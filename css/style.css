@@ -47,6 +47,10 @@ p{
   -ms-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
 }
+#faq_answer{
+  text-align: left;
+}
+
 
 a {
 	color: #222;
@@ -827,7 +831,6 @@ input[type=submit]:active {
 }
 
 }
-
 
 
   @media screen and (max-width: 500px) {
