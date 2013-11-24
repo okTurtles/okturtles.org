@@ -1,84 +1,67 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<title>okTurtles</title>
-		<meta name="description" content="okTurtles" />
-		<meta name="keywords" content="okTurtles, security" />
-		<meta name="author" content="OkTurtles" />
-		<link rel="shortcut icon" href="../favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<link rel="stylesheet" type="text/css" href="css/looper.css" />
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
-		<script src="js/modernizr.custom.js"></script>
-		<script src="js/responsiveslides.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>okTurtles</title>
+	<meta name="description" content="okTurtles" />
+	<meta name="keywords" content="okTurtles, security" />
+	<meta name="author" content="OkTurtles" />
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js" ></script>
+	<script src="js/modernizr.custom.js"></script>
+	<!-- <script src="js/responsiveslides.js"></script> -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 
-<script type="text/javascript">
+	<script type="text/javascript">
 
-	$(document).ready(function() {
-	$('body').css('display', 'none');
-	$('body').fadeIn(1200);
-	});
+		$(document).ready(function() {
+			$('body').css('display', 'none').fadeIn(1200);
+			$(".faq h3").next().hide();
+			$(".faq h3").wrap('<a href="#"></a>').click(function () {
+				$(this).parent().next().slideToggle("fast");
+				return false; 
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div id="cbp-so-scroller" class="cbp-so-scroller">
+			<section class="cbp-so-section">
+				<article class="cbp-so-side cbp-so-side-center">
+					<div id="logo">
+						<a href="index.html"><h2>ok<span class="green">Turtles</span></h2></a>
+					</div>
 
-</script>
-
-<script>
-    $(document).ready(function () {
-    $(".faq h3").next().hide();
-    $(".faq h3").wrap('<a href="#"></a>').click(function () {
-    $(this).parent().next().slideToggle("fast");
-    return false; 
-	});
-});
-</script>
-
-<script type="text/javascript">
-	//green sock to go here
-</script>
-
-
-		
-	</head>
-	<body>
-		<div class="container">
-	
-			<div id="cbp-so-scroller" class="cbp-so-scroller">
-				
-				<section class="cbp-so-section">
-					<article class="cbp-so-side cbp-so-side-center">
-						<div id="logo"><a href="index.html"><h2>ok<span class="green">Turtles</span></h2></a></div>
-
-						<div id="subtitle"> <!-- keeps inline -->
-							
-							<ul class="rslides" id="slider1">
-      					<li><img src="img/placeholder.png" alt=""></li>
-     			    	<li><img src="img/placeholder.png" alt=""></li>
-   						</ul></div>
-   						
-
-   						<p>text underneath</p>
-						<BR>
-							<div id="email">No Spam, Guaranteed.</div>
-						<form action="#">
-						  <input type="text" value="Enter email for updates" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Enter Email To Get Updates':this.value;" value="Enter email for updates">
+					<div id="subtitle"> <!-- keeps inline -->
+						
+						<ul class="rslides" id="slider1">
+							<li><img src="img/placeholder.png" alt=""></li>
+							<li><img src="img/placeholder.png" alt=""></li>
+						</ul>
+					</div>
+					<p>text underneath</p>
+					
+					<div id="email">No Spam, Guaranteed.</div>
+					<form action="#">
+						<input type="text" value="Enter email for updates" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Enter Email To Get Updates':this.value;" value="Enter email for updates">
 						<input id="button" type="submit" value="Send"  >
-						</form>
-						<BR><BR><BR>
-						<a id="down_arrow" onclick="$('#section_color_top').animatescroll({scrollSpeed:400});"><img src="img/down_arrow.png" width="25px" ></a>
-
-					</article>
-									<section id="section_color_top" class="cbp-so-section">
+					</form>
+					
+					<a id="down_arrow" onclick="$('#section_color_top').animatescroll({scrollSpeed:400});">
+						<img src="img/down_arrow.png" width="25px" >
+					</a>
+				</article>
+				<section id="section_color_top" class="cbp-so-section">
 					<article class="cbp-so-side cbp-so-side-center">
 						<h2>Security Theatre</h2>
 						<p>tagline text</p>
 					</article>
 				</section>
-				
+
 				<section id="section_color_middle" class="cbp-so-section">
 					<article class="cbp-so-side cbp-so-side-center ">
 						<h2>Features</h2>
@@ -93,7 +76,7 @@
 
 				</section>
 				<section id="section_color_middle" class="cbp-so-section">
-<BR><BR>
+
 					<article class="cbp-so-side cbp-so-side-right right ">
 						<img id="features" src="img/placeholder.png" alt="">
 					</article>
@@ -102,8 +85,8 @@
 					</article>
 
 				</section>
-								<section id="section_color_middle" class="cbp-so-section">
-<BR><BR>
+				<section id="section_color_middle" class="cbp-so-section">
+
 					<article class="cbp-so-side cbp-so-side-left left ">
 						<img id="features" src="img/placeholder.png" alt="">
 					</article>
@@ -112,7 +95,7 @@
 					</article>
 
 				</section>
-				
+
 				<section id="section_color_top" class="cbp-so-section">
 					<article class="cbp-so-side cbp-so-side-center">
 						<h2>Powered by Namecoin</h2>
@@ -120,30 +103,30 @@
 						<img src="img/pdf.png" width="50px" ></a>
 					</article>
 				</section>
-				
+
 				<section id="section_color_middle faq" class="cbp-so-section">
 					<article class="cbp-so-side cbp-so-side-center">
 						<h2>FAQ</h2>					
-	<div class="faq">
+						<div class="faq">
 
-			<h3 id="faq_question">What is okTurtles?</h3>
-			<p id="faq_answer">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-<BR>
-			<h3 id="faq_question">How does it work?</h3>
-			<p id="faq_answer">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-<BR>
-			<h3 id="faq_question">Why use okTurtles?</h3>
-			<p id="faq_answer">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+							<h3 id="faq_question">What is okTurtles?</h3>
+							<p id="faq_answer">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+							<h3 id="faq_question">How does it work?</h3>
+							<p id="faq_answer">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+							<h3 id="faq_question">Why use okTurtles?</h3>
+							<p id="faq_answer">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 
 
 
-	</div>
+						</div>
 					</article>
 				</section>
 
-								<section id="section_color_top" class="cbp-so-section">
+				<section id="section_color_top" class="cbp-so-section">
 					<article class="cbp-so-side cbp-so-side-center">
-						<BR><BR>
+
 						<h2><B>Coming Soon</B></h2>
 					</article>
 				</section>
@@ -151,20 +134,17 @@
 
 				<section id="footer" class="cbp-so-section">
 					<article class="cbp-so-side cbp-so-side-center">
-						<BR><BR><BR>
+
 						<div id="email">Sign up now to receive regular updates on the project</div>
 						<form action="#">
-						  <input type="text" value="Enter email for updates" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Enter Email To Get Updates':this.value;" value="Enter email for updates">
-						<input id="button" type="submit" value="Send"  >
+							<input type="text" value="Enter email for updates" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Enter Email To Get Updates':this.value;" value="Enter email for updates">
+							<input id="button" type="submit" value="Send"  >
 						</form>
-						<BR><BR>
-							<a id="up_arrow" onclick="$('html').animatescroll({scrollSpeed:500});">
-								back to top</a>
+						<a id="up_arrow" onclick="$('html').animatescroll({scrollSpeed:500});">back to top</a>
 					</article>
 				</section>
-
 			</div>
 		</div>
-		<script type="text/javascript" src="js/animatescroll.js"></script>
-	</body>
+	<script type="text/javascript" src="js/animatescroll.js"></script>
+</body>
 </html>
