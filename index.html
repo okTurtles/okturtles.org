@@ -14,36 +14,32 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
 		<script src="js/modernizr.custom.js"></script>
 		<script src="js/responsiveslides.js"></script>
-			<script type="text/javascript">
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
 
-$(document).ready(function() {
-$('body').css('display', 'none');
-$('body').fadeIn(1200);
+<script type="text/javascript">
 
+	$(document).ready(function() {
+	$('body').css('display', 'none');
+	$('body').fadeIn(1200);
+	});
+
+</script>
+
+<script>
+    $(document).ready(function () {
+    $(".faq h3").next().hide();
+    $(".faq h3").wrap('<a href="#"></a>').click(function () {
+    $(this).parent().next().slideToggle("fast");
+    return false; 
+	});
 });
+</script>
 
-	</script>
-	  <script>
-    // You can also use "$(window).load(function() {"
-    $(function () {
-
-      // Slideshow 1
-      $("#slider1").responsiveSlides({
-        maxwidth: 800,
-        speed: 500
-      });
-    });
-
-  </script>
-                                       <script>
-		$(document).ready(function () {
-			$(".faq h3").next().hide();
-			$(".faq h3").wrap('<a href="#"></a>').click(function () {
-				$(this).parent().next().slideToggle("fast");
-				return false; // prevents browser from scrolling anywhere (like to the top of the page) after link is clicked
-			});
-		});
-	</script>
+<script type="text/javascript">
+	//green sock to go here
+</script>
 
 
 		
@@ -57,11 +53,14 @@ $('body').fadeIn(1200);
 					<article class="cbp-so-side cbp-so-side-center">
 						<div id="logo"><a href="index.html"><h2>ok<span class="green">Turtles</span></h2></a></div>
 
-						<div id="subtitle">
+						<div id="subtitle"> <!-- keeps inline -->
+							
 							<ul class="rslides" id="slider1">
       					<li><img src="img/placeholder.png" alt=""></li>
      			    	<li><img src="img/placeholder.png" alt=""></li>
    						</ul></div>
+   						
+
    						<p>text underneath</p>
 						<BR>
 							<div id="email">No Spam, Guaranteed.</div>
