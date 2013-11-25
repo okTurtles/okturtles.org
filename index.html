@@ -14,18 +14,79 @@
 	<script src="js/modernizr.custom.js"></script>
 	<!-- <script src="js/responsiveslides.js"></script> -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script src='//cdnjs.cloudflare.com/ajax/libs/coffee-script/1.6.3/coffee-script.min.js'></script>
 
-	<script type="text/javascript">
+	<script id='main' type='text/coffeescript'>
+		CSSPlugin.defaultTransformPerspective = 500
 
-		$(document).ready(function() {
-			$('body').css('display', 'none').fadeIn(1200);
-			$(".faq h3").next().hide();
-			$(".faq h3").wrap('<a href="#"></a>').click(function () {
+		$ ->
+			$('body').css('display', 'none').fadeIn(1200)
+			$(".faq h3").next().hide()
+			$(".faq h3").wrap('<a href="#"></a>').click ->
 				$(this).parent().next().slideToggle("fast");
-				return false; 
-			});
-		});
+				return false
+
+			$imgWrap    = $ '.slideshow'
+			$images		= $imgWrap.find 'img'
+			$currImg	= $images.eq 0
+			index		= 0
+			numImgs		= $images.length
+			isAnimating	= false
+
+			# Animation properties
+			flipDepth	= -500
+			flipDur		= 1
+
+			flip = ->
+				# Ignore click until any current animations have completed.
+				if not isAnimating
+					isAnimating = true
+					# index = (index++ >= numImgs - 1) ? 0 : index
+
+					randomVal = Math.random() * 50 - 25
+
+					tl = new TimelineLite
+						onComplete: -> 
+							$currImg = $images.eq index
+							isAnimating = false
+						
+					tl.to $currImg, flipDur / 2, 
+						css: {rotationY: 90, z: flipDepth, rotationX: randomVal, alpha: 0.3}
+						ease:Expo.easeIn
+					
+					tl.append -> 
+						$currImg.hide()
+						$images.eq(index).show()
+
+					# tl.fromTo($images.eq(index), flipDur / 2, 
+					# 	{css: {rotationY: -90, z: flipDepth, rotationX: -randomVal, alpha: 0.3}}, 
+					# 	{css: {rotationY: 0, z: 0, rotationX: 0, alpha: 1}, ease:Expo.easeOut}
+					# );
+					tl.fromTo $images.eq(index), flipDur / 2, 
+						# We need to flip the number sign fo rotationX, so we do -randomVal instead of randomVal
+						{css: {rotationY: -90, z: flipDepth, rotationX: -randomVal, alpha: 0.3}}, 
+						{css: {rotationY: 0, z: 0, rotationX: 0, alpha: 1}, ease:Expo.easeOut}
+
+					# Add +1 to index or loop back to 0 if we've reached the end
+					index = ++index % numImgs # (index++ >= numImgs - 1) ? 0 : index
+			
+			# Animate first image in
+			TweenMax.fromTo $currImg, 1.8,
+				{css: {rotationY: -110, rotationX: Math.random() * 35, z: -1000, alpha: 0}}, 
+				{css: {rotationY: 0, rotationX: 0, z: 0, alpha: 1}, ease: Power3.easeInOut, onComplete: -> $imgWrap.on('click', flip)}
+
+			$currImg.show()
+		
 	</script>
+	<style>
+		.slideshow { position: relative; padding: 0; cursor: pointer; }
+		.slideshow li { list-style: none; }
+		.slideshow li img {
+			position: absolute;
+			top: 0; left: 0;
+			display: none;
+		}
+	</style>
 </head>
 <body>
 	<div class="container">
@@ -38,9 +99,11 @@
 
 					<div id="subtitle"> <!-- keeps inline -->
 						
-						<ul class="rslides" id="slider1">
+						<!-- <ul class="rslides" id="slider1"> -->
+						<ul class="slideshow">
 							<li><img src="img/placeholder.png" alt=""></li>
-							<li><img src="img/placeholder.png" alt=""></li>
+							<li><img src="img/slide1.png" alt=""></li>
+							<li><img src="img/slide2.png" alt=""></li>
 						</ul>
 					</div>
 					<p>text underneath</p>
