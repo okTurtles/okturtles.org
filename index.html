@@ -34,7 +34,7 @@
 			isAnimating	= false
 
 			# Animation properties
-			flipDepth	= -500
+			flipDepth	= 0
 			flipDur		= 1
 
 			flip = ->
@@ -43,46 +43,36 @@
 					isAnimating = true
 					# index = (index++ >= numImgs - 1) ? 0 : index
 
-					randomVal = Math.random() * 50 - 25
 
 					tl = new TimelineLite
 						onComplete: -> 
 							$currImg = $images.eq index
 							isAnimating = false
 						
-					tl.to $currImg, flipDur / 2, 
-						css: {rotationY: 90, z: flipDepth, rotationX: randomVal, alpha: 0.3}
-						ease:Expo.easeIn
+					tl.to $currImg, flipDur / 1, 
+						css: {left: 800, alpha: 0.5}
 					
 					tl.append -> 
 						$currImg.hide()
 						$images.eq(index).show()
 
-					tl.fromTo $images.eq(index), flipDur / 2, 
+					tl.fromTo $images.eq(index), flipDur / 1, 
 						# We need to flip the number sign fo rotationX, so we do -randomVal instead of randomVal
-						{css: {rotationY: -90, z: flipDepth, rotationX: -randomVal, alpha: 0.3}}, 
-						{css: {rotationY: 0, z: 0, rotationX: 0, alpha: 1}, ease:Expo.easeOut}
+						{css: {left:0, rotationY: 0, alpha: 1}}, 
+						{css: {left:0, rotationY: 0, z: 0, rotationX: 0, alpha: 1}, ease:Expo.easeOut}
 
 					# Add +1 to index or loop back to 0 if we've reached the end
 					index = ++index % numImgs # (index++ >= numImgs - 1) ? 0 : index
 			
 			# Animate first image in
 			TweenMax.fromTo $currImg, 1.8,
-				{css: {rotationY: -110, rotationX: Math.random() * 35, z: -1000, alpha: 0}}, 
-				{css: {rotationY: 0, rotationX: 0, z: 0, alpha: 1}, ease: Power3.easeInOut, onComplete: -> $imgWrap.on('click', flip)}
+				{css: {left:800, rotationY:0, alpha: 0}}, 
+				{css: {left:0, rotationY: 0, rotationX: 0, z: 0, alpha: 1}, ease: Power3.easeInOut, onComplete: -> $imgWrap.on('click', flip)}
 
 			$currImg.show()
 		
 	</script>
-	<style>
-		.slideshow { position: relative; padding: 0; cursor: pointer; }
-		.slideshow li { list-style: none; }
-		.slideshow li img {
-			position: absolute;
-			top: 0; left: 0;
-			display: none;
-		}
-	</style>
+
 </head>
 <body>
 	<div class="container">

@@ -24,6 +24,21 @@ p{
 
 }
 
+.slideshow 
+{ 
+  position: relative; 
+  padding: 0;
+  cursor: pointer;
+}
+.slideshow li 
+{ 
+  list-style: none; 
+}
+.slideshow li img {
+  position: relative;
+  top: 0; left: 0;
+  display: none;
+}
 
 
 #subtitle{
