@@ -58,10 +58,6 @@
 						$currImg.hide()
 						$images.eq(index).show()
 
-					# tl.fromTo($images.eq(index), flipDur / 2, 
-					# 	{css: {rotationY: -90, z: flipDepth, rotationX: -randomVal, alpha: 0.3}}, 
-					# 	{css: {rotationY: 0, z: 0, rotationX: 0, alpha: 1}, ease:Expo.easeOut}
-					# );
 					tl.fromTo $images.eq(index), flipDur / 2, 
 						# We need to flip the number sign fo rotationX, so we do -randomVal instead of randomVal
 						{css: {rotationY: -90, z: flipDepth, rotationX: -randomVal, alpha: 0.3}}, 
