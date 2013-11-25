@@ -34,7 +34,7 @@ p{
 #faq_question{
   font-size: 2em;
   line-height: 0;
-  margin-top: 10px;
+  margin-top: 1.5em;
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   -ms-transition: all 1s ease-in-out;
@@ -117,11 +117,6 @@ a:hover {
 	margin-bottom: 2px;
 	position: relative;
 }
-#coming_soon{
-	color: #8A8A8A;
-	font-weight: 300;
-	margin-top: -55px;
-}
 
 .green{
 	color: #27ae60;
@@ -159,7 +154,9 @@ a:hover {
 	background-color: #ffffff;
 }
 
-
+#features{
+  padding-bottom: 2.5em;
+}
 
 
 
@@ -168,12 +165,10 @@ a:hover {
 }
 
 .cbp-so-section:first-child {
-  padding-top: 0;
+  margin-bottom: 5em;
+  padding-bottom: 1em;
 }
-.cbp-so-slide:first-child {
-  margin-bottom: 3em;
-  padding-top: 0;
-}
+
 
 
 /* Clear floats of children */
@@ -343,6 +338,7 @@ a:hover {
 	color: #8A8A8A;
 	background-color: #252525;
 	height: 300px;
+  padding-top: 2.5em;
 }
 #footer a{
 	color: #8A8A8A;
@@ -438,6 +434,10 @@ input[type=submit]:active {
 	cursor: pointer;
 	color: #8A8A8A;
 }
+
+#up_arrow_container{
+  margin-top: 20px;
+}
 #up_arrow:hover {
 	opacity: .6;
 	cursor: pointer;
@@ -447,9 +447,14 @@ input[type=submit]:active {
   -o-transition: all .2s ease-in-out;
 }
 
+#down_arrow_container{
+  position: relative;
+  margin-top: 35px;
+}
+
 #down_arrow{
 	position: relative;
-	margin-top: 20px;
+	margin-top: 0px;
 	opacity: .6;
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
@@ -767,8 +772,16 @@ input[type=submit]:active {
   border: 0;
   }
 
+  #coming_soon{
+    margin-top: 2em;
+  }
+
 
 @media screen and (max-width: 850px){
+
+  #features{
+  padding-bottom: 0em;
+}
 	  
 .left{
 	width: 100%;
