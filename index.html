@@ -17,8 +17,6 @@
     <script src='//cdnjs.cloudflare.com/ajax/libs/coffee-script/1.6.3/coffee-script.min.js'></script>
 
     <script id='main' type='text/coffeescript'>
-        # CSSPlugin.defaultTransformPerspective = 500
-
         # https://gist.github.com/bfred-it/7330016
         TimelineLite::addDelay = (delay, position) ->
             switch $.type position
@@ -34,7 +32,7 @@
                 $(this).parent().next().slideToggle("fast");
                 return false
 
-            debug = false  # set to true to see how this crap works
+            debug = undefined  # set to true to see how this crap works
             TIME_PER_ANIMATION   = 1
             TIME_FOR_IMG_DISPLAY = 2
             STAGGER_AMOUNT       = TIME_PER_ANIMATION + TIME_FOR_IMG_DISPLAY
@@ -99,7 +97,7 @@
                         <div class="slideshow clearfix">
                             <img src="img/placeholder.png" alt="">
                             <img src="img/slide1.png" alt="">
-                            <img src="img/slide2.png" class="last" alt="">
+                            <img src="img/slide2.png" alt="">
                         </div>
                         <div class="clear"></div>
                     </div>
