@@ -34,24 +34,51 @@
                 $(this).parent().next().slideToggle("fast");
                 return false
 
+            debug = false  # set to true to see how this crap works
             TIME_PER_ANIMATION   = 1
-            TIME_FOR_IMG_DISPLAY = 1
+            TIME_FOR_IMG_DISPLAY = 2
             STAGGER_AMOUNT       = TIME_PER_ANIMATION + TIME_FOR_IMG_DISPLAY
             SLIDE_PADDING        = 100;
             MOVE_AMOUNT          = $('.slideshow img:first').width() + SLIDE_PADDING;
 
+            console.log "MOVE_AMOUNT = #{MOVE_AMOUNT}" if debug?
+
             tl = new TimelineMax
+                repeat: -1
+                paused: true
                 # autoRemoveChildren: false # TODO: disable this if possible!
-                # smoothChildTiming : false #
-                paused            : true
-                repeat            : -1
-                repeatDelay       : 0
+                # smoothChildTiming : true #
+
+            fadeIn  = (el, t)->
+                if $(el).css('visibility') == 'hidden'
+                    console.log "#{t}: #{new Date()} fadeIn : #{$(el).attr('src')}" if debug?
+                    TweenMax.to el, TIME_PER_ANIMATION, {left: 0, autoAlpha: 1}
+            fadeOut = (el, t)->
+                if $(el).css('visibility') != 'hidden'
+                    console.log "#{t}: #{new Date()} fadeOut: #{$(el).attr('src')}" if debug?
+                    TweenMax.to el, TIME_PER_ANIMATION, {
+                        left      : -MOVE_AMOUNT
+                        autoAlpha : 0
+                        onComplete: -> $(el).css(left: MOVE_AMOUNT) # reset to start
+                    }
+                else if debug?
+                    console.log "#{t}: #{new Date()} fadeOut: #{$(el).attr('src')} SKIPPING CAUSE: #{$(el).css('visibility')}"
+
+
             $slides = $('.slideshow img')
             $slides.each (idx, el) ->
-                [fadeIn, fadeOut] = [idx * STAGGER_AMOUNT, idx * STAGGER_AMOUNT + TIME_FOR_IMG_DISPLAY]
-                tl.set el, {left: MOVE_AMOUNT}, 0
-                tl.to el, TIME_PER_ANIMATION, {left: 0, autoAlpha: 1}, fadeIn
-                tl.to el, TIME_PER_ANIMATION, {left: -MOVE_AMOUNT, autoAlpha: 0}, fadeOut
+                [pt1, pt2] = [idx * STAGGER_AMOUNT,  STAGGER_AMOUNT + (idx * STAGGER_AMOUNT)]
+                console.log "#{idx}: [pt1=#{pt1}, pt2=#{pt2}]" if debug?
+                # set initial location
+                $(el).css(left: MOVE_AMOUNT)
+                # for a seamless transition to the start, we have the last element fadeOut at the start (if visible)
+                if idx + 1 == $slides.length
+                    tl.addCallback(fadeIn, pt1, [el, pt1]) 
+                    tl.addCallback(fadeOut, 0, [el, 0])
+                    tl.addDelay(TIME_FOR_IMG_DISPLAY, pt1)
+                else
+                    tl.addCallback(fadeIn, pt1, [el, pt1]) 
+                    tl.addCallback(fadeOut, pt2, [el, pt2]) 
                 
             tl.play()
     </script>
