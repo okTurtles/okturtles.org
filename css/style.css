@@ -29,7 +29,7 @@ p{
 
 }
 
-.slideshow 
+.slideshow, .slideshow > div
 { 
   position: relative; 
   padding: 0;
