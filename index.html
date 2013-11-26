@@ -60,6 +60,10 @@
 
 
             $slides = $('.slideshow img')
+
+            # manually iterate over all of the images instead of using the staggerFromTo/staggerTo
+            # functions, because this gives me the fine control over the timeline that i need to make
+            # the whole thing seamlessly loop around.
             $slides.each (idx, el) ->
                 [pt1, pt2] = [idx * STAGGER_AMOUNT,  STAGGER_AMOUNT + (idx * STAGGER_AMOUNT)]
                 console.log "#{idx}: [pt1=#{pt1}, pt2=#{pt2}]" if debug?
