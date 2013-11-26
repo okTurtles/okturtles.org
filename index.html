@@ -19,6 +19,14 @@
     <script id='main' type='text/coffeescript'>
         # CSSPlugin.defaultTransformPerspective = 500
 
+        # https://gist.github.com/bfred-it/7330016
+        TimelineLite::addDelay = (delay, position) ->
+            switch $.type position
+                when 'undefined', 'null' then @set {}, {}, "+=#{delay}"
+                when 'string' then @set {}, {}, "#{position}+=#{delay}"
+                when 'number' then @set {}, {}, delay + position 
+                else console.log "BAD POSITION TYPE for addDelay!"; this # nothing done
+
         $ ->
             $('body').css('display', 'none').fadeIn(1200)
             $(".faq h3").next().hide()
@@ -26,194 +34,26 @@
                 $(this).parent().next().slideToggle("fast");
                 return false
 
-            # $imgWrap    = $ '.slideshow'
-            # $images       = $imgWrap.find 'img'
-            # $currImg  = $images.eq 0
-            # index     = 0
-            # numImgs       = $images.length
-            # isAnimating   = false
-
-            # # Animation properties
-            # flipDepth = 0
-            # flipDur       = 1
-
-            # flip = ->
-            #   # Ignore click until any current animations have completed.
-            #   if not isAnimating
-            #       isAnimating = true
-            #       # index = (index++ >= numImgs - 1) ? 0 : index
-
-
-            #       tl = new TimelineLite
-            #           onComplete: -> 
-            #               $currImg = $images.eq index
-            #               isAnimating = false
-                        
-            #       tl.to $currImg, flipDur / 1, 
-            #           css: {left: 800, alpha: 0.5}
-                    
-            #       tl.append -> 
-            #           $currImg.hide()
-            #           $images.eq(index).show()
-
-            #       tl.fromTo $images.eq(index), flipDur / 1, 
-            #           # We need to flip the number sign fo rotationX, so we do -randomVal instead of randomVal
-            #           {css: {left:0, rotationY: 0, alpha: 1}}, 
-            #           {css: {left:0, rotationY: 0, z: 0, rotationX: 0, alpha: 1}, ease:Expo.easeOut}
-
-            #       # Add +1 to index or loop back to 0 if we've reached the end
-            #       index = ++index % numImgs # (index++ >= numImgs - 1) ? 0 : index
-            
-            # # Animate first image in
-            # TweenMax.fromTo $currImg, 1.8,
-            #   {css: {left:800, rotationY:0, alpha: 0}}, 
-            #   {css: {left:0, rotationY: 0, rotationX: 0, z: 0, alpha: 1}, ease: Power3.easeInOut, onComplete: -> $imgWrap.on('click', flip)}
-
-            # $currImg.show()
             TIME_PER_ANIMATION   = 1
             TIME_FOR_IMG_DISPLAY = 1
             STAGGER_AMOUNT       = TIME_PER_ANIMATION + TIME_FOR_IMG_DISPLAY
             SLIDE_PADDING        = 100;
             MOVE_AMOUNT          = $('.slideshow img:first').width() + SLIDE_PADDING;
 
-            # IMPORTANT: in coffeescript, to separate objects in an array
-            #            you must put one single extra space
-            t1 = new TimelineMax
+            tl = new TimelineMax
                 # autoRemoveChildren: false # TODO: disable this if possible!
-                smoothChildTiming : true #, paused: true
+                # smoothChildTiming : false #
+                paused            : true
                 repeat            : -1
                 repeatDelay       : 0
-                onRepeat          : -> console.log "T1 REPEAT!"; console.log this
-            t2 = new TimelineMax
-                # autoRemoveChildren: false
-                smoothChildTiming : true #, paused: true
-                repeat            : -1
-                repeatDelay       : 0
-                delay             : STAGGER_AMOUNT
-                onRepeat          : -> console.log "T2 REPEAT!"; console.log this
-            # fade in slide
-            t1.staggerFromTo '.slideshow img', TIME_PER_ANIMATION, {
-                    left      : MOVE_AMOUNT
-                    autoAlpha : 0
-                    # onStart   : -> $(this.target).show() #.css('display','inline')
-                    # onRepeat  : -> console.log "T1.tween REPEAT!"; $(this.target).show()
-                }, {
-                    left     : 0
-                    autoAlpha: 1
-                    # onComplete: ->
-                    #     console.log "ON COMPLETE!"
-                    #     TweenMax.to this.target, TIME_PER_ANIMATION, {
-                    #         left: -MOVE_AMOUNT
-                    #         autoAlpha: 0
-                    #     }
-                }
-                , STAGGER_AMOUNT # TIME_PER_ANIMATION
-                , 0 # at the start of the timeline
-                # , -> t1.invalidate().restart()
-            # t1.call -> t1.invalidate().restart()
-            # t1.call -> t1.restart()
-            # t1.call (-> t1.restart()), [], this, "+=#{STAGGER_AMOUNT}"
-            
-            # move the slide to the left and fade it out
-            t2.staggerTo '.slideshow img', TIME_PER_ANIMATION, {
-                    left      : -MOVE_AMOUNT 
-                    autoAlpha : 0 
-                    # onComplete: -> $(this.target).hide()
-                }
-                , STAGGER_AMOUNT # the stagger amount
-                # , STAGGER_AMOUNT # the timeline location to place these tweens
-                # , -> t2.invalidate().restart()
-            # t2.call -> t2.restart()
-            # t2.call -> t2.invalidate().restart()
-            # t2.call (-> t2.restart()), [], this, "+=#{STAGGER_AMOUNT}"
-            
-            # tl.call (->
-            #     # a.invalidate() for a in [a1, a2]
-            #     # a1.invalidate()
-            #     tl.invalidate().restart(true, true)
-            #     # tl.restart(true, false)
-            #     # tl.restart()
-            # ), [], this, "-=#{TIME_FOR_IMG_DISPLAY}"
-
-###
-            fadeIn = TweenMax.staggerFromTo '.slideshow img'
-                , TIME_PER_ANIMATION
-                ,
-                    left      : MOVE_AMOUNT
-                    autoAlpha : 0
-                    onStart   : -> $(this.target).show() #css('display','inline')
-                    # onCompleteParams: ["{self}"]
-                    # onComplete: (t) -> t.seek(0).play() if $(this.target).hasClass 'last'
-                 ,
-                    left     : 0
-                    autoAlpha: 1
-                , STAGGER_AMOUNT
-                # , -> fadeIn.restart().play()  # onCompleteAll callback
-
-            $(fadeIn).each ->
-                this.staggerTo fadeIn
-                , TIME_PER_ANIMATION
-                ,
-                    delay     : STAGGER_AMOUNT # the timeline location to place these tweens
-                    left      : -MOVE_AMOUNT
-                    autoAlpha : 0
-                    repeat    : -1
-                    # onStart   : -> tl.seek(0) if $(this.target).hasClass 'last'
-                    onComplete: -> $(this.target).hide()
-                , STAGGER_AMOUNT # the stagger amount
-###
-
-
-
-            # tl.fromTo '.slideshow img'
-            #     , TIME_PER_ANIMATION
-            #     ,
-            #         left     : MOVE_AMOUNT
-            #         autoAlpha: 0
-            #         onStart  : -> $(this.target).css('display','inline')
-            #     ,
-            #         left     : 0
-            #         autoAlpha: 1
-            #     , STAGGER_AMOUNT
-            
-###
-                tweens      : [
-                    TweenMax.staggerFromTo '.slideshow img'
-                        , TIME_PER_ANIMATION # move in for this many sec
-                        ,
-                            left           : MOVE_AMOUNT
-                            autoAlpha      : 0
-                            # immediateRender: false
-                            onStart        : -> $(this.target).show()
-                         ,
-                            left     : 0
-                            autoAlpha: 1
-                        , STAGGER_AMOUNT
-
-                    TweenMax.staggerTo '.slideshow img'  #:not(.last)'
-                        , TIME_PER_ANIMATION # move out for this many sec
-                        ,
-                            left      : -MOVE_AMOUNT
-                            autoAlpha : 0
-                            delay     : STAGGER_AMOUNT
-                            # onStart   : -> tl.restart false, false if $(this.target).hasClass 'last'
-                            onComplete: -> $(this.target).hide()
-                        , STAGGER_AMOUNT
-                ]
-            TweenMax.to '.slideshow img:first', 1, {
-                autoAlpha : 1
-                onComplete: -> tl.play() # TODO: change this
-            }
-            TweenMax.staggerTo '.slideshow img'  #:not(.last)'
-                , TIME_PER_ANIMATION # move out for this many sec
-                ,
-                    left      : -MOVE_AMOUNT
-                    autoAlpha : 0
-                    delay     : STAGGER_AMOUNT
-                    # onStart   : -> tl.restart false, false if $(this.target).hasClass 'last'
-                    onComplete: -> $(this.target).hide()
-                , STAGGER_AMOUNT            
-###
+            $slides = $('.slideshow img')
+            $slides.each (idx, el) ->
+                [fadeIn, fadeOut] = [idx * STAGGER_AMOUNT, idx * STAGGER_AMOUNT + TIME_FOR_IMG_DISPLAY]
+                tl.set el, {left: MOVE_AMOUNT}, 0
+                tl.to el, TIME_PER_ANIMATION, {left: 0, autoAlpha: 1}, fadeIn
+                tl.to el, TIME_PER_ANIMATION, {left: -MOVE_AMOUNT, autoAlpha: 0}, fadeOut
+                
+            tl.play()
     </script>
 
 </head>
