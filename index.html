@@ -70,53 +70,69 @@
             #   {css: {left:0, rotationY: 0, rotationX: 0, z: 0, alpha: 1}, ease: Power3.easeInOut, onComplete: -> $imgWrap.on('click', flip)}
 
             # $currImg.show()
-            TIME_PER_ANIMATION   = 1
+            TIME_PER_ANIMATION   = 2
             TIME_FOR_IMG_DISPLAY = 3
             STAGGER_AMOUNT       = TIME_PER_ANIMATION + TIME_FOR_IMG_DISPLAY
             SLIDE_PADDING        = 100;
-            MOVE_AMOUNT          = $('.slideshow').width() + SLIDE_PADDING;
+            MOVE_AMOUNT          = $('.slideshow img:first').width() + SLIDE_PADDING;
 
             # IMPORTANT: in coffeescript, to separate objects in an array
             #            you must put one single extra space
-            tl = new TimelineMax
-                autoRemoveChildren: false
-                smoothChildTiming : true #, paused: true
+            t1 = new TimelineMax
+                # autoRemoveChildren: false # TODO: disable this if possible!
+                # smoothChildTiming : true #, paused: true
                 repeat            : -1
                 repeatDelay       : 0
-            # can't use convenience functions, see here for why:
-            # http://forums.greensock.com/topic/7233-issue-while-combining-timelines-staggerfromto-and-repeat/
-            # 
+                onRepeat          : -> console.log "T1 REPEAT!"; console.log this
+            t2 = new TimelineMax
+                # autoRemoveChildren: false
+                # smoothChildTiming : true #, paused: true
+                repeat            : -1
+                repeatDelay       : 0
+                onRepeat          : -> console.log "T2 REPEAT!"; console.log this
             # fade in slide
-            
-            tl.add(
-                TweenMax.staggerFromTo('.slideshow img', TIME_PER_ANIMATION, {
+            t1.staggerFromTo '.slideshow img', TIME_PER_ANIMATION, {
                     left      : MOVE_AMOUNT
                     autoAlpha : 0
-                    onStart   : -> $(this.target).css('display','inline')
-                 }, {
+                    # onStart   : -> $(this.target).show() #.css('display','inline')
+                    # onRepeat  : -> console.log "T1.tween REPEAT!"; $(this.target).show()
+                }, {
                     left     : 0
                     autoAlpha: 1
-                }, STAGGER_AMOUNT)
-            )
+                    onComplete: ->
+                        console.log "ON COMPLETE!"
+                        TweenMax.to this.target, TIME_PER_ANIMATION, {
+                            left: -MOVE_AMOUNT
+                            autoAlpha: 0
+                        }
+                }
+                , TIME_PER_ANIMATION # STAGGER_AMOUNT
+                , 0 # at the start of the timeline
+                # , -> t1.invalidate().restart()
+            # t1.call -> t1.invalidate().restart()
+            # t1.call -> t1.restart()
+            # t1.call (-> t1.restart()), [], this, "+=#{STAGGER_AMOUNT}"
+            
             # move the slide to the left and fade it out
-            tl.add(
-                TweenMax.staggerTo('.slideshow img', TIME_PER_ANIMATION, {
-                        left      : -MOVE_AMOUNT
-                        autoAlpha : 0
-                        onComplete: -> $(this.target).hide()
-                    }
-                    , STAGGER_AMOUNT # the stagger amount
-
-                )
-                , STAGGER_AMOUNT # the timeline location to place these tweens
-            )
-            tl.call (->
-                # a.invalidate() for a in [a1, a2]
-                # a1.invalidate()
-                tl.invalidate().restart(true, true)
-                # tl.restart(true, false)
-                # tl.restart()
-            ), [], this, "-=#{TIME_FOR_IMG_DISPLAY}"
+            # t2.staggerTo '.slideshow img', TIME_PER_ANIMATION, {
+            #         left      : -MOVE_AMOUNT 
+            #         autoAlpha : 0 
+            #         # onComplete: -> $(this.target).hide()
+            #     }
+            #     , STAGGER_AMOUNT # the stagger amount
+            #     , STAGGER_AMOUNT # the timeline location to place these tweens
+                # , -> t2.invalidate().restart()
+            # t2.call -> t2.restart()
+            # t2.call -> t2.invalidate().restart()
+            # t2.call (-> t2.restart()), [], this, "+=#{STAGGER_AMOUNT}"
+            
+            # tl.call (->
+            #     # a.invalidate() for a in [a1, a2]
+            #     # a1.invalidate()
+            #     tl.invalidate().restart(true, true)
+            #     # tl.restart(true, false)
+            #     # tl.restart()
+            # ), [], this, "-=#{TIME_FOR_IMG_DISPLAY}"
 
 ###
             fadeIn = TweenMax.staggerFromTo '.slideshow img'
