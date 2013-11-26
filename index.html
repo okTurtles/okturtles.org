@@ -41,11 +41,7 @@
 
             console.log "MOVE_AMOUNT = #{MOVE_AMOUNT}" if debug?
 
-            tl = new TimelineMax
-                repeat: -1
-                paused: true
-                # autoRemoveChildren: false # TODO: disable this if possible!
-                # smoothChildTiming : true #
+            tl = new TimelineMax repeat: -1, paused: true
 
             fadeIn  = (el, t)->
                 if $(el).css('visibility') == 'hidden'
