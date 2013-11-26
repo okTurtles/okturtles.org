@@ -9,9 +9,14 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 .clearfix:before, .clearfix:after { content: " "; display: table; }
 .clearfix:after { clear: both; }
 
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
 body {
     font-family: 'Lato', Calibri, Arial, sans-serif;
     color: #222;
+    overflow-x: hidden; 
     background: whitesmoke;
 }
 
