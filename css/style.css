@@ -35,7 +35,8 @@ p{
 .slideshow img 
 { 
   position: absolute;
-  display: none;
+  /*display: none;*/
+  visibility: hidden;
   float: left;
   width: 868px !important;
 }
