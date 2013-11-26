@@ -28,18 +28,17 @@ p{
 { 
   position: relative; 
   padding: 0;
-  cursor: pointer;
+  margin: 0;
+  overflow: visible;
+  /*width: 868px;*/
 }
-.slideshow li 
+.slideshow img 
 { 
-  list-style: none; 
-}
-.slideshow li img {
-  position: relative;
-  top: 0; left: 0;
+  position: absolute;
   display: none;
+  float: left;
+  width: 868px !important;
 }
-
 
 #subtitle{
 	margin-top: -20px;
@@ -176,7 +175,7 @@ a:hover {
 
 
 .cbp-so-scroller {
-	overflow: hidden;
+	overflow: visible; /* <! GREG CHANGED THIS TO FIX SLIDE SHOW! */
 }
 
 .cbp-so-section:first-child {
@@ -213,11 +212,11 @@ a:hover {
 /* Sides */
 .cbp-so-side {
 	width: 100%;
-	max-width: 800px;
+	max-width: 1000px;
 	margin: 0 auto;
 	padding-right: 15px;
 	padding-left: 15px;
-	overflow: hidden;
+	overflow: visible;   /* <! GREG CHANGED THIS TO FIX SLIDE SHOW! */
   padding-top: 3em;
   padding-bottom: 3em;
 	-webkit-transition: -webkit-transform 1s, opacity 1s;
@@ -226,7 +225,7 @@ a:hover {
 }
 .cbp-so-side-left {
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding-right: 15px;
   padding-left: 15px;
@@ -239,7 +238,7 @@ a:hover {
 }
 .cbp-so-side-right {
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding-right: 15px;
   padding-left: 15px;
@@ -817,7 +816,7 @@ input[type=submit]:active {
 }
 .cbp-so-side-left {
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding-right: 15px;
   padding-left: 15px;
@@ -831,7 +830,7 @@ input[type=submit]:active {
 }
 .cbp-so-side-right {
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding-right: 15px;
   padding-left: 15px;
@@ -897,7 +896,7 @@ input[type=submit]:active {
 }
 .cbp-so-scroller {
   margin-top: 1em;
-  overflow: hidden;
+  overflow: visible; /* <! GREG CHANGED THIS TO FIX SLIDE SHOW! */
 }
 h3{
   margin-top: .4em;
