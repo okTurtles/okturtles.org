@@ -23,7 +23,7 @@
                 when 'undefined', 'null' then @set {}, {}, "+=#{delay}"
                 when 'string' then @set {}, {}, "#{position}+=#{delay}"
                 when 'number' then @set {}, {}, delay + position 
-                else console.log "BAD POSITION TYPE for addDelay!"; this # nothing done
+                else console.log "BAD POSITION TYPE for addDelay!"
 
         $ ->
             $('body').css('display', 'none').fadeIn(1200)
