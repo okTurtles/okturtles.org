@@ -15,7 +15,6 @@
     <!-- <script src="js/responsiveslides.js"></script> -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <script src='//cdnjs.cloudflare.com/ajax/libs/coffee-script/1.6.3/coffee-script.min.js'></script>
-
     <script id='main' type='text/coffeescript'>
         # https://gist.github.com/bfred-it/7330016
         TimelineLite::addDelay = (delay, position) ->
@@ -24,6 +23,12 @@
                 when 'string' then @set {}, {}, "#{position}+=#{delay}"
                 when 'number' then @set {}, {}, delay + position 
                 else console.log "BAD POSITION TYPE for addDelay!"
+
+        window.topOffset = ($el, topOffset=0)->
+            while $el.parent().is(':not(body)') 
+                $el = $el.parent()
+                topOffset += $el[0].offsetTop
+            return topOffset
 
         $ ->
             $('body').css('display', 'none').fadeIn(1200)
@@ -37,24 +42,39 @@
             TIME_FOR_IMG_DISPLAY = 2
             STAGGER_AMOUNT       = TIME_PER_ANIMATION + TIME_FOR_IMG_DISPLAY
             SLIDE_PADDING        = 100
+            SLIDE_TXT_PADDING    = 20
+            SLIDE_TXT_CENTER     = $('#service').offset().top - $('#serviceTagline').outerHeight(true) * 2 - SLIDE_TXT_PADDING # my god is this a hack
+            SLIDE_TXT_LEFT       = $('#service').offset().left
+            IMG_WIDTH            = $('.slideshow img:first').width()
 
             tl = new TimelineMax repeat: -1, paused: true
 
-            fadeIn  = (el, params, t)->
-                if el.css('visibility') == 'hidden'
-                    console.log "#{t}: #{new Date()} fadeIn : #{el.attr('src')}" if debug?
-                    TweenMax.to el, TIME_PER_ANIMATION, $.extend(params, {autoAlpha: 1})
-            fadeOut = (el, params, t)->
-                if el.css('visibility') != 'hidden'
-                    console.log "#{t}: #{new Date()} fadeOut: #{el.attr('src')}" if debug?
-                    inverse = $.extend {}, params # copy the params
-                    inverse[Object.keys(inverse)[0]] *= -1
-                    TweenMax.to el, TIME_PER_ANIMATION, $.extend(inverse, {
-                        autoAlpha : 0
-                        onComplete: -> el.css(params) # reset to start
-                    })
-                else if debug?
-                    console.log "#{t}: #{new Date()} fadeOut: #{el.attr('src')} SKIPPING CAUSE: #{el.css('visibility')}"
+            fadeIn  = (elements, endLocs, t) ->
+                # array-ify them if they're not already arrays
+                [elements, endLocs] = [[elements],[endLocs]] if not elements.length?
+
+                for $el, idx in elements
+                    if $el.css('visibility') == 'hidden'
+                        console.log "#{t}: #{new Date()} fadeIn : #{$el.attr('src')}" if debug?
+                        TweenMax.to $el, TIME_PER_ANIMATION, $.extend({}, endLocs[idx], {autoAlpha: 1})
+            fadeOut = (elements, endLocs, t) ->
+                # array-ify them if they're not already arrays
+                [elements, endLocs] = [[elements],[endLocs]] if not elements.length?
+                
+                for _$el, _idx in elements
+                    do -> # a bit of insanity to avoid capture of these vars: $el, idx, resetLoc
+                        [$el, idx] = [_$el, _idx]
+                        if $el.css('visibility') != 'hidden'
+                                console.log "#{t}: #{new Date()} fadeOut: #{$el.attr('src')}" if debug?
+                                resetLoc = $.extend {}, endLocs[idx] # copy the endLocs
+                                dir = Object.keys(resetLoc)[0]
+                                resetLoc[dir] = endLocs[idx][dir] + 2 * ($el.position()[dir] - endLocs[idx][dir])
+                                TweenMax.to $el, TIME_PER_ANIMATION, $.extend({}, endLocs[idx], {
+                                    autoAlpha : 0
+                                    onComplete: -> $el.css(resetLoc) # reset to start
+                                })
+                        else if debug?
+                            console.log "#{t}: #{new Date()} fadeOut: #{$el.attr('src')} SKIPPING CAUSE: #{$el.css('visibility')}"
 
 
             $slides = $('.slideshow > div')
@@ -63,25 +83,29 @@
             # functions, because this gives me the fine control over the timeline that i need to make
             # the whole thing seamlessly loop around.
             $slides.each (idx, el) ->
-                [$img, $text] = [$(el).find('img'), $(el).find('span')]
+                [$img, $text] = objs = [$(el).find('img'), $(el).find('span')]
                 [pt1, pt2] = [idx * STAGGER_AMOUNT,  STAGGER_AMOUNT + (idx * STAGGER_AMOUNT)]
 
                 console.log "#{idx}: [pt1=#{pt1}, pt2=#{pt2}]" if debug?
 
                 # set initial location
-                $img.css left: $('.slideshow img:first').width() + SLIDE_PADDING
-                $text.css top: $('#serviceName').position().top
+                $img.css left: startImgLoc = (IMG_WIDTH + SLIDE_PADDING)
+                # very hackish positioning of $text. We position top based on css (cause greensock uses that)
+                # and left, since we're not animation and i can't figure out how to get the css-value,
+                # we position using offset. this is junk, and needs to e fixed at somepoint... but if it works... it works. :)
+                $text.css {top: startTxtLoc = (SLIDE_TXT_CENTER + SLIDE_TXT_PADDING)}
+                $text.offset left: SLIDE_TXT_LEFT
+                endImgLoc = -startImgLoc
+                endTxtLoc = startTxtLoc - 2 * SLIDE_TXT_PADDING
 
-                console.log "left: #{$img.css('left')}"
+                tl.addCallback fadeIn, pt1, [objs, [{left: 0}, {top: SLIDE_TXT_CENTER}], pt1] 
 
                 # for a seamless transition to the start, we have the last element fadeOut at the start (if visible)
                 if idx + 1 == $slides.length
-                    tl.addCallback(fadeIn, pt1, [$img, {left: $img.position().left}, pt1]) 
-                    tl.addCallback(fadeOut, 0, [$img, {left: $img.position().left}, 0])
-                    tl.addDelay(TIME_FOR_IMG_DISPLAY, pt1)
+                    tl.addCallback fadeOut, 0, [objs, [{left: endImgLoc}, {top: endTxtLoc}], 0]
+                    tl.addDelay TIME_FOR_IMG_DISPLAY, pt1
                 else
-                    tl.addCallback(fadeIn, pt1, [$img, {left: $img.position().left}, pt1]) 
-                    tl.addCallback(fadeOut, pt2, [$img, {left: $img.position().left}, pt2]) 
+                    tl.addCallback fadeOut, pt2, [objs, [{left: endImgLoc}, {top: endTxtLoc}], pt2] 
                 
             tl.play()
     </script>
@@ -110,12 +134,12 @@
                             </div>
                             <div>
                                 <img src="img/slide2.png" alt="">
-                                <span>Some Other Site</span>
+                                <span>SomeOtherSite</span>
                             </div>
                         </div>
                         <div class="clear"></div>
                     </div>
-                    <p id="service">text <span id="serviceName"></span> underneath</p>
+                    <p id="serviceTagline"><span>Click the lock icon in your</span><span id="service"></span><span>to NSA-proof your message</span></p>
                     
                     <div id="email">No Spam, Guaranteed.</div>
                     <form action="#">

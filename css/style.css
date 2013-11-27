@@ -64,6 +64,20 @@ p{
 .slideshow span {
   position: absolute;
   visibility: hidden;
+  display: inline-block;
+  text-align: center;
+  width: 100px; /* has to be the same as #service */
+}
+#serviceTagline span {
+  /*position: absolute;*/
+}
+#service {
+  /*position: absolute;*/
+  display: inline-block;
+  width: 100px;
+  height: 20px;
+  margin: 0 5px;
+  background-color: #eee;
 }
 
 #subtitle{
