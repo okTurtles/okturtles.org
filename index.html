@@ -24,12 +24,6 @@
                 when 'number' then @set {}, {}, delay + position 
                 else console.log "BAD POSITION TYPE for addDelay!"
 
-        window.topOffset = ($el, topOffset=0)->
-            while $el.parent().is(':not(body)') 
-                $el = $el.parent()
-                topOffset += $el[0].offsetTop
-            return topOffset
-
         $ ->
             $('body').css('display', 'none').fadeIn(1200)
             $(".faq h3").next().hide()
