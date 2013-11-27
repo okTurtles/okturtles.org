@@ -91,7 +91,7 @@
                 # set initial location
                 $img.css left: startImgLoc = (IMG_WIDTH + SLIDE_PADDING)
                 # very hackish positioning of $text. We position top based on css (cause greensock uses that)
-                # and left, since we're not animation and i can't figure out how to get the css-value,
+                # and absolute offset, since we're not animation and i can't figure out how to get the css-value,
                 # we position using offset. this is junk, and needs to e fixed at somepoint... but if it works... it works. :)
                 $text.css {top: startTxtLoc = (SLIDE_TXT_CENTER + SLIDE_TXT_PADDING)}
                 $text.offset left: SLIDE_TXT_LEFT
