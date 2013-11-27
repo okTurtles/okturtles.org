@@ -56,7 +56,7 @@
                 [elements, endLocs] = [[elements],[endLocs]] if not elements.length?
                 
                 for _$el, _idx in elements
-                    do -> # a bit of insanity to avoid capture of these vars: $el, idx, resetLoc
+                    do -> # a bit of insanity to avoid overwriting these vars: $el, idx, resetLoc
                         [$el, idx] = [_$el, _idx]
                         if $el.css('visibility') != 'hidden'
                                 console.log "#{t}: #{new Date()} fadeOut: #{$el.attr('src')}" if debug?
