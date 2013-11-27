@@ -59,7 +59,11 @@ p{
   max-width: 700px !important;
   width: 100%;
   display: inline-block;
+}
 
+.slideshow span {
+  position: absolute;
+  visibility: hidden;
 }
 
 #subtitle{
