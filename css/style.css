@@ -66,18 +66,21 @@ p{
   visibility: hidden;
   display: inline-block;
   text-align: center;
+  margin: 0 auto;
+  margin-top: -630px;/*hack - SLIDESHOW TEXT*/
   width: 100px; /* has to be the same as #service */
 }
 #serviceTagline span {
-  /*position: absolute;*/
+  position: relative;
+  margin: 0 auto;
+  width: 100px;
 }
 #service {
-  /*position: absolute;*/
   display: inline-block;
   width: 100px;
   height: 20px;
   margin: 0 5px;
-  background-color: #eee;
+  top: 0;
 }
 
 #subtitle{
@@ -899,6 +902,15 @@ input[type=submit]:active {
 .slideshow{
   height: 300px;
 }
+.slideshow span {
+  position: absolute;
+  visibility: hidden;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: -575px;/*Tablet hack - SLIDESHOW TEXT*/
+  width: 100px; /* has to be the same as #service */
+}
 
 }
 
@@ -948,7 +960,34 @@ h3{
   margin-top: -1.5em;
 }
 .slideshow{
-  height: 180px;
+  height: 150px;
+}
+
+
+.slideshow span {
+  position: absolute;
+  visibility: hidden;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  width: 100px; /* has to be the same as #service */
+    margin-top: -512px;/*iPhone hack - SLIDESHOW TEXT*/
+}
+#serviceTagline span {
+  position: relative;
+  margin: 0 auto;
+  width: 100px;
+}
+#service {
+  display: inline-block;
+  width: 100px;
+  height: 20px;
+  margin: 0 5px;
+}
+
+#subtitle{
+  margin-top: -20px;
+  line-height: 1.8em;
 }
 
 }
