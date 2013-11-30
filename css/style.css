@@ -28,14 +28,42 @@ p{
   font-size: 1em;
 
 }
+#link{
+  font-size: 1.5em;
+  color: #27ae60;
+  text-transform: uppercase;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+#link:hover{
+  opacity: .8;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
 
+#facebook{
+  color: #3b5998;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+#gmail{
+  color: rgb(201, 44, 25); 
+  font-size: 1.2em;
+  font-weight: 400;
+}
 .slideshow
 { 
   position: relative; 
   padding: 0;
   margin: 0 auto;
   overflow: visible;
-  max-width: 700px;
+  max-width: 680px;
   width: 100%;
   height: 340px;
 }
@@ -45,9 +73,9 @@ p{
   padding: 0;
   margin: 0 auto;
   overflow: visible;
-  max-width: 700px;
+  max-width: 680px;
   width: 100%;
-  height: 340px;
+  height: 350px;
 }
 .slideshow img 
 { 
@@ -56,7 +84,7 @@ p{
   /*display: none;*/
   visibility: hidden;
   float: left;
-  max-width: 700px !important;
+  max-width: 680px !important;
   width: 100%;
   display: inline-block;
 }
@@ -67,9 +95,10 @@ p{
   display: inline-block;
   text-align: center;
   margin: 0 auto;
-  margin-top: -630px;/*hack - SLIDESHOW TEXT*/
+  margin-top: -631px;/*hack - SLIDESHOW TEXT*/
   width: 100px; /* has to be the same as #service */
 }
+
 #serviceTagline span {
   position: relative;
   margin: 0 auto;
@@ -169,6 +198,13 @@ a:hover {
 }
 
 #email{
+  color: #8A8A8A;
+  font-weight: 300;
+  margin-bottom: 2px;
+  position: relative;
+  margin-top: 50px;
+}
+#email_bottom{
   color: #8A8A8A;
   font-weight: 300;
   margin-bottom: 2px;
