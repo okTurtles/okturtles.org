@@ -82,6 +82,25 @@ b{
   transition: all .2s;
 }
 
+#kik{
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  -webkit-transition: all .7s;
+  -moz-transition: all .7s;
+  -ms-transition: all .7s;
+  -o-transition: all .7s;
+  transition: all .7s;
+}
+#kik:hover{
+  opacity: .7;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+
 #facebook{
   color: #3b5998;
   font-size: 1.2em;
@@ -910,6 +929,9 @@ input[type=submit]:active {
   #features{
   padding-bottom: 0em;
 }
+#kik{
+  width: 80px;
+}
     
 .left{
   width: 100%;
@@ -1061,8 +1083,11 @@ h3{
   line-height: 1.8em;
 }
 #link{
-  font-size: .8em;
+  font-size: .7em;
   margin-right: 5px;
+}
+#kik{
+  width: 50px;
 }
 
 }
