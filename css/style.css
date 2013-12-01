@@ -28,6 +28,34 @@ p{
   font-size: 1em;
 
 }
+
+table
+{
+  border:1px solid #ababab;
+  margin:0 auto;
+}
+td, th{
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+
+ul, li{
+  list-style: disc;
+  text-align: left;
+}
+
+ol{
+  font-weight: 700;
+}
+b{
+  font-weight: 700;
+}
+
+
+
+
+
 #h3_sub{
   margin-bottom: -10px;
 }
@@ -1031,6 +1059,10 @@ h3{
 #subtitle{
   margin-top: -20px;
   line-height: 1.8em;
+}
+#link{
+  font-size: .8em;
+  margin-right: 5px;
 }
 
 }
