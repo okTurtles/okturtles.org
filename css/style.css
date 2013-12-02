@@ -41,13 +41,11 @@ td, th{
 }
 
 ul, li{
-  list-style: disc;
   text-align: left;
 }
 
 ol{
-  font-weight: 700;
-  list-style: 
+  font-weight: 700; 
 }
 b{
   font-weight: 700;
