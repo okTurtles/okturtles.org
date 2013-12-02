@@ -84,6 +84,24 @@ b{
   -o-transition: all .2s;
   transition: all .2s;
 }
+#kik_pic{
+  padding-bottom: 50px;
+  display: block;
+  margin: 0 auto;
+    -webkit-transition: all .7s;
+  -moz-transition: all .7s;
+  -ms-transition: all .7s;
+  -o-transition: all .7s;
+  transition: all .7s;
+}
+#kik_pic:hover{
+  opacity: .7;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
 
 #kik{
   position: absolute;
@@ -927,7 +945,6 @@ input[type=submit]:active {
     margin-top: 2em;
   }
 
-  
 
 
 @media screen and (max-width: 850px){
