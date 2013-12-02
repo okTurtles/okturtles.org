@@ -47,6 +47,7 @@ ul, li{
 
 ol{
   font-weight: 700;
+  list-style: 
 }
 b{
   font-weight: 700;
@@ -84,9 +85,9 @@ b{
 
 #kik{
   position: absolute;
-  top: 3px;
-  right: 3px;
-  width: 100px;
+  top: -1px;
+  right:  -1px;
+  width: 200px;
   -webkit-transition: all .7s;
   -moz-transition: all .7s;
   -ms-transition: all .7s;
@@ -931,7 +932,7 @@ input[type=submit]:active {
   padding-bottom: 0em;
 }
 #kik{
-  width: 80px;
+  width: 150px;
 }
     
 .left{
@@ -1088,7 +1089,7 @@ h3{
   margin-right: 5px;
 }
 #kik{
-  width: 50px;
+  width: 120px;
 }
 
 }
