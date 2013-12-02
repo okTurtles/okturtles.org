@@ -55,7 +55,10 @@ b{
 
 
 
-
+#eff{
+  max-width: 680px;
+  width: 100%;
+}
 
 #h3_sub{
   margin-bottom: -10px;
