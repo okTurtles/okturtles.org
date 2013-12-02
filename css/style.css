@@ -48,7 +48,8 @@ ol{
   font-weight: 700; 
 }
 b{
-  font-weight: 700;
+  font-weight: 700; 
+
 }
 
 
@@ -364,7 +365,7 @@ a:hover {
   max-width: 1000px;
   margin: 0 auto;
   padding-right: 15px;
-  padding-left: 15px;
+  padding-left: 40px;
   overflow: hidden;
   margin-top: -6em;
   padding-bottom: 3em;
@@ -376,7 +377,7 @@ a:hover {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  padding-right: 15px;
+  padding-right: 40px;
   padding-left: 15px;
   overflow: hidden;
   margin-top: -6em;
@@ -925,6 +926,8 @@ input[type=submit]:active {
   #coming_soon{
     margin-top: 2em;
   }
+
+  
 
 
 @media screen and (max-width: 850px){
