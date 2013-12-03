@@ -84,16 +84,16 @@ KICKSTARTER HIDE + SHOW CSS - END
 
 
 
-#eff{
+.eff{
   max-width: 680px;
   width: 100%;
 }
 
-#h3_sub{
+.h3_sub{
   margin-bottom: -10px;
 }
 
-#link{
+.link{
   font-size: 1.1em;
   border-bottom: 2px solid transparent;
   margin-left: 10px;
@@ -106,7 +106,7 @@ KICKSTARTER HIDE + SHOW CSS - END
   -o-transition: all .7s;
   transition: all .7s;
 }
-#link:hover{
+.link:hover{
   border-bottom: 2px solid #27ae60;
   -webkit-transition: all .2s;
   -moz-transition: all .2s;
@@ -219,7 +219,7 @@ KICKSTARTER HIDE + SHOW CSS - END
   line-height: 1.8em;
 }
 
-#faq_question{
+.faq_question{
   font-size: 2em;
   line-height: 0;
   margin-top: 1.5em;
@@ -228,14 +228,14 @@ KICKSTARTER HIDE + SHOW CSS - END
   -ms-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
 }
-#faq_question:hover{
+.faq_question:hover{
   opacity: .7;
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -ms-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
 }
-#faq_answer{
+.faq_answer{
   text-align: left;
 }
 
@@ -339,17 +339,17 @@ a:hover {
   }
 }
 
-#section_color_top{
+.section_color_top{
   background-color: #ffffff;
 }
-#section_color_middle{
+.section_color_middle{
   background-color: #f5f5f5;
 }
 #section_color_last{
   background-color: #ffffff;
 }
 
-#features{
+.features{
   padding-bottom: 2.5em;
 }
 
@@ -584,9 +584,6 @@ input[type=submit], textarea {
   -ms-transition: all 0.005s ease-in-out;
   -o-transition: all 0.005s ease-in-out;
   outline: none;
-  padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;
-  border: 1px solid whitesmoke;
   -webkit-appearance: none;
 }
  
@@ -597,7 +594,7 @@ input[type=submit]:active {
 }
 
 
-#button{
+.button{
   background-color:  #27ae60;
   border: 1px solid #27ae60;
   position: relative;
@@ -616,20 +613,20 @@ input[type=submit]:active {
 }
 @-moz-document url-prefix() {
  
-    #button { margin-left: -5px }
+    .button { margin-left: -5px }
  
 }
 
 
 
-#button:active{
+.button:active{
   color: #8A8A8A;
   -webkit-transition: all 0s ease-in-out;
   -moz-transition: all 0s ease-in-out;
   -ms-transition: all 0s ease-in-out;
   -o-transition: all 0s ease-in-out;
 }
-#button:hover{
+.button:hover{
   cursor: pointer;
   color: #8A8A8A;
 }
@@ -974,12 +971,19 @@ input[type=submit]:active {
   #coming_soon{
     margin-top: 2em;
   }
-
+@media screen and (max-width: 1300px){
+  
+  .features{
+    max-width: 500px;
+    width: 100%;
+  }
+ 
+ } 
 
 
 @media screen and (max-width: 850px){
 
-  #features{
+  .features{
   padding-bottom: 0em;
 }
 #kik{
@@ -1038,7 +1042,7 @@ input[type=submit]:active {
   h3{
   margin-top: .8em;
 }
-  #features{
+  .features{
     max-width: 600px;
     width: 100%;
     float: none;
@@ -1046,7 +1050,7 @@ input[type=submit]:active {
     padding-right: 15px;
 }
 .slideshow{
-  height: 300px;
+  height: 350px;
 }
 .slideshow span {
   position: absolute;
@@ -1054,7 +1058,7 @@ input[type=submit]:active {
   display: inline-block;
   text-align: center;
   margin: 0 auto;
-  margin-top: -575px;/*Tablet hack - SLIDESHOW TEXT*/
+  margin-top: -625px;/*Tablet hack - SLIDESHOW TEXT - iPad*/
   width: 100px; /* has to be the same as #service */
 }
 
@@ -1067,7 +1071,7 @@ input[type=submit]:active {
     margin-top: .2em;
   }
 
-  #features{
+  .features{
     max-width: 400px;
     width: 100%;
     float: none;
@@ -1090,7 +1094,7 @@ input[type=submit]:active {
     width:100%;
     height: 50px;
   }
-  #button{
+  .button{
   position: relative;
   width: 60px;
   height: 50px;
@@ -1135,7 +1139,7 @@ h3{
   margin-top: -20px;
   line-height: 1.8em;
 }
-#link{
+.link{
   font-size: .7em;
   margin-right: 5px;
   margin-left: 5px;
