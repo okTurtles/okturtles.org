@@ -57,13 +57,12 @@ b{
 }
 
 .img_res{
-  max-width: 200px;
-  width: 100%;
+  max-height: 250px;
+  height: 100%;
 }
 
 .grey{
   color: #8A8A8A;
-  margin-top: -25px;
 }
 
 
