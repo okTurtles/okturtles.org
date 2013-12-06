@@ -52,6 +52,15 @@ b{
 
 }
 
+.logo{
+  width: 90px;
+}
+
+.img_res{
+  max-width: 200px;
+  width: 100%;
+}
+
 
 /*=======================================
 KICKSTARTER HIDE + SHOW CSS
@@ -973,6 +982,59 @@ input[type=submit], textarea {
   #coming_soon{
     margin-top: 2em;
   }
+
+
+/*! 
+ * Flow - A Fully Fluid Responsive Grid System
+ * Created by Isaac Gray
+ *
+ * Generate a grid at http://flow.gs
+ */
+ 
+.sectiongs {
+  clear: both;
+  padding: 0;
+  margin: 0;
+  margin-left: -0.25em;
+}
+
+.colgs {
+  display: block;
+  float:left;
+  width: 100%;
+  box-sizing: border-box; /* Supported by IE 8+. If IE 7 and below support is required see http://html5please.com/#box-sizing */
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background-clip: padding-box; /* This allows column elements to have background colour without it bleeding into the gutter. Supported by IE 9+. If support for IE 8 and below is required, a content div with background colour should be placed inside the column */
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  margin: 0 0 0.25em 0;
+  border-left: 0.25em solid transparent;
+}
+
+.group:before,
+.group:after {
+  content:"";
+  display:table;
+}
+
+.group:after {
+  clear:both;
+}
+
+@media only screen and (min-width:480px) {
+
+  .colgs {
+    width: auto;
+  }
+
+  .s1{ width: 50%; }
+
+  .s2{ width: 100%; }
+}
+
+
+
 @media screen and (max-width: 1300px){
   
   .features{
@@ -1069,7 +1131,7 @@ input[type=submit], textarea {
 
   @media screen and (max-width: 500px) {
 .cbp-so-section h2 {
-    font-size: 60px;
+    font-size: 55px;
     margin-top: .2em;
   }
 
@@ -1123,7 +1185,7 @@ h3{
   text-align: center;
   margin: 0 auto;
   width: 100px; /* has to be the same as #service */
-    margin-top: -512px;/*iPhone hack - SLIDESHOW TEXT*/
+    margin-top: -493px;/*iPhone hack - SLIDESHOW TEXT*/
 }
 #serviceTagline span {
   position: relative;
@@ -1151,6 +1213,9 @@ h3{
 }
 #kik_pic{
   padding-bottom: 40px;
+}
+.logo{
+  width: 50px;
 }
 
 }
