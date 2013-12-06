@@ -61,6 +61,11 @@ b{
   width: 100%;
 }
 
+.grey{
+  color: #8A8A8A;
+  margin-top: -25px;
+}
+
 
 /*=======================================
 KICKSTARTER HIDE + SHOW CSS
@@ -543,11 +548,16 @@ a:hover {
   background-color: #252525;
   height: 300px;
   padding-top: 2.5em;
+  height: 500px;
 }
-#footer a{
+.to_top{
   color: #8A8A8A;
   font-weight: 300;
   font-size: .8em;
+}
+.footer{
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 
@@ -980,7 +990,8 @@ input[type=submit], textarea {
   }
 
   #coming_soon{
-    margin-top: 2em;
+    margin-top: 1em;
+    padding-bottom: 2em;
   }
 
 
@@ -995,7 +1006,7 @@ input[type=submit], textarea {
   clear: both;
   padding: 0;
   margin: 0;
-  margin-left: -0.25em;
+  margin-left: -0.5em;
 }
 
 .colgs {
@@ -1009,7 +1020,7 @@ input[type=submit], textarea {
   -moz-background-clip: padding-box;
   -webkit-background-clip: padding-box;
   margin: 0 0 0.25em 0;
-  border-left: 0.25em solid transparent;
+  border-left: 2em solid transparent;
 }
 
 .group:before,
