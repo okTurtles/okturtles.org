@@ -28,11 +28,17 @@ p{
   font-size: 1em;
 
 }
+
+a:hover{
+  opacity: .85;
+}
+
 p a{
-  font-weight: 700;
+  color: #27ae60;
+  font-weight: 400;
 }
 p a:hover{
-  opacity: .8;
+  opacity: .85;
 }
 
 table
