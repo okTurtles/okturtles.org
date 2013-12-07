@@ -28,6 +28,12 @@ p{
   font-size: 1em;
 
 }
+p a{
+  font-weight: 700;
+}
+p a:hover{
+  opacity: .8;
+}
 
 table
 {
@@ -1194,17 +1200,17 @@ h3{
   display: inline-block;
   text-align: center;
   margin: 0 auto;
-  width: 100px; /* has to be the same as #service */
-    margin-top: -493px;/*iPhone hack - SLIDESHOW TEXT*/
+  width: 88px; /* has to be the same as #service */
+    margin-top: -461px;/*iPhone hack - SLIDESHOW TEXT*/
 }
 #serviceTagline span {
   position: relative;
   margin: 0 auto;
-  width: 100px;
+  width: 88px;
 }
 #service {
   display: inline-block;
-  width: 100px;
+  width: 88px;
   height: 20px;
   margin: 0 5px;
 }
@@ -1226,6 +1232,10 @@ h3{
 }
 .logo{
   width: 50px;
+}
+
+.colgs {
+  border-left: 0em solid transparent;
 }
 
 }
