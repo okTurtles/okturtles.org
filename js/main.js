@@ -24,7 +24,7 @@ $(function() {
   $(".fancybox").fancybox();
   debug = void 0;
   TIME_PER_ANIMATION = 1;
-  TIME_FOR_IMG_DISPLAY = 5;
+  TIME_FOR_IMG_DISPLAY = 6;
   STAGGER_AMOUNT = TIME_PER_ANIMATION + TIME_FOR_IMG_DISPLAY;
   SLIDE_PADDING = 100;
   SLIDE_TXT_PADDING = 20;
