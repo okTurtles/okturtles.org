@@ -14,7 +14,7 @@ TimelineLite.prototype.addDelay = function(delay, position) {
 };
 
 $(function() {
-  var $slides, IMG_WIDTH, SLIDE_PADDING, SLIDE_TXT_CENTER, SLIDE_TXT_LEFT, SLIDE_TXT_PADDING, STAGGER_AMOUNT, TIME_FOR_IMG_DISPLAY, TIME_PER_ANIMATION, debug, fadeIn, fadeOut, tl;
+  var $firstImg, $firstTxt, $service, $slides, $subtitle, $tagline, IMG_WIDTH, SLIDE_IMG_CENTER, SLIDE_PADDING, SLIDE_TXT_CENTER, SLIDE_TXT_LEFT, SLIDE_TXT_PADDING, STAGGER_AMOUNT, TIME_FOR_IMG_DISPLAY, TIME_PER_ANIMATION, TXT_MARGIN, debug, fadeIn, fadeOut, tl;
   $('body').css('display', 'none').fadeIn(1200);
   $(".faq h3").next().hide();
   $(".faq h3").wrap('<a href="#"></a>').click(function() {
@@ -22,15 +22,26 @@ $(function() {
     return false;
   });
   $(".fancybox").fancybox();
+  $service = $('#service');
+  $subtitle = $('#subtitle');
+  $tagline = $('#serviceTagline');
+  $firstImg = $('.slideshow img').first();
+  $firstTxt = $('.slideshow span').first();
   debug = void 0;
   TIME_PER_ANIMATION = 1;
-  TIME_FOR_IMG_DISPLAY = 6;
+  TIME_FOR_IMG_DISPLAY = 5;
   STAGGER_AMOUNT = TIME_PER_ANIMATION + TIME_FOR_IMG_DISPLAY;
   SLIDE_PADDING = 100;
-  SLIDE_TXT_PADDING = 20;
-  SLIDE_TXT_CENTER = $('#service').offset().top * 2 - SLIDE_TXT_PADDING;
-  SLIDE_TXT_LEFT = $('#service').offset().left;
-  IMG_WIDTH = $('.slideshow img:first').width();
+  SLIDE_TXT_PADDING = $firstTxt.outerHeight(true);
+  TXT_MARGIN = ($tagline.outerHeight(true) - $tagline.outerHeight(false)) / 2;
+  SLIDE_TXT_CENTER = $subtitle.outerHeight(true) + TXT_MARGIN;
+  SLIDE_TXT_LEFT = $service.offset().left;
+  IMG_WIDTH = $firstImg.width();
+  if ($firstImg.parent().offset().left === $subtitle.offset().left) {
+    SLIDE_IMG_CENTER = Math.max($subtitle.width() / 2 - IMG_WIDTH / 2, 0);
+  } else {
+    SLIDE_IMG_CENTER = 0;
+  }
   tl = new TimelineMax({
     repeat: -1,
     paused: true
@@ -109,7 +120,7 @@ $(function() {
     tl.addCallback(fadeIn, pt1, [
       objs, [
         {
-          left: 0
+          left: SLIDE_IMG_CENTER
         }, {
           top: SLIDE_TXT_CENTER
         }

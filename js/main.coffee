@@ -13,16 +13,28 @@ $ ->
         $(this).parent().next().slideToggle("fast")
         return false
     $(".fancybox").fancybox()
+    $service = $('#service')
+    $subtitle = $('#subtitle')
+    $tagline = $('#serviceTagline')
+    $firstImg = $('.slideshow img').first()
+    $firstTxt = $('.slideshow span').first()
 
     debug = undefined  # set to true to see how this crap works
     TIME_PER_ANIMATION   = 1
-    TIME_FOR_IMG_DISPLAY = 6
+    TIME_FOR_IMG_DISPLAY = 5
     STAGGER_AMOUNT       = TIME_PER_ANIMATION + TIME_FOR_IMG_DISPLAY
     SLIDE_PADDING        = 100
-    SLIDE_TXT_PADDING    = 20
-    SLIDE_TXT_CENTER     = $('#service').offset().top* 2 - SLIDE_TXT_PADDING # my god is this a hack
-    SLIDE_TXT_LEFT       = $('#service').offset().left
-    IMG_WIDTH            = $('.slideshow img:first').width()
+    SLIDE_TXT_PADDING    = $firstTxt.outerHeight(true)
+    TXT_MARGIN           = ($tagline.outerHeight(true) - $tagline.outerHeight(false))/2
+    SLIDE_TXT_CENTER     = $subtitle.outerHeight(true) + TXT_MARGIN
+    SLIDE_TXT_LEFT       = $service.offset().left
+    IMG_WIDTH            = $firstImg.width()
+
+    # really tiny window mode
+    if $firstImg.parent().offset().left == $subtitle.offset().left
+        SLIDE_IMG_CENTER = Math.max($subtitle.width()/2-IMG_WIDTH/2, 0)
+    else
+        SLIDE_IMG_CENTER = 0
 
     tl = new TimelineMax repeat: -1, paused: true
 
@@ -75,7 +87,7 @@ $ ->
         endImgLoc = -startImgLoc
         endTxtLoc = startTxtLoc - 2 * SLIDE_TXT_PADDING
 
-        tl.addCallback fadeIn, pt1, [objs, [{left: 0}, {top: SLIDE_TXT_CENTER}], pt1] 
+        tl.addCallback fadeIn, pt1, [objs, [{left: SLIDE_IMG_CENTER}, {top: SLIDE_TXT_CENTER}], pt1] 
 
         # for a seamless transition to the start, we have the last element fadeOut at the start (if visible)
         if idx + 1 == $slides.length

@@ -30,8 +30,6 @@
                     </div>
 
                     <div id="subtitle"> <!-- keeps inline -->
-                        
-                        <!-- <ul class="rslides" id="slider1"> -->
                         <div class="slideshow clearfix">
                             <div>
                                 <img src="img/slide1.jpg" data-at2x="img/slide1@2x.jpg" alt="">
@@ -42,18 +40,21 @@
                                 <span id="gmail" >Gmail</span>
                             </div>
                         </div>
-                        <div class="clear"></div>
+                        <div class="clear"></div> <!-- Will, do we need this? probably not -->
                     </div>
-                    <p id="serviceTagline"><span>Click the turtle in your</span><span id="service"></span><span>to NSA-proof your message.</span></p>
-                    
-                    <div id="email" style="display:none">No Spam, Guaranteed.</div>
+                    <p id="serviceTagline">
+                        <span>Click the turtle in your</span><span id="service">&nbsp;</span><span>to NSA-proof your message.</span>
+                    </p>
+                    <!--
+                    <div id="email">No Spam, Guaranteed.</div>
                     <form style="display:none" action="http://taoeffect.us4.list-manage.com/subscribe/post?u=1242a34f467f3522046779336&amp;id=adaee3e7e4" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank">
                         <input type="text" value="Enter email for updates" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Enter Email To Get Updates':this.value;"><input class="button" type="submit" value="Send" name="subscribe"  >
                     </form>
+                    -->
                     <div id="down_arrow_container">
-                    <a id="down_arrow" onclick="$('.section_color_top').animatescroll({scrollSpeed:400});">
-                        <img src="img/down_arrow.png" width="25" alt="" >
-                    </a>
+                        <a id="down_arrow" onclick="$('.section_color_top').animatescroll({scrollSpeed:400});">
+                            <img src="img/down_arrow.png" width="25" alt="" >
+                        </a>
                     </div>
                 </article>
             </section>
@@ -62,10 +63,24 @@
             <section class="cbp-so-section section_color_top">
                 <article class="cbp-so-side cbp-so-side-center">
                     <h2>Powered by Namecoin</h2>
-                    <p>okTurtles is made possible by thanks to the combination of two technologies, Namecoin and DNS,
-                        into a system called DNSNMC.
+                    <p class="justified">
+                        Today's web security is woefully <a href="https://www.eff.org/deeplinks/2011/10/how-secure-https-today" target="_blank">broken</a>.
+                        HTTPS does not offer protection from all malicious entities, particularly governments. Email, chats, etc. are all being recorded, and they can be used against you in the future. This appears to happen routinely. <a href="http://files.cloudprivacy.net/ssl-mitm.pdf" target="_blank">[1]</a><a href="https://www.schneier.com/blog/archives/2013/09/new_nsa_leak_sh.html" target="_blank">[2]</a> <a href="https://www.eff.org/deeplinks/2011/08/iranian-man-middle-attack-against-google" target="_blank">[3]</a>
                     </p>
-                    <p>DNSNMC combines two servers (DNS + HTTP) and one P2P peer (Namecoin) into a single en Overview of DNSNMC and okTurtles</p>
+                    <p class="justified">
+                        Something must be done about this situation. The lives of too many journalists,
+                        human rights activists, and ordinary folk are threatened by this constant and 
+                        pervasive surveillance. <a href="http://www.hacker10.com/other-computing/how-egyptian-police-quickly-cracked-journalists-computer-password/" target="_blank">[3]</a><a href="http://news.cnet.com/8301-13578_3-57583843-38/apple-deluged-by-police-demands-to-decrypt-iphones/" target="_blank">[4]</a><a href="http://www.theguardian.com/commentisfree/2013/aug/18/david-miranda-detained-uk-nsa" target="_blank">[5]</a><a href="http://www.libertariannews.org/2011/09/29/victimless-crime-constitutes-86-of-the-american-prison-population/" target="_blank">[6]</a>
+                    </p>
+                    <p class="justified">
+                                            Behind okTurtles is a new technology called DNSNMC.
+
+                        DNSNMC combines two servers (DNS &amp; HTTP) with  one P2P peer (Namecoin) into a single en Overview of DNSNMC and okTurtles
+
+                    </p>
+                       The project will provide strong security guarantees to existing web applications, without any intervention from the developers of those applications.
+                    <p class="justified">
+                    </p>
                     <a href="other/dnsnmc_okturtles_overview.pdf"><img src="img/pdf.png" width="50" alt="DNSNMC + okTurtles Overview.pdf" ></a>
                 </article>
             </section>
@@ -111,7 +126,7 @@
 
             </section>
             
-            
+
 
             <section class="cbp-so-section section_color_top">
                 <article class="cbp-so-side cbp-so-side-center">
