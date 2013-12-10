@@ -1151,6 +1151,19 @@ input[type=submit], textarea {
   padding-left: 10px;
 }
 
+}
+
+
+@media screen and (max-width: 650px){
+.slideshow{
+  height: 290px;
+}
+
+}
+@media screen and (max-width: 580px){
+.slideshow{
+  height: 280px;
+}
 
 }
 
@@ -1200,7 +1213,7 @@ h3{
   margin-top: -1.5em;
 }
 .slideshow{
-  height: 150px;
+  height: 220px;
 }
 
 
@@ -1247,6 +1260,13 @@ h3{
 
 .colgs {
   border-left: 0em solid transparent;
+}
+
+}
+
+@media screen and (max-width: 350px){
+.slideshow{
+  height: 150px;
 }
 
 }
