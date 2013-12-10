@@ -33,6 +33,10 @@ a:hover{
   opacity: .85;
 }
 
+p b a, p a b {
+  font-weight: bold;
+}
+
 p a{
   color: #27ae60;
   font-weight: 400;
