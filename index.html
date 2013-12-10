@@ -11,11 +11,23 @@
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
+    <link rel="stylesheet" type="text/css" href="css/bigfoot-default.css" />
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js" ></script>
     <script src="js/modernizr.custom.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="js/bigfoot.min.js"></script>
     <script src='js/main.js'></script>
+    <script type="text/javascript">
+    var bigfoot = $.bigfoot(
+        {
+            deleteOnUnhover: true,
+            preventPageScroll: false,
+            hoverDelay: 300,
+            activateOnHover:true
+        }
+    );
+</script>
 </head>
 <body>
     <a href="#"><img id="kik" class="hide_kik" src="img/kik.png" data-at2x="img/kik@2x.png" alt=""></a>
@@ -209,6 +221,14 @@
     <li>yoo</li>
 </ul>
 
+
+<p class="faq_answer">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged<sup>
+<a href="#" class="footnote-button" data-footnote-identifier="1" alt="See Footnote 2" rel="footnote" data-footnote-content="this a is the content">1</a>
+</sup>. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+<p>Use this for linking<sup id="fnref:1"><a href="#top" rel="footnote">1</a></sup> and this one for show content<sup><a href="#" class="footnote-button" data-footnote-identifier="2" alt="See Footnote 2" rel="footnote" data-footnote-content="this a is the content">2</a></sup>.
+    Remember to give each data-footnote-identifier="" a unique number ☺
+</p>
 
                     
                 </article>
