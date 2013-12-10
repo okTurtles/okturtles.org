@@ -419,8 +419,8 @@ a:hover {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  padding-right: 40px;
-  padding-left: 40px;
+  padding-right: 15px;
+  padding-left: 15px;
   overflow: visible;
   padding-top: 3em;
   padding-bottom: 3em;
@@ -1059,10 +1059,6 @@ input[type=submit], textarea {
   text-align: center;
   margin: 0 auto;
   padding-bottom: 0;
-}
-.cbp-so-side {
-  padding-right: 15px;
-  padding-left: 15px;
 }
 .cbp-so-side-left {
   width: 100%;
