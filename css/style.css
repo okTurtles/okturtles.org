@@ -237,7 +237,7 @@ KICKSTARTER HIDE + SHOW CSS - END
   width: 100px;
   margin: 0px 5px;
 }
-
+#serviceTagline{margin: 30px 0px;}
 /*#subtitle{
   margin-top: -20px;
   line-height: 1.8em;
@@ -676,7 +676,7 @@ input[type=submit], textarea {
 
 #down_arrow_container{
   position: relative;
-  margin-top: 35px;
+  margin-top: 55px;
 }
 
 #down_arrow{
