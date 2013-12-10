@@ -376,7 +376,10 @@ a:hover {
 .features{
   padding-bottom: 2.5em;
 }
-
+img.features {
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* h,v,blur,spread,color */
+  padding: 0px;
+}
 
 
 .cbp-so-scroller {
