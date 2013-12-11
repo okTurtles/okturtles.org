@@ -38,6 +38,9 @@ p a{
   font-weight: 400;
   border-bottom: 2px solid transparent;
 }
+
+b a {font-weight: bold;}
+
 p a:hover{
     opacity: 1;
     border-bottom: 2px solid #27ae60;
