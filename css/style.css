@@ -384,7 +384,10 @@ a:hover {
   padding-bottom: 2.5em;
 }
 
-
+img.features {
+  box-shadow: 2px 2px 4px #888888;
+  padding: 0px;
+}
 
 .cbp-so-scroller {
   overflow: visible; /* <! GREG CHANGED THIS TO FIX SLIDE SHOW! */
