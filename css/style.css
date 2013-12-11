@@ -1170,6 +1170,15 @@ input[type=submit], textarea {
 
 }
 
+@media screen and (max-width: 538px){
+.slideshow span {
+
+  padding-left: 52px;
+}
+
+}
+
+
 
   @media screen and (max-width: 500px) {
 .cbp-so-section h2 {
@@ -1228,7 +1237,7 @@ h3{
   margin: 0 auto;
   width: 88px; /* has to be the same as #service */
     margin-top: .98em;/*iPhone hack - SLIDESHOW TEXT*/
-    padding-left: 0;
+    padding-left: 10px;
 }
 #serviceTagline span {
   position: relative;
@@ -1270,6 +1279,10 @@ h3{
 @media screen and (max-width: 350px){
 .slideshow{
   height: 150px;
+}
+.slideshow span {
+
+    padding-left: 0;
 }
 
 }
