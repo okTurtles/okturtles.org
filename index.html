@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8" />
 
+    <title>okTurtles - Surveillance-free communication on your favorite websites</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>okTurtles</title>
-    <meta name="description" content="okTurtles" />
-    <meta name="keywords" content="okTurtles, security" />
-    <meta name="author" content="OkTurtles" />
+    <meta name="description" content="okTurtles makes surveillance-free communication possible on your favorite websites" />
+    <meta name="keywords" content="okTurtles, security, dnsnmc, namecoin, bitcoin, dnssec, security, surveillance, surviellance, nsa, https, certificate authorities, ssl certificates" />
+    <meta name="author" content="Greg Slepak" />
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
@@ -18,6 +18,10 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <script src="js/bigfoot.min.js"></script>
     <script src='js/main.js'></script>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
     <script type="text/javascript">
     var bigfoot = $.bigfoot(
         {
@@ -27,7 +31,26 @@
             activateOnHover:true
         }
     );
+    function buildEmail(username, domain) {
+        document.write("<a href='mailto:" + username + "@" + domain + "' >" + username + "@" + domain + "</a>");
+    }
+    $(document).ready(function () {
+        $('.fancybox').fancybox({
+            fitToView   : true,
+            autoSize    : true,
+            closeClick  : false,
+            openEffect  : 'none',
+            closeEffect : 'none'
+        });
+    });
 </script>
+    <style>
+        .modal { text-align: left; margin: 10px 15px; }
+        .modal ol { list-style: decimal; }
+        .modal ul { list-style: disc; }
+        .modal ul, .model ol { margin-left: 15px; }
+        .modal p, .modal li { margin-bottom: 8px; font-size: 12pt; }
+    </style>
 </head>
 <body>
     <a href="#"><img id="kik" class="hide_kik" src="img/kik.png" data-at2x="img/kik@2x.png" alt=""></a>
@@ -108,7 +131,7 @@
                     <img class="features" src="img/simple.jpg" data-at2x="img/simple@2x.jpg" alt="zero conf">
                 </article>
                 <article class="cbp-so-side cbp-so-side-right right ">
-                    <p><b>NSA-proof communication through virtually any website, with <i>zero</i> intervention needed from the site operators.</b> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p><b>NSA-proof communication through almost any website, with <i>zero</i> intervention needed from the site operators.</b> okTurtles is designed with the potential to work over almost any website. All it needs to create an encrypted message for someone is the <i>identity</i> of that person, specifically, their <a href="https://en.wikipedia.org/wiki/Public-key_cryptography" target="_blank">public key</a>. Unlike <a href="https://en.wikipedia.org/wiki/Certification_authority" target="_blank">the system</a> that HTTPS uses today, okTurtles is able to securely obtain this information by using <a href="#DNSNMC">DNSNMC</a>.</p>
                 </article>
 
             </section>
@@ -145,7 +168,7 @@
                         DNS), your online identity actually belong to <u>you</u>.
                         That is, when someone visits your website, they can be
                         assured that it actually belongs to you, and won't be stolen
-                        from you<sup><a href="#" class="footnote-button" data-footnote-identifier="1" alt="See Footnote 1" rel="footnote" data-footnote-content="That is, so long as your password is not compromised/stolen.">1</a></sup>. Protection from identity theft is provided because when someone uses okTurtles/DNSNMC to communicate with you, 
+                        from you.<sup><a href="#" class="footnote-button" data-footnote-identifier="1" alt="See Footnote 1" rel="footnote" data-footnote-content="As long as your password is not compromised/stolen.">1</a></sup> Protection from identity theft is provided because when someone uses okTurtles/DNSNMC to communicate with you, 
                         they don't have to worry that they're communicating with an imposter, or that there's a <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" target="_blank">"man in the middle"</a> recording the entire conversation.
                         Protection from <a href="http://torrentfreak.com/the-pirate-bay-moves-to-ac-after-domain-name-seizure-131210/" target="_blank">domain seizures</a> (government-sanctioned theft) is an inherent property of DNSNMC and Namecoin. <b>Theft is theft,</b> and the only reason this type of criminal behavior exists today is because the technology makes it possible.
                     </p>
@@ -282,7 +305,14 @@ more coming soon! :)
                 </div>
                 </article>
             </section>
-
+            <div class="modal" id="contactEmail" style="display:none; max-width: 500px">
+                <p>
+                    Send an email to 'hi' at this domain.
+                </p>
+                <p>
+                    <b>Note:</b> right now it simply forwards to a taoeffect.com email address. Therefore, don't be surprised if a reply comes from there.
+                </p>
+            </div>
 
             <section id="footer" class="cbp-so-section">
                 <article class="cbp-so-side cbp-so-side-center footer">
@@ -292,18 +322,22 @@ more coming soon! :)
                     <h3 class="kik_coming_soon kik_coming_soon_hide">Kickstarter Coming Soon!</h3>
 
 
-                    <a href="http://okturtles.com/blog" class="link">blog</a>
-                    <a href="#" class="link">contact</a>
-                    <a href="#" class="link">twitter</a>
-                    <a href="#" class="link" name="getinvolved">get involved</a>
+                    <a href="blog/" class="link" target="_blank">blog</a>
+                    <a href="#contactEmail" class="link fancybox">contact</a>
+                    <a href="https://twitter.com/okturtles" class="link" target="_blank">twitter</a>
+                    <a href="https://dot-bit.org/forum/index.php" class="link" target="_blank">community</a>
+                    <!-- <a href="https://dot-bit.org/forum/index.php" class="link" name="getinvolved" target="_blank">get involved</a> -->
                     </div>
                     
 
                     <div id="email_bottom">Low-volume project newsletter. No Spam.</div>
                     <a name="subscribe"></a>
-                    <form action="http://taoeffect.us4.list-manage.com/subscribe/post?u=1242a34f467f3522046779336&amp;id=adaee3e7e4" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-                        <input type="text" value="Enter email for updates" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Enter Email To Get Updates':this.value;">
-                        <input class="button" type="submit" value="Send" name="subscribe"  >
+                    <form action="http://taoeffect.us4.list-manage2.com/subscribe/post?u=1242a34f467f3522046779336&amp;id=28e4561262" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                        <!-- <input  type="text" value="Enter email for updates" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Enter Email To Get Updates':this.value;"> -->
+                        <input type="email" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter email for updates" value="" required>
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;"><input type="text" name="b_1242a34f467f3522046779336_28e4561262" value=""></div>
+                        <input class="button" type="submit" value="Send" name="subscribe" id="mc-embedded-subscribe">
                     </form>
                     <div id="up_arrow_container">
                     <a id="up_arrow" class="to_top" onclick="$('html').animatescroll({scrollSpeed:500});">back to top</a>

@@ -603,7 +603,7 @@ input{
   position: relative;
   display: inline-block!important;
 }
-input[type=text], textarea {
+input[type=text], input[type=email], textarea {
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   -ms-transition: all 1s ease-in-out;
@@ -614,7 +614,7 @@ input[type=text], textarea {
   border: 1px solid #27ae60;
 }
  
-input[type=text]:focus, textarea:focus {
+input[type=text]:focus, input[type=email]:focus, textarea:focus {
 
   padding: 3px 0px 3px 20px;
   margin: 5px 1px 3px 0px;
