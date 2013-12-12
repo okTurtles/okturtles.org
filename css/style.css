@@ -384,13 +384,10 @@ a:hover {
   background-color: #ffffff;
 }
 
-.features{
-  padding-bottom: 2.5em;
-}
-
 img.features {
   box-shadow: 2px 2px 4px #888888;
-  padding: 0px;
+  padding: 0;
+  margin-bottom: 2.5em;
 }
 
 .cbp-so-scroller {
