@@ -145,12 +145,10 @@
                         DNS), your online identity actually belong to <u>you</u>.
                         That is, when someone visits your website, they can be
                         assured that it actually belongs to you, and won't be stolen
-                        from you<sup><a href="#todo!">1</a></sup>. When someone wants to send you a message, <!-- TODO THIS !! -->
-                        they don't have to worry that they're communicating with an imposter, or that there's a <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" target="_blank">"main in the middle"</a> recording the entire conversation.
-                        <b><u>Theft is theft.</u></b> Those who believe their position
-                        grants them an exception to this tenet are about to get a wake-up call.
+                        from you<sup><a href="#" class="footnote-button" data-footnote-identifier="1" alt="See Footnote 1" rel="footnote" data-footnote-content="That is, so long as your password is not compromised/stolen.">1</a></sup>. Protection from identity theft is provided because when someone uses okTurtles/DNSNMC to communicate with you, 
+                        they don't have to worry that they're communicating with an imposter, or that there's a <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" target="_blank">"man in the middle"</a> recording the entire conversation.
+                        Protection from <a href="http://torrentfreak.com/the-pirate-bay-moves-to-ac-after-domain-name-seizure-131210/" target="_blank">domain seizures</a> (government-sanctioned theft) is an inherent property of DNSNMC and Namecoin. <b>Theft is theft,</b> and the only reason this type of criminal behavior exists today is because the technology makes it possible.
                     </p>
-
                 </article>
 
             </section>
@@ -173,66 +171,31 @@
             <section  class="cbp-so-section section_color_middle">
                 <article class="cbp-so-side cbp-so-side-center">
                     <h2>ok<span class="green">T</span> + DNSNMC vs. ______</h2>
+                    <h3 class="h3_sub"><a href="http://www.certificate-transparency.org/original-proposal" target="_blank">Certificate Transparency</a></h3>
+                    <p>Google's Certificate Transparency proposal wants certificate authorities (CAs) to "make a note" all of the certificates that they issue into a log somewhere protected in someway and verified via some mechanism. The <a href="other/Original_Proposal_-_Certificate_Transparency.pdf" target="_blank">original proposal</a> is almost this vague. Website owners are then asked to monitor these logs to see if their clients <b>were</b> hacked, in addition to continuing to pay the CAs money for the worthless certificates they provide. We think this proposal makes an excellent case against itself, and we don't find this at all surprising. Companies (like Google) that exploit their customer's information for profit will never provide meaningful leadership on security because it would hurt their business.</p>
+                    <h3 class="h3_sub">DNSSEC</h3>
+                    <p><a href="http://www.icann.org/en/about/learning/factsheets/dnssec-qaa-09oct08-en.htm" target="_blank">DNSSEC</a> suggests a complicated mechanism to essentially re-create many of the same problems with X509 and CAs in DNS itself, by providing a chain of trust to untrustworthy entities. Its intended goal is to secure DNS and thereby assure clients that when they ask for apple.com, they are actually visiting apple.com. This proposal <a href="http://comments.gmane.org/gmane.comp.encryption.general/16353" target="_blank">does not appear to protect against genuine MITM attacks</a>. It also suffers for extreme, unnecessary complexity, which is never a good thing in the design of secure systems. See <a href="http://ianix.com/pub/dnssec-outages.html" target="_blank">this link</a> for additional reasons why DNSSEC is a bad idea in general.</p>
                     <h3 class="h3_sub">Bitmessage</h3>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                      <h3 class="h3_sub">TextSecure</h3>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                     <h3 class="h3_sub">DNSSEC</h3>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                     <h3 class="h3_sub">DNSSEC + DANE</h3>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                     <h3 class="h3_sub">cjdns</h3>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                     <h3 class="h3_sub">Mailpile</h3>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                     <h3 class="h3_sub">Convergence</h3>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p><a href="https://bitmessage.org/wiki/Main_Page" target="_blank">Bitmessage</a> belongs to the same family of software that okTurtles and DNSNMC belong to, however it is also very different from them. Bitmessage focuses on providing anonymity to its users first and foremost. For reasons unknown to this author it was not designed to use the Namecoin blockchain, and instead uses its own (though there is nothing preventing integration between the two, and indeed work has <a href="https://bitmessage.org/forum/index.php?topic=2563.0" target="_blank">been done</a> in this area). Bitmessage, however, has a few problems that okTurtles does not have: (1) it does not work over existing websites or protocols (like email) and was not designed with this intention, (2) to quote <a href="other/bitmessage.pdf" target="_blank">the paper</a>: "The difficulty of the proof‐of‐work should be proportional to the size of the message and should be set such that <i>an average computer must expend an average of four minutes of work in order to send a typical message.</i>" (3) It requires constantly running a program in the background (and one that isn't feasible on most mobile devices), and (4) messages take a long time to get to their destination because: "Just like Bitcoin transactions and blocks, all users would receive all messages. They would be responsible for attempting to decode each message with each of their private keys to see whether the message is bound for them."</p>
+                    <h3 class="h3_sub">Convergence</h3>
+                    <p>In <a href="http://convergence.io/details.html" target="_blank">their words</a>, Convergence "is a secure replacement for the Certificate Authority System. Rather than employing a traditionally hard-coded list of immutable CAs, Convergence allows you to configure a dynamic set of Notaries which use network perspective to validate your communication." In our words: Convergence is similar to having a <i>known_hosts</i> ssh key file for your browser, and comparing it against your friend’s file. It's not a terrible idea, however, the website claims that it’s simple to use, which we have to disagree with because users are asked to manage a list of notaries. It depends on group consensus, but the group might not be very bright. What happens then? It also does not provide MITM protection on first-visit, and all of the notary info appears to be stored locally to the computer, or even the browser. That is rather inconvenient for most users.</p>
+                    <h3 class="h3_sub">More to come...</h3>
+                    <p>We know this is an incomplete list. Stay tuned for other comparisons.</p>
+<!-- 
+more coming soon! :)
+                    <h3 class="h3_sub">TextSecure</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <h3 class="h3_sub">cjdns</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <h3 class="h3_sub">Mailpile</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                      <h3 class="h3_sub">Convergence + NMC</h3>
                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                      <h3 class="h3_sub">Cryptocat</h3>
                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                      <h3 class="h3_sub">Heml.is</h3>
                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-<table>
-<tr>
-<th>table</th>
-<th>table</th>
-<th>table</th>
-</tr>
-<tr>
-<td>stuff</td>
-<td>stuff</td>
-<td>stuff</td>
-</tr>
-<tr>
-<td>stuff</td>
-<td>stuff</td>
-<td>stuff</td>
-</tr>
-</table>
-
-<ol>
-    <li>hello</li>
-    <li>hello</li>
-    <li>hello</li>
-</ol>
-<ul>
-    <li>yoo</li>
-    <li>yoo</li>
-    <li>yoo</li>
-</ul>
-
-
-<p class="faq_answer">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged<sup>
-<a href="#" class="footnote-button" data-footnote-identifier="1" alt="See Footnote 2" rel="footnote" data-footnote-content="this a is the content">1</a>
-</sup>. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-<p>Use this for linking<sup id="fnref:1"><a href="#top" rel="footnote">1</a></sup> and this one for show content<sup><a href="#" class="footnote-button" data-footnote-identifier="2" alt="See Footnote 2" rel="footnote" data-footnote-content="this a is the content">2</a></sup>.
-    Remember to give each data-footnote-identifier="" a unique number ☺
-</p>
-
-                    
+ -->                    
                 </article>
             </section>
 
@@ -317,10 +280,6 @@
                         </p> 
                     </div>
                 </div>
-
-
-                        
-
                 </article>
             </section>
 
