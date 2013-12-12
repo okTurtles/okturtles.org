@@ -1017,6 +1017,20 @@ input[type=submit], textarea {
     padding-bottom: 2em;
   }
 
+  .videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 
 /*! 
  * Flow - A Fully Fluid Responsive Grid System
@@ -1159,6 +1173,10 @@ input[type=submit], textarea {
   margin-top: 1.96em;/*hack - SLIDESHOW TEXT*/
   padding-left: 10px;
 }
+.faq_question{
+  line-height: 1;
+  margin-top: 1.5em;
+}
 
 }
 
@@ -1197,6 +1215,7 @@ input[type=submit], textarea {
     font-size: 55px;
     margin-top: .2em;
   }
+
 
   .features{
     max-width: 400px;
