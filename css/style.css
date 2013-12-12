@@ -33,7 +33,7 @@ a:hover{
   opacity: .85;
 }
 
-p a{
+li a, p a{
   color: #27ae60;
   font-weight: 400;
   border-bottom: 2px solid transparent;
@@ -41,7 +41,7 @@ p a{
 
 b a {font-weight: bold;}
 
-p a:hover{
+li a:hover, p a:hover{
     opacity: 1;
     border-bottom: 2px solid #27ae60;
 }
@@ -58,11 +58,12 @@ td, th{
 }
 
 ul, li, ol{
-list-style-position: inside ;
+  text-align: left;
+/*list-style-position: inside ;
 -webkit-margin-before: 0;
 -webkit-margin-after: 0;
 -webkit-padding-start: 0;
-}
+*/}
 
 b{
   font-weight: 700; 
@@ -421,8 +422,13 @@ img.features {
   line-height: 1;
   margin-top: 0;
 }
-
-.cbp-so-section p {
+.cbp-so-section li {
+  margin-bottom: 10px;
+}
+.cbp-so-section li:last-child {
+  margin-bottom: inherit;
+}
+.cbp-so-section p, .cbp-so-section li {
   font-size: 1.2em;
   font-weight: 300;
 }
