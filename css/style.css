@@ -199,7 +199,7 @@ KICKSTARTER HIDE + SHOW CSS - END
   padding: 0;
   margin: 0 auto;
   overflow: visible;
-  max-width: 680px;
+  max-width: 503px;
   width: 100%;
   height: 340px;
 }
@@ -209,7 +209,7 @@ KICKSTARTER HIDE + SHOW CSS - END
   padding: 0;
   margin: 0 auto;
   overflow: visible;
-  max-width: 680px;
+  max-width: 503px;
   width: 100%;
   height: 350px;
 }
@@ -220,7 +220,7 @@ KICKSTARTER HIDE + SHOW CSS - END
   /*display: none;*/
   visibility: hidden;
   float: left;
-  max-width: 680px !important;
+  max-width: 503px !important;
   width: 100%;
   display: inline-block;
 }
