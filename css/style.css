@@ -216,7 +216,7 @@ KICKSTARTER HIDE + SHOW CSS - END
 .slideshow img 
 { 
   position: absolute;
-  top:0;
+  top:40px;
   /*display: none;*/
   visibility: hidden;
   float: left;
@@ -1085,7 +1085,10 @@ input[type=submit], textarea {
 
 @media screen and (max-width: 850px){
 
-
+.slideshow img 
+{ 
+  top: 40px;
+}
 
   .features{
   padding-bottom: 0em;
@@ -1176,6 +1179,10 @@ input[type=submit], textarea {
 @media screen and (max-width: 650px){
 .slideshow{
   height: 290px;
+}
+.slideshow img 
+{ 
+  top: 0;
 }
   .videoWrapper {
   position: relative;
