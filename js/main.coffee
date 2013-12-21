@@ -12,7 +12,6 @@ $ ->
     $(".faq h3").wrap('<a href="#"></a>').click ->
         $(this).parent().next().slideToggle("fast")
         return false
-    $(".fancybox").fancybox()
     $service = $('#service')
     $subtitle = $('#subtitle')
     $tagline = $('#serviceTagline')
@@ -97,3 +96,11 @@ $ ->
             tl.addCallback fadeOut, pt2, [objs, [{left: endImgLoc}, {top: endTxtLoc}], pt2] 
         
     tl.play()
+
+    fragment = window.location.hash
+    fragment = fragment.slice(1)
+    $.scrollTo( 0 )
+    if fragment and ($faq = $(".faq h3[name='#{fragment}']")).length != 0
+        $.scrollTo $faq, 500,
+            offset: top:-50
+            onAfter:-> $faq.trigger('click')

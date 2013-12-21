@@ -26,41 +26,44 @@
 
 
     <!-- <link rel="shortcut icon" href="favicon.ico"> -->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
-    <link rel="stylesheet" type="text/css" href="css/bigfoot-default.css" />
+
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js" ></script>
-    <script src="js/modernizr.custom.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-    <script src="js/bigfoot.min.js"></script>
-    <script src='js/main.js'></script>
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.6/jquery.scrollTo.min.js"></script>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" type="text/css" media="screen" />
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
+    <link rel="stylesheet" type="text/css" href="css/bigfoot-default.css" />
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/bigfoot.min.js" type="text/javascript"></script>
+    <script src='js/main.js' type="text/javascript"></script>
+
+
     <script type="text/javascript">
-    var bigfoot = $.bigfoot(
-        {
-            deleteOnUnhover: true,
-            preventPageScroll: false,
-            hoverDelay: 300,
-            activateOnHover:true
+        var bigfoot = $.bigfoot(
+            {
+                deleteOnUnhover: true,
+                preventPageScroll: false,
+                hoverDelay: 300,
+                activateOnHover:true
+            }
+        );
+        function buildEmail(username, domain) {
+            document.write("<a href='mailto:" + username + "@" + domain + "' >" + username + "@" + domain + "</a>");
         }
-    );
-    function buildEmail(username, domain) {
-        document.write("<a href='mailto:" + username + "@" + domain + "' >" + username + "@" + domain + "</a>");
-    }
-    $(document).ready(function () {
-        $('.fancybox').fancybox({
-            fitToView   : true,
-            autoSize    : true,
-            closeClick  : false,
-            openEffect  : 'none',
-            closeEffect : 'none'
+        $(document).ready(function () {
+            $('.fancybox').fancybox({
+                fitToView   : true,
+                autoSize    : true,
+                closeClick  : false,
+                openEffect  : 'none',
+                closeEffect : 'none'
+            });
         });
-    });
-</script>
+    </script>
     <style>
         .modal { text-align: left; margin: 10px 15px; }
         .modal ol { list-style: decimal; }
@@ -111,7 +114,7 @@
                     </form>
                     -->
                     <div id="down_arrow_container">
-                        <a id="down_arrow" onclick="$('.section_color_top').animatescroll({scrollSpeed:400});">
+                        <a id="down_arrow" onclick="$.scrollTo('.section_color_top', 400);">
                             <img src="img/down_arrow.svg" width="25" alt="" >
                         </a>
                     </div>
@@ -248,6 +251,19 @@ more coming soon! :)
                         <p class="faq_answer">
                             Unfortunately, it's increasingly difficult to tell who the bad guys are. This is a very important question and that's why it's the first one. See <a href="other/dnsnmc_okturtles_overview.pdf" target="_blank">our paper's "Motivation" section</a> for the answer.
                         </p>
+                        <h3 class="faq_question" name="reviews">Has this proposal been peer-reviewed?</h3>
+                        <div class="faq_answer">
+                            <p>Yes!</p>
+                            <p>In addition to the individual reviewer mentioned in the paper's acknowledgement's, our paper was submitted to various lists and websites. To date, active discussions took place at links below (and our proposal appears to have withstood all criticism):</p>
+                            <ul>
+                                <li><a href="https://www.reddit.com/r/netsec/comments/1t20wi/therightkey_dnsnmc_deprecates_certificate/" target="_blank">r/netsec</a></li>
+                                <li><a href="http://www.ietf.org/mail-archive/web/therightkey/current/msg00715.html" target="_blank">[therightkey] mailing list</a></li>
+                                <li><a href="http://www.metzdowd.com/pipermail/cryptography/2013-December/018993.html" target="_blank">[Cryptography] @ metzdowd mailing list</a></li>
+                            </ul>
+                            <p>
+                                We plan on submitting this proposal to even more lists and sites, and you are free to help share it as well with your own community.
+                            </p>
+                        </div>
                         <h3 class="faq_question">Who's behind these projects?</h3>
                         <p class="faq_answer">okTurtles and DNSNMC are the brainchildren of <a href="https://twitter.com/taoeffect" target="_blank">Greg Slepak</a>, but he did not invent every aspect of these concepts. He's grateful to Aaron Swartz for <a href="http://www.aaronsw.com/weblog/squarezooko" target="_blank">turning him on to the idea</a>, and for <a href="https://jumpshare.com/v/ApygO7yCaOhisjZtGU0d" target="_blank">answering</a> some of his questions about it. Of course, none of this would be possible if it wasn't for Satoshi Nakamoto's historic <a href="http://bitcoin.org/bitcoin.pdf" target="_blank">paper</a> on Bitcoin, and the entire Namecoin <a href="http://dot-bit.org/forum/index.php" target="_blank">community</a>.
                         <br/> <br/>
@@ -357,13 +373,12 @@ more coming soon! :)
                         <input class="button" type="submit" value="Send" name="subscribe" id="mc-embedded-subscribe">
                     </form>
                     <div id="up_arrow_container">
-                    <a id="up_arrow" class="to_top" onclick="$('html').animatescroll({scrollSpeed:500});">back to top</a>
+                    <a id="up_arrow" class="to_top" onclick="$.scrollTo(0,500);">back to top</a>
                     </div>
                 </article>
             </section>
         </div>
     </div> 
-    <script type="text/javascript" src="js/animatescroll.js"></script>
     <script src="js/retina-1.1.0.min.js"></script>
     <script src="/mint/?js" type="text/javascript"></script>
 </body>
