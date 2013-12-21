@@ -100,10 +100,11 @@ $ ->
     fragment = window.location.hash.slice(1)
     $.scrollTo(0)
     if fragment and ($faq = $(".faq h3[name='#{fragment}']")).length != 0
-        console.log "scrolling to: #{fragment}"
+        # console.log "scrolling to: #{fragment}"
         $.scrollTo $faq,
             duration: 500
-            offset: {top:-50, left:0}
+            # offset: {top:-50, left:0}
+            margin: true
             onAfter: ->
                 $faq.trigger 'click', done: ->
                     TweenMax.to $(@), 0.5,

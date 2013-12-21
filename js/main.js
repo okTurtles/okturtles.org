@@ -156,13 +156,9 @@ $(function() {
   fragment = window.location.hash.slice(1);
   $.scrollTo(0);
   if (fragment && ($faq = $(".faq h3[name='" + fragment + "']")).length !== 0) {
-    console.log("scrolling to: " + fragment);
     return $.scrollTo($faq, {
       duration: 500,
-      offset: {
-        top: -50,
-        left: 0
-      },
+      margin: true,
       onAfter: function() {
         return $faq.trigger('click', {
           done: function() {
