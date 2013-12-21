@@ -9,8 +9,8 @@ TimelineLite::addDelay = (delay, position) ->
 $ ->
     $('body').css('display', 'none').fadeIn(1200)
     $(".faq h3").next().hide()
-    $(".faq h3").wrap('<a href="#"></a>').click ->
-        $(this).parent().next().slideToggle("fast")
+    $(".faq h3").wrap('<a href="#"></a>').click (a, obj)->
+        $(this).parent().next().slideToggle(duration: "fast", complete: obj?.done ? ->)
         return false
     $service = $('#service')
     $subtitle = $('#subtitle')
@@ -97,10 +97,16 @@ $ ->
         
     tl.play()
 
-    fragment = window.location.hash
-    fragment = fragment.slice(1)
-    $.scrollTo( 0 )
+    fragment = window.location.hash.slice(1)
+    $.scrollTo(0)
     if fragment and ($faq = $(".faq h3[name='#{fragment}']")).length != 0
-        $.scrollTo $faq, 500,
-            offset: top:-10
-            onAfter:-> $faq.trigger('click')
+        console.log "scrolling to: #{fragment}"
+        $.scrollTo $faq,
+            duration: 500
+            offset: {top:-50, left:0}
+            onAfter: ->
+                $faq.trigger 'click', done: ->
+                    TweenMax.to $(@), 0.5,
+                        backgroundColor: "yellow"
+                        onComplete: => TweenMax.to $(@), 0.5, backgroundColor: "inherit"
+        

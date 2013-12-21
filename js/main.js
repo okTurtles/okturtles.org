@@ -17,8 +17,12 @@ $(function() {
   var $faq, $firstImg, $firstTxt, $service, $slides, $subtitle, $tagline, IMG_WIDTH, SLIDE_IMG_CENTER, SLIDE_PADDING, SLIDE_TXT_CENTER, SLIDE_TXT_LEFT, SLIDE_TXT_PADDING, STAGGER_AMOUNT, TIME_FOR_IMG_DISPLAY, TIME_PER_ANIMATION, TXT_MARGIN, debug, fadeIn, fadeOut, fragment, tl;
   $('body').css('display', 'none').fadeIn(1200);
   $(".faq h3").next().hide();
-  $(".faq h3").wrap('<a href="#"></a>').click(function() {
-    $(this).parent().next().slideToggle("fast");
+  $(".faq h3").wrap('<a href="#"></a>').click(function(a, obj) {
+    var _ref;
+    $(this).parent().next().slideToggle({
+      duration: "fast",
+      complete: (_ref = obj != null ? obj.done : void 0) != null ? _ref : function() {}
+    });
     return false;
   });
   $service = $('#service');
@@ -149,16 +153,30 @@ $(function() {
     }
   });
   tl.play();
-  fragment = window.location.hash;
-  fragment = fragment.slice(1);
+  fragment = window.location.hash.slice(1);
   $.scrollTo(0);
   if (fragment && ($faq = $(".faq h3[name='" + fragment + "']")).length !== 0) {
-    return $.scrollTo($faq, 500, {
+    console.log("scrolling to: " + fragment);
+    return $.scrollTo($faq, {
+      duration: 500,
       offset: {
-        top: -10
+        top: -50,
+        left: 0
       },
       onAfter: function() {
-        return $faq.trigger('click');
+        return $faq.trigger('click', {
+          done: function() {
+            var _this = this;
+            return TweenMax.to($(this), 0.5, {
+              backgroundColor: "yellow",
+              onComplete: function() {
+                return TweenMax.to($(_this), 0.5, {
+                  backgroundColor: "inherit"
+                });
+              }
+            });
+          }
+        });
       }
     });
   }
