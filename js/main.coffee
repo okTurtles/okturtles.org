@@ -102,5 +102,5 @@ $ ->
     $.scrollTo( 0 )
     if fragment and ($faq = $(".faq h3[name='#{fragment}']")).length != 0
         $.scrollTo $faq, 500,
-            offset: top:-50
+            offset: top:-10
             onAfter:-> $faq.trigger('click')

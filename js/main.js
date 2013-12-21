@@ -155,7 +155,7 @@ $(function() {
   if (fragment && ($faq = $(".faq h3[name='" + fragment + "']")).length !== 0) {
     return $.scrollTo($faq, 500, {
       offset: {
-        top: -50
+        top: -10
       },
       onAfter: function() {
         return $faq.trigger('click');
