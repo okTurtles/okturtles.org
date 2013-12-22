@@ -15,7 +15,6 @@ TimelineLite.prototype.addDelay = function(delay, position) {
 
 $(function() {
   var $faq, $firstImg, $firstTxt, $service, $slides, $subtitle, $tagline, IMG_WIDTH, SLIDE_IMG_CENTER, SLIDE_PADDING, SLIDE_TXT_CENTER, SLIDE_TXT_LEFT, SLIDE_TXT_PADDING, STAGGER_AMOUNT, TIME_FOR_IMG_DISPLAY, TIME_PER_ANIMATION, TXT_MARGIN, debug, fadeIn, fadeOut, fragment, tl;
-  $('body').css('display', 'none').fadeIn(1200);
   $(".faq h3").next().hide();
   $(".faq h3").wrap('<a href="#"></a>').click(function(a, obj) {
     var _ref;

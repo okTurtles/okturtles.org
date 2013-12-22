@@ -7,7 +7,7 @@ TimelineLite::addDelay = (delay, position) ->
         else console.log "BAD POSITION TYPE for addDelay!"
 
 $ ->
-    $('body').css('display', 'none').fadeIn(1200)
+    # $('body').css('display', 'none').fadeIn(1200)
     $(".faq h3").next().hide()
     $(".faq h3").wrap('<a href="#"></a>').click (a, obj)->
         $(this).parent().next().slideToggle(duration: "fast", complete: obj?.done ? ->)
