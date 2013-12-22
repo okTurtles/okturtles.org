@@ -32,8 +32,8 @@ p{
 a:hover{
   opacity: .85;
 }
-
-li a, p a{
+.footnote-content-wrapper a {color: #27ae60;}
+li a, p a {
   color: #27ae60;
   font-weight: 400;
   border-bottom: 2px solid transparent;
