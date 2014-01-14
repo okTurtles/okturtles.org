@@ -64,6 +64,27 @@
             });
         });
     </script>
+
+    <!--nav fade in -->
+    <script type="text/javascript">
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 100 ){
+            
+                $('nav').addClass('nav-active');
+            
+          } else {
+            
+            $('nav').removeClass('nav-active');
+            
+            };      
+        });
+    </script>
+
+    <script>
+      var navigation = responsiveNav(".nav-collapse", {
+        insert: "before"
+      });
+    </script>
     <style>
         .modal { text-align: left; margin: 10px 15px; }
         .modal ol { list-style: decimal; }
@@ -73,6 +94,20 @@
     </style>
 </head>
 <body>
+
+<nav>
+    <ul>
+        <li><a onclick="$.scrollTo('#not-secure', 400);">The web is not secure</a></li>
+        <li><a onclick="$.scrollTo('#open-source', 400);">Open Source Freedom</a></li>
+        <li><a onclick="$.scrollTo('#name-coin', 400);">Freedom has a Namecoin</a></li>
+        <li><a onclick="$.scrollTo('#oktvs', 400);">okT + DNSNMC vs. ______</a></li>
+        <li><a onclick="$.scrollTo('#faq', 400);">FAQ</a></li>
+        <li><a onclick="$.scrollTo('#memory-of', 400);">In Memory Of</a></li>
+        <li><a onclick="$.scrollTo('#kickstarter', 400);">Kickstarter</a></li>
+    </ul>
+</nav>
+
+
     <a href="#"><img id="kik" class="hide_kik" src="img/kik.png" data-at2x="img/kik@2x.png" alt=""></a>
 
 
@@ -122,7 +157,7 @@
             </section>
 
             
-            <section class="cbp-so-section section_color_top">
+            <section class="cbp-so-section section_color_top" id="not-secure">
                 <article class="cbp-so-side cbp-so-side-center">
                     <h2>The web is not secure</h2>
                     <p>
@@ -142,7 +177,7 @@
                 </article>
             </section>
             
-            <section  class="cbp-so-section section_color_middle">
+            <section  class="cbp-so-section section_color_middle" id="open-source">
                 <article class="cbp-so-side cbp-so-side-center ">
                     <h2>Open Source Freedom</h2>
                 </article>
@@ -196,7 +231,7 @@
 
             </section>
             <a name="DNSNMC"></a><a name="paper"></a>
-            <section class="cbp-so-section section_color_top">
+            <section class="cbp-so-section section_color_top" id="name-coin">
                 <article class="cbp-so-side cbp-so-side-center">
                     <h2>Freedom has a Name<span class="green">coin</span></h2>
                     <p>These features are possible thanks to <b>DNSNMC.</b></p>
@@ -211,7 +246,7 @@
                 </article>
             </section>
 
-            <section  class="cbp-so-section section_color_middle">
+            <section  class="cbp-so-section section_color_middle" id="oktvs">
                 <article class="cbp-so-side cbp-so-side-center">
                     <h2>ok<span class="green">T</span> + DNSNMC vs. ______</h2>
                     <h3 class="h3_sub"><a href="http://www.certificate-transparency.org/original-proposal" target="_blank">Certificate Transparency</a></h3>
@@ -242,7 +277,7 @@ more coming soon! :)
                 </article>
             </section>
 
-            <section id="faq" class="cbp-so-section section_color_top">
+            <section id="faq" class="cbp-so-section section_color_top" id="faq">
                 <article class="cbp-so-side cbp-so-side-center">
                     <h2>FAQ</h2>                    
                     <div class="faq">
@@ -314,7 +349,7 @@ more coming soon! :)
             </section>-->
                         
 
-            <section class="cbp-so-section section_color_middle">
+            <section class="cbp-so-section section_color_middle" id="memory-of">
                 <article class="cbp-so-side cbp-so-side-center">
                     <h2>In Memory Of</h2>     
 
@@ -349,7 +384,7 @@ more coming soon! :)
             </div>
 
             <section id="footer" class="cbp-so-section">
-                <article class="cbp-so-side cbp-so-side-center footer">
+                <article class="cbp-so-side cbp-so-side-center footer" id="kickstarter">
                     <div id="coming_soon">
                     <a href="#" class="hide_kik"><img id="kik_pic" src="img/kickstarter.png" data-at2x="img/kickstarter@2x.png" alt=""></a>
                     <a name="kickstarter"></a>
