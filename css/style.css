@@ -71,7 +71,7 @@ b{
 }
 
 
-nav{
+.nav-green{
   position: fixed;
   bottom: 0;
   text-align:center;
@@ -86,16 +86,16 @@ nav{
   -o-transition: all .4s;
   transition: all .4s;
 }
-nav ul{
+.nav-green ul{
   margin: 0 auto;
   text-align: center;
 }
-nav ul li {
+.nav-green ul li {
   display: inline-block;
   list-style: none;
   padding: 16px;
 }
-nav ul li a{
+.nav-green ul li a{
   display: inline-block;
   color: whitesmoke;
   padding: 8px;
@@ -110,8 +110,56 @@ nav ul li a{
   -o-transition: all .2s;
   transition: all .2s;
 }
-nav ul li a:hover{
+.nav-green ul li a:hover{
   border:2px solid whitesmoke;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+
+.nav-white{
+  position: fixed;
+  bottom: 0;
+  text-align:center;
+  width: 100%;
+  background-color: rgba(245, 245, 245, 0.95);
+  font-size: 1em;
+  z-index: 99999999;
+  opacity: 0;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -ms-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+}
+.nav-white ul{
+  margin: 0 auto;
+  text-align: center;
+}
+.nav-white ul li {
+  display: inline-block;
+  list-style: none;
+  padding: 16px;
+}
+.nav-white ul li a{
+  display: inline-block;
+  color: #27ae60;
+  padding: 8px;
+  text-align: center;
+  margin-left: -1.5px;
+  margin-right: -1.5px;
+  border:2px solid transparent;
+  border-radius: 14px;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+.nav-white ul li a:hover{
+  border:2px solid rgba(39, 174, 96, 0.95);
   -webkit-transition: all .2s;
   -moz-transition: all .2s;
   -ms-transition: all .2s;
