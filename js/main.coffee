@@ -111,3 +111,17 @@ $ ->
                         backgroundColor: "yellow"
                         onComplete: => TweenMax.to $(@), 0.5, backgroundColor: "inherit"
         
+
+    # nav
+    navBoundary = 100
+    navNeedsUpdate = do ->
+        prevPos = $(window).scrollTop()
+        ->
+            curPos = $(window).scrollTop() 
+            update = if curPos < navBoundary then prevPos > navBoundary else prevPos < navBoundary
+            update and prevPos = curPos
+
+    $(window).scroll ->
+        # note that 0 position could be returned, and it has a truthy value of false
+        if typeof (pos = navNeedsUpdate()) is 'number'
+            TweenMax.to $('nav'), 0.4, {overwrite:true, autoAlpha: if pos >= navBoundary then 1 else 0}

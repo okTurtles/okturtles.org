@@ -80,11 +80,7 @@ b{
   font-size: 1em;
   z-index: 99999999;
   opacity: 0;
-  -webkit-transition: all .4s;
-  -moz-transition: all .4s;
-  -ms-transition: all .4s;
-  -o-transition: all .4s;
-  transition: all .4s;
+  visibility: hidden;
 }
 .nav-green ul{
   margin: 0 auto;
@@ -128,11 +124,7 @@ b{
   font-size: 1em;
   z-index: 99999999;
   opacity: 0;
-  -webkit-transition: all .4s;
-  -moz-transition: all .4s;
-  -ms-transition: all .4s;
-  -o-transition: all .4s;
-  transition: all .4s;
+  visibility: hidden;
 }
 .nav-white ul{
   margin: 0 auto;
@@ -166,11 +158,6 @@ b{
   -o-transition: all .2s;
   transition: all .2s;
 }
-
-.nav-active{
- opacity: 1;
-}
-
 
 .logo{
   width: 90px;
@@ -1182,12 +1169,12 @@ input[type=submit], textarea {
  
  } 
 
-@media screen and (max-width: 1170px){
+/*@media screen and (max-width: 1170px){
   nav{
     display: none;
   }
 }
-
+*/
 @media screen and (max-width: 850px){
 
 .slideshow img 
