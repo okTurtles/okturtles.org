@@ -98,7 +98,7 @@ $ ->
     tl.play()
 
     fragment = window.location.hash.slice(1)
-    $.scrollTo(0)
+    # $.scrollTo(0)
     if fragment and ($faq = $(".faq h3[name='#{fragment}']")).length != 0
         # console.log "scrolling to: #{fragment}"
         $.scrollTo $faq,
@@ -111,7 +111,7 @@ $ ->
                         backgroundColor: "yellow"
                         onComplete: => TweenMax.to $(@), 0.5, backgroundColor: "inherit"
         
-
+### TODO: enable once we get responsive css working with this, and then scroll the highlighted section.
     # nav
     navBoundary = 100
     navNeedsUpdate = do ->
@@ -125,3 +125,4 @@ $ ->
         # note that 0 position could be returned, and it has a truthy value of false
         if typeof (pos = navNeedsUpdate()) is 'number'
             TweenMax.to $('nav'), 0.4, {overwrite:true, autoAlpha: if pos >= navBoundary then 1 else 0}
+###

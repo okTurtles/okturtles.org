@@ -14,7 +14,7 @@ TimelineLite.prototype.addDelay = function(delay, position) {
 };
 
 $(function() {
-  var $faq, $firstImg, $firstTxt, $service, $slides, $subtitle, $tagline, IMG_WIDTH, SLIDE_IMG_CENTER, SLIDE_PADDING, SLIDE_TXT_CENTER, SLIDE_TXT_LEFT, SLIDE_TXT_PADDING, STAGGER_AMOUNT, TIME_FOR_IMG_DISPLAY, TIME_PER_ANIMATION, TXT_MARGIN, debug, fadeIn, fadeOut, fragment, navBoundary, navNeedsUpdate, tl;
+  var $faq, $firstImg, $firstTxt, $service, $slides, $subtitle, $tagline, IMG_WIDTH, SLIDE_IMG_CENTER, SLIDE_PADDING, SLIDE_TXT_CENTER, SLIDE_TXT_LEFT, SLIDE_TXT_PADDING, STAGGER_AMOUNT, TIME_FOR_IMG_DISPLAY, TIME_PER_ANIMATION, TXT_MARGIN, debug, fadeIn, fadeOut, fragment, tl;
   $(".faq h3").next().hide();
   $(".faq h3").wrap('<a href="#"></a>').click(function(a, obj) {
     var _ref;
@@ -153,9 +153,8 @@ $(function() {
   });
   tl.play();
   fragment = window.location.hash.slice(1);
-  $.scrollTo(0);
   if (fragment && ($faq = $(".faq h3[name='" + fragment + "']")).length !== 0) {
-    $.scrollTo($faq, {
+    return $.scrollTo($faq, {
       duration: 500,
       margin: true,
       onAfter: function() {
@@ -176,24 +175,21 @@ $(function() {
       }
     });
   }
-  navBoundary = 100;
-  navNeedsUpdate = (function() {
-    var prevPos;
-    prevPos = $(window).scrollTop();
-    return function() {
-      var curPos, update;
-      curPos = $(window).scrollTop();
-      update = curPos < navBoundary ? prevPos > navBoundary : prevPos < navBoundary;
-      return update && (prevPos = curPos);
-    };
-  })();
-  return $(window).scroll(function() {
-    var pos;
-    if (typeof (pos = navNeedsUpdate()) === 'number') {
-      return TweenMax.to($('nav'), 0.4, {
-        overwrite: true,
-        autoAlpha: pos >= navBoundary ? 1 : 0
-      });
-    }
-  });
 });
+
+
+/* TODO: enable once we get responsive css working with this, and then scroll the highlighted section.
+     * nav
+    navBoundary = 100
+    navNeedsUpdate = do ->
+        prevPos = $(window).scrollTop()
+        ->
+            curPos = $(window).scrollTop() 
+            update = if curPos < navBoundary then prevPos > navBoundary else prevPos < navBoundary
+            update and prevPos = curPos
+
+    $(window).scroll ->
+         * note that 0 position could be returned, and it has a truthy value of false
+        if typeof (pos = navNeedsUpdate()) is 'number'
+            TweenMax.to $('nav'), 0.4, {overwrite:true, autoAlpha: if pos >= navBoundary then 1 else 0}
+ */

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
 
-    <title>okTurtles + DNSNMC :: Surveillance-free communication on your favorite websites</title>
+    <title>okTurtles + DNSChain :: Surveillance-free communication on your favorite websites</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <meta name="description" content="okTurtles makes surveillance-free communication possible on your favorite websites" />
     <meta name="keywords" content="okTurtles, security, dnsnmc, namecoin, bitcoin, dnssec, security, surveillance, surviellance, nsa, https, certificate authorities, ssl certificates" />
@@ -12,7 +12,7 @@
     
         <!-- social sharing metadata -->
     <meta property="og:title" content="okTurtles: Surveillance-free communication on your favorite websites" />
-    <meta property="og:description" content="okTurtles brings NSA-proof messages to your favorite websites. DNSNMC is your connection to the Namecoin blockchain." />
+    <meta property="og:description" content="okTurtles brings NSA-proof messages to your favorite websites. DNSChain is your connection to the Namecoin blockchain." />
 
     <meta property="og:image" content="http://okturtles.com/img/simple@2x.jpg">
     <meta property="og:image:type" content="image/jpeg">
@@ -24,9 +24,7 @@
     <meta property="og:image:width" content="590">
     <meta property="og:image:height" content="264">
 
-
     <!-- <link rel="shortcut icon" href="favicon.ico"> -->
-
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js" ></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
@@ -75,16 +73,14 @@
             <li><a onclick="$.scrollTo('#not-secure', 400);">The web is not secure</a></li>
             <li><a onclick="$.scrollTo('#open-source', 400);">Open Source Freedom</a></li>
             <li><a onclick="$.scrollTo('#name-coin', 400);">Freedom has a Namecoin</a></li>
-            <li><a onclick="$.scrollTo('#oktvs', 400);">okT + DNSNMC vs. ______</a></li>
+            <li><a onclick="$.scrollTo('#oktvs', 400);">okT + DNSChain vs. ______</a></li>
             <li><a onclick="$.scrollTo('#faq', 400);">FAQ</a></li>
             <li><a onclick="$.scrollTo('#memory-of', 400);">In Memory Of</a></li>
             <li><a onclick="$.scrollTo('#kickstarter', 400);">Kickstarter</a></li>
         </ul>
     </nav>
 
-
     <a href="#"><img id="kik" class="hide_kik" src="img/kik.png" data-at2x="img/kik@2x.png" alt=""></a>
-
 
     <div class="container">
         <div class="cbp-so-scroller">
@@ -137,7 +133,7 @@
                 <article class="cbp-so-side cbp-so-side-center">
                     <h2>The web is not secure</h2>
                     <p>
-                        HTTPS is <a href="https://www.eff.org/deeplinks/2011/10/how-secure-https-today" target="_blank">broken</a>. <a href="http://okturtles.com/#DNSNMC">DNSNMC</a> fixes it.
+                        HTTPS is <a href="https://www.eff.org/deeplinks/2011/10/how-secure-https-today" target="_blank">broken</a>. <a href="#DNSChain">DNSChain</a> fixes it.
                     </p>
                     <p>
 
@@ -162,7 +158,7 @@
                     <img class="features" src="img/simple.jpg" data-at2x="img/simple@2x.jpg" alt="zero conf">
                 </article>
                 <article class="cbp-so-side cbp-so-side-right right ">
-                    <p><b>NSA-proof communication through almost any website, with <i>zero</i> intervention needed from the site operators.</b> okTurtles is designed with the potential to work over almost any website. All it needs to create an encrypted message for someone is the <i>identity</i> of that person, specifically, their <a href="https://en.wikipedia.org/wiki/Public-key_cryptography" target="_blank">public key</a>. Unlike <a href="https://en.wikipedia.org/wiki/Certification_authority" target="_blank">the system</a> that HTTPS uses today, okTurtles is able to securely obtain this information by using <a href="#DNSNMC">DNSNMC</a>.</p>
+                    <p><b>NSA-proof communication through almost any website, with <i>zero</i> intervention needed from the site operators.</b> okTurtles is designed with the potential to work over almost any website. All it needs to create an encrypted message for someone is the <i>identity</i> of that person, specifically, their <a href="https://en.wikipedia.org/wiki/Public-key_cryptography" target="_blank">public key</a>. Unlike <a href="https://en.wikipedia.org/wiki/Certification_authority" target="_blank">the system</a> that HTTPS uses today, okTurtles is able to securely obtain this information by using <a href="#DNSChain">DNSChain</a>.</p>
                 </article>
 
             </section>
@@ -178,7 +174,6 @@
                         especially when you're asked to pay every year and are given
                         a certificate that <b>doesn't do what it's supposed to do: provide
                             your vistors with security.</b>
-
                         Companies that sell SSL certificates mislead their customers into
                         believing that these certificates protect browser-server communication from all eavesdropping and tampering. As elaborated
                         in <a href="#paper">our paper</a>, this simply isn’t true today.
@@ -190,47 +185,57 @@
             <section  class="cbp-so-section section_color_middle">
 
                 <article class="cbp-so-side cbp-so-side-left left ">
-                    <img class="features" src="img/theft.jpg" data-at2x="img/theft@2x.jpg" alt="DNSNMC = Real Ownership. Say good-bye to identity theft and domain theft.">
+                    <img class="features" src="img/theft.jpg" data-at2x="img/theft@2x.jpg" alt="DNSChain = Real Ownership. Say good-bye to identity theft and domain theft.">
                 </article>
                 <article class="cbp-so-side cbp-so-side-right right ">
                     <p>
                         <b>Say good-bye to identity theft and "domain seizures".</b>
-                        Thanks to <a href="#DNSNMC">DNSNMC</a> (Namecoin-powered
+                        Thanks to <a href="#DNSChain">DNSChain</a> (Namecoin-powered
                         DNS), your online identity actually belong to <u>you</u>.
                         That is, when someone visits your website, they can be
                         assured that it actually belongs to you, and won't be stolen
-                        from you.<sup><a href="#" class="footnote-button" data-footnote-identifier="1" alt="See Footnote 1" rel="footnote" data-footnote-content="As long as your password is not compromised/stolen.">1</a></sup> Protection from identity theft is provided because when someone uses okTurtles/DNSNMC to communicate with you, 
+                        from you.<sup><a href="#" class="footnote-button" data-footnote-identifier="1" alt="See Footnote 1" rel="footnote" data-footnote-content="As long as your password is not compromised/stolen.">1</a></sup> Protection from identity theft is provided because when someone uses okTurtles/DNSChain to communicate with you, 
                         they don't have to worry that they're communicating with an imposter, or that there's a <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" target="_blank">"man in the middle"</a> recording the entire conversation.
-                        Protection from <a href="http://torrentfreak.com/the-pirate-bay-moves-to-ac-after-domain-name-seizure-131210/" target="_blank">domain seizures</a> (government-sanctioned theft) is an inherent property of DNSNMC and Namecoin.<!--  <b>Theft is theft,</b> and the only reason this type of criminal behavior exists today is because the technology makes it possible. -->
+                        Protection from <a href="http://torrentfreak.com/the-pirate-bay-moves-to-ac-after-domain-name-seizure-131210/" target="_blank">domain seizures</a> (government-sanctioned theft) is an inherent property of DNSChain and Namecoin.<!--  <b>Theft is theft,</b> and the only reason this type of criminal behavior exists today is because the technology makes it possible. -->
                     </p>
                 </article>
 
             </section>
-            <a name="DNSNMC"></a><a name="paper"></a>
+            <a name="DNSChain"></a><a name="paper"></a>
             <section class="cbp-so-section section_color_top" id="name-coin">
                 <article class="cbp-so-side cbp-so-side-center">
                     <h2>Freedom has a Name<span class="green">coin</span></h2>
-                    <p>These features are possible thanks to <b>DNSNMC.</b></p>
-                    <p><b>DNSNMC = DNS + <a href="http://namecoin.info/" target="_blank">Namecoin</a> (+ HTTP)</b></p>
+                    <p>These features are possible thanks to <b>DNSChain</b> (formerly DNSNMC).</p>
+                    <p><b>DNSChain = <a href="https://github.com/okTurtles/dnschain" target="_blank">DNS + HTTP(S) + Namecoin</a></b></p>
                     <p style="margin-top: 30px; margin-bottom:30px;">
                     </p>
-                    <a href="other/dnsnmc_okturtles_overview.pdf"><img src="img/pdf.svg" style="width:70px" alt="DNSNMC + okTurtles Overview.pdf" ></a>
-                    <p style="margin-top: 5px">
-                        <a href="other/dnsnmc_okturtles_overview.pdf">DNSNMC + okTurtles.pdf (v1.0)</a>
-                    </p>
-                       Click the icon above to learn how DNSNMC and okTurtles work.
+                    <div style="width:510px; text-align:center; margin: 0 auto">
+                        <div style="display:inline-block; width:250px">
+                            <a href="https://github.com/okTurtles/dnschain" target="_blank"><img src="img/GitHub-Mark.png" data-at2x="img/GitHub-Mark@2x.png"></a>
+                            <p style="margin-top: 5px">
+                                <a href="https://github.com/okTurtles/dnschain" target="_blank">DNSChain on GitHub</a>
+                            </p>
+                        </div>
+                        <div style="display:inline-block; width:250px">
+                            <a href="other/dnsnmc_okturtles_overview.pdf"><img src="img/pdf.svg" style="width:70px" alt="DNSChain + okTurtles Overview.pdf" ></a>
+                            <p style="margin-top: 5px">
+                                <a href="other/dnsnmc_okturtles_overview.pdf">DNSChain + okTurtles.pdf</a>
+                            </p>
+                        </div>
+                    </div>
+                   Click on the icons above to learn more about DNSChain and okTurtles.
                 </article>
             </section>
 
             <section  class="cbp-so-section section_color_middle" id="oktvs">
                 <article class="cbp-so-side cbp-so-side-center">
-                    <h2>ok<span class="green">T</span> + DNSNMC vs. ______</h2>
+                    <h2>ok<span class="green">T</span> + DNSChain vs. ______</h2>
                     <h3 class="h3_sub"><a href="http://www.certificate-transparency.org/original-proposal" target="_blank">Certificate Transparency</a></h3>
                     <p>Google's Certificate Transparency proposal wants certificate authorities (CAs) to "make a note" all of the certificates that they issue into a log somewhere protected in someway and verified via some mechanism. The <a href="other/Original_Proposal_-_Certificate_Transparency.pdf" target="_blank">original proposal</a> is almost this vague. Website owners are then asked to monitor these logs to see if their clients <b>were</b> hacked, in addition to continuing to pay the CAs money for the worthless certificates they provide. We think this proposal makes an excellent case against itself, and we don't find this at all surprising. Companies (like Google) that exploit their customer's information for profit are unlikely to provide meaningful leadership on security because it would hurt their business.</p>
                     <h3 class="h3_sub">DNSSEC</h3>
                     <p><a href="http://www.icann.org/en/about/learning/factsheets/dnssec-qaa-09oct08-en.htm" target="_blank">DNSSEC</a> suggests a complicated mechanism to essentially re-create many of the same problems with X509 and CAs in DNS itself, by providing a chain of trust to untrustworthy entities. Its intended goal is to secure DNS and thereby assure clients that when they ask for apple.com, they are actually visiting apple.com. This proposal <a href="http://comments.gmane.org/gmane.comp.encryption.general/16353" target="_blank">does not appear to protect against genuine MITM attacks</a>. It also suffers for extreme, unnecessary complexity, which is never a good thing in the design of secure systems. See <a href="http://ianix.com/pub/dnssec-outages.html" target="_blank">this link</a> for additional reasons why DNSSEC is a bad idea in general.</p>
                     <h3 class="h3_sub">Bitmessage</h3>
-                    <p><a href="https://bitmessage.org/wiki/Main_Page" target="_blank">Bitmessage</a> belongs to the same family of software that okTurtles and DNSNMC belong to, however it is also very different from them. Bitmessage focuses on providing anonymity to its users first and foremost. For reasons unknown to this author it was not designed to use the Namecoin blockchain, and instead uses its own (though there is nothing preventing integration between the two, and indeed work has <a href="https://bitmessage.org/forum/index.php?topic=2563.0" target="_blank">been done</a> in this area). Bitmessage, however, has a few problems that okTurtles does not have: (1) it does not work over existing websites or protocols (like email) and was not designed with this intention, (2) to quote <a href="other/bitmessage.pdf" target="_blank">the paper</a>: "The difficulty of the proof‐of‐work should be proportional to the size of the message and should be set such that <i>an average computer must expend an average of four minutes of work in order to send a typical message.</i>" (3) It requires constantly running a program in the background (and one that isn't feasible on most mobile devices), and (4) messages take a long time to get to their destination because: "Just like Bitcoin transactions and blocks, all users would receive all messages. They would be responsible for attempting to decode each message with each of their private keys to see whether the message is bound for them."</p>
+                    <p><a href="https://bitmessage.org/wiki/Main_Page" target="_blank">Bitmessage</a> belongs to the same family of software that okTurtles and DNSChain belong to, however it is also very different from them. Bitmessage focuses on providing anonymity to its users first and foremost. For reasons unknown to this author it was not designed to use the Namecoin blockchain, and instead uses its own (though there is nothing preventing integration between the two, and indeed work has <a href="https://bitmessage.org/forum/index.php?topic=2563.0" target="_blank">been done</a> in this area). Bitmessage, however, has a few problems that okTurtles does not have: (1) it does not work over existing websites or protocols (like email) and was not designed with this intention, (2) to quote <a href="other/bitmessage.pdf" target="_blank">the paper</a>: "The difficulty of the proof‐of‐work should be proportional to the size of the message and should be set such that <i>an average computer must expend an average of four minutes of work in order to send a typical message.</i>" (3) It requires constantly running a program in the background (and one that isn't feasible on most mobile devices), and (4) messages take a long time to get to their destination because: "Just like Bitcoin transactions and blocks, all users would receive all messages. They would be responsible for attempting to decode each message with each of their private keys to see whether the message is bound for them."</p>
                     <h3 class="h3_sub">Convergence</h3>
                     <p>In <a href="http://convergence.io/details.html" target="_blank">their words</a>, Convergence "is a secure replacement for the Certificate Authority System. Rather than employing a traditionally hard-coded list of immutable CAs, Convergence allows you to configure a dynamic set of Notaries which use network perspective to validate your communication." In our words: Convergence is similar to having a <i>known_hosts</i> ssh key file for your browser, and comparing it against your friend’s file. It's not a terrible idea, however, the website claims that it’s simple to use, which we have to disagree with because users are asked to manage a list of notaries. It depends on group consensus, but the group might not be very bright. What happens then? It also does not provide MITM protection on first-visit, and all of the notary info appears to be stored locally to the computer, or even the browser. That is rather inconvenient for most users.</p>
                     <h3 class="h3_sub">More to come...</h3>
@@ -278,7 +283,7 @@ more coming soon! :)
                             </p>
                         </div>
                         <h3 class="faq_question">Who's behind these projects?</h3>
-                        <p class="faq_answer">okTurtles and DNSNMC are the brainchildren of <a href="https://twitter.com/taoeffect" target="_blank">Greg Slepak</a>, but he did not invent every aspect of these concepts. He's grateful to Aaron Swartz for <a href="http://www.aaronsw.com/weblog/squarezooko" target="_blank">turning him on to the idea</a>, and for <a href="https://jumpshare.com/v/ApygO7yCaOhisjZtGU0d" target="_blank">answering</a> some of his questions about it. Of course, none of this would be possible if it wasn't for Satoshi Nakamoto's historic <a href="http://bitcoin.org/bitcoin.pdf" target="_blank">paper</a> on Bitcoin, and the entire Namecoin <a href="http://dot-bit.org/forum/index.php" target="_blank">community</a>.
+                        <p class="faq_answer">okTurtles and DNSChain are the brainchildren of <a href="https://twitter.com/taoeffect" target="_blank">Greg Slepak</a>, but he did not invent every aspect of these concepts. He's grateful to Aaron Swartz for <a href="http://www.aaronsw.com/weblog/squarezooko" target="_blank">turning him on to the idea</a>, and for <a href="https://jumpshare.com/v/ApygO7yCaOhisjZtGU0d" target="_blank">answering</a> some of his questions about it. Of course, none of this would be possible if it wasn't for Satoshi Nakamoto's historic <a href="http://bitcoin.org/bitcoin.pdf" target="_blank">paper</a> on Bitcoin, and the entire Namecoin <a href="http://dot-bit.org/forum/index.php" target="_blank">community</a>.
                         <br/> <br/>
                         <a href="https://twitter.com/willstanley95" target="_blank">Will Stanley</a> is chiefly responsible for this website's design. He has a passion for clean, simple, beautiful design.
                         <br/> <br/>
@@ -291,7 +296,7 @@ more coming soon! :)
                         </p>
                         <h3 class="faq_question">Is this "vaporware"?</h3>
                         <p class="faq_answer">
-                            Absolutely not! We have a functioning (though incomplete) version of DNSNMC already written (it's less than a hundred lines of JavaScript to get a basic version running in Node.js!). Even if we were not able to complete this project ourselves (for whatever reason), the idea is <b><i>so simple</i></b> to implement that it is virtually guaranteed to happen. okTurtles is a tad more complicated and requires a community effort to keep it running smoothly on third-party sites, but it's readily doable. Most of the design has been explained in <a href="other/dnsnmc_okturtles_overview.pdf" target="_blank">our paper</a>, all that remains is to implement it. <b>Github <a href="https://github.com/okturtles" target="_blank">project pages</a> will be brought online shortly!</b>
+                            Absolutely not! We have a functioning (though incomplete) version of DNSChain already written (it's less than a hundred lines of JavaScript to get a basic version running in Node.js!). Even if we were not able to complete this project ourselves (for whatever reason), the idea is <b><i>so simple</i></b> to implement that it is virtually guaranteed to happen. okTurtles is a tad more complicated and requires a community effort to keep it running smoothly on third-party sites, but it's readily doable. Most of the design has been explained in <a href="other/dnsnmc_okturtles_overview.pdf" target="_blank">our paper</a>, all that remains is to implement it. <b>Github <a href="https://github.com/okturtles" target="_blank">project pages</a> will be brought online shortly!</b>
                         </p>
                         <h3 class="faq_question">Are you going to update this site soon with more info?</h3>
                         <p class="faq_answer">Yup.</p>
@@ -366,11 +371,10 @@ more coming soon! :)
                     <a name="kickstarter"></a>
                     <h3 class="kik_coming_soon kik_coming_soon_hide">Kickstarter Coming Soon!</h3>
 
-
                     <a href="blog/" class="link" target="_blank">blog</a>
                     <a href="#contactEmail" class="link fancybox">contact</a>
                     <a href="https://twitter.com/okturtles" class="link" target="_blank">twitter</a>
-                    <a href="http://dot-bit.org/forum/index.php" class="link" target="_blank">community</a>
+                    <a href="https://github.com/okTurtles" class="link" target="_blank">source</a>
                     <!-- <a href="https://dot-bit.org/forum/index.php" class="link" name="getinvolved" target="_blank">get involved</a> -->
                     </div>
 
