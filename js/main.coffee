@@ -6,6 +6,21 @@ TimelineLite::addDelay = (delay, position) ->
         when 'number' then @set {}, {}, delay + position 
         else console.log "BAD POSITION TYPE for addDelay!"
 
+jumpToFAQ = (faqName) ->
+    if faqName and ($faq = $(".faq h3[name='#{faqName}']")).length != 0
+        jumpToEl $faq
+
+jumpToEl = ($id) ->
+    $.scrollTo $id,
+        duration: 500
+        # offset: {top:-50, left:0}
+        margin: true
+        onAfter: ->
+            $id.trigger 'click', done: ->
+                TweenMax.to $(@), 0.5,
+                    backgroundColor: "yellow"
+                    onComplete: => TweenMax.to $(@), 0.5, backgroundColor: "inherit"
+
 $ ->
     # $('body').css('display', 'none').fadeIn(1200)
     $(".faq h3").next().hide()
@@ -97,19 +112,8 @@ $ ->
         
     tl.play()
 
-    fragment = window.location.hash.slice(1)
-    # $.scrollTo(0)
-    if fragment and ($faq = $(".faq h3[name='#{fragment}']")).length != 0
-        # console.log "scrolling to: #{fragment}"
-        $.scrollTo $faq,
-            duration: 500
-            # offset: {top:-50, left:0}
-            margin: true
-            onAfter: ->
-                $faq.trigger 'click', done: ->
-                    TweenMax.to $(@), 0.5,
-                        backgroundColor: "yellow"
-                        onComplete: => TweenMax.to $(@), 0.5, backgroundColor: "inherit"
+    jumpToFAQ window.location.hash.slice(1)
+        
         
 ### TODO: enable once we get responsive css working with this, and then scroll the highlighted section.
     # nav

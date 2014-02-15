@@ -112,7 +112,7 @@
                         <div class="clear"></div> <!-- Will, do we need this? probably not -->
                     </div>
                     <p id="serviceTagline">
-                        <span>Click the turtle in your</span><span id="service">&nbsp;</span><span>to NSA-proof your message.</span>
+                        <span>Click the turtle in your</span><span id="service">&nbsp;</span><span>to <a href="javascript:jumpToFAQ('nsa_proof');">NSA-proof</a> your message.</span>
                     </p>
                     <!--
                     <div id="email">No Spam, Guaranteed.</div>
@@ -263,14 +263,14 @@ more coming soon! :)
                     <h2>FAQ</h2>                    
                     <div class="faq">
 
-                        <h3 class="faq_question">Wait a minute... couldn't this help the "bad guys"?</h3>
+                        <h3 class="faq_question">Won't this help the "bad guys"?</h3>
                         <p class="faq_answer">
                             Unfortunately, it's increasingly difficult to tell who the bad guys are. This is a very important question and that's why it's the first one. See <a href="other/dnsnmc_okturtles_overview.pdf" target="_blank">our paper's "Motivation" section</a> for the answer.
                         </p>
                         <h3 class="faq_question" name="reviews">Has this proposal been peer-reviewed?</h3>
                         <div class="faq_answer">
                             <p>Yes!</p>
-                            <p>In addition to the reviewers mentioned in the paper's acknowledgement's, our paper was submitted to various lists and forums. To date, active discussions took place at links below (and our proposal appears to have withstood criticism<sup><a href="#" class="footnote-button" data-footnote-identifier="2" alt="See Footnote 2" rel="footnote" data-footnote-content="The most significant issue raised so far has been the question of how to deal with domain name-squatters.<br/><br/>We are <a href='http://dot-bit.org/forum/viewtopic.php?f=5&t=1439' target='_blank'>proposing a method</a> to address this issue once and for all. :-)">2</a></sup>):</p>
+                            <p>In addition to the reviewers mentioned in the paper's acknowledgement's, our paper was submitted to various lists and forums. To date, active discussions took place at links below (and our proposal appears to have withstood criticism<sup><a href="#" class="footnote-button" data-footnote-identifier="2" alt="See Footnote 2" rel="footnote" data-footnote-content="The most significant issue raised so far has been the question of how to deal with domain name-squatters.<br/><br/>We are <a href='http://dot-bit.org/forum/viewtopic.php?f=5&t=1439' target='_blank'>proposing a method</a> to address this issue.">2</a></sup>):</p>
                             <ul>
                                 <li><a href="https://www.reddit.com/r/netsec/comments/1t20wi/therightkey_dnsnmc_deprecates_certificate/" target="_blank">r/netsec</a></li>
                                 <li><a href="http://www.ietf.org/mail-archive/web/therightkey/current/msg00715.html" target="_blank">[therightkey] mailing list</a></li>
@@ -279,7 +279,15 @@ more coming soon! :)
                                 <li><a href="http://dot-bit.org/forum/viewtopic.php?f=5&t=1423" target="_blank">The official Namecoin forums</a></li>
                             </ul>
                             <p>
-                                We plan on submitting this proposal to even more lists and sites, and you are free to help share it as well with your own community.
+                                One significant problem facing Namecoin, Bitcoin, and virtually all other cryptocurrencies, is the so-called <a href="http://motherboard.vice.com/blog/bitcoins-fatal-flaw-was-nearly-exposed" target="_blank">"51% problem"</a>.
+                                Solutions to the 51% problem exist, but they introduce other problems.
+                            </p>
+                            <p>
+                                At present, blockchain-based solutions appear to be the best we have.
+                                We will keep our eye on new developments and update our website and <a href="http://blog.okturtles.com">blog</a> accordingly.
+                            </p>
+                            <p>
+                                We plan on submitting this proposal to even more lists and sites. Our sincere thanks go out to everyone who has helped spread the word about this project!
                             </p>
                         </div>
                         <h3 class="faq_question">Who's behind these projects?</h3>
@@ -289,7 +297,44 @@ more coming soon! :)
                         <br/> <br/>
                         Olga Ivanova is the master illustrator behind the okTurtles logo.
                         </p>
-
+                        <h3 class="faq_question" name="nsa_proof">Is this project <i>really</i> "NSA-proof"?</h3>
+                        <div class="faq_answer">
+                            <p>
+                                It depends on what you mean by that (<a href="http://www.slate.com/articles/news_and_politics/chatterbox/1998/09/bill_clinton_and_the_meaning_of_is.html" target="_blank">thanks Clinton</a>!). ;-)
+                            </p>
+                            <p>
+                                <b>Here is what we mean:</b>
+                            </p>
+                            <p>
+                                When we state that okTurtles will "NSA-proof" your online communications, we mean that <b>it will stop all of the publicly known methods by which the NSA <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" target="_blank">can read</a> your messages on these sites.</b>
+                            </p>
+                            <p>
+                                Specifically, okTurtles will provide true <b>end-to-end encryption</b> and <b>authentication</b> between you and the person you're communicating witt that does not fall prey to any of the following:
+                            </p>
+                            <ul>
+                                <li>
+                                    Coercion of any sort against the host company (e.g. forcing Google or Facebook to hand over their data).
+                                </li>
+                                <li>
+                                    Publicly known attacks against the crypography in use.
+                                </li>
+                                <li>
+                                    Interception, redirection, and/or tampering-with of the communication in question.
+                                </li>
+                            </ul>
+                            <p>
+                                Additionally, it is our intention to provide a modicum of <b>plausible deniability</b> features that <i>might</i> protect *you* from coercion (the gun-to-the-head scenario), but they do not guarantee such protection.
+                            </p>
+                            <p>
+                                It should go without saying that okTurtles <u>will not protect you</u> from any of the following:
+                            </p>
+                            <ul>
+                                <li>Your (in)voluntary disclosure of your password(s).</li>
+                                <li>Your use of a computer that has been compromised in some other way.</li>
+                                <li>The above, but applied to the people you're communicating with.</li>
+                                <li>Acts of a diety or some hitherto unknown supra-human intelligence.</li>
+                            </ul>
+                        </div>
                         <h3 class="faq_question">I want to help! How can I participate?</h3>
                         <p class="faq_answer">
                             Certainly. You can participate directly (see the <a href="https://dot-bit.org/forum/viewtopic.php?f=5&t=1423" target="_blank">Get Involved</a> link at the bottom of the page), or help fund the Kickstarter when it's ready (<a href="#subscribe">subscribe</a> to know when that'll be).
