@@ -70,13 +70,13 @@
 
     <nav class="nav-green"> <!--Chane class for different nav - can be .nav-green or .nav-white -->
         <ul>
-            <li><a onclick="$.scrollTo('#not-secure', 400);">The web is not secure</a></li>
-            <li><a onclick="$.scrollTo('#open-source', 400);">Open Source Freedom</a></li>
-            <li><a onclick="$.scrollTo('#name-coin', 400);">Freedom has a Namecoin</a></li>
-            <li><a onclick="$.scrollTo('#oktvs', 400);">okT + DNSChain vs. ______</a></li>
-            <li><a onclick="$.scrollTo('#faq', 400);">FAQ</a></li>
-            <li><a onclick="$.scrollTo('#memory-of', 400);">In Memory Of</a></li>
-            <li><a onclick="$.scrollTo('#kickstarter', 400);">Kickstarter</a></li>
+            <li><a href="#not-secure">The web is not secure</a></li>
+            <li><a href="#open-source">Open Source Freedom</a></li>
+            <li><a href="#DNSChain">DNSChain</a></li>
+            <li><a href="#oktvs">okT + DNSChain vs. ______</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#memory-of">In Memory Of</a></li>
+            <li><a href="#footer">Kickstarter</a></li>
         </ul>
     </nav>
 
@@ -112,7 +112,7 @@
                         <div class="clear"></div> <!-- Will, do we need this? probably not -->
                     </div>
                     <p id="serviceTagline">
-                        <span>Click the turtle in your</span><span id="service">&nbsp;</span><span>to <a href="javascript:jumpToFAQ('nsa_proof');">NSA-proof</a> your message.</span>
+                        <span>Click the turtle in your</span><span id="service">&nbsp;</span><span>to <a href="#nsa_proof">NSA-proof</a> your message.</span>
                     </p>
                     <!--
                     <div id="email">No Spam, Guaranteed.</div>
@@ -129,7 +129,7 @@
             </section>
 
             
-            <section class="cbp-so-section section_color_top" id="not-secure">
+            <section class="cbp-so-section section_color_top nav" id="not-secure">
                 <article class="cbp-so-side cbp-so-side-center">
                     <h2>The web is not secure</h2>
                     <p>
@@ -149,7 +149,7 @@
                 </article>
             </section>
             
-            <section  class="cbp-so-section section_color_middle" id="open-source">
+            <section class="cbp-so-section section_color_middle nav" id="open-source">
                 <article class="cbp-so-side cbp-so-side-center ">
                     <h2>Open Source Freedom</h2>
                 </article>
@@ -162,7 +162,7 @@
                 </article>
 
             </section>
-            <section  class="cbp-so-section section_color_middle">
+            <section class="cbp-so-section section_color_middle">
 
                 <article class="cbp-so-side cbp-so-side-right right ">
                     <img class="features" src="img/certs-white.jpg" data-at2x="img/certs-white@2x.jpg" alt="poo on paying for ssl certs">
@@ -201,12 +201,13 @@
                 </article>
 
             </section>
-            <a name="DNSChain"></a><a name="paper"></a>
-            <section class="cbp-so-section section_color_top" id="name-coin">
+            <a name="paper"></a>
+            <section class="cbp-so-section section_color_top nav" id="DNSChain">
                 <article class="cbp-so-side cbp-so-side-center">
-                    <h2>Freedom has a Name<span class="green">coin</span></h2>
+                    <!-- <h2>Freedom has a Name<span class="green">coin</span></h2> -->
+                    <h2>DNSChain</h2>
                     <p>These features are possible thanks to <b>DNSChain</b> (formerly DNSNMC).</p>
-                    <p><b>DNSChain = <a href="https://github.com/okTurtles/dnschain" target="_blank">DNS + HTTP(S) + Namecoin</a></b></p>
+                    <p><b>DNSChain = <a href="https://github.com/okTurtles/dnschain" target="_blank">DNS + HTTP(S) + Blockchain</a></b></p>
                     <p style="margin-top: 30px; margin-bottom:30px;">
                     </p>
                     <div style="width:510px; text-align:center; margin: 0 auto">
@@ -216,7 +217,7 @@
                                 <a href="https://github.com/okTurtles/dnschain" target="_blank">DNSChain on GitHub</a>
                             </p>
                         </div>
-                        <div style="display:inline-block; width:250px">
+                        <div style="display:inline-block; width:250px" id="paper">
                             <a href="other/dnsnmc_okturtles_overview.pdf"><img src="img/pdf.svg" style="width:70px" alt="DNSChain + okTurtles Overview.pdf" ></a>
                             <p style="margin-top: 5px">
                                 <a href="other/dnsnmc_okturtles_overview.pdf">DNSChain + okTurtles.pdf</a>
@@ -227,7 +228,7 @@
                 </article>
             </section>
 
-            <section  class="cbp-so-section section_color_middle" id="oktvs">
+            <section  class="cbp-so-section section_color_middle nav" id="oktvs">
                 <article class="cbp-so-side cbp-so-side-center">
                     <h2>ok<span class="green">T</span> + DNSChain vs. ______</h2>
                     <h3 class="h3_sub"><a href="http://www.certificate-transparency.org/original-proposal" target="_blank">Certificate Transparency</a></h3>
@@ -258,16 +259,15 @@ more coming soon! :)
                 </article>
             </section>
 
-            <section id="faq" class="cbp-so-section section_color_top" id="faq">
+            <section id="faq" class="cbp-so-section section_color_top nav" id="faq">
                 <article class="cbp-so-side cbp-so-side-center">
                     <h2>FAQ</h2>                    
                     <div class="faq">
-
                         <h3 class="faq_question">Won't this help the "bad guys"?</h3>
                         <p class="faq_answer">
                             Unfortunately, it's increasingly difficult to tell who the bad guys are. This is a very important question and that's why it's the first one. See <a href="other/dnsnmc_okturtles_overview.pdf" target="_blank">our paper's "Motivation" section</a> for the answer.
                         </p>
-                        <h3 class="faq_question" name="reviews">Has this proposal been peer-reviewed?</h3>
+                        <h3 class="faq_question" id="reviews">Has this proposal been peer-reviewed?</h3>
                         <div class="faq_answer">
                             <p>Yes!</p>
                             <p>In addition to the reviewers mentioned in the paper's acknowledgement's, our paper was submitted to various lists and forums. To date, active discussions took place at links below (and our proposal appears to have withstood criticism<sup><a href="#" class="footnote-button" data-footnote-identifier="2" alt="See Footnote 2" rel="footnote" data-footnote-content="The most significant issue raised so far has been the question of how to deal with domain name-squatters.<br/><br/>We are <a href='http://dot-bit.org/forum/viewtopic.php?f=5&t=1439' target='_blank'>proposing a method</a> to address this issue.">2</a></sup>):</p>
@@ -297,7 +297,7 @@ more coming soon! :)
                         <br/> <br/>
                         Olga Ivanova is the master illustrator behind the okTurtles logo.
                         </p>
-                        <h3 class="faq_question" name="nsa_proof">Is this project <i>really</i> "NSA-proof"?</h3>
+                        <h3 class="faq_question" id="nsa_proof" name="nsa_proof">Is this project <i>really</i> "NSA-proof"?</h3>
                         <div class="faq_answer">
                             <p>
                                 When we state that okTurtles will "NSA-proof" your online communications, we mean that <b>it will stop all of the publicly known methods by which the NSA <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" target="_blank">can read</a> your messages on these sites.</b>
@@ -369,7 +369,7 @@ more coming soon! :)
             </section>-->
                         
 
-            <section class="cbp-so-section section_color_middle" id="memory-of">
+            <section class="cbp-so-section section_color_middle nav" id="memory-of">
                 <article class="cbp-so-side cbp-so-side-center">
                     <h2>In Memory Of</h2>     
 
@@ -403,17 +403,16 @@ more coming soon! :)
                 <p>hi at okturtles.com</p>
             </div>
 
-            <section id="footer" class="cbp-so-section">
-                <article class="cbp-so-side cbp-so-side-center footer" id="kickstarter">
+            <section id="footer" class="cbp-so-section nav">
+                <article class="cbp-so-side cbp-so-side-center footer">
                     <div id="coming_soon">
                     <a href="#" class="hide_kik"><img id="kik_pic" src="img/kickstarter.png" data-at2x="img/kickstarter@2x.png" alt=""></a>
-                    <a name="kickstarter"></a>
                     <h3 class="kik_coming_soon kik_coming_soon_hide">Kickstarter Coming Soon!</h3>
 
                     <a href="blog/" class="link" target="_blank">blog</a>
                     <a href="#contactEmail" class="link fancybox">contact</a>
                     <a href="https://twitter.com/okturtles" class="link" target="_blank">twitter</a>
-                    <a href="https://github.com/okTurtles" class="link" target="_blank">source</a>
+                    <a href="https://github.com/okTurtles" class="link" target="_blank">github</a>
                     <!-- <a href="https://dot-bit.org/forum/index.php" class="link" name="getinvolved" target="_blank">get involved</a> -->
                     </div>
 

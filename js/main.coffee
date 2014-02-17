@@ -6,23 +6,87 @@ TimelineLite::addDelay = (delay, position) ->
         when 'number' then @set {}, {}, delay + position 
         else console.log "BAD POSITION TYPE for addDelay!"
 
-jumpToFAQ = (faqName) ->
-    if faqName and ($faq = $(".faq h3[name='#{faqName}']")).length != 0
-        jumpToEl $faq
+# TODO: make this generic and for jumping to ids, not names.
+# scrollToFAQ = (idName) ->
+#     if idName and ($faq = $(".faq h3[name='#{idName}']")).length != 0
+#         scrollToEl $faq
 
-jumpToEl = ($id) ->
-    $.scrollTo $id,
-        duration: 500
-        # offset: {top:-50, left:0}
-        margin: true
-        onAfter: ->
-            $id.trigger 'click', done: ->
-                TweenMax.to $(@), 0.5,
-                    backgroundColor: "yellow"
-                    onComplete: => TweenMax.to $(@), 0.5, backgroundColor: "inherit"
+gScrollTo = (target, shouldFlashCb) ->
+    if target # '' evals to false
+        if typeof(target) isnt 'string'
+            $t = target
+        else if target.indexOf('#') is 0
+            if ($t = $(target)).length is 0
+                $t = $("[name='#{target.slice(1)}']")
+        else if ($t = $("[name='#{target}']")).length is 0
+            $t = $('#'+target)
+
+        if $t.length is 0
+            console.log "ERROR: can't find: #{target}!"
+        else
+            hash = '#' + ($t.attr('id') or $t.attr('name'))
+            faq = $t.hasClass 'faq_question'
+            console.log "scrolling to: #{hash} (faq=#{faq})"
+            options =
+                duration: 500
+                # offset: {top:-50, left:0}
+                onAfter: ->
+                    window.location.hash = hash
+                    
+                    return if !faq and shouldFlashCb and !shouldFlashCb()
+
+                    hTgt = if faq then $t.parent().next() else $t
+                    
+                    highlight = ->
+                        color = $(@).css 'background-color'
+                        TweenMax.to $(@), 0.5,
+                            backgroundColor: "yellow"
+                            onComplete: => TweenMax.to $(@), 0.5, backgroundColor: color
+                    
+                    if faq and hTgt.is ':hidden'
+                        $t.trigger 'click', done: highlight
+                    else
+                        highlight.call hTgt
+                        
+            # scrollTo has a bug where even specifying margin:true means margin is enabled
+            if faq
+                console.log "ADDING MARGIN!"
+                $.extend(options, {margin:true})
+            
+            console.log options
+            $.scrollTo $t, options
+            
+            return false # for <a href='#blah'> links
+
+cachedCurrentSectionTop = undefined
+
+# sets 'cachedCurrentSectionTop'
+navPillSelectedOn = 0
+selectNavPill = (target, sticky) ->
+    if ($t = $("nav a[href='##{target}']")).length > 0
+        $li = $t.parent('li')
+        if (Date.now() - navPillSelectedOn) > 300
+            navPillSelectedOn = Date.now() if sticky
+            $li.addClass('active').siblings().removeClass 'active'
+            cachedCurrentSectionTop = $('#'+target).offset().top
+        $li
+
+makeSectionObj = (el) -> {el: el, top: $(el).offset().top}
+
+closestSection = ->
+    pos = $(window).scrollTop() + ($(window).height() / 2)
+    offsets = $('section.nav').map(-> makeSectionObj @).get().sort (a,b)-> a.top - b.top
+    for o in offsets
+        if pos >= o.top then closest = o else break
+    closest ? offsets[0]
 
 $ ->
-    # $('body').css('display', 'none').fadeIn(1200)
+    # do this before we wrap the FAQ with anchors
+    $("a[href^='#']").click ->
+        if (target = $(@).attr('href').slice(1)) != ''
+            gScrollTo target, -> not selectNavPill(target, true)
+                
+
     $(".faq h3").next().hide()
     $(".faq h3").wrap('<a href="#"></a>').click (a, obj)->
         $(this).parent().next().slideToggle(duration: "fast", complete: obj?.done ? ->)
@@ -111,12 +175,8 @@ $ ->
             tl.addCallback fadeOut, pt2, [objs, [{left: endImgLoc}, {top: endTxtLoc}], pt2] 
         
     tl.play()
-
-    jumpToFAQ window.location.hash.slice(1)
         
-        
-### TODO: enable once we get responsive css working with this, and then scroll the highlighted section.
-    # nav
+    # nav        
     navBoundary = 100
     navNeedsUpdate = do ->
         prevPos = $(window).scrollTop()
@@ -127,6 +187,22 @@ $ ->
 
     $(window).scroll ->
         # note that 0 position could be returned, and it has a truthy value of false
-        if typeof (pos = navNeedsUpdate()) is 'number'
+        if (pos = navNeedsUpdate()) != false
             TweenMax.to $('nav'), 0.4, {overwrite:true, autoAlpha: if pos >= navBoundary then 1 else 0}
-###
+        
+        if (closest = closestSection()).top != cachedCurrentSectionTop
+            $li = selectNavPill $(closest.el).attr('id') # update 'cachedCurrentSectionTop'
+            liOff = ($li.offset().left + $li.outerWidth(true)) - $(window).width()
+            if liOff > 0
+                # we need to scroll the 'ul' to bring it inside
+                TweenMax.to $li.parent(), 0.2, {marginLeft: -liOff}
+            else if $li.offset().left < 0
+                TweenMax.to $li.parent(), 0.2, {marginLeft: 0}
+
+    winHash = window.location.hash.slice(1)
+    gScrollTo winHash, -> not selectNavPill(winHash, true)
+        # # yes, this is hackish..
+        # # do it like this so that 'updateCurrentSection' doesn't override it
+        # setTimeout (-> selectNavPill winHash), 200
+        # # gScrollTo needs to know whether or not to highlight
+        # not selectNavPill(winHash)
