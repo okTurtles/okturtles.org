@@ -6,11 +6,6 @@ TimelineLite::addDelay = (delay, position) ->
         when 'number' then @set {}, {}, delay + position 
         else console.log "BAD POSITION TYPE for addDelay!"
 
-# TODO: make this generic and for jumping to ids, not names.
-# scrollToFAQ = (idName) ->
-#     if idName and ($faq = $(".faq h3[name='#{idName}']")).length != 0
-#         scrollToEl $faq
-
 gScrollTo = (target, shouldFlashCb) ->
     if target # '' evals to false
         if typeof(target) isnt 'string'
