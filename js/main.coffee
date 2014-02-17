@@ -193,6 +193,7 @@ $ ->
         if (pos = navNeedsUpdate()) != false
             TweenMax.to $('nav'), 0.4, {overwrite:true, autoAlpha: if pos >= navBoundary then 1 else 0}
         
+        # TODO: don't do a $.map on every call! Only generate it when the page size changes
         if (closest = closestSection()).top != cachedCurrentSectionTop
             # this will update 'cachedCurrentSectionTop' appropriately
             selectNavPill $(closest.el).attr('id')
