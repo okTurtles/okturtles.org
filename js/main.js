@@ -83,7 +83,7 @@ cachedCurrentSectionTop = void 0;
 navPillSelectedOn = 0;
 
 selectNavPill = function(target, sticky) {
-  var $li, $t;
+  var $li, $t, liOff, margin;
   if (($t = $("nav a[href='#" + target + "']")).length > 0) {
     $li = $t.parent('li');
     if ((Date.now() - navPillSelectedOn) > 300) {
@@ -92,6 +92,17 @@ selectNavPill = function(target, sticky) {
       }
       $li.addClass('active').siblings().removeClass('active');
       cachedCurrentSectionTop = $('#' + target).offset().top;
+    }
+    liOff = ($li.offset().left + $li.outerWidth(true)) - $(window).width();
+    if (liOff > 0) {
+      margin = $li.outerWidth(true) - $li.width();
+      TweenMax.to($li.parent(), 0.2, {
+        marginLeft: -1 * (liOff + margin)
+      });
+    } else if ($li.offset().left < 0) {
+      TweenMax.to($li.parent(), 0.2, {
+        marginLeft: 0
+      });
     }
     return $li;
   }
@@ -282,7 +293,7 @@ $(function() {
     };
   })();
   $(window).scroll(function() {
-    var $li, closest, liOff, pos;
+    var closest, pos;
     if ((pos = navNeedsUpdate()) !== false) {
       TweenMax.to($('nav'), 0.4, {
         overwrite: true,
@@ -290,17 +301,7 @@ $(function() {
       });
     }
     if ((closest = closestSection()).top !== cachedCurrentSectionTop) {
-      $li = selectNavPill($(closest.el).attr('id'));
-      liOff = ($li.offset().left + $li.outerWidth(true)) - $(window).width();
-      if (liOff > 0) {
-        return TweenMax.to($li.parent(), 0.2, {
-          marginLeft: -liOff
-        });
-      } else if ($li.offset().left < 0) {
-        return TweenMax.to($li.parent(), 0.2, {
-          marginLeft: 0
-        });
-      }
+      return selectNavPill($(closest.el).attr('id'));
     }
   });
   winHash = window.location.hash.slice(1);

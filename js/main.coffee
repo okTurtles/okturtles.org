@@ -69,6 +69,14 @@ selectNavPill = (target, sticky) ->
             navPillSelectedOn = Date.now() if sticky
             $li.addClass('active').siblings().removeClass 'active'
             cachedCurrentSectionTop = $('#'+target).offset().top
+        liOff = ($li.offset().left + $li.outerWidth(true)) - $(window).width()
+        if liOff > 0
+            # we need to scroll the 'ul' to bring it inside
+            margin = $li.outerWidth(true) - $li.width()
+            TweenMax.to $li.parent(), 0.2, {marginLeft: -1 * (liOff + margin)}
+        else if $li.offset().left < 0
+            TweenMax.to $li.parent(), 0.2, {marginLeft: 0}
+        # return $li (so that we know whether to flash the section or not)
         $li
 
 makeSectionObj = (el) -> {el: el, top: $(el).offset().top}
@@ -191,18 +199,8 @@ $ ->
             TweenMax.to $('nav'), 0.4, {overwrite:true, autoAlpha: if pos >= navBoundary then 1 else 0}
         
         if (closest = closestSection()).top != cachedCurrentSectionTop
-            $li = selectNavPill $(closest.el).attr('id') # update 'cachedCurrentSectionTop'
-            liOff = ($li.offset().left + $li.outerWidth(true)) - $(window).width()
-            if liOff > 0
-                # we need to scroll the 'ul' to bring it inside
-                TweenMax.to $li.parent(), 0.2, {marginLeft: -liOff}
-            else if $li.offset().left < 0
-                TweenMax.to $li.parent(), 0.2, {marginLeft: 0}
+            # this will update 'cachedCurrentSectionTop' appropriately
+            selectNavPill $(closest.el).attr('id')
 
     winHash = window.location.hash.slice(1)
     gScrollTo winHash, -> not selectNavPill(winHash, true)
-        # # yes, this is hackish..
-        # # do it like this so that 'updateCurrentSection' doesn't override it
-        # setTimeout (-> selectNavPill winHash), 200
-        # # gScrollTo needs to know whether or not to highlight
-        # not selectNavPill(winHash)
