@@ -32,7 +32,6 @@ gScrollTo = function(target, shouldFlashCb) {
     } else {
       hash = '#' + ($t.attr('id') || $t.attr('name'));
       faq = $t.hasClass('faq_question');
-      console.log("scrolling to: " + hash + " (faq=" + faq + ")");
       options = {
         duration: 500,
         onAfter: function() {
@@ -66,12 +65,10 @@ gScrollTo = function(target, shouldFlashCb) {
         }
       };
       if (faq) {
-        console.log("ADDING MARGIN!");
         $.extend(options, {
           margin: true
         });
       }
-      console.log(options);
       $.scrollTo($t, options);
       return false;
     }

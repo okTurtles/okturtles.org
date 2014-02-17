@@ -21,7 +21,7 @@ gScrollTo = (target, shouldFlashCb) ->
         else
             hash = '#' + ($t.attr('id') or $t.attr('name'))
             faq = $t.hasClass 'faq_question'
-            console.log "scrolling to: #{hash} (faq=#{faq})"
+            # console.log "scrolling to: #{hash} (faq=#{faq})"
             options =
                 duration: 500
                 # offset: {top:-50, left:0}
@@ -45,10 +45,10 @@ gScrollTo = (target, shouldFlashCb) ->
                         
             # scrollTo has a bug where even specifying margin:true means margin is enabled
             if faq
-                console.log "ADDING MARGIN!"
+                # console.log "ADDING MARGIN!"
                 $.extend(options, {margin:true})
             
-            console.log options
+            # console.log options
             $.scrollTo $t, options
             
             return false # for <a href='#blah'> links
