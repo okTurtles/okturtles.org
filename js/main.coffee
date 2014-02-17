@@ -85,7 +85,7 @@ closestSection = ->
 
 $ ->
     # do this before we wrap the FAQ with anchors
-    $("a[href^='#']").click ->
+    $("a[href^='#']:not(.fancybox)").click ->
         if (target = $(@).attr('href').slice(1)) != ''
             gScrollTo target, -> not selectNavPill(target, true)
                 

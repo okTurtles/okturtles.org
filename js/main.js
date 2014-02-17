@@ -136,7 +136,7 @@ closestSection = function() {
 
 $(function() {
   var $firstImg, $firstTxt, $service, $slides, $subtitle, $tagline, IMG_WIDTH, SLIDE_IMG_CENTER, SLIDE_PADDING, SLIDE_TXT_CENTER, SLIDE_TXT_LEFT, SLIDE_TXT_PADDING, STAGGER_AMOUNT, TIME_FOR_IMG_DISPLAY, TIME_PER_ANIMATION, TXT_MARGIN, debug, fadeIn, fadeOut, navBoundary, navNeedsUpdate, tl, winHash;
-  $("a[href^='#']").click(function() {
+  $("a[href^='#']:not(.fancybox)").click(function() {
     var target;
     if ((target = $(this).attr('href').slice(1)) !== '') {
       return gScrollTo(target, function() {
