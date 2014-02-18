@@ -54,6 +54,8 @@ gScrollTo = (target, shouldFlashCb) ->
             return false # for <a href='#blah'> links
 
 cachedCurrentSectionTop = undefined
+navScroller = undefined
+navPadding = 0
 
 # sets 'cachedCurrentSectionTop'
 navPillSelectedOn = 0
@@ -64,13 +66,19 @@ selectNavPill = (target, sticky) ->
             navPillSelectedOn = Date.now() if sticky
             $li.addClass('active').siblings().removeClass 'active'
             cachedCurrentSectionTop = $('#'+target).offset().top
-        liOff = ($li.offset().left + $li.outerWidth(true)) - $(window).width()
+        # doesn't work: navScroller.doScrollLeft $li.offset().left, 0.2
+        liLft = $li.offset().left
+        posLft = $li.position().left
+        windowWidth = $(window).width()
+        liOff = (liLft + $li.outerWidth(true)) - windowWidth
         if liOff > 0
-            # we need to scroll the 'ul' to bring it inside
-            margin = $li.outerWidth(true) - $li.width()
-            TweenMax.to $li.parent(), 0.2, {marginLeft: -1 * (liOff + margin)}
-        else if $li.offset().left < 0
-            TweenMax.to $li.parent(), 0.2, {marginLeft: 0}
+            left = "-#{posLft + liOff - liLft}px"
+            # console.log "#{target}: LI.LEFT=[#{liLft}-#{liLft+$li.outerWidth(true)}], WINDOW=#{windowWidth} UL.LEFT=>#{left}   (liOff=#{liOff}!)"
+            TweenMax.to $li.parent(), 0.2, {left: left}
+        else if liLft < navPadding
+            left = "-#{posLft - navPadding}px"
+            # console.log "#{target}: LI.LEFT=[#{liLft}-#{liLft+$li.outerWidth(true)}], WINDOW=#{windowWidth} UL.LEFT=>#{left}   (liOff=#{liOff})"
+            TweenMax.to $li.parent(), 0.2, {left: left}
         # return $li (so that we know whether to flash the section or not)
         $li
 
@@ -89,11 +97,27 @@ $ ->
         if (target = $(@).attr('href').slice(1)) != ''
             gScrollTo target, -> not selectNavPill(target, true)
                 
-
+    # faqs
     $(".faq h3").next().hide()
     $(".faq h3").wrap('<a href="#"></a>').click (a, obj)->
         $(this).parent().next().slideToggle(duration: "fast", complete: obj?.done ? ->)
         return false
+
+    # navScroller = $('nav').niceScroll "nav > ul",
+    #     touchbehavior: true
+    #     smoothscroll: false
+    #     enablekeyboard: false
+    #     hidecursordelay: 0
+
+    navPadding = $('nav li:first-child').position().left
+    $('nav > ul').draggable
+        axis: 'x'
+        cursor: 'move'
+        # containment: 'parent'
+        # scroll: true
+
+
+    # top animation thing
     $service = $('#service')
     $subtitle = $('#subtitle')
     $tagline = $('#serviceTagline')
@@ -182,7 +206,7 @@ $ ->
     # nav        
     navBoundary = 100
     navNeedsUpdate = do ->
-        prevPos = $(window).scrollTop()
+        prevPos = 0 #$(window).scrollTop()
         ->
             curPos = $(window).scrollTop() 
             update = if curPos < navBoundary then prevPos > navBoundary else prevPos < navBoundary
@@ -191,7 +215,9 @@ $ ->
     $(window).scroll ->
         # note that 0 position could be returned, and it has a truthy value of false
         if (pos = navNeedsUpdate()) != false
-            TweenMax.to $('nav'), 0.4, {overwrite:true, autoAlpha: if pos >= navBoundary then 1 else 0}
+            alpha = if pos >= navBoundary then 1 else 0
+            # console.log "updating nav to: #{alpha}"
+            TweenMax.to $('nav'), 0.4, {overwrite:true, autoAlpha: alpha}
         
         # TODO: don't do a $.map on every call! Only generate it when the page size changes
         if (closest = closestSection()).top != cachedCurrentSectionTop
