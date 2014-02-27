@@ -72,10 +72,10 @@
 
     <nav class="nav-green"> <!--Chane class for different nav - can be .nav-green or .nav-white -->
         <ul>
-            <li><a href="#not-secure">The web is not secure</a></li>
-            <li><a href="#open-source">Open Source Freedom</a></li>
+            <li><a href="#not-secure">Not secure</a></li>
+            <li><a href="#open-source">Features</a></li>
             <li><a href="#DNSChain">DNSChain</a></li>
-            <li><a href="#oktvs">okT + DNSChain vs. ______</a></li>
+            <li><a href="#oktvs">Comparisons</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#memory-of">In Memory Of</a></li>
             <li><a href="#footer">Community</a></li>
@@ -337,7 +337,7 @@ more coming soon! :)
                         </p>
                         <h3 class="faq_question">Is this "vaporware"?</h3>
                         <p class="faq_answer">
-                            Absolutely not! We have a functioning (though incomplete) version of DNSChain already written (it's less than a hundred lines of JavaScript to get a basic version running in Node.js!). Even if we were not able to complete this project ourselves (for whatever reason), the idea is <b><i>so simple</i></b> to implement that it is virtually guaranteed to happen. okTurtles is a tad more complicated and requires a community effort to keep it running smoothly on third-party sites, but it's readily doable. Most of the design has been explained in <a href="other/dnsnmc_okturtles_overview.pdf" target="_blank">our paper</a>, all that remains is to implement it. <b>Github <a href="https://github.com/okturtles" target="_blank">project pages</a> will be brought online shortly!</b>
+                            Absolutely not! We have a functioning (though incomplete) version of <a href="https://github.com/okTurtles/dnschain" target="_blank">DNSChain already written</a>. okTurtles is a tad more complicated, and requires a community effort to keep it running smoothly on third-party sites. Most of the design has been explained in <a href="other/dnsnmc_okturtles_overview.pdf" target="_blank">our paper</a>, all that remains is to implement it.
                         </p>
                         <h3 class="faq_question">Are you going to update this site soon with more info?</h3>
                         <p class="faq_answer">Yup.</p>
@@ -408,6 +408,20 @@ more coming soon! :)
                     <a href="https://twitter.com/okturtles">@okTurtles</a></b>
                 </p>
             </div>
+            <div class="modal" id="forumsBox" style="display:none; width: 300px; max-width: 500px">
+                <p>
+                    Forums served over HTTPS using self-signed certificate.
+                </p>
+                <p>
+                    <ul>
+                        <li><a href="https://forums.okturtles.com">https://forums.okturtles.com</a></li>
+                    </ul>
+                </p>
+                <p>
+                    You can use a public DNSChain server <a href="http://dns.dnschain.net/d/okturtles" target="_blank">to check</a> its fingerprint.
+                </p>
+                <p>SHA1: <b><a href="https://twitter.com/okTurtles/status/439162282636218369">https://twitter.com/okTurtles/status/439162282636218369</a></b></p>
+            </div>
 
             <section id="footer" class="cbp-so-section nav">
                 <article class="cbp-so-side cbp-so-side-center footer">
@@ -415,8 +429,10 @@ more coming soon! :)
                     <a href="#" class="hide_kik"><img id="kik_pic" src="img/kickstarter.png" data-at2x="img/kickstarter@2x.png" alt=""></a>
                     <h3 class="kik_coming_soon kik_coming_soon_hide">Kickstarter Coming Soon!</h3>
 
-                    <a href="blog/" class="link" target="_blank">blog</a>
-                    <a href="#contactEmail" class="link fancybox">contact</a>
+                    <a href="http://blog.okturtles.com" class="link" target="_blank">blog</a>
+                    <!-- <a href="#contactEmail" class="link fancybox">contact</a> -->
+                    <a href="#forumsBox" class="link fancybox">forums</a>
+                    <a href="http://webchat.freenode.net/?channels=%23dnschain&uio=MT11bmRlZmluZWQb1" class="link" target="_blank">chat</a>
                     <a href="https://twitter.com/okturtles" class="link" target="_blank">twitter</a>
                     <a href="https://github.com/okTurtles" class="link" target="_blank">github</a>
                     <!-- <a href="https://dot-bit.org/forum/index.php" class="link" name="getinvolved" target="_blank">get involved</a> -->
@@ -441,7 +457,6 @@ more coming soon! :)
         </div>
     </div> 
     <script src="js/retina-1.1.0.min.js"></script>
-    <!-- // <script src="/mint/?js" type="text/javascript"></script> -->
     <!-- Piwik -->
     <script type="text/javascript">
       var _paq = _paq || [];
