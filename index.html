@@ -6,13 +6,13 @@
     <title>okTurtles + DNSChain :: Surveillance-free communication on your favorite websites</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <meta name="description" content="okTurtles makes surveillance-free communication possible on your favorite websites" />
-    <meta name="keywords" content="okTurtles, security, dnsnmc, namecoin, bitcoin, dnssec, security, surveillance, surviellance, nsa, https, certificate authorities, ssl certificates, certificate transparency, convergence" />
+    <meta name="keywords" content="okTurtles, security, dnsnmc, namecoin, bitcoin, dnssec, security, surveillance, surviellance, nsa, https, certificate authorities, ssl certificates, certificate transparency, convergence, mitm, nsa-proof, mitm-proof" />
     <link rel="shortcut icon" href="/favicon.ico?v=2" />
 
     
         <!-- social sharing metadata -->
     <meta property="og:title" content="okTurtles: Surveillance-free communication on your favorite websites" />
-    <meta property="og:description" content="okTurtles brings NSA-proof messages to your favorite websites. DNSChain is your connection to the Namecoin blockchain." />
+    <meta property="og:description" content="okTurtles brings MITM-proof messages to your favorite websites. DNSChain is your connection to the Namecoin blockchain." />
 
     <meta property="og:image" content="http://okturtles.com/img/simple@2x.jpg">
     <meta property="og:image:type" content="image/jpeg">
@@ -114,7 +114,7 @@
                         <div class="clear"></div> <!-- Will, do we need this? probably not -->
                     </div>
                     <p id="serviceTagline">
-                        <span>Click the turtle in your</span><span id="service">&nbsp;</span><span>to <a href="#nsa_proof">"NSA-proof"</a> your message.</span>
+                        <span>Click the turtle in your</span><span id="service">&nbsp;</span><span>to <a href="#mitm_proof">"MITM-proof"</a> your message.</span>
                     </p>
                     <!--
                     <div id="email">No Spam, Guaranteed.</div>
@@ -160,7 +160,7 @@
                     <img class="features" src="img/simple.jpg" data-at2x="img/simple@2x.jpg" alt="zero conf">
                 </article>
                 <article class="cbp-so-side cbp-so-side-right right ">
-                    <p><b>NSA-proof communication through almost any website, with <i>zero</i> intervention needed from the site operators.</b> okTurtles is designed with the potential to work over almost any website. All it needs to create an encrypted message for someone is the <i>identity</i> of that person, specifically, their <a href="https://en.wikipedia.org/wiki/Public-key_cryptography" target="_blank">public key</a>. Unlike <a href="https://en.wikipedia.org/wiki/Certification_authority" target="_blank">the system</a> that HTTPS uses today, okTurtles is able to securely obtain this information by using <a href="#DNSChain">DNSChain</a>.</p>
+                    <p><b><a href="#mitm_proof">MITM-proof</a> communication through almost any website, with <i>zero</i> intervention needed from the site operators.</b> okTurtles is designed with the potential to work over almost any website. All it needs to create an encrypted message for someone is the <i>identity</i> of that person, specifically, their <a href="https://en.wikipedia.org/wiki/Public-key_cryptography" target="_blank">public key</a>. Unlike <a href="https://en.wikipedia.org/wiki/Certification_authority" target="_blank">the system</a> that HTTPS uses today, okTurtles is able to securely obtain this information by using <a href="#DNSChain">DNSChain</a>.</p>
                 </article>
 
             </section>
@@ -300,10 +300,11 @@ more coming soon! :)
                         <br/> <br/>
                         Olga Ivanova is the master illustrator behind the okTurtles logo.
                         </p>
-                        <h3 class="faq_question" id="nsa_proof" name="nsa_proof">Is this project <i>really</i> "NSA-proof"?</h3>
+                        <a name="nsa_proof"></a>
+                        <h3 class="faq_question" id="mitm_proof" name="mitm_proof">Is this project <i>really</i> "MITM/NSA-proof"?</h3>
                         <div class="faq_answer">
                             <p>
-                                When we state that okTurtles will "NSA-proof" your online communications, we mean that <b>it will stop all of the publicly known methods by which the NSA <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" target="_blank">can read</a> your messages on these sites.</b>
+                                When we state that okTurtles will "MITM-proof" your online communications, we mean that <b>it will stop all of the publicly known methods by which the NSA <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" target="_blank">can read</a> your messages on these sites.</b>
                             </p>
                             <p>
                                 Specifically, okTurtles will provide true <b>end-to-end encryption</b> and <b>authentication</b> between you and the person you're communicating with that does not fall prey to any of the following:
