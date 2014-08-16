@@ -38,6 +38,8 @@
     <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
     <link rel="stylesheet" type="text/css" href="css/bigfoot-default.css" />
     <script src="js/modernizr.custom.js"></script>
+    <!-- <script src="js/popcorn-custom.min.js"></script> -->
+    <script src="js/popcorn.min.js"></script>
     <script src="js/bigfoot.min.js" type="text/javascript"></script>
     <script src='js/main.js' type="text/javascript"></script>
 
@@ -58,6 +60,8 @@
                 openEffect  : 'none',
                 closeEffect : 'none'
             });
+            // TODO: use smart player: http://popcornjs.org/popcorn-docs/media-wrappers/#smart
+            $pop = new Popcorn('#demoVideo');
         });
     </script>
     <style>
@@ -94,8 +98,8 @@
                         </a>
                     </div>
                     <p style="padding-bottom:25px;">
-                        For a surveillance-free world.
-                        <!-- Surveillance-free communication for everyone. -->
+                        <!-- For a surveillance-free world. -->
+                        Simple, surveillance-free communication, everywhere.
                     </p>
 
                     <div id="subtitle"> <!-- keeps inline -->
@@ -137,6 +141,12 @@
                     <p>
                         HTTPS is <a href="https://www.eff.org/deeplinks/2011/10/how-secure-https-today" target="_blank">broken</a>. <a href="#DNSChain">DNSChain</a> fixes it.
                     </p>
+                    <video width="500" height="281" id="demoVideo" controls="controls" poster="other/okTDemoPoster.jpg">
+                        <source src="other/okTurtlesDEMO.webm">
+                        <source src="other/okTurtlesDEMO.mp4">
+                        <source src="other/okTurtlesDEMO.ogv">
+                        <source src="other/okTurtlesDEMO.mov">
+                    </video>
                     <p>
 
                         Your communications <a href="http://www.propublica.org/article/nsa-data-collection-faq" target="_blank">are recorded</a> and can be <a href="https://www.eff.org/deeplinks/2011/08/iranian-man-middle-attack-against-google" target="_blank">used against you</a>. This <a href="https://www.schneier.com/blog/archives/2013/09/new_nsa_leak_sh.html" target="_blank">happens</a> <a href="http://files.cloudprivacy.net/ssl-mitm.pdf" target="_blank">routinely</a>.
@@ -468,7 +478,7 @@ more coming soon! :)
       _paq.push(['trackPageView']);
       _paq.push(['enableLinkTracking']);
       (function() {
-        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.okturtles.com/";
+        var u=(("https:" === document.location.protocol) ? "https" : "http") + "://piwik.okturtles.com/";
         _paq.push(['setTrackerUrl', u+'piwik.php']);
         _paq.push(['setSiteId', 1]);
         var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
