@@ -62,6 +62,10 @@
             });
             // TODO: use smart player: http://popcornjs.org/popcorn-docs/media-wrappers/#smart
             $pop = new Popcorn('#demoVideo');
+            $pop.listen('playing', function () {
+                if (typeof _paq !== 'undefined' && _paq !== null)
+                    _paq.push(['trackPageView', '/screencast']);
+            });
         });
     </script>
     <style>
