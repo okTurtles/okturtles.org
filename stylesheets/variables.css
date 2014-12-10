@@ -1,0 +1,5 @@
+/* line 30, ../sass/variables.scss */
+.smooth-scrolling {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}

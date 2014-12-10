@@ -1,0 +1,94 @@
+.browser-extension{
+	.header{
+		padding: 60px 0;
+		background-color: $green;
+		h1{
+			font-size: 40px;
+		}
+		h3{
+			font-size: 1.1em;
+		}
+	}
+
+	.browser-extension{
+		padding: 80px 0;
+		background-color: $white;
+		.okturtles{
+			max-width: 110px;
+			vertical-align: middle;
+			position: relative;
+			display: inline-block;
+			margin-bottom: 50px;	
+		    
+		}
+		.okturtles:hover{
+			-webkit-animation:spin .5s linear infinite;
+		    -moz-animation:spin .5s linear infinite;
+		    animation:spin .5s linear infinite;
+		}
+		@-webkit-keyframes spin{
+			0%{
+			  -webkit-transform: rotate(0deg);
+			}
+			25% {
+			  -webkit-transform: rotate(3deg);
+			}
+			50% {
+			  -webkit-transform: rotate(0deg);
+			}
+			75% {
+			  -webkit-transform: rotate(-3deg);
+			}
+			100% {
+			  -webkit-transform: rotate(0deg);
+			}
+		}
+		@-moz-keyframes spin{
+			0%{
+			  -moz-transform: rotate(0deg);
+			}
+			25% {
+			  -moz-transform: rotate(3deg);
+			}
+			50% {
+			  -moz-transform: rotate(0deg);
+			}
+			75% {
+			  -moz-transform: rotate(-3deg);
+			}
+			100% {
+			  -moz-transform: rotate(0deg);
+			}
+		}
+		@keyframes spin{
+			0%{
+			  transform: rotate(0deg);
+			}
+			25% {
+			  transform: rotate(3deg);
+			}
+			50% {
+			  transform: rotate(0deg);
+			}
+			75% {
+			  transform: rotate(-3deg);
+			}
+			100% {
+			  transform: rotate(0deg);
+			}
+		}
+
+
+
+		h2{
+			font-size: 28px;
+			color: $dark-green;
+			margin-bottom: 20px;
+		}
+		p{
+			color: $grey;
+		}
+
+
+	}
+}

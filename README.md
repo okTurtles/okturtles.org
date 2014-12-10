@@ -1,4 +1,0 @@
-# okTurtles.com
-
-Hello world!
-
