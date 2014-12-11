@@ -585,10 +585,11 @@ section {
 }
 /* line 16, ../sass/browser-extension.scss */
 .browser-extension .browser-extension .okturtles {
-  max-width: 110px;
+  max-width: 130px;
   vertical-align: middle;
   position: relative;
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
   margin-bottom: 50px;
 }
 /* line 24, ../sass/browser-extension.scss */
@@ -650,11 +651,27 @@ section {
 }
 /* line 83, ../sass/browser-extension.scss */
 .browser-extension .browser-extension h2 {
-  font-size: 28px;
+  text-align: center;
+  font-size: 44px;
   color: #0C6130;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 /* line 88, ../sass/browser-extension.scss */
+.browser-extension .browser-extension h2 span {
+  color: #9a9a9a;
+  font-weight: normal;
+  font-size: 20px;
+}
+/* line 94, ../sass/browser-extension.scss */
+.browser-extension .browser-extension .first {
+  color: #141414;
+  font-size: 1.2em;
+  line-height: 1.4;
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+}
+/* line 102, ../sass/browser-extension.scss */
 .browser-extension .browser-extension p {
   color: #5a5a5a;
 }

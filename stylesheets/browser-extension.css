@@ -1,6 +1,6 @@
 /*
 Error: Undefined variable: "$green".
-        on line 4 of /Applications/MAMP/htdocs/okturtles/sass/browser-extension.scss
+        on line 4 of /Applications/MAMP/htdocs/okturtles.com/sass/browser-extension.scss
 
 1: .browser-extension{
 2: 	.header{
@@ -13,7 +13,7 @@ Error: Undefined variable: "$green".
 9: 			font-size: 1.1em;
 
 Backtrace:
-/Applications/MAMP/htdocs/okturtles/sass/browser-extension.scss:4
+/Applications/MAMP/htdocs/okturtles.com/sass/browser-extension.scss:4
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.6/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.6/lib/sass/script/tree/node.rb:50:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.6/lib/sass/tree/visitors/perform.rb:384:in `visit_prop'
@@ -78,4 +78,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$green\".\A         on line 4 of /Applications/MAMP/htdocs/okturtles/sass/browser-extension.scss\A \A 1: .browser-extension{\A 2: 	.header{\A 3: 		padding: 60px 0;\A 4: 		background-color: $green;\A 5: 		h1{\A 6: 			font-size: 40px;\A 7: 		}\A 8: 		h3{\A 9: 			font-size: 1.1em;"; }
+  content: "Error: Undefined variable: \"$green\".\A         on line 4 of /Applications/MAMP/htdocs/okturtles.com/sass/browser-extension.scss\A \A 1: .browser-extension{\A 2: 	.header{\A 3: 		padding: 60px 0;\A 4: 		background-color: $green;\A 5: 		h1{\A 6: 			font-size: 40px;\A 7: 		}\A 8: 		h3{\A 9: 			font-size: 1.1em;"; }

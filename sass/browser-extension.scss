@@ -14,12 +14,12 @@
 		padding: 80px 0;
 		background-color: $white;
 		.okturtles{
-			max-width: 110px;
+			max-width: 130px;
 			vertical-align: middle;
 			position: relative;
-			display: inline-block;
-			margin-bottom: 50px;	
-		    
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 50px;
 		}
 		.okturtles:hover{
 			-webkit-animation:spin .5s linear infinite;
@@ -81,9 +81,23 @@
 
 
 		h2{
-			font-size: 28px;
+			text-align: center;
+			font-size: 44px;
 			color: $dark-green;
-			margin-bottom: 20px;
+			margin-bottom: 40px;
+			span{
+				color: #9a9a9a;
+				font-weight: normal;
+				font-size: 20px;
+			}
+		}
+		.first{
+			color: $black;
+			font-size: 1.2em;
+			line-height: 1.4;
+			position: relative;
+			display: block;
+			margin-bottom: 20px;	
 		}
 		p{
 			color: $grey;
