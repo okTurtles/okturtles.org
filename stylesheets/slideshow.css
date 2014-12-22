@@ -1,0 +1,441 @@
+/* line 4, ../sass/slideshow.scss */
+#facebook {
+  color: #3b5998;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+/* line 9, ../sass/slideshow.scss */
+#gmail {
+  color: #c92c19;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+/* line 14, ../sass/slideshow.scss */
+.slideshow {
+  position: relative;
+  padding: 20px 0;
+  margin: 0 auto;
+  overflow: visible;
+  max-width: 503px;
+  width: 100%;
+  height: 280px;
+}
+
+/* line 23, ../sass/slideshow.scss */
+.slideshow > div {
+  position: absolute;
+  padding: 0;
+  margin: 0 auto;
+  overflow: visible;
+  max-width: 503px;
+  width: 100%;
+  height: 350px;
+}
+
+/* line 33, ../sass/slideshow.scss */
+.slideshow img {
+  position: absolute;
+  top: 10px;
+  /*display: none;*/
+  visibility: hidden;
+  float: left;
+  max-width: 503px !important;
+  width: 100%;
+  display: inline-block;
+}
+
+/* line 45, ../sass/slideshow.scss */
+.slideshow span {
+  position: absolute;
+  visibility: hidden;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: .905em;
+  /*hack - SLIDESHOW TEXT*/
+  width: 100px;
+  /* has to be the same as #service */
+}
+
+/* line 56, ../sass/slideshow.scss */
+#serviceTagline span {
+  position: relative;
+  margin: 0 auto;
+  width: 100px;
+  margin-top: 1.1em;
+}
+
+/* line 62, ../sass/slideshow.scss */
+#service {
+  display: inline-block;
+  width: 100px;
+  height: 20px;
+  margin: 0 5px;
+  top: 0;
+}
+
+/* line 70, ../sass/slideshow.scss */
+#subtitle {
+  margin-top: -20px;
+  line-height: 1.8em;
+}
+
+/* line 76, ../sass/slideshow.scss */
+.green {
+  color: #27ae60;
+}
+
+@media screen and (max-width: 55em) {
+  /* line 83, ../sass/slideshow.scss */
+  .container > header h1,
+  .container > header nav {
+    float: none;
+  }
+
+  /* line 88, ../sass/slideshow.scss */
+  .container > header > span,
+  .container > header h1 {
+    text-align: center;
+  }
+
+  /* line 93, ../sass/slideshow.scss */
+  .container > header nav {
+    margin: 0 auto;
+  }
+
+  /* line 97, ../sass/slideshow.scss */
+  .container > header > span {
+    text-indent: 30px;
+  }
+}
+/* line 102, ../sass/slideshow.scss */
+.section_color_top {
+  background-color: #ffffff;
+}
+
+/* line 105, ../sass/slideshow.scss */
+.section_color_middle {
+  background-color: #f5f5f5;
+}
+
+/* line 108, ../sass/slideshow.scss */
+#section_color_last {
+  background-color: #ffffff;
+}
+
+/* line 112, ../sass/slideshow.scss */
+img.features {
+  box-shadow: 2px 2px 4px #888888;
+  padding: 0;
+  margin-bottom: 2.5em;
+}
+
+/* line 118, ../sass/slideshow.scss */
+.cbp-so-scroller {
+  overflow: visible;
+  /* <! GREG CHANGED THIS TO FIX SLIDE SHOW! */
+}
+
+/* line 122, ../sass/slideshow.scss */
+.cbp-so-section {
+  overflow: hidden;
+}
+
+/* line 125, ../sass/slideshow.scss */
+.cbp-so-section:first-child {
+  margin-bottom: 5em;
+  padding-bottom: 1em;
+}
+
+/* Clear floats of children */
+/* line 133, ../sass/slideshow.scss */
+.cbp-so-section:before,
+.cbp-so-section:after {
+  content: " ";
+  display: table;
+}
+
+/* line 139, ../sass/slideshow.scss */
+.cbp-so-section:after {
+  clear: both;
+}
+
+/* Text styling */
+/* line 144, ../sass/slideshow.scss */
+.cbp-so-section h2 {
+  font-size: 4em;
+  font-weight: 300;
+  line-height: 1;
+  margin-top: 0;
+}
+
+/* line 150, ../sass/slideshow.scss */
+.cbp-so-section li {
+  margin-bottom: 10px;
+}
+
+/* line 153, ../sass/slideshow.scss */
+.cbp-so-section li:last-child {
+  margin-bottom: inherit;
+}
+
+/* line 156, ../sass/slideshow.scss */
+.cbp-so-section p, .cbp-so-section li {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+/* Sides */
+/* line 162, ../sass/slideshow.scss */
+.cbp-so-side {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: visible;
+  /* <! GREG CHANGED THIS TO FIX SLIDE SHOW! */
+  padding-top: 0;
+  padding-bottom: 60px;
+  -webkit-transition: -webkit-transform 1s, opacity 1s;
+  -moz-transition: -moz-transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s;
+}
+
+/* line 175, ../sass/slideshow.scss */
+.cbp-so-side-left {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 40px;
+  overflow: hidden;
+  margin-top: -6em;
+  padding-bottom: 3em;
+  -webkit-transition: -webkit-transform 1s, opacity 1s;
+  -moz-transition: -moz-transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s;
+}
+
+/* line 188, ../sass/slideshow.scss */
+.cbp-so-side-right {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-right: 40px;
+  padding-left: 15px;
+  overflow: hidden;
+  margin-top: -6em;
+  padding-bottom: 3em;
+  -webkit-transition: -webkit-transform 1s, opacity 1s;
+  -moz-transition: -moz-transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s;
+}
+
+/* line 201, ../sass/slideshow.scss */
+.center {
+  margin-bottom: -5em;
+}
+
+/* line 205, ../sass/slideshow.scss */
+.left {
+  width: 50%;
+  float: left;
+  text-align: right;
+  padding-right: 2em;
+}
+
+/* line 212, ../sass/slideshow.scss */
+.right {
+  width: 50%;
+  float: right;
+  text-align: left;
+  padding-left: 2em;
+}
+
+/* Clear floats of children */
+/* line 220, ../sass/slideshow.scss */
+.cbp-so-side:before,
+.cbp-so-side:after {
+  content: " ";
+  display: table;
+}
+
+/* line 226, ../sass/slideshow.scss */
+.cbp-so-side:after {
+  clear: both;
+}
+
+/* line 230, ../sass/slideshow.scss */
+.cbp-so-side-center {
+  text-align: center;
+}
+
+/* Initial state (hidden or anything else) */
+/* line 238, ../sass/slideshow.scss */
+.cbp-so-init .cbp-so-side {
+  opacity: 0;
+}
+
+/* line 242, ../sass/slideshow.scss */
+.cbp-so-init .cbp-so-side-center {
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+/* line 247, ../sass/slideshow.scss */
+.cbp-so-init .cbp-so-side-left {
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+/* line 252, ../sass/slideshow.scss */
+.cbp-so-init .cbp-so-side-right {
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+/* line 259, ../sass/slideshow.scss */
+.sectiongs {
+  clear: both;
+  padding: 0;
+  margin: 0;
+  margin-left: -0.5em;
+}
+
+/* line 266, ../sass/slideshow.scss */
+.colgs {
+  display: block;
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+  /* Supported by IE 8+. If IE 7 and below support is required see http://html5please.com/#box-sizing */
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background-clip: padding-box;
+  /* This allows column elements to have background colour without it bleeding into the gutter. Supported by IE 9+. If support for IE 8 and below is required, a content div with background colour should be placed inside the column */
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  margin: 0 0 0.25em 0;
+  border-left: 2em solid transparent;
+}
+
+/* line 280, ../sass/slideshow.scss */
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+
+/* line 286, ../sass/slideshow.scss */
+.group:after {
+  clear: both;
+}
+
+@media screen and (max-width: 580px) {
+  /* line 291, ../sass/slideshow.scss */
+  .slideshow {
+    height: 280px;
+  }
+}
+@media screen and (max-width: 538px) {
+  /* line 297, ../sass/slideshow.scss */
+  .slideshow span {
+    padding-left: 52px;
+  }
+}
+@media screen and (max-width: 509px) {
+  /* line 304, ../sass/slideshow.scss */
+  .slideshow span {
+    padding-left: 2px;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* line 315, ../sass/slideshow.scss */
+  .slideshow {
+    height: 220px;
+  }
+
+  /* line 320, ../sass/slideshow.scss */
+  .slideshow span {
+    position: absolute;
+    visibility: hidden;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    width: 88px;
+    /* has to be the same as #service */
+    margin-top: .98em;
+    /*iPhone hack - SLIDESHOW TEXT*/
+    padding-left: 10px;
+  }
+
+  /* line 330, ../sass/slideshow.scss */
+  #serviceTagline span {
+    position: relative;
+    margin: 0 auto;
+    width: 88px;
+  }
+
+  /* line 335, ../sass/slideshow.scss */
+  #service {
+    display: inline-block;
+    width: 88px;
+    height: 20px;
+    margin: 0 5px;
+  }
+
+  /* line 342, ../sass/slideshow.scss */
+  #subtitle {
+    margin-top: -20px;
+    line-height: 1.8em;
+  }
+}
+@media screen and (max-width: 449px) {
+  /* line 351, ../sass/slideshow.scss */
+  .slideshow span {
+    padding-left: 30px;
+  }
+}
+@media screen and (max-width: 350px) {
+  /* line 359, ../sass/slideshow.scss */
+  .slideshow {
+    height: 150px;
+  }
+
+  /* line 362, ../sass/slideshow.scss */
+  .slideshow span {
+    padding-left: 0;
+  }
+}
+/* line 368, ../sass/slideshow.scss */
+#serviceTaglineMobile {
+  display: none;
+}
+
+@media screen and (max-width: 580px) {
+  /* line 374, ../sass/slideshow.scss */
+  .slideshow span {
+    display: none;
+  }
+
+  /* line 377, ../sass/slideshow.scss */
+  #serviceTagline {
+    display: none;
+  }
+
+  /* line 380, ../sass/slideshow.scss */
+  #serviceTagline span {
+    display: none;
+  }
+
+  /* line 383, ../sass/slideshow.scss */
+  #serviceTaglineMobile {
+    display: block;
+    position: relative;
+    top: 20px;
+  }
+}

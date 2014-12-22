@@ -102,6 +102,10 @@ section{
 }
 .green{
 	color: $green;
+	@include transition(all, .4s, ease);
+}
+.green:hover{
+	@include transition(all, .15s, ease);
 }
 
 
@@ -113,6 +117,9 @@ section{
 	padding-bottom: 300px;
 	h1{
 		color: $white;
+	}
+	.home-container{
+		max-width: 800px;
 	}
 }
 @media only screen and (max-width:568px) {
@@ -130,13 +137,18 @@ section{
 .video-container{
     position: relative;
     margin: 0 auto;
-    max-width: 700px;
+    max-width: 701px; // seems to fix line at bottom @desktop
     width: 100%;
     bottom: 200px;
     z-index: 99999999;
+    overflow: hidden;
     .video-wrapper {
         position: relative;
+        display: block;
+        height: 0;
+        border: none;
         padding-bottom: 56.25%;
+        overflow: hidden;
     }
      
     .video-wrapper iframe,
@@ -151,6 +163,20 @@ section{
 
     iframe:not([seamless]){
         border:none;
+    }
+    .placeholder{
+    	position: relative;
+    	margin: 0 auto;
+    	max-width: 700px;
+    	img{
+    		position: relative;
+    		display: block;
+    		max-width: 700px;
+    		width: 100%;
+    	}
+    }
+    .placeholder:hover{
+    	cursor: pointer;
     }
 }
 @media only screen and (max-width:380px) {
@@ -175,6 +201,11 @@ section{
 	}
 	.b{
 		margin-top: 30px;
+	}
+	a:hover{
+		.green{
+			color: $blue;
+		}
 	}
 }
 
@@ -212,6 +243,7 @@ section{
 				position: relative;
 				display: inline-block;
 				vertical-align: middle;
+				width: 100%;
 				img{
 					position: relative;
 					display: inline-block;
@@ -228,7 +260,7 @@ section{
 	.education{
 		margin-right: 6%;
 	}
-	@media only screen and (max-width:568px) {
+	@media only screen and (max-width:668px) {
 		.half{
 			width: 100%;
 			margin-bottom: 50px;
@@ -243,7 +275,8 @@ section{
 	.blog-post-link{
 		color: $dark-green;
 		position: relative;
-		display: inline-block;
+		display: block;
+		margin-bottom: 10px;
 		font-weight: bold;
 		margin-top: 20px;
 		img{
@@ -300,6 +333,12 @@ section{
 			}
 		}
 	}
+	.social-icons{
+		margin-top: 35px;
+		li{
+			font-size: 18px;
+		}
+	}
 
 	.form-container{
 		position: relative;
@@ -312,7 +351,10 @@ section{
 		}
 		form{
 			input{
-				font-family: "proxima-nova", helvetica, sans-serif;
+				vertical-align: bottom;
+				-webkit-appearance: none;
+				-webkit-font-smoothing: antialiased;
+				font-family: "proxima-nova";
 				background-color: $light-grey;
 				border:none;
 				max-width: 300px;
@@ -339,31 +381,36 @@ section{
 			}
 
 			.submit{
-				font-family: "proxima-nova", helvetica, sans-serif;
-				background-color:  $black;
-				color: $white;
+				font-family: "proxima-nova";
+				color: $blue;
 				position: relative;
 				width: 70px;
 				max-height: 50px;
 				height: 50px;
 				padding-left: 5px;
-				right: 5px;
+				right: 6px;
 				padding-right: 5px;
 				margin-bottom: 3px;
 				text-align: center;
 				-webkit-appearance: none;
 				@include transition(all, .3s, ease);
 			}
-			.submit:hover, .submit:focus{
+			.submit:hover, .submit:focus, .submit:active{
+				-webkit-font-smoothing: antialiased;
 				cursor: pointer;
-				background-color: $black;
-				color: $blue;
+				background-color: $blue;
+				color: $white;
 				@include transition(all, .3s, ease);
 			}
 			@media only screen and (max-width:568px) {
 				input{
 					max-width: 180px;
 				}
+			}
+		}
+		form:hover{
+			input{
+				border-color: $blue;
 			}
 		}
 	}

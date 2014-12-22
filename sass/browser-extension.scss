@@ -84,7 +84,7 @@
 			text-align: center;
 			font-size: 44px;
 			color: $dark-green;
-			margin-bottom: 40px;
+			margin-bottom: 20px;
 			span{
 				color: #9a9a9a;
 				font-weight: normal;
@@ -93,11 +93,11 @@
 		}
 		.first{
 			color: $black;
-			font-size: 1.2em;
+			font-size: 1.3em;
 			line-height: 1.4;
 			position: relative;
 			display: block;
-			margin-bottom: 20px;	
+			margin: 20px 0;
 		}
 		p{
 			color: $grey;
@@ -105,4 +105,89 @@
 
 
 	}
+
+	#faq{
+		padding-top: 80px;
+		h2{
+			text-align: left;
+		}
+		h3{
+			font-size: 1.5em;	
+			color: $black;	
+			font-weight: normal;
+			padding: 10px 0;
+			@include transition(all, .4s, ease);
+		}
+		h3:hover{
+			color: $blue;
+			text-decoration: none;
+			@include transition(all, .15s, ease);
+		}
+		p{
+			margin-bottom: 10px;	
+			a:hover{
+				text-decoration: underline;	
+			}
+		}
+		ul{
+			padding: 20px;
+			-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+			li{
+				color: $grey;
+				list-style: disc;
+				position: relative;
+				display: list-item;
+				margin-bottom: 10px;
+				a:hover{
+					text-decoration: underline;
+				}
+			}
+		}
+		a{
+			color: $blue;
+		}
+	}
 }
+
+
+
+
+// big foot
+sup{
+  line-height: 0em;
+}
+
+sup a{
+	color: #27AE60;
+}
+
+.footnote-button {  }
+.footnote-button:hover { opacity: 0.6; }
+.footnote-button:active { opacity: 0.6; }
+.footnote-button.active { opacity: 0.9; -webkit-transition-delay: 0.05s; -moz-transition-delay: 0.05s; -ms-transition-delay: 0.05s; transition-delay: 0.05s; }
+
+.footnote-circle {  }
+.footnote-circle:last-child { margin-right: 0; }
+
+.footnote-content { position: fixed; z-index: 10; bottom: auto; left: auto; box-sizing: border-box; max-width: 90%; margin: 1.21924em auto; display: inline-block; -webkit-transform: scale(0.1) translateZ(0); -moz-transform: scale(0.1) translateZ(0); -ms-transform: scale(0.1) translateZ(0); transform: scale(0.1) translateZ(0); -webkit-transform-origin: 50% 0; -moz-transform-origin: 50% 0; -ms-transform-origin: 50% 0; transform-origin: 50% 0; background: #fafafa; opacity: 0; border-radius: 0.5em; border: 1px solid $blue; -webkit-transition-property: opacity, -webkit-transform; -moz-transition-property: opacity, -moz-transform; -ms-transition-property: opacity, -ms-transform; transition-property: opacity, transform; -webkit-transition-duration: 0.25s; -moz-transition-duration: 0.25s; -ms-transition-duration: 0.25s; transition-duration: 0.25s; }
+.footnote-content.active { -webkit-transform: scale(1) translateZ(0); -moz-transform: scale(1) translateZ(0); -ms-transform: scale(1) translateZ(0); transform: scale(1) translateZ(0); opacity: 0.97; }
+.footnote-content.bottom { -webkit-transform-origin: top; -moz-transform-origin: top; -ms-transform-origin: top; transform-origin: top; }
+.footnote-content.top { -webkit-transform-origin: bottom; -moz-transform-origin: bottom; -ms-transform-origin: bottom; transform-origin: bottom; }
+
+.footnote-content ::-webkit-scrollbar { display: none; }
+
+.footnote-main-wrapper { position: relative; z-index: 14; box-sizing: border-box; overflow: hidden; margin: 0; max-width: 22em; background-color: #fafafa; border-radius: 0.5em; -webkit-transition-property: max-height; -moz-transition-property: max-height; -ms-transition-property: max-height; transition-property: max-height; -webkit-transition-duration: 0.25s; -moz-transition-duration: 0.25s; -ms-transition-duration: 0.25s; transition-duration: 0.25s; }
+
+.footnote-content-wrapper { position: relative; z-index: 8; max-height: 15em; padding: 1.1em 1.3em 1.2em; box-sizing: border-box; overflow: auto; -webkit-overflow-scrolling: touch; background: #fafafa; border-radius: 0.5em; }
+.footnote-content-wrapper img { max-width: 100%; }
+.footnote-content-wrapper *:last-child { margin-bottom: 0; }
+.footnote-content-wrapper *:first-child { margin-top: 0; }
+
+.tooltip { position: absolute; z-index: 12; box-sizing: border-box; margin-left: -0.65em; width: 1.3em; height: 1.3em; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); background: #fafafa; border: 1px solid $blue ; border-top-left-radius: 0; }
+
+.bottom .tooltip { top: -0.65em; bottom: auto; }
+
+.top .tooltip { bottom: -0.65em; top: auto; }
+
