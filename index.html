@@ -28,7 +28,7 @@
 			};
 			if (map[hash]) {
 				console.log('redirecting to => ' + map[hash]);
-				window.location.href = map[hash];
+				window.location.replace(map[hash]); // http://stackoverflow.com/a/506004/1781435
 			}
 		});
 	</script>
