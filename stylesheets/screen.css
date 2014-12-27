@@ -631,6 +631,63 @@ section {
     float: left;
   }
 }
+/* line 65, ../sass/team.scss */
+.team #memory-of {
+  background-color: #f5f5f5;
+  padding-bottom: 80px;
+}
+/* line 68, ../sass/team.scss */
+.team #memory-of a {
+  color: #1479DE;
+}
+/* line 71, ../sass/team.scss */
+.team #memory-of a:hover {
+  text-decoration: underline;
+}
+/* line 74, ../sass/team.scss */
+.team #memory-of h2 {
+  font-size: 34px;
+  color: #0C6130;
+  margin-bottom: 50px;
+}
+/* line 79, ../sass/team.scss */
+.team #memory-of .half {
+  position: relative;
+  display: block;
+  width: 47%;
+  float: left;
+  text-align: left;
+}
+/* line 85, ../sass/team.scss */
+.team #memory-of .half h3 {
+  color: #141414;
+  font-size: 1.6em;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+/* line 91, ../sass/team.scss */
+.team #memory-of .half img {
+  max-width: 150px;
+}
+/* line 94, ../sass/team.scss */
+.team #memory-of .half p {
+  margin-top: 20px;
+}
+/* line 98, ../sass/team.scss */
+.team #memory-of .half-left {
+  margin-right: 6%;
+}
+@media only screen and (max-width: 668px) {
+  /* line 102, ../sass/team.scss */
+  .team #memory-of .half {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  /* line 106, ../sass/team.scss */
+  .team #memory-of .half-left {
+    margin-right: 0;
+  }
+}
 
 /* line 2, ../sass/browser-extension.scss */
 .browser-extension .header {
@@ -650,86 +707,20 @@ section {
   padding: 80px 0;
   background-color: #f5f5f5;
 }
-/* line 16, ../sass/browser-extension.scss */
-.browser-extension .browser-extension .okturtles {
-  max-width: 130px;
-  vertical-align: middle;
-  position: relative;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 50px;
-}
-/* line 24, ../sass/browser-extension.scss */
-.browser-extension .browser-extension .okturtles:hover {
-  -webkit-animation: spin .5s linear infinite;
-  -moz-animation: spin .5s linear infinite;
-  animation: spin .5s linear infinite;
-}
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  25% {
-    -webkit-transform: rotate(3deg);
-  }
-  50% {
-    -webkit-transform: rotate(0deg);
-  }
-  75% {
-    -webkit-transform: rotate(-3deg);
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
-  }
-}
-@-moz-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-  }
-  25% {
-    -moz-transform: rotate(3deg);
-  }
-  50% {
-    -moz-transform: rotate(0deg);
-  }
-  75% {
-    -moz-transform: rotate(-3deg);
-  }
-  100% {
-    -moz-transform: rotate(0deg);
-  }
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(3deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(-3deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-/* line 83, ../sass/browser-extension.scss */
+/* line 17, ../sass/browser-extension.scss */
 .browser-extension .browser-extension h2 {
   text-align: center;
   font-size: 44px;
   color: #0C6130;
   margin-bottom: 20px;
 }
-/* line 88, ../sass/browser-extension.scss */
+/* line 22, ../sass/browser-extension.scss */
 .browser-extension .browser-extension h2 span {
   color: #9a9a9a;
   font-weight: normal;
   font-size: 20px;
 }
-/* line 94, ../sass/browser-extension.scss */
+/* line 28, ../sass/browser-extension.scss */
 .browser-extension .browser-extension .first {
   color: #141414;
   font-size: 1.3em;
@@ -738,19 +729,33 @@ section {
   display: block;
   margin: 20px 0;
 }
-/* line 102, ../sass/browser-extension.scss */
+/* line 36, ../sass/browser-extension.scss */
 .browser-extension .browser-extension p {
   color: #5a5a5a;
 }
-/* line 109, ../sass/browser-extension.scss */
+/* line 42, ../sass/browser-extension.scss */
+.browser-extension #unblock {
+  padding-top: 80px;
+  text-align: left;
+}
+/* line 45, ../sass/browser-extension.scss */
+.browser-extension #unblock h2 {
+  text-align: left;
+}
+/* line 50, ../sass/browser-extension.scss */
 .browser-extension #faq {
   padding-top: 80px;
 }
-/* line 111, ../sass/browser-extension.scss */
+/* line 52, ../sass/browser-extension.scss */
+.browser-extension #faq sup {
+  vertical-align: super;
+  font-size: .8em;
+}
+/* line 56, ../sass/browser-extension.scss */
 .browser-extension #faq h2 {
   text-align: left;
 }
-/* line 114, ../sass/browser-extension.scss */
+/* line 59, ../sass/browser-extension.scss */
 .browser-extension #faq h3 {
   font-size: 1.5em;
   color: #141414;
@@ -762,7 +767,7 @@ section {
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-/* line 121, ../sass/browser-extension.scss */
+/* line 66, ../sass/browser-extension.scss */
 .browser-extension #faq h3:hover {
   color: #1479DE;
   text-decoration: none;
@@ -772,22 +777,23 @@ section {
   -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
-/* line 126, ../sass/browser-extension.scss */
+/* line 71, ../sass/browser-extension.scss */
 .browser-extension #faq p {
   margin-bottom: 10px;
 }
-/* line 128, ../sass/browser-extension.scss */
+/* line 73, ../sass/browser-extension.scss */
 .browser-extension #faq p a:hover {
   text-decoration: underline;
 }
-/* line 132, ../sass/browser-extension.scss */
+/* line 77, ../sass/browser-extension.scss */
 .browser-extension #faq ul {
+  margin-left: 20px;
   padding: 20px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 137, ../sass/browser-extension.scss */
+/* line 83, ../sass/browser-extension.scss */
 .browser-extension #faq ul li {
   color: #5a5a5a;
   list-style: disc;
@@ -795,36 +801,47 @@ section {
   display: list-item;
   margin-bottom: 10px;
 }
-/* line 143, ../sass/browser-extension.scss */
+/* line 89, ../sass/browser-extension.scss */
 .browser-extension #faq ul li a:hover {
   text-decoration: underline;
 }
-/* line 148, ../sass/browser-extension.scss */
+/* line 94, ../sass/browser-extension.scss */
 .browser-extension #faq a {
   color: #1479DE;
 }
 
-/* line 158, ../sass/browser-extension.scss */
+/* line 100, ../sass/browser-extension.scss */
+.b-blue {
+  color: #1479DE;
+  font-weight: bold;
+}
+
+/* line 104, ../sass/browser-extension.scss */
+.b-blue:hover {
+  text-decoration: underline;
+}
+
+/* line 110, ../sass/browser-extension.scss */
 sup {
   line-height: 0em;
 }
 
-/* line 162, ../sass/browser-extension.scss */
+/* line 114, ../sass/browser-extension.scss */
 sup a {
   color: #27AE60;
 }
 
-/* line 167, ../sass/browser-extension.scss */
+/* line 119, ../sass/browser-extension.scss */
 .footnote-button:hover {
   opacity: 0.6;
 }
 
-/* line 168, ../sass/browser-extension.scss */
+/* line 120, ../sass/browser-extension.scss */
 .footnote-button:active {
   opacity: 0.6;
 }
 
-/* line 169, ../sass/browser-extension.scss */
+/* line 121, ../sass/browser-extension.scss */
 .footnote-button.active {
   opacity: 0.9;
   -webkit-transition-delay: 0.05s;
@@ -833,12 +850,12 @@ sup a {
   transition-delay: 0.05s;
 }
 
-/* line 172, ../sass/browser-extension.scss */
+/* line 124, ../sass/browser-extension.scss */
 .footnote-circle:last-child {
   margin-right: 0;
 }
 
-/* line 174, ../sass/browser-extension.scss */
+/* line 126, ../sass/browser-extension.scss */
 .footnote-content {
   position: fixed;
   z-index: 10;
@@ -870,7 +887,7 @@ sup a {
   transition-duration: 0.25s;
 }
 
-/* line 175, ../sass/browser-extension.scss */
+/* line 127, ../sass/browser-extension.scss */
 .footnote-content.active {
   -webkit-transform: scale(1) translateZ(0);
   -moz-transform: scale(1) translateZ(0);
@@ -879,7 +896,7 @@ sup a {
   opacity: 0.97;
 }
 
-/* line 176, ../sass/browser-extension.scss */
+/* line 128, ../sass/browser-extension.scss */
 .footnote-content.bottom {
   -webkit-transform-origin: top;
   -moz-transform-origin: top;
@@ -887,7 +904,7 @@ sup a {
   transform-origin: top;
 }
 
-/* line 177, ../sass/browser-extension.scss */
+/* line 129, ../sass/browser-extension.scss */
 .footnote-content.top {
   -webkit-transform-origin: bottom;
   -moz-transform-origin: bottom;
@@ -895,12 +912,12 @@ sup a {
   transform-origin: bottom;
 }
 
-/* line 179, ../sass/browser-extension.scss */
+/* line 131, ../sass/browser-extension.scss */
 .footnote-content ::-webkit-scrollbar {
   display: none;
 }
 
-/* line 181, ../sass/browser-extension.scss */
+/* line 133, ../sass/browser-extension.scss */
 .footnote-main-wrapper {
   position: relative;
   z-index: 14;
@@ -920,7 +937,7 @@ sup a {
   transition-duration: 0.25s;
 }
 
-/* line 183, ../sass/browser-extension.scss */
+/* line 135, ../sass/browser-extension.scss */
 .footnote-content-wrapper {
   position: relative;
   z-index: 8;
@@ -933,22 +950,22 @@ sup a {
   border-radius: 0.5em;
 }
 
-/* line 184, ../sass/browser-extension.scss */
+/* line 136, ../sass/browser-extension.scss */
 .footnote-content-wrapper img {
   max-width: 100%;
 }
 
-/* line 185, ../sass/browser-extension.scss */
+/* line 137, ../sass/browser-extension.scss */
 .footnote-content-wrapper *:last-child {
   margin-bottom: 0;
 }
 
-/* line 186, ../sass/browser-extension.scss */
+/* line 138, ../sass/browser-extension.scss */
 .footnote-content-wrapper *:first-child {
   margin-top: 0;
 }
 
-/* line 188, ../sass/browser-extension.scss */
+/* line 140, ../sass/browser-extension.scss */
 .tooltip {
   position: absolute;
   z-index: 12;
@@ -965,13 +982,13 @@ sup a {
   border-top-left-radius: 0;
 }
 
-/* line 190, ../sass/browser-extension.scss */
+/* line 142, ../sass/browser-extension.scss */
 .bottom .tooltip {
   top: -0.65em;
   bottom: auto;
 }
 
-/* line 192, ../sass/browser-extension.scss */
+/* line 144, ../sass/browser-extension.scss */
 .top .tooltip {
   bottom: -0.65em;
   top: auto;

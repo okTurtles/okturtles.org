@@ -62,4 +62,51 @@
 			}
 		}
 	}
+	#memory-of{
+		background-color: $white;
+		padding-bottom: 80px;
+		a{
+			color: $blue;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+		h2{
+			font-size: 34px;
+			color: $dark-green;
+			margin-bottom: 50px;
+		}
+		.half{
+			position: relative;
+			display: block;
+			width: 47%;
+			float: left;
+			text-align: left;
+			h3{
+				color: $black;
+				font-size: 1.6em;
+				font-weight: normal;
+				margin-bottom: 20px;
+			}
+			img{
+				max-width: 150px;
+			}
+			p{
+				margin-top: 20px;
+			}
+		}
+		.half-left{
+			margin-right: 6%;
+		}
+			@media only screen and (max-width:668px) {
+			.half{
+				width: 100%;
+				margin-bottom: 50px;
+			}
+			.half-left{
+				margin-right: 0;
+			}
+			
+		}
+	}
 }

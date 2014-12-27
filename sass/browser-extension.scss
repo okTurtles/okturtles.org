@@ -13,72 +13,6 @@
 	.browser-extension{
 		padding: 80px 0;
 		background-color: $white;
-		.okturtles{
-			max-width: 130px;
-			vertical-align: middle;
-			position: relative;
-			display: block;
-			margin: 0 auto;
-			margin-bottom: 50px;
-		}
-		.okturtles:hover{
-			-webkit-animation:spin .5s linear infinite;
-		    -moz-animation:spin .5s linear infinite;
-		    animation:spin .5s linear infinite;
-		}
-		@-webkit-keyframes spin{
-			0%{
-			  -webkit-transform: rotate(0deg);
-			}
-			25% {
-			  -webkit-transform: rotate(3deg);
-			}
-			50% {
-			  -webkit-transform: rotate(0deg);
-			}
-			75% {
-			  -webkit-transform: rotate(-3deg);
-			}
-			100% {
-			  -webkit-transform: rotate(0deg);
-			}
-		}
-		@-moz-keyframes spin{
-			0%{
-			  -moz-transform: rotate(0deg);
-			}
-			25% {
-			  -moz-transform: rotate(3deg);
-			}
-			50% {
-			  -moz-transform: rotate(0deg);
-			}
-			75% {
-			  -moz-transform: rotate(-3deg);
-			}
-			100% {
-			  -moz-transform: rotate(0deg);
-			}
-		}
-		@keyframes spin{
-			0%{
-			  transform: rotate(0deg);
-			}
-			25% {
-			  transform: rotate(3deg);
-			}
-			50% {
-			  transform: rotate(0deg);
-			}
-			75% {
-			  transform: rotate(-3deg);
-			}
-			100% {
-			  transform: rotate(0deg);
-			}
-		}
-
-
 
 		h2{
 			text-align: center;
@@ -103,11 +37,22 @@
 			color: $grey;
 		}
 
+	}
 
+	#unblock{
+		padding-top: 80px;
+		text-align: left;
+		h2{
+			text-align: left;
+		}
 	}
 
 	#faq{
 		padding-top: 80px;
+		sup{
+			vertical-align: super;
+			font-size: .8em;
+		}
 		h2{
 			text-align: left;
 		}
@@ -130,6 +75,7 @@
 			}
 		}
 		ul{
+			margin-left: 20px;
 			padding: 20px;
 			-webkit-box-sizing: border-box;
 				-moz-box-sizing: border-box;
@@ -151,7 +97,13 @@
 	}
 }
 
-
+.b-blue{
+	color: #1479DE;
+	font-weight: bold;
+}
+.b-blue:hover{
+	text-decoration: underline;
+}
 
 
 // big foot
