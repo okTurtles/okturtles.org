@@ -316,26 +316,34 @@ section {
   display: block;
   margin: 0 auto;
 }
-/* line 202, ../sass/screen.scss */
+/* line 201, ../sass/screen.scss */
+.https-is-broken p a {
+  color: #1479DE;
+}
+/* line 204, ../sass/screen.scss */
+.https-is-broken p a:hover {
+  text-decoration: underline;
+}
+/* line 208, ../sass/screen.scss */
 .https-is-broken .b {
   margin-top: 30px;
 }
-/* line 206, ../sass/screen.scss */
+/* line 212, ../sass/screen.scss */
 .https-is-broken a:hover .green {
   color: #1479DE;
 }
 
-/* line 213, ../sass/screen.scss */
+/* line 219, ../sass/screen.scss */
 .what-we-do {
   padding: 100px 0;
   background-color: #f5f5f5;
   text-align: center;
 }
-/* line 217, ../sass/screen.scss */
+/* line 223, ../sass/screen.scss */
 .what-we-do h2 {
   margin-bottom: 50px;
 }
-/* line 220, ../sass/screen.scss */
+/* line 226, ../sass/screen.scss */
 .what-we-do .half {
   position: relative;
   display: block;
@@ -343,25 +351,25 @@ section {
   float: left;
   text-align: left;
 }
-/* line 226, ../sass/screen.scss */
+/* line 232, ../sass/screen.scss */
 .what-we-do .half h3 {
   color: #0C6130;
   font-size: 32px;
   margin-bottom: 12px;
 }
-/* line 231, ../sass/screen.scss */
+/* line 237, ../sass/screen.scss */
 .what-we-do .half h4 {
   margin-top: 40px;
   font-size: 1.1em;
   font-weight: bold;
 }
-/* line 236, ../sass/screen.scss */
+/* line 242, ../sass/screen.scss */
 .what-we-do .half .link-container {
   position: relative;
   display: block;
   margin: 20px 0 30px 0;
 }
-/* line 240, ../sass/screen.scss */
+/* line 246, ../sass/screen.scss */
 .what-we-do .half .link-container .link {
   color: #0C6130;
   font-weight: bold;
@@ -370,7 +378,7 @@ section {
   vertical-align: middle;
   width: 100%;
 }
-/* line 247, ../sass/screen.scss */
+/* line 253, ../sass/screen.scss */
 .what-we-do .half .link-container .link img {
   position: relative;
   display: inline-block;
@@ -378,30 +386,30 @@ section {
   margin-right: 10px;
   vertical-align: middle;
 }
-/* line 255, ../sass/screen.scss */
+/* line 261, ../sass/screen.scss */
 .what-we-do .half .link-container .link:hover {
   color: #1479DE;
 }
-/* line 260, ../sass/screen.scss */
+/* line 266, ../sass/screen.scss */
 .what-we-do .education {
   margin-right: 6%;
 }
 @media only screen and (max-width: 668px) {
-  /* line 264, ../sass/screen.scss */
+  /* line 270, ../sass/screen.scss */
   .what-we-do .half {
     width: 100%;
     margin-bottom: 50px;
   }
-  /* line 268, ../sass/screen.scss */
+  /* line 274, ../sass/screen.scss */
   .what-we-do .education {
     margin-right: 0;
   }
-  /* line 271, ../sass/screen.scss */
+  /* line 277, ../sass/screen.scss */
   .what-we-do .solutions {
     margin-bottom: 0;
   }
 }
-/* line 275, ../sass/screen.scss */
+/* line 281, ../sass/screen.scss */
 .what-we-do .blog-post-link {
   color: #0C6130;
   position: relative;
@@ -410,7 +418,7 @@ section {
   font-weight: bold;
   margin-top: 20px;
 }
-/* line 282, ../sass/screen.scss */
+/* line 288, ../sass/screen.scss */
 .what-we-do .blog-post-link img {
   position: relative;
   display: inline-block;
@@ -418,11 +426,11 @@ section {
   margin-right: 10px;
   vertical-align: middle;
 }
-/* line 290, ../sass/screen.scss */
+/* line 296, ../sass/screen.scss */
 .what-we-do .blog-post-link:hover {
   color: #1479DE;
 }
-/* line 293, ../sass/screen.scss */
+/* line 299, ../sass/screen.scss */
 .what-we-do .button {
   font-size: .9em;
   text-align: center;
@@ -436,54 +444,54 @@ section {
   margin-top: 30px;
   border: 1px solid #1479DE;
 }
-/* line 306, ../sass/screen.scss */
+/* line 312, ../sass/screen.scss */
 .what-we-do .button:hover {
   background-color: #1479DE;
   color: #f5f5f5;
 }
 
-/* line 315, ../sass/screen.scss */
+/* line 321, ../sass/screen.scss */
 .footer {
   text-align: center;
   padding: 100px 0;
 }
-/* line 319, ../sass/screen.scss */
+/* line 325, ../sass/screen.scss */
 .footer ul li {
   position: relative;
   display: inline-block;
   margin: 0 20px;
 }
-/* line 326, ../sass/screen.scss */
+/* line 332, ../sass/screen.scss */
 .footer ul li a:hover {
   color: #1479DE;
 }
 @media only screen and (max-width: 568px) {
-  /* line 331, ../sass/screen.scss */
+  /* line 337, ../sass/screen.scss */
   .footer ul li {
     margin-bottom: 20px;
   }
 }
-/* line 336, ../sass/screen.scss */
+/* line 342, ../sass/screen.scss */
 .footer .social-icons {
   margin-top: 35px;
 }
-/* line 338, ../sass/screen.scss */
+/* line 344, ../sass/screen.scss */
 .footer .social-icons li {
   font-size: 18px;
 }
-/* line 343, ../sass/screen.scss */
+/* line 349, ../sass/screen.scss */
 .footer .form-container {
   position: relative;
   display: block;
   margin-top: 60px;
 }
-/* line 347, ../sass/screen.scss */
+/* line 353, ../sass/screen.scss */
 .footer .form-container p {
   color: #aeaeae;
   margin-bottom: 14px;
   font-size: .9em;
 }
-/* line 353, ../sass/screen.scss */
+/* line 359, ../sass/screen.scss */
 .footer .form-container form input {
   vertical-align: bottom;
   -webkit-appearance: none;
@@ -516,11 +524,11 @@ section {
   /* Firefox, other Gecko */
   box-sizing: border-box;
 }
-/* line 379, ../sass/screen.scss */
+/* line 385, ../sass/screen.scss */
 .footer .form-container form input:hover, .footer .form-container form input:focus {
   background-color: #f5f5f5;
 }
-/* line 383, ../sass/screen.scss */
+/* line 389, ../sass/screen.scss */
 .footer .form-container form .submit {
   font-family: "proxima-nova";
   color: #1479DE;
@@ -540,7 +548,7 @@ section {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-/* line 398, ../sass/screen.scss */
+/* line 404, ../sass/screen.scss */
 .footer .form-container form .submit:hover, .footer .form-container form .submit:focus, .footer .form-container form .submit:active {
   -webkit-font-smoothing: antialiased;
   cursor: pointer;
@@ -553,12 +561,12 @@ section {
   transition: all 0.3s ease;
 }
 @media only screen and (max-width: 568px) {
-  /* line 406, ../sass/screen.scss */
+  /* line 412, ../sass/screen.scss */
   .footer .form-container form input {
     max-width: 180px;
   }
 }
-/* line 412, ../sass/screen.scss */
+/* line 418, ../sass/screen.scss */
 .footer .form-container form:hover input {
   border-color: #1479DE;
 }

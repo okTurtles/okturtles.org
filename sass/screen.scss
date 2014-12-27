@@ -198,6 +198,12 @@ section{
 		position: relative;
 		display: block;
 		margin: 0 auto;
+		a{
+			color: $blue;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
 	}
 	.b{
 		margin-top: 30px;
