@@ -563,7 +563,7 @@ section {
 @media only screen and (max-width: 568px) {
   /* line 412, ../sass/screen.scss */
   .footer .form-container form input {
-    max-width: 180px;
+    max-width: 190px;
   }
 }
 /* line 418, ../sass/screen.scss */
@@ -629,69 +629,76 @@ section {
   font-size: 1.2em;
 }
 /* line 50, ../sass/team.scss */
+.team .meet-the-team .members .member .content span {
+  font-size: .7em;
+  color: #888888;
+}
+/* line 54, ../sass/team.scss */
 .team .meet-the-team .members .member .content p {
   margin-top: 20px;
   color: #5a5a5a;
 }
 @media only screen and (max-width: 668px) {
-  /* line 58, ../sass/team.scss */
+  /* line 62, ../sass/team.scss */
   .team .meet-the-team .members .member .img, .team .meet-the-team .members .member .content {
     float: left;
   }
 }
-/* line 65, ../sass/team.scss */
+/* line 69, ../sass/team.scss */
 .team #memory-of {
   background-color: #f5f5f5;
   padding-bottom: 80px;
+  text-align: center;
 }
-/* line 68, ../sass/team.scss */
+/* line 73, ../sass/team.scss */
 .team #memory-of a {
   color: #1479DE;
 }
-/* line 71, ../sass/team.scss */
+/* line 76, ../sass/team.scss */
 .team #memory-of a:hover {
   text-decoration: underline;
 }
-/* line 74, ../sass/team.scss */
+/* line 79, ../sass/team.scss */
 .team #memory-of h2 {
   font-size: 34px;
   color: #0C6130;
   margin-bottom: 50px;
+  text-align: left;
 }
-/* line 79, ../sass/team.scss */
+/* line 85, ../sass/team.scss */
 .team #memory-of .half {
   position: relative;
   display: block;
   width: 47%;
   float: left;
-  text-align: left;
 }
-/* line 85, ../sass/team.scss */
+/* line 90, ../sass/team.scss */
 .team #memory-of .half h3 {
   color: #141414;
   font-size: 1.6em;
   font-weight: normal;
   margin-bottom: 20px;
 }
-/* line 91, ../sass/team.scss */
+/* line 96, ../sass/team.scss */
 .team #memory-of .half img {
-  max-width: 150px;
+  max-height: 200px;
 }
-/* line 94, ../sass/team.scss */
+/* line 99, ../sass/team.scss */
 .team #memory-of .half p {
   margin-top: 20px;
+  color: #777777;
 }
-/* line 98, ../sass/team.scss */
+/* line 104, ../sass/team.scss */
 .team #memory-of .half-left {
   margin-right: 6%;
 }
 @media only screen and (max-width: 668px) {
-  /* line 102, ../sass/team.scss */
+  /* line 108, ../sass/team.scss */
   .team #memory-of .half {
     width: 100%;
     margin-bottom: 50px;
   }
-  /* line 106, ../sass/team.scss */
+  /* line 112, ../sass/team.scss */
   .team #memory-of .half-left {
     margin-right: 0;
   }
@@ -821,35 +828,34 @@ section {
 /* line 100, ../sass/browser-extension.scss */
 .b-blue {
   color: #1479DE;
-  font-weight: bold;
 }
 
-/* line 104, ../sass/browser-extension.scss */
+/* line 103, ../sass/browser-extension.scss */
 .b-blue:hover {
   text-decoration: underline;
 }
 
-/* line 110, ../sass/browser-extension.scss */
+/* line 109, ../sass/browser-extension.scss */
 sup {
   line-height: 0em;
 }
 
-/* line 114, ../sass/browser-extension.scss */
+/* line 113, ../sass/browser-extension.scss */
 sup a {
   color: #27AE60;
 }
 
-/* line 119, ../sass/browser-extension.scss */
+/* line 118, ../sass/browser-extension.scss */
 .footnote-button:hover {
   opacity: 0.6;
 }
 
-/* line 120, ../sass/browser-extension.scss */
+/* line 119, ../sass/browser-extension.scss */
 .footnote-button:active {
   opacity: 0.6;
 }
 
-/* line 121, ../sass/browser-extension.scss */
+/* line 120, ../sass/browser-extension.scss */
 .footnote-button.active {
   opacity: 0.9;
   -webkit-transition-delay: 0.05s;
@@ -858,12 +864,12 @@ sup a {
   transition-delay: 0.05s;
 }
 
-/* line 124, ../sass/browser-extension.scss */
+/* line 123, ../sass/browser-extension.scss */
 .footnote-circle:last-child {
   margin-right: 0;
 }
 
-/* line 126, ../sass/browser-extension.scss */
+/* line 125, ../sass/browser-extension.scss */
 .footnote-content {
   position: fixed;
   z-index: 10;
@@ -895,7 +901,7 @@ sup a {
   transition-duration: 0.25s;
 }
 
-/* line 127, ../sass/browser-extension.scss */
+/* line 126, ../sass/browser-extension.scss */
 .footnote-content.active {
   -webkit-transform: scale(1) translateZ(0);
   -moz-transform: scale(1) translateZ(0);
@@ -904,7 +910,7 @@ sup a {
   opacity: 0.97;
 }
 
-/* line 128, ../sass/browser-extension.scss */
+/* line 127, ../sass/browser-extension.scss */
 .footnote-content.bottom {
   -webkit-transform-origin: top;
   -moz-transform-origin: top;
@@ -912,7 +918,7 @@ sup a {
   transform-origin: top;
 }
 
-/* line 129, ../sass/browser-extension.scss */
+/* line 128, ../sass/browser-extension.scss */
 .footnote-content.top {
   -webkit-transform-origin: bottom;
   -moz-transform-origin: bottom;
@@ -920,12 +926,12 @@ sup a {
   transform-origin: bottom;
 }
 
-/* line 131, ../sass/browser-extension.scss */
+/* line 130, ../sass/browser-extension.scss */
 .footnote-content ::-webkit-scrollbar {
   display: none;
 }
 
-/* line 133, ../sass/browser-extension.scss */
+/* line 132, ../sass/browser-extension.scss */
 .footnote-main-wrapper {
   position: relative;
   z-index: 14;
@@ -945,7 +951,7 @@ sup a {
   transition-duration: 0.25s;
 }
 
-/* line 135, ../sass/browser-extension.scss */
+/* line 134, ../sass/browser-extension.scss */
 .footnote-content-wrapper {
   position: relative;
   z-index: 8;
@@ -958,22 +964,22 @@ sup a {
   border-radius: 0.5em;
 }
 
-/* line 136, ../sass/browser-extension.scss */
+/* line 135, ../sass/browser-extension.scss */
 .footnote-content-wrapper img {
   max-width: 100%;
 }
 
-/* line 137, ../sass/browser-extension.scss */
+/* line 136, ../sass/browser-extension.scss */
 .footnote-content-wrapper *:last-child {
   margin-bottom: 0;
 }
 
-/* line 138, ../sass/browser-extension.scss */
+/* line 137, ../sass/browser-extension.scss */
 .footnote-content-wrapper *:first-child {
   margin-top: 0;
 }
 
-/* line 140, ../sass/browser-extension.scss */
+/* line 139, ../sass/browser-extension.scss */
 .tooltip {
   position: absolute;
   z-index: 12;
@@ -990,13 +996,13 @@ sup a {
   border-top-left-radius: 0;
 }
 
-/* line 142, ../sass/browser-extension.scss */
+/* line 141, ../sass/browser-extension.scss */
 .bottom .tooltip {
   top: -0.65em;
   bottom: auto;
 }
 
-/* line 144, ../sass/browser-extension.scss */
+/* line 143, ../sass/browser-extension.scss */
 .top .tooltip {
   bottom: -0.65em;
   top: auto;
