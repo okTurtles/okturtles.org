@@ -1,0 +1,25 @@
+{
+  "name": "okturtles.com",
+  "version": "1.0.0",
+  "description": "okTurtles.org website",
+  "main": "server.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/okTurtles/okturtles.com.git"
+  },
+  "author": "okTurtles Foundation",
+  "license": "MPL 2.0",
+  "bugs": {
+    "url": "https://github.com/okTurtles/okturtles.com/issues"
+  },
+  "homepage": "https://github.com/okTurtles/okturtles.com",
+  "dependencies": {
+    "connect-static-transform": "^0.7.0",
+    "express": "^4.10.7",
+    "node-ssi": "^0.3.0",
+    "string": "^3.0.0"
+  }
+}
