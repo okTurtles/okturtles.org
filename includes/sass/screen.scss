@@ -192,6 +192,12 @@ section{
 	padding-bottom: 100px;
 	h2{
 		margin-bottom: 40px;
+		a{
+			color: $blue;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
 	}
 	p{
 		max-width: 90%;

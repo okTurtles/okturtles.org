@@ -40,6 +40,9 @@
 		.spacer{
 			margin-bottom: 10px;
 		}
+		.top-spacer{
+			margin-top: 30px;
+		}
 
 		.bitpay-donate{
 			margin-bottom: 30px;
@@ -124,6 +127,22 @@
 					max-width: 190px;
 				}
 			}
+		}
+		.tilt{
+			position: relative;
+			display: block;
+			padding: 14px 20px;
+			width: 130px;
+			font-size: 16px;
+			border-radius: 5px;
+			background-color: $blue;
+			color: $white;	
+			text-align: center;
+			@include transition(all, .3s, ease);
+		}
+		.tilt:hover{
+			cursor: pointer;
+			background-color: #105EAA;
 		}
 
 	}

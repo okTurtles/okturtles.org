@@ -32,9 +32,9 @@
 				</li>
 			</ul>
 
-<p class="spacer">
-	Donate using Bitcoin
-</p>
+  <p class="spacer">
+  	Donate using Bitcoin
+  </p>
  
   <form class="bitpay-donate" action="https://bitpay.com/checkout" method="post" onsubmit="return checkRequiredFields(this);">
     <input name="action" type="hidden" value="checkout">
@@ -87,13 +87,22 @@
     </fieldset>
   </form>
 
-<p class="spacer">
-	Or Altcoins
-</p>
+    <p class="spacer">
+    	Altcoins
+    </p>
 
-<script>function shapeshift_click(a,e){e.preventDefault();var link=a.href;window.open(link,'1418115287605','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0');return false;}</script> <a href="https://shapeshift.io/shifty.html?destination=1PXL2HSqJZDX3DC9Ungs8mrDBPvUBZp2yU;amount=enter-amount" onclick="shapeshift_click(this, event);"><img class="ss-button" src="http://shapeshift.io/images/shifty/xs_light_altcoins.png"></a>
+    <script>function shapeshift_click(a,e){e.preventDefault();var link=a.href;window.open(link,'1418115287605','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0');return false;}</script> <a href="https://shapeshift.io/shifty.html?destination=1PXL2HSqJZDX3DC9Ungs8mrDBPvUBZp2yU;amount=enter-amount" onclick="shapeshift_click(this, event);"><img class="ss-button" src="http://shapeshift.io/images/shifty/xs_light_altcoins.png"></a>
+
+    <p class="spacer top-spacer">
+      Or Tilt
+    </p>
+
+    <div class="tilt" data-ct-checkout="okturtles.support-the-okturtles-foundation">Donate with Tilt</div>
+
 		</div>
 	</section>
+
+  
 
 	<!--# include file="/includes/footer.html" -->
 
@@ -131,6 +140,7 @@
     return true;
   };
   </script>
+  <script type="text/javascript" src="https://open.tilt.com/checkout.js"></script>
 </body>
 
 
