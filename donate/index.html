@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Team | okTurtles</title>
+	<!--# include file="/includes/head.html" -->
+</head>
+
+<body class="donate">
+	<!--# include file="/includes/header.html" -->
+
+	<!-- donate -->
+	<section class="donate-content">
+		<div class="container">
+			<h2>
+				Donate to the okTurtles Foundation
+			</h2>
+
+			<p>
+				<b>
+					Support the okTurtles Foundation's work on:
+				</b>
+			</p>
+			<ul>
+				<li>
+					Education
+				</li>
+				<li>
+					Research
+				</li>
+				<li>
+					Development of private communications tools, including DNSChain and the okTurtles browser extension.
+				</li>
+			</ul>
+
+<p class="spacer">
+	Donate using Bitcoin
+</p>
+ 
+  <form class="bitpay-donate" action="https://bitpay.com/checkout" method="post" onsubmit="return checkRequiredFields(this);">
+    <input name="action" type="hidden" value="checkout">
+    <fieldset>
+
+          <input class="bitpay-donate-field-email" name="orderID" type="email" placeholder="Email address (optional)" maxlength=50 autocapitalize=off autocorrect=off>
+
+
+          <input class="bitpay-donate-field-price" name="price" type="number" value="10.00" placeholder="Amount" maxlength="10" min="0.000006" step="0.000001"/>
+          <select class="bitpay-donate-field-currency" name="currency" value="">
+            <option selected="selected" value="USD">USD</option>
+            <option value="BTC">BTC</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="AUD">AUD</option>
+            <option value="BGN">BGN</option>
+            <option value="BRL">BRL</option>
+            <option value="CAD">CAD</option>
+            <option value="CHF">CHF</option>
+            <option value="CNY">CNY</option>
+            <option value="CZK">CZK</option>
+            <option value="DKK">DKK</option>
+            <option value="HKD">HKD</option>
+            <option value="HRK">HRK</option>
+            <option value="HUF">HUF</option>
+            <option value="IDR">IDR</option>
+            <option value="ILS">ILS</option>
+            <option value="INR">INR</option>
+            <option value="JPY">JPY</option>
+            <option value="KRW">KRW</option>
+            <option value="LTL">LTL</option>
+            <option value="LVL">LVL</option>
+            <option value="MXN">MXN</option>
+            <option value="MYR">MYR</option>
+            <option value="NOK">NOK</option>
+            <option value="NZD">NZD</option>
+            <option value="PHP">PHP</option>
+            <option value="PLN">PLN</option>
+            <option value="RON">RON</option>
+            <option value="RUB">RUB</option>
+            <option value="SEK">SEK</option>
+            <option value="SGD">SGD</option>
+            <option value="THB">THB</option>
+            <option value="TRY">TRY</option>
+            <option value="ZAR">ZAR</option>
+          </select>
+
+      <input type="hidden" name="data" value="4dl7kfyjdQhj4YKmAtrtjhpM2saOEr+1X2r+wghy2tovcsOZQfWo8IagSPlcLJnqIg4++6dr5sv0iEjEF/iQc/sUkiL47YMrSIiRO9E752uiQSDtmQfMIEdp4mrsjYeOvazLm6Lg2uengKDCf/SGsnedgTMCoGvgH8+aQ15Y/eVMa5FTIvrkz7LxGlFOF1pyQUZkgF1Jl5AxH+4xepPF+w=="> 
+        <input class="bitpay-donate-button" name="submit" src="https://bitpay.com/img/donate-button.svg" onerror="this.onerror=null; this.src='https://bitpay.com/img/donate-button-md.png'" width="126" height="48" type="image" alt="BitPay, the easy way to pay with bitcoins." border="0">
+    </fieldset>
+  </form>
+
+<p class="spacer">
+	Or Altcoins
+</p>
+
+<script>function shapeshift_click(a,e){e.preventDefault();var link=a.href;window.open(link,'1418115287605','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0');return false;}</script> <a href="https://shapeshift.io/shifty.html?destination=1PXL2HSqJZDX3DC9Ungs8mrDBPvUBZp2yU;amount=enter-amount" onclick="shapeshift_click(this, event);"><img class="ss-button" src="http://shapeshift.io/images/shifty/xs_light_altcoins.png"></a>
+		</div>
+	</section>
+
+	<!--# include file="/includes/footer.html" -->
+
+  <script type="text/javascript">
+  function checkRequiredFields(form){
+    function isFilled(field){
+      if (field.value.length < 1){
+        return false;
+      }
+      return true;
+    }
+    var elements = form.elements;
+    var invalid = false;
+    for(var i=0; i<elements.length; i++) {
+      elements[i].className = elements[i].className.replace('bitpay-donate-error', '');
+      if(elements[i].className.indexOf("required") != -1) {
+        if(!isFilled(elements[i])){
+          elements[i].className = elements[i].className + ' bitpay-donate-error';
+          invalid = true;
+        };
+      };
+    }
+    if ( invalid ) {
+       return false;
+    }
+    var donationElement = document.getElementById('donation-value');
+    if(donationElement){
+      var enteredDonation = Number(donationElement.value);
+      var maximumDonation = Number(document.getElementById('reference-maximum').value);
+      if(enteredDonation > maximumDonation){ 
+        alert("Your donation was larger than the allowed maximum of " + Number(maximumDonation).toFixed(2))
+        return false;
+      };
+    };
+    return true;
+  };
+  </script>
+</body>
+
+
+
+</html>
