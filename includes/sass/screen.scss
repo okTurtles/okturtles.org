@@ -4,61 +4,49 @@
 @import "variables";
 
 @font-face {
-    font-family: 'open_sansbold';
-    src: url('/includes/fonts/OpenSans-Bold-webfont.eot');
-    src: url('/includes/fonts/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/includes/fonts/OpenSans-Bold-webfont.woff2') format('woff2'),
-         url('/includes/fonts/OpenSans-Bold-webfont.woff') format('woff'),
-         url('/includes/fonts/OpenSans-Bold-webfont.ttf') format('truetype'),
-         url('/includes/fonts/OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
+    font-family: 'proxima_novaitalic';
+    src: url('/includes/fonts/ProximaNova-RegularIt-webfont.eot');
+    src: url('/includes/fonts/ProximaNova-RegularIt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/includes/fonts/ProximaNova-RegularIt-webfont.woff2') format('woff2'),
+         url('/includes/fonts/ProximaNova-RegularIt-webfont.woff') format('woff'),
+         url('/includes/fonts/ProximaNova-RegularIt-webfont.ttf') format('truetype'),
+         url('/includes/fonts/ProximaNova-RegularIt-webfont.svg#proxima_novaitalic') format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
-
-
-
-
 @font-face {
-    font-family: 'open_sansitalic';
-    src: url('/includes/fonts/OpenSans-Italic-webfont.eot');
-    src: url('/includes/fonts/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/includes/fonts/OpenSans-Italic-webfont.woff2') format('woff2'),
-         url('/includes/fonts/OpenSans-Italic-webfont.woff') format('woff'),
-         url('/includes/fonts/OpenSans-Italic-webfont.ttf') format('truetype'),
-         url('/includes/fonts/OpenSans-Italic-webfont.svg#open_sansitalic') format('svg');
+    font-family: 'proxima_novaregular';
+    src: url('/includes/fonts/ProximaNova-Regular-webfont.eot');
+    src: url('/includes/fonts/ProximaNova-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/includes/fonts/ProximaNova-Regular-webfont.woff2') format('woff2'),
+         url('/includes/fonts/ProximaNova-Regular-webfont.woff') format('woff'),
+         url('/includes/fonts/ProximaNova-Regular-webfont.ttf') format('truetype'),
+         url('/includes/fonts/ProximaNova-Regular-webfont.svg#proxima_novaregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
-
-
-
-
 @font-face {
-    font-family: 'open_sanslight';
-    src: url('/includes/fonts/OpenSans-Light-webfont.eot');
-    src: url('/includes/fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/includes/fonts/OpenSans-Light-webfont.woff2') format('woff2'),
-         url('/includes/fonts/OpenSans-Light-webfont.woff') format('woff'),
-         url('/includes/fonts/OpenSans-Light-webfont.ttf') format('truetype'),
-         url('/includes/fonts/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+    font-family: 'proxima_novalight';
+    src: url('/includes/fonts/ProximaNova-Light-webfont.eot');
+    src: url('/includes/fonts/ProximaNova-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/includes/fonts/ProximaNova-Light-webfont.woff2') format('woff2'),
+         url('/includes/fonts/ProximaNova-Light-webfont.woff') format('woff'),
+         url('/includes/fonts/ProximaNova-Light-webfont.ttf') format('truetype'),
+         url('/includes/fonts/ProximaNova-Light-webfont.svg#proxima_novalight') format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
-
-
-
-
 @font-face {
-    font-family: 'open_sansregular';
-    src: url('/includes/fonts/OpenSans-Regular-webfont.eot');
-    src: url('/includes/fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/includes/fonts/OpenSans-Regular-webfont.woff2') format('woff2'),
-         url('/includes/fonts/OpenSans-Regular-webfont.woff') format('woff'),
-         url('/includes/fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
-         url('/includes/fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-family: 'proxima_novabold';
+    src: url('/includes/fonts/ProximaNova-Bold-webfont.eot');
+    src: url('/includes/fonts/ProximaNova-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/includes/fonts/ProximaNova-Bold-webfont.woff2') format('woff2'),
+         url('/includes/fonts/ProximaNova-Bold-webfont.woff') format('woff'),
+         url('/includes/fonts/ProximaNova-Bold-webfont.ttf') format('truetype'),
+         url('/includes/fonts/ProximaNova-Bold-webfont.svg#proxima_novabold') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -70,7 +58,7 @@ body, html {
 	position: relative;
 	width: 100%;
 	min-height: 100%;
-	font-family: "open_sansregular", helvetica, sans-serif;
+	font-family: "proxima_novaregular", helvetica, sans-serif;
 	font-size: 100%;
 	-webkit-text-size-adjust: 100%;
 	text-align: left;
@@ -121,16 +109,16 @@ body, html {
 }
 
 b, strong{
-	font-family: "open_sansbold";
+	font-family: "proxima_novabold";
 	font-weight: bold;
 }
 i{
-	font-family: "open_sansitalic";
+	font-family: "proxima_novaitalic";
 	font-style: italic;
 }
 
 h1{
-	font-family: "open_sanslight";
+	font-family: "proxima_novalight";
 	font-size: 48px;
 	font-weight: lighter;
 	line-height: 1.25;
@@ -140,14 +128,14 @@ h1{
 }
 
 h2{
-	font-family: "open_sanslight";
+	font-family: "proxima_novalight";
 	font-size: 38px;
 	font-weight: lighter;
 	line-height: 1.25;
 	color: $grey;
 }
 h3{
-	font-family: "open_sanslight";
+	font-family: "proxima_novalight";
 	font-size: 1.25em;
 	font-weight: lighter;
 	line-height: 1.25;
@@ -435,7 +423,7 @@ section{
 				vertical-align: bottom;
 				-webkit-appearance: none;
 				-webkit-font-smoothing: antialiased;
-				font-family: "open_sansregular";
+				font-family: "proxima_novaregular";
 				background-color: $light-grey;
 				border:none;
 				max-width: 300px;
@@ -462,7 +450,7 @@ section{
 			}
 
 			.submit{
-				font-family: "open_sansregular";
+				font-family: "proxima_novaregular";
 				color: $blue;
 				position: relative;
 				width: 70px;
