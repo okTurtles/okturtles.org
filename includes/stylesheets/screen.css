@@ -91,13 +91,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-style: normal;
 }
 @font-face {
+  font-family: 'proxima_novathin';
+  src: url("/includes/fonts/ProximaNova-Thin-webfont.eot");
+  src: url("/includes/fonts/ProximaNova-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("/includes/fonts/ProximaNova-Thin-webfont.woff2") format("woff2"), url("/includes/fonts/ProximaNova-Thin-webfont.woff") format("woff"), url("/includes/fonts/ProximaNova-Thin-webfont.ttf") format("truetype"), url("/includes/fonts/ProximaNova-Thin-webfont.svg#proxima_novathin") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: 'proxima_novabold';
   src: url("/includes/fonts/ProximaNova-Bold-webfont.eot");
   src: url("/includes/fonts/ProximaNova-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("/includes/fonts/ProximaNova-Bold-webfont.woff2") format("woff2"), url("/includes/fonts/ProximaNova-Bold-webfont.woff") format("woff"), url("/includes/fonts/ProximaNova-Bold-webfont.ttf") format("truetype"), url("/includes/fonts/ProximaNova-Bold-webfont.svg#proxima_novabold") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-/* line 55, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 body, html {
   margin: 0;
   padding: 0;
@@ -114,17 +121,17 @@ body, html {
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
 }
-/* line 71, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 body ::selection, html ::selection {
   color: #f5f5f5;
   background-color: #5a5a5a;
 }
-/* line 75, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
 body ::-moz-selection, html ::-moz-selection {
   color: #f5f5f5;
   background-color: #5a5a5a;
 }
-/* line 80, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
 body a, html a {
   text-decoration: none;
   -webkit-transition: all 0.4s ease;
@@ -134,7 +141,7 @@ body a, html a {
   transition: all 0.4s ease;
   color: #141414;
 }
-/* line 86, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 body a:hover, html a:hover {
   text-decoration: none;
   -webkit-transition: all 0.15s ease;
@@ -144,29 +151,29 @@ body a:hover, html a:hover {
   transition: all 0.15s ease;
 }
 
-/* line 93, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 .wf-loading {
   visibility: hidden;
 }
 
-/* line 97, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 .clearfix {
   display: inline-block;
 }
 
 /* start commented backslash hack \*/
-/* line 99, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 * html .clearfix {
   height: 1%;
 }
 
-/* line 100, ../sass/screen.scss */
+/* line 112, ../sass/screen.scss */
 .clearfix {
   display: block;
 }
 
 /* close commented backslash hack */
-/* line 102, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -176,62 +183,62 @@ body a:hover, html a:hover {
   height: 0;
 }
 
-/* line 111, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 b, strong {
   font-family: "proxima_novabold";
   font-weight: bold;
 }
 
-/* line 115, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 i {
   font-family: "proxima_novaitalic";
   font-style: italic;
 }
 
-/* line 120, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 h1 {
-  font-family: "proxima_novalight";
+  font-family: "proxima_novathin";
   font-size: 48px;
   font-weight: lighter;
   line-height: 1.25;
 }
-/* line 125, ../sass/screen.scss */
+/* line 137, ../sass/screen.scss */
 h1 span {
   color: #141414;
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 142, ../sass/screen.scss */
 h2 {
-  font-family: "proxima_novalight";
+  font-family: "proxima_novathin";
   font-size: 38px;
   font-weight: lighter;
   line-height: 1.25;
   color: #5a5a5a;
 }
 
-/* line 137, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 h3 {
-  font-family: "proxima_novalight";
+  font-family: "proxima_novathin";
   font-size: 1.25em;
   font-weight: lighter;
   line-height: 1.25;
   color: #f5f5f5;
 }
 
-/* line 144, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 p {
   color: #5a5a5a;
   line-height: 20px;
 }
 
-/* line 148, ../sass/screen.scss */
+/* line 160, ../sass/screen.scss */
 section {
   position: relative;
   display: block;
   width: 100%;
 }
 
-/* line 153, ../sass/screen.scss */
+/* line 165, ../sass/screen.scss */
 .container {
   position: relative;
   display: block;
@@ -240,7 +247,7 @@ section {
   width: 90%;
 }
 
-/* line 160, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 .green {
   color: #27ae60;
   -webkit-transition: all 0.4s ease;
@@ -250,7 +257,7 @@ section {
   transition: all 0.4s ease;
 }
 
-/* line 164, ../sass/screen.scss */
+/* line 176, ../sass/screen.scss */
 .green:hover {
   -webkit-transition: all 0.15s ease;
   -moz-transition: all 0.15s ease;
@@ -259,28 +266,28 @@ section {
   transition: all 0.15s ease;
 }
 
-/* line 171, ../sass/screen.scss */
+/* line 183, ../sass/screen.scss */
 .header {
   background-color: #27ae60;
   padding-top: 100px;
   padding-bottom: 300px;
 }
-/* line 175, ../sass/screen.scss */
+/* line 187, ../sass/screen.scss */
 .header h1 {
   color: #f5f5f5;
 }
-/* line 178, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 .header .home-container {
   max-width: 800px;
 }
 
 @media only screen and (max-width: 568px) {
-  /* line 183, ../sass/screen.scss */
+  /* line 195, ../sass/screen.scss */
   .header {
     padding-bottom: 250px;
   }
 }
-/* line 194, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 .video-container {
   position: relative;
   margin: 0 auto;
@@ -290,7 +297,7 @@ section {
   z-index: 99999999;
   overflow: hidden;
 }
-/* line 202, ../sass/screen.scss */
+/* line 214, ../sass/screen.scss */
 .video-container .video-wrapper {
   position: relative;
   display: block;
@@ -299,7 +306,7 @@ section {
   padding-bottom: 56.25%;
   overflow: hidden;
 }
-/* line 211, ../sass/screen.scss */
+/* line 223, ../sass/screen.scss */
 .video-container .video-wrapper iframe,
 .video-container .video-wrapper object,
 .video-container .video-wrapper embed {
@@ -309,87 +316,87 @@ section {
   width: 100%;
   height: 100%;
 }
-/* line 221, ../sass/screen.scss */
+/* line 233, ../sass/screen.scss */
 .video-container iframe:not([seamless]) {
   border: none;
 }
-/* line 224, ../sass/screen.scss */
+/* line 236, ../sass/screen.scss */
 .video-container .placeholder {
   position: relative;
   margin: 0 auto;
   max-width: 700px;
 }
-/* line 228, ../sass/screen.scss */
+/* line 240, ../sass/screen.scss */
 .video-container .placeholder img {
   position: relative;
   display: block;
   max-width: 700px;
   width: 100%;
 }
-/* line 235, ../sass/screen.scss */
+/* line 247, ../sass/screen.scss */
 .video-container .placeholder:hover {
   cursor: pointer;
 }
 
 @media only screen and (max-width: 380px) {
-  /* line 240, ../sass/screen.scss */
+  /* line 252, ../sass/screen.scss */
   .video-container {
     bottom: 160px;
   }
 }
-/* line 246, ../sass/screen.scss */
+/* line 258, ../sass/screen.scss */
 .https-is-broken {
   margin-top: -100px;
   text-align: center;
   padding-bottom: 100px;
 }
-/* line 250, ../sass/screen.scss */
+/* line 262, ../sass/screen.scss */
 .https-is-broken h2 {
   margin-bottom: 40px;
 }
-/* line 252, ../sass/screen.scss */
+/* line 264, ../sass/screen.scss */
 .https-is-broken h2 a {
   color: #1479DE;
 }
-/* line 255, ../sass/screen.scss */
+/* line 267, ../sass/screen.scss */
 .https-is-broken h2 a:hover {
   text-decoration: underline;
 }
-/* line 259, ../sass/screen.scss */
+/* line 271, ../sass/screen.scss */
 .https-is-broken p {
   max-width: 90%;
   position: relative;
   display: block;
   margin: 0 auto;
 }
-/* line 264, ../sass/screen.scss */
+/* line 276, ../sass/screen.scss */
 .https-is-broken p a {
   color: #1479DE;
 }
-/* line 267, ../sass/screen.scss */
+/* line 279, ../sass/screen.scss */
 .https-is-broken p a:hover {
   text-decoration: underline;
 }
-/* line 271, ../sass/screen.scss */
+/* line 283, ../sass/screen.scss */
 .https-is-broken .b {
   margin-top: 30px;
 }
-/* line 275, ../sass/screen.scss */
+/* line 287, ../sass/screen.scss */
 .https-is-broken a:hover .green {
   color: #1479DE;
 }
 
-/* line 282, ../sass/screen.scss */
+/* line 294, ../sass/screen.scss */
 .what-we-do {
   padding: 100px 0;
   background-color: #f5f5f5;
   text-align: center;
 }
-/* line 286, ../sass/screen.scss */
+/* line 298, ../sass/screen.scss */
 .what-we-do h2 {
   margin-bottom: 50px;
 }
-/* line 289, ../sass/screen.scss */
+/* line 301, ../sass/screen.scss */
 .what-we-do .half {
   position: relative;
   display: block;
@@ -397,25 +404,25 @@ section {
   float: left;
   text-align: left;
 }
-/* line 295, ../sass/screen.scss */
+/* line 307, ../sass/screen.scss */
 .what-we-do .half h3 {
   color: #0C6130;
   font-size: 32px;
   margin-bottom: 12px;
 }
-/* line 300, ../sass/screen.scss */
+/* line 312, ../sass/screen.scss */
 .what-we-do .half h4 {
   margin-top: 40px;
   font-size: 1.1em;
   font-weight: bold;
 }
-/* line 305, ../sass/screen.scss */
+/* line 317, ../sass/screen.scss */
 .what-we-do .half .link-container {
   position: relative;
   display: block;
   margin: 20px 0 30px 0;
 }
-/* line 309, ../sass/screen.scss */
+/* line 321, ../sass/screen.scss */
 .what-we-do .half .link-container .link {
   color: #0C6130;
   font-weight: bold;
@@ -424,7 +431,7 @@ section {
   vertical-align: middle;
   width: 100%;
 }
-/* line 316, ../sass/screen.scss */
+/* line 328, ../sass/screen.scss */
 .what-we-do .half .link-container .link img {
   position: relative;
   display: inline-block;
@@ -432,30 +439,30 @@ section {
   margin-right: 10px;
   vertical-align: middle;
 }
-/* line 324, ../sass/screen.scss */
+/* line 336, ../sass/screen.scss */
 .what-we-do .half .link-container .link:hover {
   color: #1479DE;
 }
-/* line 329, ../sass/screen.scss */
+/* line 341, ../sass/screen.scss */
 .what-we-do .education {
   margin-right: 6%;
 }
 @media only screen and (max-width: 668px) {
-  /* line 333, ../sass/screen.scss */
+  /* line 345, ../sass/screen.scss */
   .what-we-do .half {
     width: 100%;
     margin-bottom: 50px;
   }
-  /* line 337, ../sass/screen.scss */
+  /* line 349, ../sass/screen.scss */
   .what-we-do .education {
     margin-right: 0;
   }
-  /* line 340, ../sass/screen.scss */
+  /* line 352, ../sass/screen.scss */
   .what-we-do .solutions {
     margin-bottom: 0;
   }
 }
-/* line 344, ../sass/screen.scss */
+/* line 356, ../sass/screen.scss */
 .what-we-do .blog-post-link {
   color: #0C6130;
   position: relative;
@@ -464,7 +471,7 @@ section {
   font-weight: bold;
   margin-top: 20px;
 }
-/* line 351, ../sass/screen.scss */
+/* line 363, ../sass/screen.scss */
 .what-we-do .blog-post-link img {
   position: relative;
   display: inline-block;
@@ -472,11 +479,11 @@ section {
   margin-right: 10px;
   vertical-align: middle;
 }
-/* line 359, ../sass/screen.scss */
+/* line 371, ../sass/screen.scss */
 .what-we-do .blog-post-link:hover {
   color: #1479DE;
 }
-/* line 362, ../sass/screen.scss */
+/* line 374, ../sass/screen.scss */
 .what-we-do .button {
   font-size: .9em;
   text-align: center;
@@ -490,54 +497,54 @@ section {
   margin-top: 30px;
   border: 1px solid #1479DE;
 }
-/* line 375, ../sass/screen.scss */
+/* line 387, ../sass/screen.scss */
 .what-we-do .button:hover {
   background-color: #1479DE;
   color: #f5f5f5;
 }
 
-/* line 384, ../sass/screen.scss */
+/* line 396, ../sass/screen.scss */
 .footer {
   text-align: center;
   padding: 100px 0;
 }
-/* line 388, ../sass/screen.scss */
+/* line 400, ../sass/screen.scss */
 .footer ul li {
   position: relative;
   display: inline-block;
   margin: 0 20px;
 }
-/* line 395, ../sass/screen.scss */
+/* line 407, ../sass/screen.scss */
 .footer ul li a:hover {
   color: #1479DE;
 }
 @media only screen and (max-width: 568px) {
-  /* line 400, ../sass/screen.scss */
+  /* line 412, ../sass/screen.scss */
   .footer ul li {
     margin-bottom: 20px;
   }
 }
-/* line 405, ../sass/screen.scss */
+/* line 417, ../sass/screen.scss */
 .footer .social-icons {
   margin-top: 35px;
 }
-/* line 407, ../sass/screen.scss */
+/* line 419, ../sass/screen.scss */
 .footer .social-icons li {
   font-size: 18px;
 }
-/* line 412, ../sass/screen.scss */
+/* line 424, ../sass/screen.scss */
 .footer .form-container {
   position: relative;
   display: block;
   margin-top: 60px;
 }
-/* line 416, ../sass/screen.scss */
+/* line 428, ../sass/screen.scss */
 .footer .form-container p {
   color: #aeaeae;
   margin-bottom: 14px;
   font-size: .9em;
 }
-/* line 422, ../sass/screen.scss */
+/* line 434, ../sass/screen.scss */
 .footer .form-container form input {
   vertical-align: bottom;
   -webkit-appearance: none;
@@ -570,11 +577,11 @@ section {
   /* Firefox, other Gecko */
   box-sizing: border-box;
 }
-/* line 448, ../sass/screen.scss */
+/* line 460, ../sass/screen.scss */
 .footer .form-container form input:hover, .footer .form-container form input:focus {
   background-color: #f5f5f5;
 }
-/* line 452, ../sass/screen.scss */
+/* line 464, ../sass/screen.scss */
 .footer .form-container form .submit {
   font-family: "proxima_novaregular";
   color: #1479DE;
@@ -594,7 +601,7 @@ section {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-/* line 467, ../sass/screen.scss */
+/* line 479, ../sass/screen.scss */
 .footer .form-container form .submit:hover, .footer .form-container form .submit:focus, .footer .form-container form .submit:active {
   -webkit-font-smoothing: antialiased;
   cursor: pointer;
@@ -607,12 +614,12 @@ section {
   transition: all 0.3s ease;
 }
 @media only screen and (max-width: 568px) {
-  /* line 475, ../sass/screen.scss */
+  /* line 487, ../sass/screen.scss */
   .footer .form-container form input {
     max-width: 190px;
   }
 }
-/* line 481, ../sass/screen.scss */
+/* line 493, ../sass/screen.scss */
 .footer .form-container form:hover input {
   border-color: #1479DE;
 }

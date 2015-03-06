@@ -40,6 +40,18 @@
 
 }
 @font-face {
+    font-family: 'proxima_novathin';
+    src: url('/includes/fonts/ProximaNova-Thin-webfont.eot');
+    src: url('/includes/fonts/ProximaNova-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/includes/fonts/ProximaNova-Thin-webfont.woff2') format('woff2'),
+         url('/includes/fonts/ProximaNova-Thin-webfont.woff') format('woff'),
+         url('/includes/fonts/ProximaNova-Thin-webfont.ttf') format('truetype'),
+         url('/includes/fonts/ProximaNova-Thin-webfont.svg#proxima_novathin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
     font-family: 'proxima_novabold';
     src: url('/includes/fonts/ProximaNova-Bold-webfont.eot');
     src: url('/includes/fonts/ProximaNova-Bold-webfont.eot?#iefix') format('embedded-opentype'),
@@ -118,7 +130,7 @@ i{
 }
 
 h1{
-	font-family: "proxima_novalight";
+	font-family: "proxima_novathin";
 	font-size: 48px;
 	font-weight: lighter;
 	line-height: 1.25;
@@ -128,14 +140,14 @@ h1{
 }
 
 h2{
-	font-family: "proxima_novalight";
+	font-family: "proxima_novathin";
 	font-size: 38px;
 	font-weight: lighter;
 	line-height: 1.25;
 	color: $grey;
 }
 h3{
-	font-family: "proxima_novalight";
+	font-family: "proxima_novathin";
 	font-size: 1.25em;
 	font-weight: lighter;
 	line-height: 1.25;
