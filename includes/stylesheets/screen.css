@@ -728,7 +728,7 @@ section {
 .team #memory-of .half h3 {
   color: #141414;
   font-size: 1.6em;
-  font-weight: normal;
+  font-family: 'proxima_novaregular';
   margin-bottom: 20px;
 }
 /* line 96, ../sass/team.scss */
