@@ -413,7 +413,7 @@ section {
 .what-we-do .half h4 {
   margin-top: 40px;
   font-size: 1.1em;
-  font-weight: bold;
+  font-family: "proxima_novabold";
 }
 /* line 316, ../sass/screen.scss */
 .what-we-do .half .link-container {
@@ -424,7 +424,7 @@ section {
 /* line 320, ../sass/screen.scss */
 .what-we-do .half .link-container .link {
   color: #0C6130;
-  font-weight: bold;
+  font-family: "proxima_novabold";
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -467,7 +467,7 @@ section {
   position: relative;
   display: block;
   margin-bottom: 10px;
-  font-weight: bold;
+  font-family: "proxima_novabold";
   margin-top: 20px;
 }
 /* line 362, ../sass/screen.scss */
@@ -969,7 +969,7 @@ section {
 /* line 22, ../sass/browser-extension.scss */
 .browser-extension .browser-extension h2 span {
   color: #9a9a9a;
-  font-weight: normal;
+  font-family: 'proxima_novaregular';
   font-size: 20px;
 }
 /* line 28, ../sass/browser-extension.scss */
@@ -1011,7 +1011,7 @@ section {
 .browser-extension #faq h3 {
   font-size: 1.5em;
   color: #141414;
-  font-weight: normal;
+  font-family: 'proxima_novaregular';
   padding: 10px 0;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;

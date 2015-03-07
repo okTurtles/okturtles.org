@@ -311,7 +311,7 @@ section{
 		h4{
 			margin-top: 40px;
 			font-size: 1.1em;
-			font-weight: bold;
+			font-family: "proxima_novabold";
 		}
 		.link-container{
 			position: relative;
@@ -319,7 +319,7 @@ section{
 			margin: 20px 0 30px 0;
 			.link{
 				color: $dark-green;
-				font-weight: bold;
+				font-family: "proxima_novabold";
 				position: relative;
 				display: inline-block;
 				vertical-align: middle;
@@ -357,7 +357,7 @@ section{
 		position: relative;
 		display: block;
 		margin-bottom: 10px;
-		font-weight: bold;
+		font-family: "proxima_novabold";
 		margin-top: 20px;
 		img{
 			position: relative;

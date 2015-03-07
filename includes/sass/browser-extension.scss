@@ -21,7 +21,7 @@
 			margin-bottom: 20px;
 			span{
 				color: #9a9a9a;
-				font-weight: normal;
+				font-family: 'proxima_novaregular';
 				font-size: 20px;
 			}
 		}
@@ -59,7 +59,7 @@
 		h3{
 			font-size: 1.5em;	
 			color: $black;	
-			font-weight: normal;
+			font-family: 'proxima_novaregular';
 			padding: 10px 0;
 			@include transition(all, .4s, ease);
 		}
