@@ -7,13 +7,19 @@
 
 <style>
 /* Courtesy: https://unindented.org/articles/github-ribbon-using-css-transforms/ */
-.ribbon {
-  z-index: 99999;
-  background-color: #a00;
-  overflow: hidden;
-  white-space: nowrap;
-  /* top left corner */
+.ribbon-wrapper {
   position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+  width: 142px;
+  height: 90px;
+  overflow: hidden;
+}
+.ribbon {
+  background-color: #a00;
+  white-space: nowrap;
+  position: relative;
   right: -40px;
   top: 10px;
   /* 45 deg ccw rotation */
