@@ -1,1246 +1,233 @@
-/* line 5, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
 
-/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
-html {
-  line-height: 1;
-}
+html { line-height: 1; }
 
-/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
-}
+ol, ul { list-style: none; }
 
-/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
+table { border-collapse: collapse; border-spacing: 0; }
 
-/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
 
-/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
-}
-/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
 
-/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
-}
+a img { border: none; }
 
-/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
 
-/* line 30, ../sass/variables.scss */
-.smooth-scrolling {
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-}
+.smooth-scrolling { overflow-y: scroll; -webkit-overflow-scrolling: touch; }
 
-@font-face {
-  font-family: 'proxima_novaitalic';
-  src: url("/includes/fonts/ProximaNova-RegularIt-webfont.eot");
-  src: url("/includes/fonts/ProximaNova-RegularIt-webfont.eot?#iefix") format("embedded-opentype"), url("/includes/fonts/ProximaNova-RegularIt-webfont.woff2") format("woff2"), url("/includes/fonts/ProximaNova-RegularIt-webfont.woff") format("woff"), url("/includes/fonts/ProximaNova-RegularIt-webfont.ttf") format("truetype"), url("/includes/fonts/ProximaNova-RegularIt-webfont.svg#proxima_novaitalic") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'proxima_novaregular';
-  src: url("/includes/fonts/ProximaNova-Regular-webfont.eot");
-  src: url("/includes/fonts/ProximaNova-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("/includes/fonts/ProximaNova-Regular-webfont.woff2") format("woff2"), url("/includes/fonts/ProximaNova-Regular-webfont.woff") format("woff"), url("/includes/fonts/ProximaNova-Regular-webfont.ttf") format("truetype"), url("/includes/fonts/ProximaNova-Regular-webfont.svg#proxima_novaregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'proxima_novalight';
-  src: url("/includes/fonts/ProximaNova-Light-webfont.eot");
-  src: url("/includes/fonts/ProximaNova-Light-webfont.eot?#iefix") format("embedded-opentype"), url("/includes/fonts/ProximaNova-Light-webfont.woff2") format("woff2"), url("/includes/fonts/ProximaNova-Light-webfont.woff") format("woff"), url("/includes/fonts/ProximaNova-Light-webfont.ttf") format("truetype"), url("/includes/fonts/ProximaNova-Light-webfont.svg#proxima_novalight") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'proxima_novathin';
-  src: url("/includes/fonts/ProximaNova-Thin-webfont.eot");
-  src: url("/includes/fonts/ProximaNova-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("/includes/fonts/ProximaNova-Thin-webfont.woff2") format("woff2"), url("/includes/fonts/ProximaNova-Thin-webfont.woff") format("woff"), url("/includes/fonts/ProximaNova-Thin-webfont.ttf") format("truetype"), url("/includes/fonts/ProximaNova-Thin-webfont.svg#proxima_novathin") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'proxima_novabold';
-  src: url("/includes/fonts/ProximaNova-Bold-webfont.eot");
-  src: url("/includes/fonts/ProximaNova-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("/includes/fonts/ProximaNova-Bold-webfont.woff2") format("woff2"), url("/includes/fonts/ProximaNova-Bold-webfont.woff") format("woff"), url("/includes/fonts/ProximaNova-Bold-webfont.ttf") format("truetype"), url("/includes/fonts/ProximaNova-Bold-webfont.svg#proxima_novabold") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-/* line 67, ../sass/screen.scss */
-body, html {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  width: 100%;
-  min-height: 100%;
-  font-family: "proxima_novaregular", helvetica, sans-serif;
-  font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-  text-align: left;
-  color: #141414;
-  background-color: #eeeeee;
-  font-weight: normal;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-font-smoothing: antialiased;
-}
-/* line 83, ../sass/screen.scss */
-body ::selection, html ::selection {
-  color: #f5f5f5;
-  background-color: #5a5a5a;
-}
-/* line 87, ../sass/screen.scss */
-body ::-moz-selection, html ::-moz-selection {
-  color: #f5f5f5;
-  background-color: #5a5a5a;
-}
-/* line 92, ../sass/screen.scss */
-body a, html a {
-  text-decoration: none;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  color: #141414;
-}
-/* line 98, ../sass/screen.scss */
-body a:hover, html a:hover {
-  text-decoration: none;
-  -webkit-transition: all 0.15s ease;
-  -moz-transition: all 0.15s ease;
-  -ms-transition: all 0.15s ease;
-  -o-transition: all 0.15s ease;
-  transition: all 0.15s ease;
-}
+@font-face { font-family: 'proxima_novaitalic'; src: url("/includes/fonts/ProximaNova-RegularIt-webfont.eot"); src: url("/includes/fonts/ProximaNova-RegularIt-webfont.eot?#iefix") format("embedded-opentype"), url("/includes/fonts/ProximaNova-RegularIt-webfont.woff2") format("woff2"), url("/includes/fonts/ProximaNova-RegularIt-webfont.woff") format("woff"), url("/includes/fonts/ProximaNova-RegularIt-webfont.ttf") format("truetype"), url("/includes/fonts/ProximaNova-RegularIt-webfont.svg#proxima_novaitalic") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'proxima_novaregular'; src: url("/includes/fonts/ProximaNova-Regular-webfont.eot"); src: url("/includes/fonts/ProximaNova-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("/includes/fonts/ProximaNova-Regular-webfont.woff2") format("woff2"), url("/includes/fonts/ProximaNova-Regular-webfont.woff") format("woff"), url("/includes/fonts/ProximaNova-Regular-webfont.ttf") format("truetype"), url("/includes/fonts/ProximaNova-Regular-webfont.svg#proxima_novaregular") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'proxima_novalight'; src: url("/includes/fonts/ProximaNova-Light-webfont.eot"); src: url("/includes/fonts/ProximaNova-Light-webfont.eot?#iefix") format("embedded-opentype"), url("/includes/fonts/ProximaNova-Light-webfont.woff2") format("woff2"), url("/includes/fonts/ProximaNova-Light-webfont.woff") format("woff"), url("/includes/fonts/ProximaNova-Light-webfont.ttf") format("truetype"), url("/includes/fonts/ProximaNova-Light-webfont.svg#proxima_novalight") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'proxima_novathin'; src: url("/includes/fonts/ProximaNova-Thin-webfont.eot"); src: url("/includes/fonts/ProximaNova-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("/includes/fonts/ProximaNova-Thin-webfont.woff2") format("woff2"), url("/includes/fonts/ProximaNova-Thin-webfont.woff") format("woff"), url("/includes/fonts/ProximaNova-Thin-webfont.ttf") format("truetype"), url("/includes/fonts/ProximaNova-Thin-webfont.svg#proxima_novathin") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'proxima_novabold'; src: url("/includes/fonts/ProximaNova-Bold-webfont.eot"); src: url("/includes/fonts/ProximaNova-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("/includes/fonts/ProximaNova-Bold-webfont.woff2") format("woff2"), url("/includes/fonts/ProximaNova-Bold-webfont.woff") format("woff"), url("/includes/fonts/ProximaNova-Bold-webfont.ttf") format("truetype"), url("/includes/fonts/ProximaNova-Bold-webfont.svg#proxima_novabold") format("svg"); font-weight: normal; font-style: normal; }
+body, html { margin: 0; padding: 0; position: relative; width: 100%; min-height: 100%; font-family: 'proxima_novaregular', helvetica, sans-serif; font-size: 100%; -webkit-text-size-adjust: 100%; text-align: left; color: #141414; background-color: #eeeeee; font-weight: normal; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; }
+body ::selection, html ::selection { color: #f5f5f5; background-color: #5a5a5a; }
+body ::-moz-selection, html ::-moz-selection { color: #f5f5f5; background-color: #5a5a5a; }
+body a, html a { text-decoration: none; -webkit-transition: all 0.4s ease; -moz-transition: all 0.4s ease; -ms-transition: all 0.4s ease; transition: all 0.4s ease; color: #141414; }
+body a:hover, html a:hover { -webkit-transition: all 0.15s ease; -moz-transition: all 0.15s ease; -ms-transition: all 0.15s ease; transition: all 0.15s ease; text-decoration: none; }
 
-/* line 105, ../sass/screen.scss */
-.wf-loading {
-  visibility: hidden;
-}
+.wf-loading { visibility: hidden; }
 
-/* line 109, ../sass/screen.scss */
-.clearfix {
-  display: inline-block;
-}
+.clearfix { display: inline-block; }
 
 /* start commented backslash hack \*/
-/* line 111, ../sass/screen.scss */
-* html .clearfix {
-  height: 1%;
-}
+* html .clearfix { height: 1%; }
 
-/* line 112, ../sass/screen.scss */
-.clearfix {
-  display: block;
-}
+.clearfix { display: block; }
 
 /* close commented backslash hack */
-/* line 114, ../sass/screen.scss */
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
-}
+.clearfix::after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
 
-/* line 123, ../sass/screen.scss */
-b, strong {
-  font-family: "proxima_novabold";
-}
+b, strong { font-family: "proxima_novabold"; }
 
-/* line 126, ../sass/screen.scss */
-i {
-  font-family: "proxima_novaitalic";
-  font-style: italic;
-}
+i { font-family: "proxima_novaitalic"; font-style: italic; }
 
-/* line 131, ../sass/screen.scss */
-h1 {
-  font-family: "proxima_novathin";
-  font-size: 48px;
-  font-weight: lighter;
-  line-height: 1.25;
-}
-/* line 136, ../sass/screen.scss */
-h1 span {
-  color: #141414;
-}
+h1 { font-family: "proxima_novathin"; font-size: 48px; font-weight: lighter; line-height: 1.25; }
+h1 span { color: #141414; }
 
-/* line 141, ../sass/screen.scss */
-h2 {
-  font-family: "proxima_novathin";
-  font-size: 38px;
-  font-weight: lighter;
-  line-height: 1.25;
-  color: #5a5a5a;
-}
+h2 { font-family: "proxima_novathin"; font-size: 38px; font-weight: lighter; line-height: 1.25; color: #5a5a5a; }
 
-/* line 148, ../sass/screen.scss */
-h3 {
-  font-family: "proxima_novathin";
-  font-size: 1.25em;
-  font-weight: lighter;
-  line-height: 1.25;
-  color: #f5f5f5;
-}
+h3 { font-family: "proxima_novathin"; font-size: 1.25em; font-weight: lighter; line-height: 1.25; color: #f5f5f5; }
 
-/* line 155, ../sass/screen.scss */
-p {
-  color: #5a5a5a;
-  line-height: 20px;
-}
+p { color: #5a5a5a; line-height: 20px; }
 
-/* line 159, ../sass/screen.scss */
-section {
-  position: relative;
-  display: block;
-  width: 100%;
-}
+section { position: relative; display: block; width: 100%; }
 
-/* line 164, ../sass/screen.scss */
-.container {
-  position: relative;
-  display: block;
-  margin: 0 auto;
-  max-width: 960px;
-  width: 90%;
-}
+.container { position: relative; display: block; margin: 0 auto; max-width: 960px; width: 90%; }
 
-/* line 171, ../sass/screen.scss */
-.green {
-  color: #27ae60;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
+.green { -webkit-transition: all 0.4s ease; -moz-transition: all 0.4s ease; -ms-transition: all 0.4s ease; transition: all 0.4s ease; color: #27ae60; }
+.green:hover { -webkit-transition: all 0.15s ease; -moz-transition: all 0.15s ease; -ms-transition: all 0.15s ease; transition: all 0.15s ease; }
 
-/* line 175, ../sass/screen.scss */
-.green:hover {
-  -webkit-transition: all 0.15s ease;
-  -moz-transition: all 0.15s ease;
-  -ms-transition: all 0.15s ease;
-  -o-transition: all 0.15s ease;
-  transition: all 0.15s ease;
-}
+.header { background-color: #27ae60; padding-top: 100px; padding-bottom: 300px; }
+.header h1 { color: #f5f5f5; }
+.header .home-container { max-width: 800px; }
 
-/* line 182, ../sass/screen.scss */
-.header {
-  background-color: #27ae60;
-  padding-top: 100px;
-  padding-bottom: 300px;
-}
-/* line 186, ../sass/screen.scss */
-.header h1 {
-  color: #f5f5f5;
-}
-/* line 189, ../sass/screen.scss */
-.header .home-container {
-  max-width: 800px;
-}
+@media only screen and (max-width: 568px) { .header { padding-bottom: 250px; } }
+.video-container { position: relative; margin: 0 auto; max-width: 704px; width: 100%; bottom: 200px; z-index: 99999999; overflow: hidden; }
+.video-container .video-wrapper { position: relative; display: block; height: 0; border: none; padding-bottom: 56.25%; overflow: hidden; }
+.video-container .video-wrapper iframe, .video-container .video-wrapper object, .video-container .video-wrapper embed, .video-container .video-wrapper > div { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.video-container iframe:not([seamless]) { border: none; }
+.video-container .placeholder { position: relative; margin: 0 auto; max-width: 700px; }
+.video-container .placeholder img { position: relative; display: block; max-width: 700px; width: 100%; }
+.video-container .placeholder:hover { cursor: pointer; }
 
-@media only screen and (max-width: 568px) {
-  /* line 194, ../sass/screen.scss */
-  .header {
-    padding-bottom: 250px;
-  }
-}
-/* line 205, ../sass/screen.scss */
-.video-container {
-  position: relative;
-  margin: 0 auto;
-  max-width: 701px;
-  width: 100%;
-  bottom: 200px;
-  z-index: 99999999;
-  overflow: hidden;
-}
-/* line 213, ../sass/screen.scss */
-.video-container .video-wrapper {
-  position: relative;
-  display: block;
-  height: 0;
-  border: none;
-  padding-bottom: 56.25%;
-  overflow: hidden;
-}
-/* line 222, ../sass/screen.scss */
-.video-container .video-wrapper iframe,
-.video-container .video-wrapper object,
-.video-container .video-wrapper embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-/* line 232, ../sass/screen.scss */
-.video-container iframe:not([seamless]) {
-  border: none;
-}
-/* line 235, ../sass/screen.scss */
-.video-container .placeholder {
-  position: relative;
-  margin: 0 auto;
-  max-width: 700px;
-}
-/* line 239, ../sass/screen.scss */
-.video-container .placeholder img {
-  position: relative;
-  display: block;
-  max-width: 700px;
-  width: 100%;
-}
-/* line 246, ../sass/screen.scss */
-.video-container .placeholder:hover {
-  cursor: pointer;
-}
+@media only screen and (max-width: 380px) { .video-container { bottom: 160px; } }
+.https-is-broken { margin-top: -100px; text-align: center; padding-bottom: 100px; }
+.https-is-broken h2 { margin-bottom: 40px; }
+.https-is-broken h2 a { color: #1479DE; }
+.https-is-broken h2 a:hover { text-decoration: underline; }
+.https-is-broken p { max-width: 90%; position: relative; display: block; margin: 0 auto; }
+.https-is-broken p a { color: #1479DE; }
+.https-is-broken p a:hover { text-decoration: underline; }
+.https-is-broken .b { margin-top: 30px; }
+.https-is-broken a:hover .green { color: #1479DE; }
 
-@media only screen and (max-width: 380px) {
-  /* line 251, ../sass/screen.scss */
-  .video-container {
-    bottom: 160px;
-  }
-}
-/* line 257, ../sass/screen.scss */
-.https-is-broken {
-  margin-top: -100px;
-  text-align: center;
-  padding-bottom: 100px;
-}
-/* line 261, ../sass/screen.scss */
-.https-is-broken h2 {
-  margin-bottom: 40px;
-}
-/* line 263, ../sass/screen.scss */
-.https-is-broken h2 a {
-  color: #1479DE;
-}
-/* line 266, ../sass/screen.scss */
-.https-is-broken h2 a:hover {
-  text-decoration: underline;
-}
-/* line 270, ../sass/screen.scss */
-.https-is-broken p {
-  max-width: 90%;
-  position: relative;
-  display: block;
-  margin: 0 auto;
-}
-/* line 275, ../sass/screen.scss */
-.https-is-broken p a {
-  color: #1479DE;
-}
-/* line 278, ../sass/screen.scss */
-.https-is-broken p a:hover {
-  text-decoration: underline;
-}
-/* line 282, ../sass/screen.scss */
-.https-is-broken .b {
-  margin-top: 30px;
-}
-/* line 286, ../sass/screen.scss */
-.https-is-broken a:hover .green {
-  color: #1479DE;
-}
+.what-we-do { padding: 100px 0; background-color: #f5f5f5; text-align: center; }
+.what-we-do h2 { margin-bottom: 50px; }
+.what-we-do .half { position: relative; display: block; width: 47%; float: left; text-align: left; }
+.what-we-do .half h3 { color: #0C6130; font-size: 32px; margin-bottom: 12px; }
+.what-we-do .half h4 { margin-top: 40px; font-size: 1.1em; font-family: "proxima_novabold"; }
+.what-we-do .half .link-container { position: relative; display: block; margin: 20px 0 30px 0; }
+.what-we-do .half .link-container .link { color: #0C6130; font-family: "proxima_novabold"; position: relative; display: inline-block; vertical-align: middle; width: 100%; }
+.what-we-do .half .link-container .link img { position: relative; display: inline-block; max-width: 40px; margin-right: 10px; vertical-align: middle; }
+.what-we-do .half .link-container .link:hover { color: #1479DE; }
+.what-we-do .education { margin-right: 6%; }
+@media only screen and (max-width: 668px) { .what-we-do .half { width: 100%; margin-bottom: 50px; }
+  .what-we-do .education { margin-right: 0; }
+  .what-we-do .solutions { margin-bottom: 0; } }
+.what-we-do .blog-post-link { color: #0C6130; position: relative; display: block; margin-bottom: 10px; font-family: "proxima_novabold"; margin-top: 20px; }
+.what-we-do .blog-post-link img { position: relative; display: inline-block; max-width: 25px; margin-right: 10px; vertical-align: middle; }
+.what-we-do .blog-post-link:hover { color: #1479DE; }
+.what-we-do .button { font-size: .9em; text-align: center; position: relative; display: block; max-width: 80px; padding: 11px; border-radius: 6px; background-color: #f5f5f5; color: #1479DE; margin-top: 30px; border: 1px solid #1479DE; }
+.what-we-do .button:hover { background-color: #1479DE; color: #f5f5f5; }
 
-/* line 293, ../sass/screen.scss */
-.what-we-do {
-  padding: 100px 0;
-  background-color: #f5f5f5;
-  text-align: center;
-}
-/* line 297, ../sass/screen.scss */
-.what-we-do h2 {
-  margin-bottom: 50px;
-}
-/* line 300, ../sass/screen.scss */
-.what-we-do .half {
-  position: relative;
-  display: block;
-  width: 47%;
-  float: left;
-  text-align: left;
-}
-/* line 306, ../sass/screen.scss */
-.what-we-do .half h3 {
-  color: #0C6130;
-  font-size: 32px;
-  margin-bottom: 12px;
-}
-/* line 311, ../sass/screen.scss */
-.what-we-do .half h4 {
-  margin-top: 40px;
-  font-size: 1.1em;
-  font-family: "proxima_novabold";
-}
-/* line 316, ../sass/screen.scss */
-.what-we-do .half .link-container {
-  position: relative;
-  display: block;
-  margin: 20px 0 30px 0;
-}
-/* line 320, ../sass/screen.scss */
-.what-we-do .half .link-container .link {
-  color: #0C6130;
-  font-family: "proxima_novabold";
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  width: 100%;
-}
-/* line 327, ../sass/screen.scss */
-.what-we-do .half .link-container .link img {
-  position: relative;
-  display: inline-block;
-  max-width: 40px;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-/* line 335, ../sass/screen.scss */
-.what-we-do .half .link-container .link:hover {
-  color: #1479DE;
-}
-/* line 340, ../sass/screen.scss */
-.what-we-do .education {
-  margin-right: 6%;
-}
-@media only screen and (max-width: 668px) {
-  /* line 344, ../sass/screen.scss */
-  .what-we-do .half {
-    width: 100%;
-    margin-bottom: 50px;
-  }
-  /* line 348, ../sass/screen.scss */
-  .what-we-do .education {
-    margin-right: 0;
-  }
-  /* line 351, ../sass/screen.scss */
-  .what-we-do .solutions {
-    margin-bottom: 0;
-  }
-}
-/* line 355, ../sass/screen.scss */
-.what-we-do .blog-post-link {
-  color: #0C6130;
-  position: relative;
-  display: block;
-  margin-bottom: 10px;
-  font-family: "proxima_novabold";
-  margin-top: 20px;
-}
-/* line 362, ../sass/screen.scss */
-.what-we-do .blog-post-link img {
-  position: relative;
-  display: inline-block;
-  max-width: 25px;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-/* line 370, ../sass/screen.scss */
-.what-we-do .blog-post-link:hover {
-  color: #1479DE;
-}
-/* line 373, ../sass/screen.scss */
-.what-we-do .button {
-  font-size: .9em;
-  text-align: center;
-  position: relative;
-  display: block;
-  max-width: 80px;
-  padding: 11px;
-  border-radius: 6px;
-  background-color: #f5f5f5;
-  color: #1479DE;
-  margin-top: 30px;
-  border: 1px solid #1479DE;
-}
-/* line 386, ../sass/screen.scss */
-.what-we-do .button:hover {
-  background-color: #1479DE;
-  color: #f5f5f5;
-}
+.footer { text-align: center; padding: 100px 0; }
+.footer ul li { position: relative; display: inline-block; margin: 0 20px; }
+.footer ul li a:hover { color: #1479DE; }
+@media only screen and (max-width: 568px) { .footer ul li { margin-bottom: 20px; } }
+.footer .social-icons { margin-top: 35px; }
+.footer .social-icons li { font-size: 18px; }
+.footer .form-container { position: relative; display: block; margin-top: 60px; }
+.footer .form-container p { color: #aeaeae; margin-bottom: 14px; font-size: .9em; }
+.footer .form-container form input { -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -ms-transition: all 0.3s ease; transition: all 0.3s ease; vertical-align: bottom; -webkit-appearance: none; -webkit-font-smoothing: antialiased; font-family: "proxima_novaregular"; background-color: #eeeeee; max-width: 300px; width: 100%; height: 50px; font-weight: normal; position: relative; border-radius: 0; font-size: 14px; text-align: left; position: relative; display: inline-block; outline: none; padding: 3px 20px; margin: 5px 1px 3px 0px; border: 1px solid #141414; -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */ -moz-box-sizing: border-box; /* Firefox, other Gecko */ box-sizing: border-box; }
+.footer .form-container form input:hover, .footer .form-container form input:focus { background-color: #f5f5f5; }
+.footer .form-container form .submit { font-family: "proxima_novaregular"; color: #1479DE; position: relative; width: 70px; max-height: 50px; height: 50px; padding-left: 5px; right: 7px; padding-right: 5px; margin-bottom: 3px; text-align: center; -webkit-appearance: none; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -ms-transition: all 0.3s ease; transition: all 0.3s ease; }
+.footer .form-container form .submit:hover, .footer .form-container form .submit:focus, .footer .form-container form .submit:active { -webkit-font-smoothing: antialiased; cursor: pointer; background-color: #1479DE; color: #f5f5f5; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -ms-transition: all 0.3s ease; transition: all 0.3s ease; }
+@media only screen and (max-width: 568px) { .footer .form-container form input { max-width: 190px; } }
+.footer .form-container form:hover input { border-color: #1479DE; }
 
-/* line 395, ../sass/screen.scss */
-.footer {
-  text-align: center;
-  padding: 100px 0;
-}
-/* line 399, ../sass/screen.scss */
-.footer ul li {
-  position: relative;
-  display: inline-block;
-  margin: 0 20px;
-}
-/* line 406, ../sass/screen.scss */
-.footer ul li a:hover {
-  color: #1479DE;
-}
-@media only screen and (max-width: 568px) {
-  /* line 411, ../sass/screen.scss */
-  .footer ul li {
-    margin-bottom: 20px;
-  }
-}
-/* line 416, ../sass/screen.scss */
-.footer .social-icons {
-  margin-top: 35px;
-}
-/* line 418, ../sass/screen.scss */
-.footer .social-icons li {
-  font-size: 18px;
-}
-/* line 423, ../sass/screen.scss */
-.footer .form-container {
-  position: relative;
-  display: block;
-  margin-top: 60px;
-}
-/* line 427, ../sass/screen.scss */
-.footer .form-container p {
-  color: #aeaeae;
-  margin-bottom: 14px;
-  font-size: .9em;
-}
-/* line 433, ../sass/screen.scss */
-.footer .form-container form input {
-  vertical-align: bottom;
-  -webkit-appearance: none;
-  -webkit-font-smoothing: antialiased;
-  font-family: "proxima_novaregular";
-  background-color: #eeeeee;
-  border: none;
-  max-width: 300px;
-  width: 100%;
-  height: 50px;
-  font-weight: normal;
-  position: relative;
-  border-radius: 0;
-  font-size: 14px;
-  text-align: left;
-  position: relative;
-  display: inline-block;
-  outline: none;
-  padding: 3px 20px;
-  margin: 5px 1px 3px 0px;
-  border: 1px solid #141414;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  -webkit-box-sizing: border-box;
-  /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;
-  /* Firefox, other Gecko */
-  box-sizing: border-box;
-}
-/* line 459, ../sass/screen.scss */
-.footer .form-container form input:hover, .footer .form-container form input:focus {
-  background-color: #f5f5f5;
-}
-/* line 463, ../sass/screen.scss */
-.footer .form-container form .submit {
-  font-family: "proxima_novaregular";
-  color: #1479DE;
-  position: relative;
-  width: 70px;
-  max-height: 50px;
-  height: 50px;
-  padding-left: 5px;
-  right: 7px;
-  padding-right: 5px;
-  margin-bottom: 3px;
-  text-align: center;
-  -webkit-appearance: none;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-/* line 478, ../sass/screen.scss */
-.footer .form-container form .submit:hover, .footer .form-container form .submit:focus, .footer .form-container form .submit:active {
-  -webkit-font-smoothing: antialiased;
-  cursor: pointer;
-  background-color: #1479DE;
-  color: #f5f5f5;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-@media only screen and (max-width: 568px) {
-  /* line 486, ../sass/screen.scss */
-  .footer .form-container form input {
-    max-width: 190px;
-  }
-}
-/* line 492, ../sass/screen.scss */
-.footer .form-container form:hover input {
-  border-color: #1479DE;
-}
+.team .header { padding: 60px 0; background-color: #27ae60; }
+.team .header h1 { font-size: 40px; }
+.team .header h3 { font-size: 1.1em; }
+.team .meet-the-team { padding: 80px 0; background-color: #f5f5f5; }
+.team .meet-the-team h2 { font-size: 34px; color: #0C6130; margin-bottom: 30px; }
+.team .meet-the-team .members .member { position: relative; display: block; width: 100%; padding: 50px 0; }
+.team .meet-the-team .members .member .img { width: 19%; display: inline-block; vertical-align: middle; margin-right: 5%; }
+.team .meet-the-team .members .member .img img { position: relative; max-width: 150px; width: 100%; height: auto; border-radius: 50%; }
+.team .meet-the-team .members .member .content { width: 74%; display: inline-block; vertical-align: middle; }
+.team .meet-the-team .members .member .content h4 { color: #141414; font-size: 1.2em; }
+.team .meet-the-team .members .member .content span { font-size: .7em; color: #888888; }
+.team .meet-the-team .members .member .content p { margin-top: 20px; color: #5a5a5a; }
+@media only screen and (max-width: 668px) { .team .meet-the-team .members .member .img, .team .meet-the-team .members .member .content { float: left; } }
+.team #memory-of { background-color: #f5f5f5; padding-bottom: 80px; text-align: center; }
+.team #memory-of a { color: #1479DE; }
+.team #memory-of a:hover { text-decoration: underline; }
+.team #memory-of h2 { font-size: 34px; color: #0C6130; margin-bottom: 50px; text-align: left; }
+.team #memory-of .half { position: relative; display: block; width: 47%; float: left; }
+.team #memory-of .half h3 { color: #141414; font-size: 1.6em; font-family: 'proxima_novaregular'; margin-bottom: 20px; }
+.team #memory-of .half img { max-height: 200px; }
+.team #memory-of .half p { margin-top: 20px; color: #777777; }
+.team #memory-of .half-left { margin-right: 6%; }
+@media only screen and (max-width: 668px) { .team #memory-of .half { width: 100%; margin-bottom: 50px; }
+  .team #memory-of .half-left { margin-right: 0; } }
 
-/* line 2, ../sass/team.scss */
-.team .header {
-  padding: 60px 0;
-  background-color: #27ae60;
-}
-/* line 5, ../sass/team.scss */
-.team .header h1 {
-  font-size: 40px;
-}
-/* line 8, ../sass/team.scss */
-.team .header h3 {
-  font-size: 1.1em;
-}
-/* line 13, ../sass/team.scss */
-.team .meet-the-team {
-  padding: 80px 0;
-  background-color: #f5f5f5;
-}
-/* line 16, ../sass/team.scss */
-.team .meet-the-team h2 {
-  font-size: 34px;
-  color: #0C6130;
-  margin-bottom: 30px;
-}
-/* line 23, ../sass/team.scss */
-.team .meet-the-team .members .member {
-  position: relative;
-  display: block;
-  width: 100%;
-  padding: 50px 0;
-}
-/* line 28, ../sass/team.scss */
-.team .meet-the-team .members .member .img {
-  width: 19%;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 5%;
-}
-/* line 33, ../sass/team.scss */
-.team .meet-the-team .members .member .img img {
-  position: relative;
-  max-width: 150px;
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-}
-/* line 42, ../sass/team.scss */
-.team .meet-the-team .members .member .content {
-  width: 74%;
-  display: inline-block;
-  vertical-align: middle;
-}
-/* line 46, ../sass/team.scss */
-.team .meet-the-team .members .member .content h4 {
-  color: #141414;
-  font-size: 1.2em;
-}
-/* line 50, ../sass/team.scss */
-.team .meet-the-team .members .member .content span {
-  font-size: .7em;
-  color: #888888;
-}
-/* line 54, ../sass/team.scss */
-.team .meet-the-team .members .member .content p {
-  margin-top: 20px;
-  color: #5a5a5a;
-}
-@media only screen and (max-width: 668px) {
-  /* line 62, ../sass/team.scss */
-  .team .meet-the-team .members .member .img, .team .meet-the-team .members .member .content {
-    float: left;
-  }
-}
-/* line 69, ../sass/team.scss */
-.team #memory-of {
-  background-color: #f5f5f5;
-  padding-bottom: 80px;
-  text-align: center;
-}
-/* line 73, ../sass/team.scss */
-.team #memory-of a {
-  color: #1479DE;
-}
-/* line 76, ../sass/team.scss */
-.team #memory-of a:hover {
-  text-decoration: underline;
-}
-/* line 79, ../sass/team.scss */
-.team #memory-of h2 {
-  font-size: 34px;
-  color: #0C6130;
-  margin-bottom: 50px;
-  text-align: left;
-}
-/* line 85, ../sass/team.scss */
-.team #memory-of .half {
-  position: relative;
-  display: block;
-  width: 47%;
-  float: left;
-}
-/* line 90, ../sass/team.scss */
-.team #memory-of .half h3 {
-  color: #141414;
-  font-size: 1.6em;
-  font-family: 'proxima_novaregular';
-  margin-bottom: 20px;
-}
-/* line 96, ../sass/team.scss */
-.team #memory-of .half img {
-  max-height: 200px;
-}
-/* line 99, ../sass/team.scss */
-.team #memory-of .half p {
-  margin-top: 20px;
-  color: #777777;
-}
-/* line 104, ../sass/team.scss */
-.team #memory-of .half-left {
-  margin-right: 6%;
-}
-@media only screen and (max-width: 668px) {
-  /* line 108, ../sass/team.scss */
-  .team #memory-of .half {
-    width: 100%;
-    margin-bottom: 50px;
-  }
-  /* line 112, ../sass/team.scss */
-  .team #memory-of .half-left {
-    margin-right: 0;
-  }
-}
+.donate .header { padding: 60px 0; background-color: #27ae60; }
+.donate .header h1 { font-size: 40px; }
+.donate .header h3 { font-size: 1.1em; }
+.donate .donate-content { padding: 80px 0; background-color: #f5f5f5; }
+.donate .donate-content h2 { font-size: 34px; color: #0C6130; margin-bottom: 30px; }
+.donate .donate-content ul { margin-left: 20px; margin-bottom: 10px; padding: 20px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.donate .donate-content ul li { color: #5a5a5a; list-style: disc; position: relative; display: list-item; margin-bottom: 10px; }
+.donate .donate-content ul li a:hover { text-decoration: underline; }
+.donate .donate-content .spacer { margin-bottom: 10px; }
+.donate .donate-content .top-spacer { margin-top: 30px; }
+.donate .donate-content .bitpay-donate { margin-bottom: 30px; }
+.donate .donate-content .bitpay-donate input, .donate .donate-content .bitpay-donate select { vertical-align: bottom; -webkit-appearance: none; -webkit-font-smoothing: antialiased; font-family: "proxima_novaregular"; background-color: #f5f5f5; border: none; max-width: 250px; width: 100%; height: 50px; font-weight: normal; position: relative; border-radius: 0; font-size: 14px; text-align: left; position: relative; display: inline-block; outline: none; padding: 3px 20px; margin: 5px 1px 3px 0px; border: 1px solid #141414; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -ms-transition: all 0.3s ease; transition: all 0.3s ease; -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */ -moz-box-sizing: border-box; /* Firefox, other Gecko */ box-sizing: border-box; }
+.donate .donate-content .bitpay-donate .bitpay-donate-field-price { max-width: 150px; }
+.donate .donate-content .bitpay-donate .bitpay-donate-button { border: none; width: auto; padding: 0; }
+.donate .donate-content .bitpay-donate select { max-width: 110px; text-align: center; }
+.donate .donate-content .bitpay-donate option { text-align: center; }
+.donate .donate-content .bitpay-donate input:hover, .donate .donate-content .bitpay-donate input:focus { background-color: #f5f5f5; }
+.donate .donate-content .bitpay-donate input:focus { border-color: #1479DE; }
+.donate .donate-content .bitpay-donate select:hover, .donate .donate-content .bitpay-donate select:focus { background-color: #1479DE; border-color: #1479DE; color: #f5f5f5; cursor: pointer; }
+.donate .donate-content .bitpay-donate .submit { font-family: "proxima_novaregular"; color: #1479DE; position: relative; width: 70px; max-height: 50px; height: 50px; padding-left: 5px; right: 6px; padding-right: 5px; margin-bottom: 3px; text-align: center; -webkit-appearance: none; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -ms-transition: all 0.3s ease; transition: all 0.3s ease; }
+.donate .donate-content .bitpay-donate .submit:hover, .donate .donate-content .bitpay-donate .submit:focus, .donate .donate-content .bitpay-donate .submit:active { -webkit-font-smoothing: antialiased; cursor: pointer; background-color: #1479DE; color: #f5f5f5; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -ms-transition: all 0.3s ease; transition: all 0.3s ease; }
+@media only screen and (max-width: 568px) { .donate .donate-content .bitpay-donate input { max-width: 190px; } }
+.donate .donate-content .tilt { position: relative; display: block; padding: 14px 20px; width: 130px; font-size: 16px; border-radius: 5px; background-color: #1479DE; color: #f5f5f5; text-align: center; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -ms-transition: all 0.3s ease; transition: all 0.3s ease; }
+.donate .donate-content .tilt:hover { cursor: pointer; background-color: #105EAA; }
 
-/* line 2, ../sass/donate.scss */
-.donate .header {
-  padding: 60px 0;
-  background-color: #27ae60;
-}
-/* line 5, ../sass/donate.scss */
-.donate .header h1 {
-  font-size: 40px;
-}
-/* line 8, ../sass/donate.scss */
-.donate .header h3 {
-  font-size: 1.1em;
-}
-/* line 13, ../sass/donate.scss */
-.donate .donate-content {
-  padding: 80px 0;
-  background-color: #f5f5f5;
-}
-/* line 16, ../sass/donate.scss */
-.donate .donate-content h2 {
-  font-size: 34px;
-  color: #0C6130;
-  margin-bottom: 30px;
-}
-/* line 21, ../sass/donate.scss */
-.donate .donate-content ul {
-  margin-left: 20px;
-  margin-bottom: 10px;
-  padding: 20px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-/* line 28, ../sass/donate.scss */
-.donate .donate-content ul li {
-  color: #5a5a5a;
-  list-style: disc;
-  position: relative;
-  display: list-item;
-  margin-bottom: 10px;
-}
-/* line 34, ../sass/donate.scss */
-.donate .donate-content ul li a:hover {
-  text-decoration: underline;
-}
-/* line 40, ../sass/donate.scss */
-.donate .donate-content .spacer {
-  margin-bottom: 10px;
-}
-/* line 43, ../sass/donate.scss */
-.donate .donate-content .top-spacer {
-  margin-top: 30px;
-}
-/* line 47, ../sass/donate.scss */
-.donate .donate-content .bitpay-donate {
-  margin-bottom: 30px;
-}
-/* line 49, ../sass/donate.scss */
-.donate .donate-content .bitpay-donate input, .donate .donate-content .bitpay-donate select {
-  vertical-align: bottom;
-  -webkit-appearance: none;
-  -webkit-font-smoothing: antialiased;
-  font-family: "proxima_novaregular";
-  background-color: #f5f5f5;
-  border: none;
-  max-width: 250px;
-  width: 100%;
-  height: 50px;
-  font-weight: normal;
-  position: relative;
-  border-radius: 0;
-  font-size: 14px;
-  text-align: left;
-  position: relative;
-  display: inline-block;
-  outline: none;
-  padding: 3px 20px;
-  margin: 5px 1px 3px 0px;
-  border: 1px solid #141414;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  -webkit-box-sizing: border-box;
-  /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;
-  /* Firefox, other Gecko */
-  box-sizing: border-box;
-}
-/* line 75, ../sass/donate.scss */
-.donate .donate-content .bitpay-donate .bitpay-donate-field-price {
-  max-width: 150px;
-}
-/* line 78, ../sass/donate.scss */
-.donate .donate-content .bitpay-donate .bitpay-donate-button {
-  border: none;
-  width: auto;
-  padding: 0;
-}
-/* line 83, ../sass/donate.scss */
-.donate .donate-content .bitpay-donate select {
-  max-width: 110px;
-  text-align: center;
-}
-/* line 87, ../sass/donate.scss */
-.donate .donate-content .bitpay-donate option {
-  text-align: center;
-}
-/* line 90, ../sass/donate.scss */
-.donate .donate-content .bitpay-donate input:hover, .donate .donate-content .bitpay-donate input:focus {
-  background-color: #f5f5f5;
-}
-/* line 93, ../sass/donate.scss */
-.donate .donate-content .bitpay-donate input:focus {
-  border-color: #1479DE;
-}
-/* line 96, ../sass/donate.scss */
-.donate .donate-content .bitpay-donate select:hover, .donate .donate-content .bitpay-donate select:focus {
-  background-color: #1479DE;
-  border-color: #1479DE;
-  color: #f5f5f5;
-  cursor: pointer;
-}
-/* line 103, ../sass/donate.scss */
-.donate .donate-content .bitpay-donate .submit {
-  font-family: "proxima_novaregular";
-  color: #1479DE;
-  position: relative;
-  width: 70px;
-  max-height: 50px;
-  height: 50px;
-  padding-left: 5px;
-  right: 6px;
-  padding-right: 5px;
-  margin-bottom: 3px;
-  text-align: center;
-  -webkit-appearance: none;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-/* line 118, ../sass/donate.scss */
-.donate .donate-content .bitpay-donate .submit:hover, .donate .donate-content .bitpay-donate .submit:focus, .donate .donate-content .bitpay-donate .submit:active {
-  -webkit-font-smoothing: antialiased;
-  cursor: pointer;
-  background-color: #1479DE;
-  color: #f5f5f5;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-@media only screen and (max-width: 568px) {
-  /* line 126, ../sass/donate.scss */
-  .donate .donate-content .bitpay-donate input {
-    max-width: 190px;
-  }
-}
-/* line 131, ../sass/donate.scss */
-.donate .donate-content .tilt {
-  position: relative;
-  display: block;
-  padding: 14px 20px;
-  width: 130px;
-  font-size: 16px;
-  border-radius: 5px;
-  background-color: #1479DE;
-  color: #f5f5f5;
-  text-align: center;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-/* line 143, ../sass/donate.scss */
-.donate .donate-content .tilt:hover {
-  cursor: pointer;
-  background-color: #105EAA;
-}
+.browser-extension .header { padding: 60px 0; background-color: #27ae60; }
+.browser-extension .header h1 { font-size: 40px; }
+.browser-extension .header h3 { font-size: 1.1em; }
+.browser-extension .browser-extension { padding: 80px 0; background-color: #f5f5f5; }
+.browser-extension .browser-extension h2 { text-align: center; font-size: 44px; color: #0C6130; margin-bottom: 20px; }
+.browser-extension .browser-extension h2 span { color: #9a9a9a; font-family: 'proxima_novaregular'; font-size: 20px; }
+.browser-extension .browser-extension .first { color: #141414; font-size: 1.3em; line-height: 1.4; position: relative; display: block; margin: 20px 0; }
+.browser-extension .browser-extension p { color: #5a5a5a; }
+.browser-extension #unblock { padding-top: 80px; text-align: left; }
+.browser-extension #unblock h2 { text-align: left; }
+.browser-extension #faq { padding-top: 80px; }
+.browser-extension #faq sup { vertical-align: super; font-size: .8em; }
+.browser-extension #faq h2 { text-align: left; }
+.browser-extension #faq h3 { font-size: 1.5em; color: #141414; font-family: 'proxima_novaregular'; padding: 10px 0; -webkit-transition: all 0.4s ease; -moz-transition: all 0.4s ease; -ms-transition: all 0.4s ease; transition: all 0.4s ease; }
+.browser-extension #faq h3:hover { color: #1479DE; text-decoration: none; -webkit-transition: all 0.15s ease; -moz-transition: all 0.15s ease; -ms-transition: all 0.15s ease; transition: all 0.15s ease; }
+.browser-extension #faq p { margin-bottom: 10px; }
+.browser-extension #faq p a:hover { text-decoration: underline; }
+.browser-extension #faq ul { margin-left: 20px; padding: 20px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.browser-extension #faq ul li { color: #5a5a5a; list-style: disc; position: relative; display: list-item; margin-bottom: 10px; }
+.browser-extension #faq ul li a:hover { text-decoration: underline; }
+.browser-extension #faq a { color: #1479DE; }
 
-/* line 2, ../sass/browser-extension.scss */
-.browser-extension .header {
-  padding: 60px 0;
-  background-color: #27ae60;
-}
-/* line 5, ../sass/browser-extension.scss */
-.browser-extension .header h1 {
-  font-size: 40px;
-}
-/* line 8, ../sass/browser-extension.scss */
-.browser-extension .header h3 {
-  font-size: 1.1em;
-}
-/* line 13, ../sass/browser-extension.scss */
-.browser-extension .browser-extension {
-  padding: 80px 0;
-  background-color: #f5f5f5;
-}
-/* line 17, ../sass/browser-extension.scss */
-.browser-extension .browser-extension h2 {
-  text-align: center;
-  font-size: 44px;
-  color: #0C6130;
-  margin-bottom: 20px;
-}
-/* line 22, ../sass/browser-extension.scss */
-.browser-extension .browser-extension h2 span {
-  color: #9a9a9a;
-  font-family: 'proxima_novaregular';
-  font-size: 20px;
-}
-/* line 28, ../sass/browser-extension.scss */
-.browser-extension .browser-extension .first {
-  color: #141414;
-  font-size: 1.3em;
-  line-height: 1.4;
-  position: relative;
-  display: block;
-  margin: 20px 0;
-}
-/* line 36, ../sass/browser-extension.scss */
-.browser-extension .browser-extension p {
-  color: #5a5a5a;
-}
-/* line 42, ../sass/browser-extension.scss */
-.browser-extension #unblock {
-  padding-top: 80px;
-  text-align: left;
-}
-/* line 45, ../sass/browser-extension.scss */
-.browser-extension #unblock h2 {
-  text-align: left;
-}
-/* line 50, ../sass/browser-extension.scss */
-.browser-extension #faq {
-  padding-top: 80px;
-}
-/* line 52, ../sass/browser-extension.scss */
-.browser-extension #faq sup {
-  vertical-align: super;
-  font-size: .8em;
-}
-/* line 56, ../sass/browser-extension.scss */
-.browser-extension #faq h2 {
-  text-align: left;
-}
-/* line 59, ../sass/browser-extension.scss */
-.browser-extension #faq h3 {
-  font-size: 1.5em;
-  color: #141414;
-  font-family: 'proxima_novaregular';
-  padding: 10px 0;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-/* line 66, ../sass/browser-extension.scss */
-.browser-extension #faq h3:hover {
-  color: #1479DE;
-  text-decoration: none;
-  -webkit-transition: all 0.15s ease;
-  -moz-transition: all 0.15s ease;
-  -ms-transition: all 0.15s ease;
-  -o-transition: all 0.15s ease;
-  transition: all 0.15s ease;
-}
-/* line 71, ../sass/browser-extension.scss */
-.browser-extension #faq p {
-  margin-bottom: 10px;
-}
-/* line 73, ../sass/browser-extension.scss */
-.browser-extension #faq p a:hover {
-  text-decoration: underline;
-}
-/* line 77, ../sass/browser-extension.scss */
-.browser-extension #faq ul {
-  margin-left: 20px;
-  padding: 20px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-/* line 83, ../sass/browser-extension.scss */
-.browser-extension #faq ul li {
-  color: #5a5a5a;
-  list-style: disc;
-  position: relative;
-  display: list-item;
-  margin-bottom: 10px;
-}
-/* line 89, ../sass/browser-extension.scss */
-.browser-extension #faq ul li a:hover {
-  text-decoration: underline;
-}
-/* line 94, ../sass/browser-extension.scss */
-.browser-extension #faq a {
-  color: #1479DE;
-}
+.b-blue { color: #1479DE; }
 
-/* line 100, ../sass/browser-extension.scss */
-.b-blue {
-  color: #1479DE;
-}
+.b-blue:hover { text-decoration: underline; }
 
-/* line 103, ../sass/browser-extension.scss */
-.b-blue:hover {
-  text-decoration: underline;
-}
+sup { line-height: 0em; }
 
-/* line 109, ../sass/browser-extension.scss */
-sup {
-  line-height: 0em;
-}
+sup a { color: #27AE60; }
 
-/* line 113, ../sass/browser-extension.scss */
-sup a {
-  color: #27AE60;
-}
+.footnote-button:hover { opacity: 0.6; }
 
-/* line 118, ../sass/browser-extension.scss */
-.footnote-button:hover {
-  opacity: 0.6;
-}
+.footnote-button:active { opacity: 0.6; }
 
-/* line 119, ../sass/browser-extension.scss */
-.footnote-button:active {
-  opacity: 0.6;
-}
+.footnote-button.active { opacity: 0.9; -webkit-transition-delay: 0.05s; -moz-transition-delay: 0.05s; -ms-transition-delay: 0.05s; transition-delay: 0.05s; }
 
-/* line 120, ../sass/browser-extension.scss */
-.footnote-button.active {
-  opacity: 0.9;
-  -webkit-transition-delay: 0.05s;
-  -moz-transition-delay: 0.05s;
-  -ms-transition-delay: 0.05s;
-  transition-delay: 0.05s;
-}
+.footnote-circle:last-child { margin-right: 0; }
 
-/* line 123, ../sass/browser-extension.scss */
-.footnote-circle:last-child {
-  margin-right: 0;
-}
+.footnote-content { position: fixed; z-index: 10; bottom: auto; left: auto; box-sizing: border-box; max-width: 90%; margin: 1.21924em auto; display: inline-block; -webkit-transform: scale(0.1) translateZ(0); -moz-transform: scale(0.1) translateZ(0); -ms-transform: scale(0.1) translateZ(0); transform: scale(0.1) translateZ(0); -webkit-transform-origin: 50% 0; -moz-transform-origin: 50% 0; -ms-transform-origin: 50% 0; transform-origin: 50% 0; background: #fafafa; opacity: 0; border-radius: 0.5em; border: 1px solid #1479DE; -webkit-transition-property: opacity, -webkit-transform; -moz-transition-property: opacity, -moz-transform; -ms-transition-property: opacity, -ms-transform; transition-property: opacity, transform; -webkit-transition-duration: 0.25s; -moz-transition-duration: 0.25s; -ms-transition-duration: 0.25s; transition-duration: 0.25s; }
 
-/* line 125, ../sass/browser-extension.scss */
-.footnote-content {
-  position: fixed;
-  z-index: 10;
-  bottom: auto;
-  left: auto;
-  box-sizing: border-box;
-  max-width: 90%;
-  margin: 1.21924em auto;
-  display: inline-block;
-  -webkit-transform: scale(0.1) translateZ(0);
-  -moz-transform: scale(0.1) translateZ(0);
-  -ms-transform: scale(0.1) translateZ(0);
-  transform: scale(0.1) translateZ(0);
-  -webkit-transform-origin: 50% 0;
-  -moz-transform-origin: 50% 0;
-  -ms-transform-origin: 50% 0;
-  transform-origin: 50% 0;
-  background: #fafafa;
-  opacity: 0;
-  border-radius: 0.5em;
-  border: 1px solid #1479DE;
-  -webkit-transition-property: opacity, -webkit-transform;
-  -moz-transition-property: opacity, -moz-transform;
-  -ms-transition-property: opacity, -ms-transform;
-  transition-property: opacity, transform;
-  -webkit-transition-duration: 0.25s;
-  -moz-transition-duration: 0.25s;
-  -ms-transition-duration: 0.25s;
-  transition-duration: 0.25s;
-}
+.footnote-content.active { -webkit-transform: scale(1) translateZ(0); -moz-transform: scale(1) translateZ(0); -ms-transform: scale(1) translateZ(0); transform: scale(1) translateZ(0); opacity: 0.97; }
 
-/* line 126, ../sass/browser-extension.scss */
-.footnote-content.active {
-  -webkit-transform: scale(1) translateZ(0);
-  -moz-transform: scale(1) translateZ(0);
-  -ms-transform: scale(1) translateZ(0);
-  transform: scale(1) translateZ(0);
-  opacity: 0.97;
-}
+.footnote-content.bottom { -webkit-transform-origin: top; -moz-transform-origin: top; -ms-transform-origin: top; transform-origin: top; }
 
-/* line 127, ../sass/browser-extension.scss */
-.footnote-content.bottom {
-  -webkit-transform-origin: top;
-  -moz-transform-origin: top;
-  -ms-transform-origin: top;
-  transform-origin: top;
-}
+.footnote-content.top { -webkit-transform-origin: bottom; -moz-transform-origin: bottom; -ms-transform-origin: bottom; transform-origin: bottom; }
 
-/* line 128, ../sass/browser-extension.scss */
-.footnote-content.top {
-  -webkit-transform-origin: bottom;
-  -moz-transform-origin: bottom;
-  -ms-transform-origin: bottom;
-  transform-origin: bottom;
-}
+.footnote-content ::-webkit-scrollbar { display: none; }
 
-/* line 130, ../sass/browser-extension.scss */
-.footnote-content ::-webkit-scrollbar {
-  display: none;
-}
+.footnote-main-wrapper { position: relative; z-index: 14; box-sizing: border-box; overflow: hidden; margin: 0; max-width: 22em; background-color: #fafafa; border-radius: 0.5em; -webkit-transition-property: max-height; -moz-transition-property: max-height; -ms-transition-property: max-height; transition-property: max-height; -webkit-transition-duration: 0.25s; -moz-transition-duration: 0.25s; -ms-transition-duration: 0.25s; transition-duration: 0.25s; }
 
-/* line 132, ../sass/browser-extension.scss */
-.footnote-main-wrapper {
-  position: relative;
-  z-index: 14;
-  box-sizing: border-box;
-  overflow: hidden;
-  margin: 0;
-  max-width: 22em;
-  background-color: #fafafa;
-  border-radius: 0.5em;
-  -webkit-transition-property: max-height;
-  -moz-transition-property: max-height;
-  -ms-transition-property: max-height;
-  transition-property: max-height;
-  -webkit-transition-duration: 0.25s;
-  -moz-transition-duration: 0.25s;
-  -ms-transition-duration: 0.25s;
-  transition-duration: 0.25s;
-}
+.footnote-content-wrapper { position: relative; z-index: 8; max-height: 15em; padding: 1.1em 1.3em 1.2em; box-sizing: border-box; overflow: auto; -webkit-overflow-scrolling: touch; background: #fafafa; border-radius: 0.5em; }
 
-/* line 134, ../sass/browser-extension.scss */
-.footnote-content-wrapper {
-  position: relative;
-  z-index: 8;
-  max-height: 15em;
-  padding: 1.1em 1.3em 1.2em;
-  box-sizing: border-box;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  background: #fafafa;
-  border-radius: 0.5em;
-}
+.footnote-content-wrapper img { max-width: 100%; }
 
-/* line 135, ../sass/browser-extension.scss */
-.footnote-content-wrapper img {
-  max-width: 100%;
-}
+.footnote-content-wrapper *:last-child { margin-bottom: 0; }
 
-/* line 136, ../sass/browser-extension.scss */
-.footnote-content-wrapper *:last-child {
-  margin-bottom: 0;
-}
+.footnote-content-wrapper *:first-child { margin-top: 0; }
 
-/* line 137, ../sass/browser-extension.scss */
-.footnote-content-wrapper *:first-child {
-  margin-top: 0;
-}
+.tooltip { position: absolute; z-index: 12; box-sizing: border-box; margin-left: -0.65em; width: 1.3em; height: 1.3em; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); background: #fafafa; border: 1px solid #1479DE; border-top-left-radius: 0; }
 
-/* line 139, ../sass/browser-extension.scss */
-.tooltip {
-  position: absolute;
-  z-index: 12;
-  box-sizing: border-box;
-  margin-left: -0.65em;
-  width: 1.3em;
-  height: 1.3em;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  background: #fafafa;
-  border: 1px solid #1479DE;
-  border-top-left-radius: 0;
-}
+.bottom .tooltip { top: -0.65em; bottom: auto; }
 
-/* line 141, ../sass/browser-extension.scss */
-.bottom .tooltip {
-  top: -0.65em;
-  bottom: auto;
-}
-
-/* line 143, ../sass/browser-extension.scss */
-.top .tooltip {
-  bottom: -0.65em;
-  top: auto;
-}
+.top .tooltip { bottom: -0.65em; top: auto; }

@@ -1,18 +1,15 @@
-
-
-
 #facebook{
   color: #3b5998;
   font-size: 1.2em;
   font-weight: 400;
 }
 #gmail{
-  color: rgb(201, 44, 25); 
+  color: rgb(201, 44, 25);
   font-size: 1.2em;
   font-weight: 400;
 }
-.slideshow{ 
-  position: relative; 
+.slideshow{
+  position: relative;
   padding: 20px 0;
   margin: 0 auto;
   overflow: visible;
@@ -21,8 +18,8 @@
   height: 280px;
 }
 .slideshow > div
-{ 
-  position: absolute; 
+{
+  position: absolute;
   padding: 0;
   margin: 0 auto;
   overflow: visible;
@@ -30,8 +27,8 @@
   width: 100%;
   height: 350px;
 }
-.slideshow img 
-{ 
+.slideshow img
+{
   position: absolute;
   top:10px;
   /*display: none;*/
@@ -370,7 +367,7 @@ img.features {
   display: none;
 }
 
-// fix for now 
+// fix for now
 @media screen and (max-width: 580px){
   .slideshow span{
       display: none;
@@ -388,6 +385,3 @@ img.features {
   }
 
 }
-
-
-
