@@ -12,7 +12,7 @@
 
 	.donate-content{
 		padding: 80px 0;
-		background-color: $white;	
+		background-color: $white;
 		h2{
 			font-size: 34px;
 			color: $dark-green;
@@ -70,7 +70,7 @@
 				@include transition(all, .3s, ease);
 				-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 				-moz-box-sizing: border-box;    /* Firefox, other Gecko */
-				box-sizing: border-box; 
+				box-sizing: border-box;
 			}
 			.bitpay-donate-field-price{
 				max-width: 150px;
@@ -131,12 +131,12 @@
 		.tilt{
 			position: relative;
 			display: block;
+			width: 160px;
 			padding: 14px 20px;
-			width: 130px;
 			font-size: 16px;
 			border-radius: 5px;
 			background-color: $blue;
-			color: $white;	
+			color: $white;
 			text-align: center;
 			@include transition(all, .3s, ease);
 		}
