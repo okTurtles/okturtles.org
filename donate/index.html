@@ -35,7 +35,7 @@
   <p class="spacer">
   	Donate using Bitcoin
   </p>
- 
+
   <form class="bitpay-donate" action="https://bitpay.com/checkout" method="post" onsubmit="return checkRequiredFields(this);">
     <input name="action" type="hidden" value="checkout">
     <fieldset>
@@ -82,7 +82,7 @@
             <option value="ZAR">ZAR</option>
           </select>
 
-      <input type="hidden" name="data" value="4dl7kfyjdQhj4YKmAtrtjhpM2saOEr+1X2r+wghy2tovcsOZQfWo8IagSPlcLJnqIg4++6dr5sv0iEjEF/iQc/sUkiL47YMrSIiRO9E752uiQSDtmQfMIEdp4mrsjYeOvazLm6Lg2uengKDCf/SGsnedgTMCoGvgH8+aQ15Y/eVMa5FTIvrkz7LxGlFOF1pyQUZkgF1Jl5AxH+4xepPF+w=="> 
+      <input type="hidden" name="data" value="4dl7kfyjdQhj4YKmAtrtjhpM2saOEr+1X2r+wghy2tovcsOZQfWo8IagSPlcLJnqIg4++6dr5sv0iEjEF/iQc/sUkiL47YMrSIiRO9E752uiQSDtmQfMIEdp4mrsjYeOvazLm6Lg2uengKDCf/SGsnedgTMCoGvgH8+aQ15Y/eVMa5FTIvrkz7LxGlFOF1pyQUZkgF1Jl5AxH+4xepPF+w==">
         <input class="bitpay-donate-button" name="submit" src="https://bitpay.com/img/donate-button.svg" onerror="this.onerror=null; this.src='https://bitpay.com/img/donate-button-md.png'" width="126" height="48" type="image" alt="BitPay, the easy way to pay with bitcoins." border="0">
     </fieldset>
   </form>
@@ -90,7 +90,8 @@
       Credit/debit card
     </p>
 
-    <div class="tilt" data-ct-checkout="okturtles.support-the-okturtles-foundation">Donate with Tilt</div>
+    <!-- <div class="tilt" data-ct-checkout="okturtles.support-the-okturtles-foundation">Donate with Tilt</div> -->
+		<a class="dbox-donation-button" href="https://donorbox.org/okturtles-donation" style="background:#1479DE; color: #fff;text-decoration: none;font-family: Verdana,sans-serif;display: inline-block;font-size: 16px;padding: 15px 38px 15px 38px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; box-shadow: 0 1px 0 0 #1f5a89; text-shadow: 0 1px rgba(0, 0, 0, 0.3);" >Donate with USD</a>
 
     <p class="spacer top-spacer" style="color: #aeaeae">
       The okTurtles Foundation is a <a href="http://search.sunbiz.org/Inquiry/CorporationSearch/ConvertTiffToPDF?storagePath=COR\2014\0617\60010916.tif&documentNumber=N14000005704" target="_blank" style="color:inherit; text-decoration:underline">registered</a> Florida nonprofit.
@@ -100,7 +101,7 @@
 		</div>
 	</section>
 
-  
+
 
 	<!--# include file="/includes/footer.html" -->
 
@@ -130,7 +131,7 @@
     if(donationElement){
       var enteredDonation = Number(donationElement.value);
       var maximumDonation = Number(document.getElementById('reference-maximum').value);
-      if(enteredDonation > maximumDonation){ 
+      if(enteredDonation > maximumDonation){
         alert("Your donation was larger than the allowed maximum of " + Number(maximumDonation).toFixed(2))
         return false;
       };
