@@ -3,6 +3,11 @@
 <head>
 	<title>Donate | okTurtles</title>
 	<!--# include file="/includes/head.html" -->
+	<style>
+	span.tt {
+		background-color: #9a9a9a; color: #f5f5f5; padding: 0.1em 0.3em; border-radius: 0.3em
+	}
+	</style>
 </head>
 
 <body class="donate">
@@ -11,35 +16,19 @@
 	<!-- donate -->
 	<section class="donate-content">
 		<div class="container">
-			<h2>
-				Donate to the okTurtles Foundation
-			</h2>
+			<h2>Donate to the okTurtles Foundation</h2>
 
-			<p>
-				<b>
-					Support the okTurtles Foundation's work on:
-				</b>
-			</p>
+			<p><b>Support the okTurtles Foundation's work on:</b></p>
 			<ul>
-				<li>
-					Educational content
-				</li>
-				<li>
-					Research
-				</li>
-				<li>
-					Development of private communications tools
-				</li>
+				<li>Educational content</li>
+				<li>Research</li>
+				<li>Tools for <b>real</b> <a href="https://github.com/okTurtles/dnschain">information</a> and <a href="https://groupincome.org">financial</a> security</li>
 			</ul>
 
-  <p class="spacer">
-  	Donate using Bitcoin
-  </p>
-
-  <form class="bitpay-donate" action="https://bitpay.com/checkout" method="post" onsubmit="return checkRequiredFields(this);">
-    <input name="action" type="hidden" value="checkout">
-    <fieldset>
-
+		  <p class="spacer">Donate using Bitcoin</p>
+		  <form class="bitpay-donate" action="https://bitpay.com/checkout" method="post" onsubmit="return checkRequiredFields(this);">
+		    <input name="action" type="hidden" value="checkout">
+		    <fieldset>
           <input class="bitpay-donate-field-email" name="orderID" type="email" placeholder="Email address (optional)" maxlength=50 autocapitalize=off autocorrect=off>
 
 
@@ -82,26 +71,28 @@
             <option value="ZAR">ZAR</option>
           </select>
 
-      <input type="hidden" name="data" value="4dl7kfyjdQhj4YKmAtrtjhpM2saOEr+1X2r+wghy2tovcsOZQfWo8IagSPlcLJnqIg4++6dr5sv0iEjEF/iQc/sUkiL47YMrSIiRO9E752uiQSDtmQfMIEdp4mrsjYeOvazLm6Lg2uengKDCf/SGsnedgTMCoGvgH8+aQ15Y/eVMa5FTIvrkz7LxGlFOF1pyQUZkgF1Jl5AxH+4xepPF+w==">
-        <input class="bitpay-donate-button" name="submit" src="https://bitpay.com/img/donate-button.svg" onerror="this.onerror=null; this.src='https://bitpay.com/img/donate-button-md.png'" width="126" height="48" type="image" alt="BitPay, the easy way to pay with bitcoins." border="0">
-    </fieldset>
-  </form>
-    <p class="spacer">
-      Credit/debit card
-    </p>
+		      <input type="hidden" name="data" value="4dl7kfyjdQhj4YKmAtrtjhpM2saOEr+1X2r+wghy2tovcsOZQfWo8IagSPlcLJnqIg4++6dr5sv0iEjEF/iQc/sUkiL47YMrSIiRO9E752uiQSDtmQfMIEdp4mrsjYeOvazLm6Lg2uengKDCf/SGsnedgTMCoGvgH8+aQ15Y/eVMa5FTIvrkz7LxGlFOF1pyQUZkgF1Jl5AxH+4xepPF+w==">
+		        <input class="bitpay-donate-button" name="submit" src="https://bitpay.com/img/donate-button.svg" onerror="this.onerror=null; this.src='https://bitpay.com/img/donate-button-md.png'" width="126" height="48" type="image" alt="BitPay, the easy way to pay with bitcoins." border="0">
+		    </fieldset>
+		  </form>
 
-    <!-- <div class="tilt" data-ct-checkout="okturtles.support-the-okturtles-foundation">Donate with Tilt</div> -->
-		<a class="tilt" href="https://donorbox.org/okturtles-donation">Donate with Donorbox</a>
+		  <p class="spacer">Credit/debit card</p>
+			<a class="tilt" href="https://donorbox.org/okturtles-donation">Donate with Donorbox</a>
 
-    <p class="spacer top-spacer" style="color: #aeaeae">
-      The okTurtles Foundation is a <a href="http://search.sunbiz.org/Inquiry/CorporationSearch/ConvertTiffToPDF?storagePath=COR\2014\0617\60010916.tif&documentNumber=N14000005704" target="_blank" style="color:inherit; text-decoration:underline">registered</a> Florida nonprofit.
-      <br/>Your donation will additionally help us cover the costs of applying for 501(c)(3) status.
-    </p>
+			<p class="top-spacer">Options for which we do not have a widget (yet)</p>
+			<ul>
+				<li>ETH: <span class="tt">0x71a690ff6b4ff7f57b8bd86cfcfaff18e97935ee</span></li>
+			</ul>
+			<p style="margin: -20px 0 10px 40px">
+				<i>Afterward, <a href="mailto:hi@okturtles.com" style="text-decoration: underline;">email us</a> so we can thank you.</i>
+			</p>
 
+			<p class="spacer top-spacer" style="color: #aeaeae">
+		    The okTurtles Foundation is a <a href="http://search.sunbiz.org/Inquiry/CorporationSearch/ConvertTiffToPDF?storagePath=COR\2014\0617\60010916.tif&documentNumber=N14000005704" target="_blank" style="color:inherit; text-decoration:underline">registered</a> Florida nonprofit.
+		    <br/>Your donation will additionally help us cover the costs of applying for 501(c)(3) status.
+		  </p>
 		</div>
 	</section>
-
-
 
 	<!--# include file="/includes/footer.html" -->
 
@@ -139,9 +130,5 @@
     return true;
   };
   </script>
-  <script type="text/javascript" src="https://open.tilt.com/checkout.js"></script>
 </body>
-
-
-
 </html>
