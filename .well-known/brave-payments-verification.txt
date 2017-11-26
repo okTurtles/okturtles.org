@@ -1,0 +1,4 @@
+This is a Brave Payments publisher verification file.
+
+Domain: okturtles.com
+Token: f437f97d7717265db485dad8b6708cca18ba2535b03bfdfefccf104279f4bb6d

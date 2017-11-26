@@ -1,0 +1,1058 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAYcAA0AAAAACjQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABMAAAABwAAAAca8vGTk9TLzIAAAFMAAAARAAAAFZG1VHVY21hcAAAAZAAAAA+AAABQgAP9AdjdnQgAAAB0AAAAAQAAAAEACICiGdhc3AAAAHUAAAACAAAAAj//wADZ2x5ZgAAAdwAAADRAAABEKyikaNoZWFkAAACsAAAAC0AAAA2AtXoA2hoZWEAAALgAAAAHAAAACQHngNFaG10eAAAAvwAAAAQAAAAEAwAACJsb2NhAAADDAAAAAoAAAAKALIAVG1heHAAAAMYAAAAHwAAACABEAB2bmFtZQAAAzgAAALBAAAFu3I9x/Nwb3N0AAAF/AAAAB0AAAAvaoFvbwAAAAEAAAAAzBdyYwAAAADP2IQvAAAAAM/bz7t4nGNgZGFgnMDAysDB1Ml0hoGBoR9CM75mMGLkYGBgYmBlZsAKAtJcUxgcPsR8iGF2+O/AEMPsznAYKMwIkgMA5REMOXicY2BgYGaAYBkGRgYQsAHyGMF8FgYFIM0ChED+h5j//yEk/3KoSgZGNgYYk4GRCUgwMaACRoZhDwCs7QgGAAAAIgKIAAAAAf//AAJ4nHWMMQrCQBBF/0zWrCCIKUQsTDCL2EXMohYGSSmorScInsRGL2DOYJe0Ntp7BK+gJ1BxF1stZvjz/v8DRghQzEc4kIgKwiAppcA9LtzKLSkdNhKFY3HF4lK69ExKslx7Xa+vPRVS43G98vG1DnkDMIBUgFN0MDXflU8tbaZOUkXUH0+U27RoRpOIyCKjbMCVejwypzJJG4jIwb43rfl6wbwanocrJm9XFYfskuVC5K/TPyczNU7b84CXcbxks1Un6H6tLH9vf2LRnn8Ax7A5WQAAAHicY2BkYGAA4teL1+yI57f5ysDNwgAC529f0kOmWRiYVgEpDgYmEA8AUzEKsQAAAHicY2BkYGB2+O/AEMPCAAJAkpEBFbAAADgKAe0EAAAiAAAAAAQAAAAEAAAAAAAAKgAqACoAiAAAeJxjYGRgYGBhsGFgYgABEMkFhAwM/xn0QAIAD6YBhwB4nI1Ty07cMBS9QwKlQapQW3VXySvEqDCZGbGaHULiIQ1FKgjWMxknMfLEke2A+IJu+wntrt/QbVf9gG75jK577Lg8K1qQPCfnnnt8fX1NRC/pmjrk/zprC+8D7tBy9DHgBXoWfQ44Av8t4Bj4Z8CLtBL9CniJluPXASf0Lm4CXqFX8Q84dOLnMB17N4c7tBo1AS/Qi+hTwBH4rwHHwN8DXqQ30XXAS7QaLwSc0Gn8NuAVWou/gFmnjLrEaEh9GmDdDGgL3B4JsrRPDU2hTOiMSuJUIdKQQayiAth69r6akSSFqIJuA19TrzCIaY8sIoxyrNIrL//pw7A2iMygkX5vDj+G+kuoLdX4GlGK/8Lnlz6/h9MpmoO9rafrz7ILXEHHaAx95s9lsI7AHNMBWEZHULnfAXwG9/ZqdzLI08iuwRloXE8kfhXYAvE23+23DU3t626rbs8/8adv+9DWknsHp3E17oCf+Z48rvEQNZ78paYM38qfk3v/u3l3u3GXN2Dmvmvpf1Srwk3pB/VSsp512bA/GG5i2WJ7wu430yQ5K3nFGiOqgtmSB5pJVSizwaacmUZzZhXLlZTq8qGGFY2YcSkqbth6aW1tRmlaCFs2016m5qn36SbJrqosG4uMV4aP2PHBmB3tjtmgN2izkGQyLWprekbIntJFing32a5rKWCN/SdSoga45EJykyQ7asZvHQ8PTm6cslIpwyeyjbVltNikc2HTR7YKh9LBl9DADC0U/jLcBZDKrMhUBfQBvXRzLtFtjU9eNHKin0x5InTqb8lNpfKv1s1xHzTXRqgKzek/mb7nB8RZTCDhGEX3kK/8Q75AmUM/eLkfA+0Hi908Kx4eNsMgudg5GLdRD7a84npi+YxNr5i5KIbW5izXas7cHXIMAau1OueZhfj+cOcP3P8MNIWLyYOBuxL6DRylJ4cAAAB4nGNgYoAALjDJyIAOWMCiTIxMLDmZedkABtIBygAAAA==) format('woff');
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .octicon {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .anchor {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body .highlight {
+  background: #fff;
+}
+
+.markdown-body .highlight .h {
+  color: #333;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.markdown-body .highlight .mf,
+.markdown-body .highlight .mh,
+.markdown-body .highlight .mi,
+.markdown-body .highlight .mo,
+.markdown-body .highlight .il,
+.markdown-body .highlight .m {
+  color: #945277;
+}
+
+.markdown-body .highlight .s,
+.markdown-body .highlight .sb,
+.markdown-body .highlight .sc,
+.markdown-body .highlight .sd,
+.markdown-body .highlight .s2,
+.markdown-body .highlight .se,
+.markdown-body .highlight .sh,
+.markdown-body .highlight .si,
+.markdown-body .highlight .sx,
+.markdown-body .highlight .s1 {
+  color: #df5000;
+}
+
+.markdown-body .highlight .kc,
+.markdown-body .highlight .kd,
+.markdown-body .highlight .kn,
+.markdown-body .highlight .kp,
+.markdown-body .highlight .kr,
+.markdown-body .highlight .kt,
+.markdown-body .highlight .k,
+.markdown-body .highlight .o {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .kt {
+  color: #458;
+}
+
+.markdown-body .highlight .c,
+.markdown-body .highlight .cm,
+.markdown-body .highlight .c1 {
+  color: #998;
+  font-style: italic;
+}
+
+.markdown-body .highlight .cp,
+.markdown-body .highlight .cs,
+.markdown-body .highlight .cp .h {
+  color: #999;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .cs {
+  font-style: italic;
+}
+
+.markdown-body .highlight .n {
+  color: #333;
+}
+
+.markdown-body .highlight .na,
+.markdown-body .highlight .nv,
+.markdown-body .highlight .vc,
+.markdown-body .highlight .vg,
+.markdown-body .highlight .vi {
+  color: #008080;
+}
+
+.markdown-body .highlight .nb {
+  color: #0086B3;
+}
+
+.markdown-body .highlight .nc {
+  color: #458;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .no {
+  color: #094e99;
+}
+
+.markdown-body .highlight .ni {
+  color: #800080;
+}
+
+.markdown-body .highlight .ne {
+  color: #990000;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .nf {
+  color: #945277;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .nn {
+  color: #555;
+}
+
+.markdown-body .highlight .nt {
+  color: #000080;
+}
+
+.markdown-body .highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+
+.markdown-body .highlight .gd {
+  color: #000;
+  background-color: #fdd;
+}
+
+.markdown-body .highlight .gd .x {
+  color: #000;
+  background-color: #faa;
+}
+
+.markdown-body .highlight .ge {
+  font-style: italic;
+}
+
+.markdown-body .highlight .gr {
+  color: #aa0000;
+}
+
+.markdown-body .highlight .gh {
+  color: #999;
+}
+
+.markdown-body .highlight .gi {
+  color: #000;
+  background-color: #dfd;
+}
+
+.markdown-body .highlight .gi .x {
+  color: #000;
+  background-color: #afa;
+}
+
+.markdown-body .highlight .go {
+  color: #888;
+}
+
+.markdown-body .highlight .gp {
+  color: #555;
+}
+
+.markdown-body .highlight .gs {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .gu {
+  color: #800080;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .gt {
+  color: #aa0000;
+}
+
+.markdown-body .highlight .ow {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .w {
+  color: #bbb;
+}
+
+.markdown-body .highlight .sr {
+  color: #017936;
+}
+
+.markdown-body .highlight .ss {
+  color: #8b467f;
+}
+
+.markdown-body .highlight .bp {
+  color: #999;
+}
+
+.markdown-body .highlight .gc {
+  color: #999;
+  background-color: #EAF2F5;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #000;
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+}
+
+.markdown-body .highlight .pl-coc,
+.markdown-body .highlight .pl-entm,
+.markdown-body .highlight .pl-eoa,
+.markdown-body .highlight .pl-mai .pl-sf,
+.markdown-body .highlight .pl-pdv,
+.markdown-body .highlight .pl-sc,
+.markdown-body .highlight .pl-sr,
+.markdown-body .highlight .pl-v,
+.markdown-body .highlight .pl-vpf {
+  color: #0086b3;
+}
+
+.markdown-body .highlight .pl-eoac,
+.markdown-body .highlight .pl-mdht,
+.markdown-body .highlight .pl-mi1,
+.markdown-body .highlight .pl-mri,
+.markdown-body .highlight .pl-va,
+.markdown-body .highlight .pl-vpu {
+  color: #008080;
+}
+
+.markdown-body .highlight .pl-c,
+.markdown-body .highlight .pl-pdc {
+  color: #b4b7b4;
+  font-style: italic;
+}
+
+.markdown-body .highlight .pl-k,
+.markdown-body .highlight .pl-ko,
+.markdown-body .highlight .pl-kolp,
+.markdown-body .highlight .pl-mc,
+.markdown-body .highlight .pl-mr,
+.markdown-body .highlight .pl-ms,
+.markdown-body .highlight .pl-s,
+.markdown-body .highlight .pl-sok,
+.markdown-body .highlight .pl-st {
+  color: #6e5494;
+}
+
+.markdown-body .highlight .pl-ef,
+.markdown-body .highlight .pl-enf,
+.markdown-body .highlight .pl-enm,
+.markdown-body .highlight .pl-entc,
+.markdown-body .highlight .pl-eoi,
+.markdown-body .highlight .pl-sf,
+.markdown-body .highlight .pl-smc {
+  color: #d12089;
+}
+
+.markdown-body .highlight .pl-ens,
+.markdown-body .highlight .pl-eoai,
+.markdown-body .highlight .pl-kos,
+.markdown-body .highlight .pl-mh .pl-pdh,
+.markdown-body .highlight .pl-mp,
+.markdown-body .highlight .pl-pde,
+.markdown-body .highlight .pl-stp {
+  color: #458;
+}
+
+.markdown-body .highlight .pl-enti {
+  color: #d12089;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .pl-cce,
+.markdown-body .highlight .pl-enc,
+.markdown-body .highlight .pl-kou,
+.markdown-body .highlight .pl-mq {
+  color: #f93;
+}
+
+.markdown-body .highlight .pl-mp1 .pl-sf {
+  color: #458;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .pl-cos,
+.markdown-body .highlight .pl-ent,
+.markdown-body .highlight .pl-md,
+.markdown-body .highlight .pl-mdhf,
+.markdown-body .highlight .pl-ml,
+.markdown-body .highlight .pl-pdc1,
+.markdown-body .highlight .pl-pds,
+.markdown-body .highlight .pl-s1,
+.markdown-body .highlight .pl-scp,
+.markdown-body .highlight .pl-sol {
+  color: #df5000;
+}
+
+.markdown-body .highlight .pl-c1,
+.markdown-body .highlight .pl-cn,
+.markdown-body .highlight .pl-pse,
+.markdown-body .highlight .pl-pse .pl-s2,
+.markdown-body .highlight .pl-vi {
+  color: #a31515;
+}
+
+.markdown-body .highlight .pl-mb,
+.markdown-body .highlight .pl-pdb {
+  color: #df5000;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .pl-mi,
+.markdown-body .highlight .pl-pdi {
+  color: #6e5494;
+  font-style: italic;
+}
+
+.markdown-body .highlight .pl-ms1 {
+  background-color: #f5f5f5;
+}
+
+.markdown-body .highlight .pl-mdh,
+.markdown-body .highlight .pl-mdi {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .pl-mdr {
+  color: #0086b3;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .pl-s2 {
+  color: #333;
+}
+
+.markdown-body .highlight .pl-ii {
+  background-color: #df5000;
+  color: #fff;
+}
+
+.markdown-body .highlight .pl-ib {
+  background-color: #f93;
+}
+
+.markdown-body .highlight .pl-id {
+  background-color: #a31515;
+  color: #fff;
+}
+
+.markdown-body .highlight .pl-iu {
+  background-color: #b4b7b4;
+}
+
+.markdown-body .highlight .pl-mo {
+  color: #969896;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  float: left;
+  margin: 0.3em 0 0.25em -1.6em;
+  vertical-align: middle;
+}</style><title>DNSChain-Security-Model</title></head><body><article class="markdown-body"><h1>
+<a id="user-content-the-dnschain-security-model" class="anchor" href="#the-dnschain-security-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>The DNSChain Security Model</h1>
+
+<p><em>Low-trust blockchain Public Key Infrastructure</em></p>
+
+<blockquote>
+<p><strong>Abstract.</strong> Most Internet communications systems rely on accurate public key exchange to ensure their security. A man-in-the-middle (MITM) can compromise the security of these systems by replacing legitimate keys with their own as they travel to their destination. In the context of SSL/TLS, <a href="https://blog.okturtles.com/2014/02/introducing-the-dotdns-metatld/#CAs">over 1200 organizations</a> each have the ability to perform this attack for any website. Blockchains prevent these and other "non-fundamental" MITM attacks by associating keys and arbitrary identifiers without relying on third party trust. However, end-user devices cannot run blockchain full nodes due to resource constraints. Here we present a blockchain agnostic thin client infrastructure for the Internet that can transfer the security properties of full blockchain nodes to resource constrained devices in a low-trust manner.</p>
+</blockquote>
+
+<p><strong>Table of Contents</strong></p>
+
+<ul>
+<li><a href="#dnschains-revised-security-model">DNSChain's Revised Security Model</a></li>
+<li><a href="#goals-security--agnosticism">Goals: Security + Agnosticism</a></li>
+<li><a href="#comparing-thin-clients-techniques-spv-vs-pot">Comparing Thin Clients Techniques: SPV vs PoT</a></li>
+<li><a href="#proof-of-transition-pot-definition">Proof-of-Transition (PoT) Definition</a></li>
+<li><a href="#generalized-thin-client-protocol">Generalized Thin Client Protocol</a></li>
+<li><a href="#threat-models">Threat Models</a></li>
+</ul>
+
+<p><em>Note: From here on "proxy" and "DNSChain" are interchangeable.</em></p>
+
+<hr>
+
+<h4>
+<a id="user-content-dnschains-revised-security-model" class="anchor" href="#dnschains-revised-security-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>DNSChain's Revised Security Model</h4>
+
+<p>DNSChain's original security model involved a trusted-proxy with a MITM-proof channel established via public key pinning.</p>
+
+<p>This technique offers significant improvement over today's HTTPS security model that relies on <a href="https://en.wikipedia.org/wiki/X.509">X.509</a>. However, scaling a trusted-proxy model to all Internet users is challenging since not everyone may have a trustworthy DNSChain server to connect to.</p>
+
+<p>The security model described herein modifies the old by relying on thin client techniques to reduce the amount of trust that is placed in the proxy that clients connect to.</p>
+
+<p><strong>Our focus is now on defining a blockchain-agnostic protocol for thin client techniques.</strong></p>
+
+<hr>
+
+<h4>
+<a id="user-content-goals-security--agnosticism" class="anchor" href="#goals-security--agnosticism" aria-hidden="true"><span class="octicon octicon-link"></span></a>Goals: Security + Agnosticism</h4>
+
+<p><strong>Security.</strong> Communications should be readable by invited participants only, and any tampering must be detectable. Blockchains make this possible.</p>
+
+<p><strong>Agnosticism.</strong> The protocol must be blockchain agnostic since:</p>
+
+<ul>
+<li>Any blockchain may become abandoned by the Internet community.</li>
+<li>The "ideal blockchain" is unknown and may not exist.</li>
+<li>Non-agnostic protocols promote potentially harmful centralization.</li>
+</ul>
+
+<hr>
+
+<h4>
+<a id="user-content-comparing-thin-clients-techniques-spv-vs-pot" class="anchor" href="#comparing-thin-clients-techniques-spv-vs-pot" aria-hidden="true"><span class="octicon octicon-link"></span></a>Comparing Thin Clients Techniques: SPV vs PoT</h4>
+
+<p>A <em>thin client</em> refers to software that downloads only a portion of the blockchain<sup><a href="https://en.bitcoin.it/w/index.php?title=Thin_Client_Security&amp;oldid=56863">1</a></sup>, thereby giving clients a greater ability to verify for themselves the authenticity of information that's within it.</p>
+
+<p>The standard thin client protocol used by Bitcoin is called <a href="https://en.bitcoin.it/wiki/Thin_Client_Security">Simple Payment Verification (SPV)</a>. In this document, we will describe a new thin client protocol called <em>Proof of Transition (PoT)</em>.</p>
+
+<p>There may be yet other thin client techniques to be discovered. Our long-term goal (outside the scope of this document), is to help define a generalized thin client protocol flexible enough to accommodate as many techniques as possible.</p>
+
+<h5>
+<a id="user-content-spv-and-related-techniques" class="anchor" href="#spv-and-related-techniques" aria-hidden="true"><span class="octicon octicon-link"></span></a>SPV and related techniques</h5>
+
+<p>There are many ways to do SPV, some better than others. The Namecoin developers put together a comprehensive document exploring the <a href="https://github.com/hlandau/ncdocs/blob/master/stateofnamecoin.md">various different types of SPV modes</a> that are possible.</p>
+
+<p>Pros:</p>
+
+<ul>
+<li>SPV and its variations provide the best known security for accessing blockchain information without running a full node.</li>
+</ul>
+
+<p>Cons:</p>
+
+<ul>
+<li>This technique <a href="/Users/gslepak/test/dnschain/docs/Comparison.md#thin-clients--light-clients">is not always practical or available</a>. Some blockchains may not support it and some devices may not make it feasible.</li>
+</ul>
+
+<h5>
+<a id="user-content-proof-of-transition-pot" class="anchor" href="#proof-of-transition-pot" aria-hidden="true"><span class="octicon octicon-link"></span></a>Proof of Transition (PoT)</h5>
+
+<p>In PoT, clients download portions of the blockchain from the proxy on an as-needed basis and keep track of who owns the value for a given key. If the value changes, they require proof demonstrating the original owner authorized the transition.</p>
+
+<p>Pros:</p>
+
+<ul>
+<li>Smaller client-side footprint than SPV (no need to store all blockchain headers or rebuild Merkle tree proofs). This can also result in faster connections.</li>
+<li>Might support more types of blockchains because Merkle roots do not need to be stored in the blockchain (but see con about pruning).</li>
+</ul>
+
+<p>Cons:</p>
+
+<ul>
+<li>Possibly weaker security assurance than some types of SPV.</li>
+<li>Does not support full nodes that prune transaction history.</li>
+<li>There is a small but non-zero possibility that clients can diverge from what is considered the "true" blockchain.</li>
+</ul>
+
+<hr>
+
+
+
+<p><strong>If possible, prefer SPV(+) over PoT. We describe PoT not to promote its use, but to explore the diversity of thin client techniques to help define a generic thin client protocol.</strong></p>
+
+<p><strong>The rest of this document will focus on defining Proof of Transition since plenty of literature on thin clients and SPV(+) already exists elsewhere.</strong></p>
+
+<hr>
+
+<h4>
+<a id="user-content-proof-of-transition-pot-definition" class="anchor" href="#proof-of-transition-pot-definition" aria-hidden="true"><span class="octicon octicon-link"></span></a>Proof-of-Transition (PoT) Definition</h4>
+
+<p>As the name suggests, blockchains are made of blocks chained together. Each block usually contains a list of transactions.</p>
+
+<p>In Namecoin, <code>.bit</code> domains are mapped to the <code>d/</code> namespace. So <code>okturtles.bit</code> can be registered by creating a transaction claiming ownership of <code>d/okturtles</code> (if no unexpired transaction already exist in the blockchain).</p>
+
+<p><a href="https://camo.githubusercontent.com/70f24c5b6ed2af7157295fad8f7d6ad38c742395/68747470733a2f2f6f6b747572746c65732e636f6d2f6f746865722f696d616765732f444e53436861696e2d53656375726974792d4d6f64656c2d312e312e6a7067" target="_blank"><img src="https://camo.githubusercontent.com/70f24c5b6ed2af7157295fad8f7d6ad38c742395/68747470733a2f2f6f6b747572746c65732e636f6d2f6f746865722f696d616765732f444e53436861696e2d53656375726974792d4d6f64656c2d312e312e6a7067" alt="" data-canonical-src="https://okturtles.com/other/images/DNSChain-Security-Model-1.1.jpg" style="max-width:100%;"></a></p>
+
+<p><strong>PoT behavior on initial identifier lookup</strong></p>
+
+<p>When a client looks up an identifier <strong><em>for the first time</em></strong> (such as <code>okturtles.bit</code>), PoT does the following:</p>
+
+<ol>
+<li>Client is sent the first transaction where that identifier was first registered. This is called <strong>root</strong> transaction. Client stores this transaction locally.</li>
+<li>Client is sent the transaction corresponding to the current value (and thus the current owner as well). This is also stored locally.</li>
+<li>If other proxies are available, clients should request the same information from them and verify that all responses match. Clients <em>should</em> contact at least two different proxies because the security of PoT rests on establishing the validity of the <strong>root</strong> transaction.</li>
+</ol>
+
+<p><strong>Securing the connection to proxies and reducing collusion risk</strong></p>
+
+<p>Connections to proxies are secured via public key pinning, similar to how browsers come with a list of Certificate Authorities (CAs) key pins.</p>
+
+<p>Whereas security in today's CA system <em>decreases</em> with the more CAs there are, the opposite is true with blockchain-based architectures: the more proxies that are queried, <em>the greater</em> the security.</p>
+
+<p>Of greatest significance is that blockchains can be run and used by anyone to authenticate arbitrary Internet connections and end users can specify which proxies they trust. If the end user does not specify a trusted proxy, two or more proxies (belonging to separate organizations) can be chosen at random from a predefined list.</p>
+
+<p>To prevent the likelihood of colluding proxies, the proxies that are used can be periodically changed (re-chosen at random). If a previously chosen set of proxies had colluded on the first-lookup of an identifier, this would be discovered once a proxy outside of that colluding set is used.</p>
+
+<p><strong>PoT behavior when an identifier's value changes</strong></p>
+
+<p>When a previously queried identifier changes, PoT requires a proof be sent demonstrating the previously known owner authorized that change.</p>
+
+<p>If the observed change is not the result of a fork, the entire protocol sequence would be as follows:</p>
+
+<ol>
+<li>Client queries a proxy for the value of an identifier and receives a transaction that is different from its locally cached version.</li>
+<li>Client sends its cached transaction (the one labeled "previous" in the figure below) to the proxy and requests a PoT to the "current" transaction it received in (1).</li>
+<li>Proxy responds with the list of transactions between the "previous" txn sent in (2) and the "current" txn in (1).</li>
+<li>Client verifies the transaction chain and discards all transactions except the <strong>root</strong> and the new "current" transaction for the identifier.</li>
+</ol>
+
+<p>In the scenario depicted below, steps 2-3 are skipped because there are no transactions between "previous" and "current", and so the PoT can be instantly verified at step 1:</p>
+
+<p><a href="https://camo.githubusercontent.com/28354351b694a4277e061cf2732a7c9801c0fd6f/68747470733a2f2f6f6b747572746c65732e636f6d2f6f746865722f696d616765732f444e53436861696e2d53656375726974792d4d6f64656c2d312e322e6a7067" target="_blank"><img src="https://camo.githubusercontent.com/28354351b694a4277e061cf2732a7c9801c0fd6f/68747470733a2f2f6f6b747572746c65732e636f6d2f6f746865722f696d616765732f444e53436861696e2d53656375726974792d4d6f64656c2d312e322e6a7067" alt="" data-canonical-src="https://okturtles.com/other/images/DNSChain-Security-Model-1.2.jpg" style="max-width:100%;"></a></p>
+
+<p><strong>Forking Considerations</strong></p>
+
+<p>Clients never discard the <strong>root</strong> transaction they receive in order to handle legitimate forks in the blockchain that override the "previous" cached transaction.</p>
+
+<p>If such a situation occurs, the PoT protocol works exactly as described previously, except Step 3 is now:</p>
+
+<ul>
+<li>The proxy is unable to provide a PoT from the "previous" transaction so it assumes that the client is going off of an old fork and sends a specially marked "fork PoT" that contains the entire transaction chain (from the <strong>root</strong> to the "current").</li>
+</ul>
+
+<p>There is a danger to this behavior: it means that forks cannot be so long that they result in the block containing the <strong>root</strong> being overridden. If such a fork were to occur, the thin client would have no way to obtain a PoT. This scenario is depicted in the figure below (where the red blocks are now the longest chain):</p>
+
+<p><a href="https://camo.githubusercontent.com/838a569529337449af1166d4413c9c41c4b718b2/68747470733a2f2f6f6b747572746c65732e636f6d2f6f746865722f696d616765732f444e53436861696e2d53656375726974792d4d6f64656c2d332e6a7067" target="_blank"><img src="https://camo.githubusercontent.com/838a569529337449af1166d4413c9c41c4b718b2/68747470733a2f2f6f6b747572746c65732e636f6d2f6f746865722f696d616765732f444e53436861696e2d53656375726974792d4d6f64656c2d332e6a7067" alt="" data-canonical-src="https://okturtles.com/other/images/DNSChain-Security-Model-3.jpg" style="max-width:100%;"></a></p>
+
+<p>Clients have no way to distinguish this scenario from an actual attack (where the proxy fabricates a fork to insert its own key as the <strong>root</strong>), and must therefore treat it as such.</p>
+
+<p>Recovering can behave as follows:</p>
+
+<ol>
+<li>Inform the user that they may be under attack by the proxy they are using.</li>
+<li>Present a GUI to the user that allows them to choose two or more other proxies to query to re-establish a new root.</li>
+<li>Query those two proxies in addition to four other randomly chosen proxies to establish a quorum for a new <strong>root</strong> for the identifier.
+
+<ul>
+<li>If quorum achieves 100% agreement, override the <strong>root</strong> and then blacklist and report the offending proxy to some authority (or authorities).</li>
+<li>If quorum fails to achieve 100% agreement, inform the user and let the decide what to do next.</li>
+</ul>
+</li>
+</ol>
+
+<p>This scenario should be extremely rare since most <strong>root</strong> transactions will be buried deep in the blockchain.</p>
+
+<h4>
+<a id="user-content-generalized-thin-client-protocol" class="anchor" href="#generalized-thin-client-protocol" aria-hidden="true"><span class="octicon octicon-link"></span></a>Generalized Thin Client Protocol</h4>
+
+<p>TBD.</p>
+
+<h4>
+<a id="user-content-threat-models" class="anchor" href="#threat-models" aria-hidden="true"><span class="octicon octicon-link"></span></a>Threat Models</h4>
+
+<p>TBD.</p>
+</article></body></html>

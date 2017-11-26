@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8"><style>body
+{
+  font-size:15px;
+  line-height:1.7;
+  overflow-x:hidden;
+
+    background-color: white;
+    border-radius: 3px;
+    border: 3px solid #EEE;
+    box-shadow: inset 0 0 0 1px #CECECE;
+    font-family: Helvetica, arial, freesans, clean, sans-serif;
+    max-width: 912px;
+    padding: 30px;
+    margin: 2em auto;
+
+    color:#333333;
+}
+
+
+.body-classic{
+  color:#444;
+  font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', "Hiragino Sans GB", "STXihei", "微软雅黑", serif;
+  font-size:16px;
+  line-height:1.5em;
+  background:#fefefe;
+  width: 45em;
+  margin: 10px auto;
+  padding: 1em;
+  outline: 1300px solid #FAFAFA;
+}
+
+body>:first-child
+{
+  margin-top:0!important;
+}
+
+body>:last-child
+{
+  margin-bottom:0!important;
+}
+
+blockquote,dl,ol,p,pre,table,ul {
+  border: 0;
+  margin: 15px 0;
+  padding: 0;
+}
+
+body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+body a:hover {
+  text-decoration: underline;
+}
+
+body a.absent
+{
+  color:#c00;
+}
+
+body a.anchor
+{
+  display:block;
+  padding-left:30px;
+  margin-left:-30px;
+  cursor:pointer;
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0
+}
+
+/*h4,h5,h6{ font-weight: bold; }*/
+
+.octicon{
+  font:normal normal 16px sans-serif;
+  width: 1em;
+  height: 1em;
+  line-height:1;
+  display:inline-block;
+  text-decoration:none;
+  -webkit-font-smoothing:antialiased
+}
+
+.octicon-link {
+  background: url("data:image/svg+xml;utf8,<?xml version='1.0' standalone='no'?> <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'> <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 832'> <metadata>Copyright (C) 2013 by GitHub</metadata> <!-- scale(0.01565557729941) --> <path transform='' d='M768 64h-192s-254 0-256 256c0 22 3 43 8 64h137c-11-19-18-41-18-64 0-128 128-128 128-128h192s128 0 128 128-128 128-128 128 0 64-64 128h64s256 0 256-256-256-256-256-256z m-72 192h-137c11 19 18 41 18 64 0 128-128 128-128 128h-192s-128 0-128-128 128-128 128-128-4-65 66-128h-66s-256 0-256 256 256 256 256 256h192s256 0 256-256c0-22-4-44-8-64z'/> </svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.octicon-link:before{
+  content:'\a0';
+}
+
+body h1,body h2,body h3,body h4,body h5,body h6{
+  margin:1em 0 15px;
+  padding:0;
+  font-weight:bold;
+  line-height:1.7;
+  cursor:text;
+  position:relative
+}
+
+body h1 .octicon-link,body h2 .octicon-link,body h3 .octicon-link,body h4 .octicon-link,body h5 .octicon-link,body h6 .octicon-link{
+  display:none;
+  color:#000
+}
+
+body h1:hover a.anchor,body h2:hover a.anchor,body h3:hover a.anchor,body h4:hover a.anchor,body h5:hover a.anchor,body h6:hover a.anchor{
+  text-decoration:none;
+  line-height:1;
+  padding-left:0;
+  margin-left:-22px;
+  top:15%
+}
+
+body h1:hover a.anchor .octicon-link,body h2:hover a.anchor .octicon-link,body h3:hover a.anchor .octicon-link,body h4:hover a.anchor .octicon-link,body h5:hover a.anchor .octicon-link,body h6:hover a.anchor .octicon-link{
+  display:inline-block
+}
+
+body h1 tt,body h1 code,body h2 tt,body h2 code,body h3 tt,body h3 code,body h4 tt,body h4 code,body h5 tt,body h5 code,body h6 tt,body h6 code{
+  font-size:inherit
+}
+
+body h1{
+  font-size:2.5em;
+  border-bottom:1px solid #ddd
+}
+
+body h2{
+  font-size:2em;
+  border-bottom:1px solid #eee
+}
+
+body h3{
+  font-size:1.5em
+}
+
+body h4{
+  font-size:1.2em
+}
+
+body h5{
+  font-size:1em
+}
+
+body h6{
+  color:#777;
+  font-size:1em
+}
+
+body p,body blockquote,body ul,body ol,body dl,body table,body pre{
+  margin:15px 0
+}
+
+body h1 tt,body h1 code,body h2 tt,body h2 code,body h3 tt,body h3 code,body h4 tt,body h4 code,body h5 tt,body h5 code,body h6 tt,body h6 code
+{
+  font-size:inherit;
+}
+
+
+body hr
+{
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC);
+  background-repeat: repeat-x;
+  /*background:transparent url(http://overblown.net/files/markdown/dirty-shade.png) repeat-x 0 0;*/
+  background-color: transparent;
+  background-position: 0;
+  border:0 none;
+  color:#ccc;
+  height:4px;
+  margin:15px 0;
+  padding:0;
+}
+
+body li p.first
+{
+  display:inline-block;
+}
+
+body ul,body ol
+{
+  padding-left:30px;
+}
+
+body ul.no-list,body ol.no-list
+{
+  list-style-type:none;
+  padding:0;
+}
+
+body ul ul,body ul ol,body ol ol,body ol ul
+{
+  margin-bottom:0;
+  margin-top:0;
+}
+
+body dl
+{
+  padding:0;
+}
+
+body dl dt
+{
+  font-size:14px;
+  font-style:italic;
+  font-weight:700;
+  margin-top:15px;
+  padding:0;
+}
+
+body dl dd
+{
+  margin-bottom:15px;
+  padding:0 15px;
+}
+
+body blockquote
+{
+  border-left:4px solid #DDD;
+  color:#777;
+  padding:0 15px;
+}
+
+body blockquote>:first-child
+{
+  margin-top:0;
+}
+
+body blockquote>:last-child
+{
+  margin-bottom:0;
+}
+
+body table
+{
+  display:block;
+  overflow:auto;
+  width:100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  padding: 0;
+}
+
+body table th
+{
+  font-weight:700;
+}
+
+body table th,body table td
+{
+  border:1px solid #ddd;
+  padding:6px 13px;
+}
+
+body table tr
+{
+  background-color:#fff;
+  border-top:1px solid #ccc;
+}
+
+body table tr:nth-child(2n)
+{
+  background-color:#f8f8f8;
+}
+
+body img
+{
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  max-width:100%;
+}
+
+body span.frame
+{
+  display:block;
+  overflow:hidden;
+}
+
+body span.frame>span
+{
+  border:1px solid #ddd;
+  display:block;
+  float:left;
+  margin:13px 0 0;
+  overflow:hidden;
+  padding:7px;
+  width:auto;
+}
+
+body span.frame span img
+{
+  display:block;
+  float:left;
+}
+
+body span.frame span span
+{
+  clear:both;
+  color:#333;
+  display:block;
+  padding:5px 0 0;
+}
+
+body span.align-center
+{
+  clear:both;
+  display:block;
+  overflow:hidden;
+}
+
+body span.align-center>span
+{
+  display:block;
+  margin:13px auto 0;
+  overflow:hidden;
+  text-align:center;
+}
+
+body span.align-center span img
+{
+  margin:0 auto;
+  text-align:center;
+}
+
+body span.align-right
+{
+  clear:both;
+  display:block;
+  overflow:hidden;
+}
+
+body span.align-right>span
+{
+  display:block;
+  margin:13px 0 0;
+  overflow:hidden;
+  text-align:right;
+}
+
+body span.align-right span img
+{
+  margin:0;
+  text-align:right;
+}
+
+body span.float-left
+{
+  display:block;
+  float:left;
+  margin-right:13px;
+  overflow:hidden;
+}
+
+body span.float-left span
+{
+  margin:13px 0 0;
+}
+
+body span.float-right
+{
+  display:block;
+  float:right;
+  margin-left:13px;
+  overflow:hidden;
+}
+
+body span.float-right>span
+{
+  display:block;
+  margin:13px auto 0;
+  overflow:hidden;
+  text-align:right;
+}
+
+body code,body tt
+{
+  background-color:#f8f8f8;
+  border:1px solid #ddd;
+  border-radius:3px;
+  margin:0 2px;
+  padding:0 5px;
+}
+
+body code
+{
+  white-space:nowrap;
+}
+
+
+code,pre{
+  font-family:Consolas, "Liberation Mono", Courier, monospace;
+  font-size:12px
+}
+
+body pre>code
+{
+  background:transparent;
+  border:none;
+  margin:0;
+  padding:0;
+  white-space:pre;
+}
+
+body .highlight pre,body pre
+{
+  background-color:#f8f8f8;
+  border:1px solid #ddd;
+  font-size:13px;
+  line-height:19px;
+  overflow:auto;
+  padding:6px 10px;
+  border-radius:3px
+}
+
+body pre code,body pre tt
+{
+  background-color:transparent;
+  border:none;
+  margin:0;
+  padding:0;
+}
+
+body .task-list{
+  list-style-type:none;
+  padding-left:10px
+}
+
+.task-list-item{
+  padding-left:20px
+}
+
+.task-list-item label{
+  font-weight:normal
+}
+
+.task-list-item.enabled label{
+  cursor:pointer
+}
+
+.task-list-item+.task-list-item{
+  margin-top:5px
+}
+
+.task-list-item-checkbox{
+  float:left;
+  margin-left:-20px;
+  margin-top:7px
+}
+
+
+.highlight{
+  background:#ffffff
+}
+
+.highlight .c{
+  color:#999988;
+  font-style:italic
+}
+
+.highlight .err{
+  color:#a61717;
+  background-color:#e3d2d2
+}
+
+.highlight .k{
+  font-weight:bold
+}
+
+.highlight .o{
+  font-weight:bold
+}
+
+.highlight .cm{
+  color:#999988;
+  font-style:italic
+}
+
+.highlight .cp{
+  color:#999999;
+  font-weight:bold
+}
+
+.highlight .c1{
+  color:#999988;
+  font-style:italic
+}
+
+.highlight .cs{
+  color:#999999;
+  font-weight:bold;
+  font-style:italic
+}
+
+.highlight .gd{
+  color:#000000;
+  background-color:#ffdddd
+}
+
+.highlight .gd .x{
+  color:#000000;
+  background-color:#ffaaaa
+}
+
+.highlight .ge{
+  font-style:italic
+}
+
+.highlight .gr{
+  color:#aa0000
+}
+
+.highlight .gh{
+  color:#999999
+}
+
+.highlight .gi{
+  color:#000000;
+  background-color:#ddffdd
+}
+
+.highlight .gi .x{
+  color:#000000;
+  background-color:#aaffaa
+}
+
+.highlight .go{
+  color:#888888
+}
+
+.highlight .gp{
+  color:#555555
+}
+
+.highlight .gs{
+  font-weight:bold
+}
+
+.highlight .gu{
+  color:#800080;
+  font-weight:bold
+}
+
+.highlight .gt{
+  color:#aa0000
+}
+
+.highlight .kc{
+  font-weight:bold
+}
+
+.highlight .kd{
+  font-weight:bold
+}
+
+.highlight .kn{
+  font-weight:bold
+}
+
+.highlight .kp{
+  font-weight:bold
+}
+
+.highlight .kr{
+  font-weight:bold
+}
+
+.highlight .kt{
+  color:#445588;
+  font-weight:bold
+}
+
+.highlight .m{
+  color:#009999
+}
+
+.highlight .s{
+  color:#d14
+}
+
+.highlight .n{
+  color:#333333
+}
+
+.highlight .na{
+  color:#008080
+}
+
+.highlight .nb{
+  color:#0086B3
+}
+
+.highlight .nc{
+  color:#445588;
+  font-weight:bold
+}
+
+.highlight .no{
+  color:#008080
+}
+
+.highlight .ni{
+  color:#800080
+}
+
+.highlight .ne{
+  color:#990000;
+  font-weight:bold
+}
+
+.highlight .nf{
+  color:#990000;
+  font-weight:bold
+}
+
+.highlight .nn{
+  color:#555555
+}
+
+.highlight .nt{
+  color:#000080
+}
+
+.highlight .nv{
+  color:#008080
+}
+
+.highlight .ow{
+  font-weight:bold
+}
+
+.highlight .w{
+  color:#bbbbbb
+}
+
+.highlight .mf{
+  color:#009999
+}
+
+.highlight .mh{
+  color:#009999
+}
+
+.highlight .mi{
+  color:#009999
+}
+
+.highlight .mo{
+  color:#009999
+}
+
+.highlight .sb{
+  color:#d14
+}
+
+.highlight .sc{
+  color:#d14
+}
+
+.highlight .sd{
+  color:#d14
+}
+
+.highlight .s2{
+  color:#d14
+}
+
+.highlight .se{
+  color:#d14
+}
+
+.highlight .sh{
+  color:#d14
+}
+
+.highlight .si{
+  color:#d14
+}
+
+.highlight .sx{
+  color:#d14
+}
+
+.highlight .sr{
+  color:#009926
+}
+
+.highlight .s1{
+  color:#d14
+}
+
+.highlight .ss{
+  color:#990073
+}
+
+.highlight .bp{
+  color:#999999
+}
+
+.highlight .vc{
+  color:#008080
+}
+
+.highlight .vg{
+  color:#008080
+}
+
+.highlight .vi{
+  color:#008080
+}
+
+.highlight .il{
+  color:#009999
+}
+
+.highlight .gc{
+  color:#999;
+  background-color:#EAF2F5
+}
+
+.type-csharp .highlight .k{
+  color:#0000FF
+}
+
+.type-csharp .highlight .kt{
+  color:#0000FF
+}
+
+.type-csharp .highlight .nf{
+  color:#000000;
+  font-weight:normal
+}
+
+.type-csharp .highlight .nc{
+  color:#2B91AF
+}
+
+.type-csharp .highlight .nn{
+  color:#000000
+}
+
+.type-csharp .highlight .s{
+  color:#A31515
+}
+
+.type-csharp .highlight .sc{
+  color:#A31515
+}
+</style><title>OUTDATED okTurtles Bylaws</title></head><body><h1>
+<a name="user-content-bylaws-of-the-okturtles-foundation" class="anchor" href="#bylaws-of-the-okturtles-foundation"><span class="octicon octicon-link"></span></a>OUTDATED Bylaws of the okTurtles Foundation</h1>
+
+<h2>
+<a name="user-content-article-i---name-purpose" class="anchor" href="#article-i---name-purpose"><span class="octicon octicon-link"></span></a>ARTICLE I - NAME, PURPOSE</h2>
+
+<ol>
+<li>The name of the organization shall be the okTurtles Foundation.</li>
+<li>The okTurtles Foundation is organized for the purpose of conducting 
+any activity permitted under US Internal Revenue Code Section 501(c)(3) 
+and applicable law.</li>
+</ol><h2>
+<a name="user-content-article-ii---membership" class="anchor" href="#article-ii---membership"><span class="octicon octicon-link"></span></a>ARTICLE II - MEMBERSHIP</h2>
+
+<ol>
+<li>The okTurtles Foundation shall have no members.</li>
+</ol><h2>
+<a name="user-content-article-iii---annual-meeting" class="anchor" href="#article-iii---annual-meeting"><span class="octicon octicon-link"></span></a>ARTICLE III - ANNUAL MEETING</h2>
+
+<ol>
+<li>
+<strong>Annual Meeting.</strong> The date of the regular annual meeting 
+shall be set by the Board of Directors of the okTurtles Foundation, who 
+shall also set the time and place.</li>
+<li>
+<strong>Special Meetings.</strong> Special meetings may be called by any
+ officer of the okTurtles Foundation, or any member of the board of 
+directors at any time, provided calling of such a meeting complies with 
+notice requirements articulated below.</li>
+<li>
+<strong>Notice.</strong> Notice of each meeting shall be given three days in advance of that meeting.</li>
+</ol><h2>
+<a name="user-content-article-iv---board-of-directors" class="anchor" href="#article-iv---board-of-directors"><span class="octicon octicon-link"></span></a>ARTICLE IV - BOARD OF DIRECTORS</h2>
+
+<ol>
+<li>
+<strong>Board Role, Size, Compensation.</strong> The board of directors 
+shall have three members. The size of the board of directors may be 
+amended from time to time as best serves the interests of the okTurtles 
+Foundation, provided such amendments are in compliance with applicable 
+state law.</li>
+<li>
+<strong>Meetings.</strong> The board shall meet annually at an agreed upon time and place.</li>
+<li>
+<strong>Board Elections.</strong> Election of new directors will occur 
+as the first item of business at the annual meeting of the okTurtles 
+Foundation, or at special meetings in order to fill a vacancy. Directors
+ will be elected by a unanimous vote of the current directors whenever 
+there are three acting directors, otherwise, if more than three acting 
+directors are on the board, a majority vote is required.</li>
+<li>
+<strong>Terms.</strong> Unless board members resign, terms of office 
+shall be for life. If there comes a time when there is substantial 
+public interest in serving on the board of the okTurtles Foundation, 
+this section may be amended by two-thirds majority vote to limit terms, 
+or subject board members to annual election, as the then board of 
+directors sees fit.</li>
+<li>
+<strong>Quorum.</strong> A majority of the board members must be in 
+attendance before business can be transacted or motions made or passed. 
+Attendance may be in person, via phone, or by some other electronic 
+method.</li>
+<li>
+<strong>Notice.</strong> An official board meeting requires that each 
+board member have notice of the meeting given at least three days in 
+advance of that meeting.</li>
+<li>
+<strong>Officers and Duties.</strong>
+
+<ul>
+<li>Officers: There shall be four officers of the board: a president, 
+chairman, vice president and secretary. One board member may serve in 
+one, some, or all of these capacities so long as doing so does not 
+conflict with state law.</li>
+<li>Duties: Officer duties are as follows: The president, chairman, 
+secretary or treasurer may preside or arrange for other directors to 
+preside at each meeting in the following order: president, chairman, 
+secretary, treasurer and other members. The president, chairman, 
+secretary, treasurer or other board members may chair committees on 
+special subjects as designated by the board. The secretary shall be 
+responsible for keeping records of board actions, including overseeing 
+the taking of minutes at all board meetings, sending out meeting 
+announcements, distributing copies of minutes and the agenda to each 
+board member, and assuring that corporate records are maintained. Any 
+officer listed herein may delegate this duty to any other board member 
+who consents to accept it.</li>
+</ul>
+</li>
+<li>
+<strong>Vacancies.</strong> When a vacancy on the board exists, 
+nominations for new members may be received from present board members 
+by the president, chairman, secretary or treasurer within ten working 
+days in advance of a board meeting. Board members shall be given three 
+days advance notice of any nominations to be voted upon at the next 
+board meeting. If events transpire such that there is only one director 
+on the board of directors, that director may unilaterally appoint a 
+second director. If events transpire such that there are no directors in
+ office, the current volunteers and employees as well as the present and
+ past presidents of the okTurtles Foundation may, by majority of those 
+voting, elect one director.</li>
+<li>
+<strong>Resignation, Termination and Absences.</strong> Resignation from
+ the board must be in writing and received by the secretary or tendered 
+at a board meeting. A board member may be removed by a two-thirds vote 
+of the remaining directors where such removal is deemed by the voting 
+directors to be in the best interests of the okTurtles Foundation and 
+where such removal does not conflict with any applicable law.</li>
+<li>
+<strong>Special Meetings.</strong> Special meetings of the Board shall 
+be called upon the request of the president, vice-president, secretary, 
+treasurer or any other board member. Special meetings require three days
+ advance notice.</li>
+</ol><h2>
+<a name="user-content-article-v---committees" class="anchor" href="#article-v---committees"><span class="octicon octicon-link"></span></a>ARTICLE V - COMMITTEES</h2>
+
+<ol>
+<li>The board may create committees as needed. The board may appoint any
+ individuals it deems appropriate to such committees without regard to 
+age. Appointments shall be by majority vote of the board. Committees may
+ be convened prior to the annual meeting by any officer of the okTurtles
+ Foundation without calling a meeting of the board. Committees created 
+in this fashion are subject to ratification by a majority of the board 
+members present at the next annual meeting. The president, chairman, 
+secretary or treasurer may appoint committee chairs. In the event of 
+disagreement, the choice of officers in the order listed shall take 
+priority.</li>
+<li>The president, chairman, secretary and treasurer of the okTurtles 
+Foundation serve as the members of the executive committee. Except for 
+the power to amend the articles of incorporation and bylaws, the 
+executive committee shall have all of the powers and authority of the 
+board of directors in the intervals between meetings of the board of 
+directors, subject to the direction and control of the board of 
+directors.</li>
+</ol><h2>
+<a name="user-content-article-vi---indemnification" class="anchor" href="#article-vi---indemnification"><span class="octicon octicon-link"></span></a>ARTICLE VI - INDEMNIFICATION</h2>
+
+<p>The okTurtles Foundation shall, to the extent legally permissible, 
+indemnify each person who may serve or who has served at any time as an 
+officer, director, or employee of the corporation against all expenses 
+and liabilities, including, without limitation, counsel fees, judgments,
+ fines, excise taxes, penalties and settlement payments, reasonably 
+incurred by or imposed upon such person in connection with any 
+threatened, pending, or completed action, suit, or proceeding in which 
+he or she may become involved by reason of his or her service in such 
+capacity; provided that no indemnification shall be provided for any 
+such person with respect to any matter as to which he or she shall have 
+been finally adjudicated in any proceeding not to have acted in good 
+faith in the reasonable belief that such action was in the best 
+interests of the corporation; and further provided that any compromise 
+or settlement payment shall be approved by a majority vote of a quorum 
+of directors who are not at that time parties to the proceeding.</p>
+
+<p>The indemnification provided hereunder shall inure to the benefit of 
+the heirs, executors and administrators of persons entitled to 
+indemnification hereunder. The right of indemnification under this 
+Article shall be in addition to and not exclusive of all other rights to
+ which any person may be entitled.</p>
+
+<p>No amendment or repeal of the provisions of this Article which 
+adversely affects the right of an indemnified person under this Article 
+shall apply to such person with respect to those acts or omissions which
+ occurred at any time prior to such amendment or repeal, unless such 
+amendment or repeal was voted by or was made with the written consent of
+ such indemnified person. This Article constitutes a contract between 
+the corporation and the indemnified officers, directors, employees and 
+volunteers. No amendment or repeal of the provisions of this Article 
+which adversely affects the right of an indemnified officer, director, 
+employee or volunteer under this Article shall apply to such officer, 
+director, employee or volunteer with respect to those acts or omissions 
+which occurred at any time prior to such amendment or repeal.</p>
+
+<h2>
+<a name="user-content-article-vii--conflict-of-interest-policy" class="anchor" href="#article-vii--conflict-of-interest-policy"><span class="octicon octicon-link"></span></a>ARTICLE VII – CONFLICT OF INTEREST POLICY</h2>
+
+<h3>
+<a name="user-content-section-i-purpose" class="anchor" href="#section-i-purpose"><span class="octicon octicon-link"></span></a>Section I: Purpose</h3>
+
+<p>The purpose of the conflict of interest policy is to protect the 
+interest of this tax-exempt organization (the okTurtles Foundation) when
+ it is contemplating entering into a transaction or arrangement that 
+might benefit the private interest of an officer or director of the 
+Organization or might result in a possible excess benefit transaction. 
+This policy is intended to supplement but not replace any applicable 
+state and federal laws governing conflict of interest applicable to 
+nonprofit and charitable organizations.</p>
+
+<h3>
+<a name="user-content-section-ii-definitions" class="anchor" href="#section-ii-definitions"><span class="octicon octicon-link"></span></a>Section II: Definitions</h3>
+
+<ul>
+<li>Interested Person: Any director, principal officer, or member of a 
+committee with governing board delegated powers, who has a direct or 
+indirect financial interest, as defined below, is an interested person.</li>
+<li>Financial Interest: A person has a financial interest if the person 
+has, directly or indirectly, through business, investment, or family:
+
+<ul>
+<li>An ownership or investment interest in any entity with which the Organization has a transaction or arrangement,</li>
+<li>A compensation arrangement with the Organization or with any entity 
+or individual with which the Organization has a transaction or 
+arrangement, or</li>
+<li>A potential ownership or investment interest in, or compensation 
+arrangement with, any entity or individual with which the Organization 
+is negotiating a transaction or arrangement.</li>
+</ul>
+</li>
+</ul><p>Compensation includes direct and indirect remuneration, as well as gifts or favors that are not insubstantial.</p>
+
+<p>A financial interest is not necessarily a conflict of interest. Under
+ Section III, Subsection 2, a person who has a financial interest may 
+have a conflict of interest only if the appropriate governing board or 
+committee decides that a conflict of interest exists.</p>
+
+<h3>
+<a name="user-content-section-iii-procedures" class="anchor" href="#section-iii-procedures"><span class="octicon octicon-link"></span></a>Section III: Procedures</h3>
+
+<ol>
+<li>Duty to Disclose
+In connection with any actual or possible conflict of interest, an 
+interested person must disclose the existence of the financial interest 
+and be given the opportunity to disclose all material facts to the 
+directors and members of committees with governing board delegated 
+powers considering the proposed transaction or arrangement.</li>
+<li>Determining Whether a Conflict of Interest Exists
+After disclosure of the financial interest and all material facts, and 
+after any discussion with the interested person, he/she shall leave the 
+governing board or committee meeting while the determination of a 
+conflict of interest is discussed and voted upon. The remaining board or
+ committee members shall decide if a conflict of interest exists.</li>
+<li>Procedures for Addressing the Conflict of Interest
+
+<ul>
+<li>An interested person may make a presentation at the governing board 
+or committee meeting, but after the presentation, he/she shall leave the
+ meeting during the discussion of, and the vote on, the transaction or 
+arrangement involving the possible conflict of interest.</li>
+<li>The chairperson of the governing board or committee shall, if 
+appropriate, appoint a disinterested person or committee to investigate 
+alternatives to the proposed transaction or arrangement.</li>
+<li>After exercising due diligence, the governing board or committee 
+shall determine whether the Organization can obtain with reasonable 
+efforts a more advantageous transaction or arrangement from a person or 
+entity that would not give rise to a conflict of interest.</li>
+<li>If a more advantageous transaction or arrangement is not reasonably 
+possible under circumstances not producing a conflict of interest, the 
+governing board or committee shall determine by a majority vote of the 
+disinterested directors whether the transaction or arrangement is in the
+ Organization’s best interest, for its own benefit, and whether it is 
+fair and reasonable. In conformity with the above determination it shall
+ make its decision as to whether to enter into the transaction or 
+arrangement.</li>
+</ul>
+</li>
+<li>Violations of the Conflicts of Interest Policy
+
+<ul>
+<li>If the governing board or committee has reasonable cause to believe a
+ member has failed to disclose actual or possible conflicts of interest,
+ it shall inform the member of the basis for such belief and afford the 
+member an opportunity to explain the alleged failure to disclose. </li>
+<li>If, after hearing the member’s response and after making further 
+investigation as warranted by the circumstances, the governing board or 
+committee determines the member has failed to disclose an actual or 
+possible conflict of interest, it shall take appropriate disciplinary 
+and corrective action.</li>
+</ul>
+</li>
+</ol><h3>
+<a name="user-content-section-iv-records-of-proceedings" class="anchor" href="#section-iv-records-of-proceedings"><span class="octicon octicon-link"></span></a>Section IV: Records of Proceedings</h3>
+
+<p>The minutes of the governing board and all committees with board-delegated powers shall contain:</p>
+
+<ol>
+<li>The names of the persons who disclosed or otherwise were found to 
+have a financial interest in connection with an actual or possible 
+conflict of interest, the nature of the financial interest, any action 
+taken to determine whether a conflict of interest was present, and the 
+governing board’s or committee’s decision as to whether a conflict of 
+interest in fact existed.</li>
+<li>The names of the persons who were present for discussions and votes 
+relating to the transaction or arrangement, the content of the 
+discussion, including any alternatives to the proposed transaction or 
+arrangement, and a record of any votes taken in connection with the 
+proceedings.</li>
+</ol><h3>
+<a name="user-content-section-v-compensation" class="anchor" href="#section-v-compensation"><span class="octicon octicon-link"></span></a>Section V: Compensation</h3>
+
+<ol>
+<li>A voting member of the governing board who receives compensation, 
+directly or indirectly, from the Organization for services is precluded 
+from voting on matters pertaining to that member’s compensation.</li>
+<li>A voting member of any committee whose jurisdiction includes 
+compensation matters and who receives compensation, directly or 
+indirectly, from the Organization for services is precluded from voting 
+on matters pertaining to that member’s compensation.</li>
+<li>No voting member of the governing board or any committee whose 
+jurisdiction includes compensation matters and who receives 
+compensation, directly or indirectly, from the Organization, either 
+individually or collectively, is prohibited from providing information 
+to any committee regarding compensation.</li>
+</ol><h3>
+<a name="user-content-section-vi-annual-statements" class="anchor" href="#section-vi-annual-statements"><span class="octicon octicon-link"></span></a>Section VI: Annual Statements</h3>
+
+<p>Each director, principal officer and member of a committee with 
+governing board delegated powers shall annually sign a statement which 
+affirms such person:</p>
+
+<ol>
+<li>Has received a copy of the conflicts of interest policy;</li>
+<li>Has read and understands the policy;</li>
+<li>Has agreed to comply with the policy; and</li>
+<li>Understands the Organization is charitable and in order to maintain 
+its federal tax exemption it must engage primarily in activities which 
+accomplish one or more of its tax-exempt purposes.</li>
+</ol><h3>
+<a name="user-content-section-vii-periodic-reviews" class="anchor" href="#section-vii-periodic-reviews"><span class="octicon octicon-link"></span></a>Section VII: Periodic Reviews</h3>
+
+<p>To ensure the Organization operates in a manner consistent with 
+charitable purposes and does not engage in activities that could 
+jeopardize its tax-exempt status, periodic reviews shall be conducted. 
+The periodic reviews shall, at a minimum, include the following 
+subjects:</p>
+
+<ol>
+<li>Whether compensation arrangements and benefits are reasonable, based
+ on competent survey information, and the result of arm’s length 
+bargaining.</li>
+<li>Whether partnerships, joint ventures, and arrangements with 
+management organizations conform to the Organization’s written policies,
+ are properly recorded, reflect reasonable investment or payments for 
+goods and services, further charitable purposes and do not result in 
+inurement, impermissible private benefit or in an excess benefit 
+transaction.</li>
+</ol><h3>
+<a name="user-content-section-viii-use-of-outside-experts" class="anchor" href="#section-viii-use-of-outside-experts"><span class="octicon octicon-link"></span></a>Section VIII: Use of Outside Experts</h3>
+
+<p>When conducting the periodic reviews as provided for in Section VII, 
+the Organization may, but need not, use outside advisors. If outside 
+experts are used, their use shall not relieve the governing board of its
+ responsibility for ensuring periodic reviews are conducted.</p>
+
+<h2>
+<a name="user-content-article-viii---software-licenses" class="anchor" href="#article-viii---software-licenses"><span class="octicon octicon-link"></span></a>Article VIII - Software Licenses</h2>
+
+<ol>
+<li>All software belonging to the okTurtles Foundation shall be licensed
+ under the terms of an open source license. Currently, that license must
+ be the Mozilla Public License 2.0 (MPL 2.0).</li>
+</ol><h2>
+<a name="user-content-article-ix---amendments" class="anchor" href="#article-ix---amendments"><span class="octicon octicon-link"></span></a>ARTICLE IX - AMENDMENTS</h2>
+
+<ol>
+<li>These bylaws may be amended when necessary by a two-thirds majority 
+of the board of directors. Proposed amendments may be submitted to the 
+president, vice-president or secretary and notice of them shall be given
+ with notice of any annual or special meeting. </li>
+</ol><p>These bylaws were approved at a meeting of the board of directors of the okTurtles Foundation on June 6, 2014.</p></body><div id="floatnotes-container154eebd9-599e-4be1-b4a3-690bb5b9e066"><div id="indicators154eebd9-599e-4be1-b4a3-690bb5b9e066"><div style="font-size: 13px; display: none;" class="indicator154eebd9-599e-4be1-b4a3-690bb5b9e066 above154eebd9-599e-4be1-b4a3-690bb5b9e066"><div class="indicator-label154eebd9-599e-4be1-b4a3-690bb5b9e066"></div><div style="display: none;" class="indicator-container154eebd9-599e-4be1-b4a3-690bb5b9e066">Loading...</div></div><div style="font-size: 13px; display: none;" class="indicator154eebd9-599e-4be1-b4a3-690bb5b9e066 below154eebd9-599e-4be1-b4a3-690bb5b9e066"><div style="display: none;" class="indicator-container154eebd9-599e-4be1-b4a3-690bb5b9e066">Loading...</div><div class="indicator-label154eebd9-599e-4be1-b4a3-690bb5b9e066"></div></div></div></div></html>

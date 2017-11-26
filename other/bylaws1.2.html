@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>okTurtles Bylaws</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    <style>
+    .markdown-preview-enhanced pre.editor-colors.editor-colors,
+.markdown-preview-enhanced code {
+  background-color: #f7f7f7 !important;
+}
+pre.editor-colors {
+  background-color: #fff;
+  color: #333;
+}
+pre.editor-colors .line.cursor-line {
+  background-color: #f5f5f5;
+}
+pre.editor-colors .invisible {
+  color: #c0c0c0;
+}
+pre.editor-colors .cursor {
+  border-left: 2px solid #000;
+}
+pre.editor-colors .selection .region {
+  background-color: #c8c8fa;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #000;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character {
+  color: #c0c0c0;
+}
+pre.editor-colors .indent-guide {
+  color: #c0c0c0;
+}
+pre.editor-colors .wrap-guide {
+  background-color: #c0c0c0;
+}
+pre.editor-colors .gutter {
+  background-color: #fff;
+  color: #333;
+}
+pre.editor-colors .gutter .line-number {
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  color: #333;
+  background-color: #f5f5f5;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right {
+  color: #333;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(255, 236, 236, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #333;
+}
+pre.editor-colors .search-results .mpe-syntax--marker .region {
+  background-color: transparent;
+  border: 1px solid #ed6a43;
+}
+pre.editor-colors .search-results .mpe-syntax--marker.current-result .region {
+  border: 1px solid #fff;
+}
+.mpe-syntax--comment,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--comment,
+.mpe-syntax--string.mpe-syntax--comment {
+  color: #969896;
+}
+.mpe-syntax--constant,
+.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--constant,
+.mpe-syntax--variable.mpe-syntax--other.mpe-syntax--constant,
+.mpe-syntax--variable.mpe-syntax--language {
+  color: #0086b3;
+}
+.mpe-syntax--entity,
+.mpe-syntax--entity.mpe-syntax--name {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #795da3;
+}
+.mpe-syntax--variable.mpe-syntax--parameter.mpe-syntax--function {
+  color: #333;
+}
+.mpe-syntax--entity.mpe-syntax--name.mpe-syntax--tag {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #63a35c;
+}
+.mpe-syntax--keyword {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #a71d5d;
+}
+.mpe-syntax--storage,
+.mpe-syntax--storage.mpe-syntax--type {
+  color: #a71d5d;
+}
+.mpe-syntax--storage.mpe-syntax--modifier.mpe-syntax--package,
+.mpe-syntax--storage.mpe-syntax--modifier.mpe-syntax--import,
+.mpe-syntax--storage.mpe-syntax--type.mpe-syntax--java {
+  color: #333;
+}
+.mpe-syntax--string,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--string,
+.mpe-syntax--string .mpe-syntax--punctuation.mpe-syntax--section.mpe-syntax--embedded .mpe-syntax--source {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #183691;
+}
+.mpe-syntax--support {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #0086b3;
+}
+.mpe-syntax--meta.mpe-syntax--property-name {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #0086b3;
+}
+.mpe-syntax--variable {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #ed6a43;
+}
+.mpe-syntax--variable.mpe-syntax--other {
+  color: #333;
+}
+.mpe-syntax--invalid.mpe-syntax--broken {
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+  color: #b52a1d;
+}
+.mpe-syntax--invalid.mpe-syntax--deprecated {
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+  color: #b52a1d;
+}
+.mpe-syntax--invalid.mpe-syntax--illegal {
+  font-style: italic;
+  text-decoration: underline;
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+.mpe-syntax--carriage-return {
+  font-style: italic;
+  text-decoration: underline;
+  background-color: #b52a1d;
+  color: #f8f8f8;
+  undefined: ^M;
+}
+.mpe-syntax--invalid.mpe-syntax--unimplemented {
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+  color: #b52a1d;
+}
+.mpe-syntax--message.mpe-syntax--error {
+  color: #b52a1d;
+}
+.mpe-syntax--string .mpe-syntax--source {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #333;
+}
+.mpe-syntax--string .mpe-syntax--variable {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #0086b3;
+}
+.mpe-syntax--source.mpe-syntax--regexp,
+.mpe-syntax--string.mpe-syntax--regexp {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #183691;
+}
+.mpe-syntax--string.mpe-syntax--regexp.mpe-syntax--character-class,
+.mpe-syntax--string.mpe-syntax--regexp .mpe-syntax--constant.mpe-syntax--character.mpe-syntax--escape,
+.mpe-syntax--string.mpe-syntax--regexp .mpe-syntax--source.mpe-syntax--ruby.mpe-syntax--embedded,
+.mpe-syntax--string.mpe-syntax--regexp .mpe-syntax--string.mpe-syntax--regexp.mpe-syntax--arbitrary-repitition {
+  color: #183691;
+}
+.mpe-syntax--string.mpe-syntax--regexp .mpe-syntax--constant.mpe-syntax--character.mpe-syntax--escape {
+  font-weight: bold;
+  color: #63a35c;
+}
+.mpe-syntax--support.mpe-syntax--constant {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #0086b3;
+}
+.mpe-syntax--support.mpe-syntax--variable {
+  color: #0086b3;
+}
+.mpe-syntax--meta.mpe-syntax--module-reference {
+  color: #0086b3;
+}
+.mpe-syntax--markup.mpe-syntax--list {
+  color: #693a17;
+}
+.mpe-syntax--markup.mpe-syntax--heading,
+.mpe-syntax--markup.mpe-syntax--heading .mpe-syntax--entity.mpe-syntax--name {
+  font-weight: bold;
+  color: #1d3e81;
+}
+.mpe-syntax--markup.mpe-syntax--quote {
+  color: #008080;
+}
+.mpe-syntax--markup.mpe-syntax--italic {
+  font-style: italic;
+  color: #333;
+}
+.mpe-syntax--markup.mpe-syntax--bold {
+  font-weight: bold;
+  color: #333;
+}
+.mpe-syntax--markup.mpe-syntax--raw {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #0086b3;
+}
+.mpe-syntax--markup.mpe-syntax--deleted,
+.mpe-syntax--meta.mpe-syntax--diff.mpe-syntax--header.mpe-syntax--from-file,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+.mpe-syntax--markup.mpe-syntax--inserted,
+.mpe-syntax--meta.mpe-syntax--diff.mpe-syntax--header.mpe-syntax--to-file,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+.mpe-syntax--markup.mpe-syntax--changed,
+.mpe-syntax--punctuation.mpe-syntax--definition.mpe-syntax--changed {
+  background-color: #ffe3b4;
+  color: #ef9700;
+}
+.mpe-syntax--markup.mpe-syntax--ignored,
+.mpe-syntax--markup.mpe-syntax--untracked {
+  color: #d8d8d8;
+  background-color: #808080;
+}
+.mpe-syntax--meta.mpe-syntax--diff.mpe-syntax--range {
+  color: #795da3;
+  font-weight: bold;
+}
+.mpe-syntax--meta.mpe-syntax--diff.mpe-syntax--header {
+  color: #0086b3;
+}
+.mpe-syntax--meta.mpe-syntax--separator {
+  font-weight: bold;
+  color: #1d3e81;
+}
+.mpe-syntax--meta.mpe-syntax--output {
+  color: #1d3e81;
+}
+.mpe-syntax--brackethighlighter.mpe-syntax--tag,
+.mpe-syntax--brackethighlighter.mpe-syntax--curly,
+.mpe-syntax--brackethighlighter.mpe-syntax--round,
+.mpe-syntax--brackethighlighter.mpe-syntax--square,
+.mpe-syntax--brackethighlighter.mpe-syntax--angle,
+.mpe-syntax--brackethighlighter.mpe-syntax--quote {
+  color: #595e62;
+}
+.mpe-syntax--brackethighlighter.mpe-syntax--unmatched {
+  color: #b52a1d;
+}
+.mpe-syntax--sublimelinter.mpe-syntax--mark.mpe-syntax--error {
+  color: #b52a1d;
+}
+.mpe-syntax--sublimelinter.mpe-syntax--mark.mpe-syntax--warning {
+  color: #ed6a43;
+}
+.mpe-syntax--sublimelinter.mpe-syntax--gutter-mark {
+  color: #c0c0c0;
+}
+.mpe-syntax--constant.mpe-syntax--other.mpe-syntax--reference.mpe-syntax--link,
+.mpe-syntax--string.mpe-syntax--other.mpe-syntax--link {
+  color: #183691;
+  text-decoration: underline;
+}
+.scrollbar-style::-webkit-scrollbar {
+  width: 8px;
+}
+.scrollbar-style::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #fff;
+}
+.scrollbar-style::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(150, 150, 150, 0.66);
+  border: 4px solid rgba(150, 150, 150, 0.66);
+  background-clip: content-box;
+}
+.markdown-preview-enhanced-container .mpe-toolbar {
+  position: absolute;
+  top: 32px;
+  right: 24px;
+  opacity: 0;
+  display: block;
+}
+.markdown-preview-enhanced-container .mpe-toolbar .back-to-top-btn,
+.markdown-preview-enhanced-container .mpe-toolbar .refresh-btn,
+.markdown-preview-enhanced-container .mpe-toolbar .sidebar-toc-btn {
+  float: right;
+  width: 32px;
+  margin-right: 4px;
+  opacity: 0.4;
+}
+.markdown-preview-enhanced-container .mpe-toolbar .back-to-top-btn:hover,
+.markdown-preview-enhanced-container .mpe-toolbar .refresh-btn:hover,
+.markdown-preview-enhanced-container .mpe-toolbar .sidebar-toc-btn:hover {
+  opacity: 1.0;
+}
+.markdown-preview-enhanced-container:hover .back-to-top-btn,
+.markdown-preview-enhanced-container:hover .refresh-btn,
+.markdown-preview-enhanced-container:hover .sidebar-toc-btn {
+  display: block;
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .mpe-sidebar-toc {
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 268px;
+  height: 100%;
+  padding: 32px 0 12px 0;
+  overflow: auto;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  box-shadow: -4px 0px 12px rgba(150, 150, 150, 0.33);
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .mpe-sidebar-toc a {
+  color: #333;
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .mpe-sidebar-toc ul {
+  padding: 0 1.6em;
+  margin-top: 0.8em;
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .mpe-sidebar-toc li {
+  margin-bottom: 0.8em;
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .mpe-sidebar-toc ul {
+  list-style-type: none;
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .mpe-toolbar {
+  right: 300px;
+}
+.markdown-preview-enhanced-container.show-sidebar-toc .markdown-preview-enhanced {
+  width: calc(100% - 268px);
+}
+.markdown-preview-enhanced-container .mpe-sidebar-toc::-webkit-scrollbar,
+.markdown-preview-enhanced-container .markdown-preview-enhanced::-webkit-scrollbar {
+  width: 8px;
+}
+.markdown-preview-enhanced-container .mpe-sidebar-toc::-webkit-scrollbar-track,
+.markdown-preview-enhanced-container .markdown-preview-enhanced::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #fff;
+}
+.markdown-preview-enhanced-container .mpe-sidebar-toc::-webkit-scrollbar-thumb,
+.markdown-preview-enhanced-container .markdown-preview-enhanced::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(150, 150, 150, 0.66);
+  border: 4px solid rgba(150, 150, 150, 0.66);
+  background-clip: content-box;
+}
+.markdown-preview-enhanced {
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  overflow: initial;
+  margin: 10px 13px 10px 13px;
+  padding: 2em;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+.markdown-preview-enhanced > :first-child {
+  margin-top: 0;
+}
+.markdown-preview-enhanced[for="preview"] {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+  font-size: 16px;
+  display: block;
+  position: absolute;
+}
+.markdown-preview-enhanced h1,
+.markdown-preview-enhanced h2,
+.markdown-preview-enhanced h3,
+.markdown-preview-enhanced h4,
+.markdown-preview-enhanced h5,
+.markdown-preview-enhanced h6 {
+  line-height: 1.2;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  color: #000000;
+}
+.markdown-preview-enhanced h1 {
+  font-size: 2.25em;
+  font-weight: 300;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #d6d6d6;
+}
+.markdown-preview-enhanced h2 {
+  font-size: 1.75em;
+  font-weight: 400;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #d6d6d6;
+}
+.markdown-preview-enhanced h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.markdown-preview-enhanced h4 {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+.markdown-preview-enhanced h5 {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.markdown-preview-enhanced h6 {
+  font-size: 1.0em;
+  font-weight: 600;
+}
+.markdown-preview-enhanced h1,
+.markdown-preview-enhanced h2,
+.markdown-preview-enhanced h3,
+.markdown-preview-enhanced h4,
+.markdown-preview-enhanced h5 {
+  font-weight: 600;
+}
+.markdown-preview-enhanced h5 {
+  font-size: 1em;
+}
+.markdown-preview-enhanced h6 {
+  color: #5c5c5c;
+}
+.markdown-preview-enhanced h1,
+.markdown-preview-enhanced h2 {
+  border-bottom: 1px solid #d6d6d6;
+}
+.markdown-preview-enhanced strong {
+  color: #000000;
+}
+.markdown-preview-enhanced del {
+  color: #5c5c5c;
+}
+.markdown-preview-enhanced a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+.markdown-preview-enhanced a {
+  color: #08c;
+  text-decoration: none;
+}
+.markdown-preview-enhanced a:hover {
+  color: #0050a3;
+  text-decoration: none;
+}
+.markdown-preview-enhanced img,
+.markdown-preview-enhanced svg {
+  max-width: 100%;
+}
+.markdown-preview-enhanced > p {
+  margin-top: 0;
+  margin-bottom: 16px;
+  word-wrap: break-word;
+}
+.markdown-preview-enhanced > ul,
+.markdown-preview-enhanced > ol {
+  margin-bottom: 16px;
+}
+.markdown-preview-enhanced ul,
+.markdown-preview-enhanced ol {
+  padding-left: 2em;
+}
+.markdown-preview-enhanced ul.no-list,
+.markdown-preview-enhanced ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+.markdown-preview-enhanced ul ul,
+.markdown-preview-enhanced ul ol,
+.markdown-preview-enhanced ol ol,
+.markdown-preview-enhanced ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.markdown-preview-enhanced li {
+  margin-bottom: 0;
+}
+.markdown-preview-enhanced li.task-list-item {
+  list-style: none;
+}
+.markdown-preview-enhanced li > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.markdown-preview-enhanced .task-list-item-checkbox {
+  margin: 0 0.2em 0.25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-preview-enhanced .task-list-item-checkbox:hover {
+  cursor: pointer;
+}
+.markdown-preview-enhanced blockquote {
+  margin: 16px 0;
+  font-size: inherit;
+  padding: 0 15px;
+  color: #5c5c5c;
+  border-left: 4px solid #d6d6d6;
+}
+.markdown-preview-enhanced blockquote > :first-child {
+  margin-top: 0;
+}
+.markdown-preview-enhanced blockquote > :last-child {
+  margin-bottom: 0;
+}
+.markdown-preview-enhanced hr {
+  height: 4px;
+  margin: 32px 0;
+  background-color: #d6d6d6;
+  border: 0 none;
+}
+.markdown-preview-enhanced table {
+  margin: 10px 0 15px 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+.markdown-preview-enhanced table th {
+  font-weight: bold;
+  color: #000000;
+}
+.markdown-preview-enhanced table td,
+.markdown-preview-enhanced table th {
+  border: 1px solid #d6d6d6;
+  padding: 6px 13px;
+}
+.markdown-preview-enhanced dl {
+  padding: 0;
+}
+.markdown-preview-enhanced dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+.markdown-preview-enhanced dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+.markdown-preview-enhanced code {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 0.85em !important;
+  color: #000000;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  padding: 0.2em 0;
+}
+.markdown-preview-enhanced code::before,
+.markdown-preview-enhanced code::after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+.markdown-preview-enhanced pre > code {
+  padding: 0;
+  margin: 0;
+  font-size: 0.85em !important;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+.markdown-preview-enhanced .highlight {
+  margin-bottom: 16px;
+}
+.markdown-preview-enhanced .highlight pre,
+.markdown-preview-enhanced pre {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  padding: 16px;
+  overflow: auto;
+  font-size: 0.85em !important;
+  line-height: 1.45;
+  color: #333;
+  background-color: #f0f0f0 !important;
+  border: #d6d6d6;
+  border-radius: 3px;
+}
+.markdown-preview-enhanced .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+.markdown-preview-enhanced pre {
+  word-wrap: break-word;
+  white-space: normal;
+  word-break: break-all;
+}
+.markdown-preview-enhanced pre .section {
+  opacity: 1;
+}
+.markdown-preview-enhanced pre code,
+.markdown-preview-enhanced pre tt {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+.markdown-preview-enhanced pre code:before,
+.markdown-preview-enhanced pre tt:before,
+.markdown-preview-enhanced pre code:after,
+.markdown-preview-enhanced pre tt:after {
+  content: normal;
+}
+.markdown-preview-enhanced p,
+.markdown-preview-enhanced blockquote,
+.markdown-preview-enhanced ul,
+.markdown-preview-enhanced ol,
+.markdown-preview-enhanced dl,
+.markdown-preview-enhanced pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.markdown-preview-enhanced pre.editor-colors.lineNo {
+  counter-reset: lineNo;
+}
+.markdown-preview-enhanced pre.editor-colors.lineNo .line::before {
+  display: inline-block;
+  counter-increment: lineNo;
+  content: counter(lineNo);
+  text-align: right;
+  padding: 0;
+  margin-left: -1em;
+  margin-right: 1.5em;
+}
+.markdown-preview-enhanced pre.editor-colors.lineNo.lineno-100 .line::before {
+  width: 2em;
+}
+.markdown-preview-enhanced pre.editor-colors.lineNo.lineno-1000 .line::before {
+  width: 2.5em;
+}
+.markdown-preview-enhanced pre.editor-colors.lineNo.lineno-10000 .line::before {
+  width: 3em;
+}
+.markdown-preview-enhanced pre.editor-colors.lineNo.lineno-100000 .line::before {
+  width: 3.5em;
+}
+.markdown-preview-enhanced kbd {
+  color: #000000;
+  border: 1px solid #d6d6d6;
+  border-bottom: 2px solid #c7c7c7;
+  padding: 2px 4px;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+}
+.markdown-preview-enhanced .pagebreak,
+.markdown-preview-enhanced .newpage {
+  page-break-before: always;
+}
+@media screen and (min-width: 914px) {
+  .markdown-preview-enhanced {
+    width: 980px;
+    margin: 10px auto;
+    background: #fff;
+  }
+}
+@media screen and (max-width: 400px) {
+  .markdown-preview-enhanced {
+    font-size: 14px;
+    margin: 0 auto;
+    padding: 15px;
+  }
+}
+@media print {
+  .markdown-preview-enhanced {
+    background-color: #fff;
+    /*table,*/
+  }
+  .markdown-preview-enhanced h1,
+  .markdown-preview-enhanced h2,
+  .markdown-preview-enhanced h3,
+  .markdown-preview-enhanced h4,
+  .markdown-preview-enhanced h5,
+  .markdown-preview-enhanced h6 {
+    color: #000000;
+    page-break-after: avoid;
+  }
+  .markdown-preview-enhanced blockquote {
+    color: #5c5c5c;
+  }
+  .markdown-preview-enhanced pre {
+    page-break-inside: avoid;
+  }
+  .markdown-preview-enhanced table {
+    display: table;
+  }
+  .markdown-preview-enhanced img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .markdown-preview-enhanced pre,
+  .markdown-preview-enhanced code {
+    word-wrap: break-word;
+    white-space: normal;
+  }
+}
+.markdown-preview-enhanced .mathjax-exps .MathJax_Display {
+  text-align: center !important;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk {
+  position: relative;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk .output-div {
+  overflow-x: auto;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk .output-div svg {
+  display: block;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk pre {
+  cursor: text;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk .btn-group {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk .btn-group .run-btn,
+.markdown-preview-enhanced[for="preview"] .code-chunk .btn-group .run-all-btn {
+  float: right;
+  margin-left: 4px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  color: #eee;
+  background-color: #528bff;
+  background-image: none;
+  border: none;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk .btn-group .run-btn:hover,
+.markdown-preview-enhanced[for="preview"] .code-chunk .btn-group .run-all-btn:hover {
+  background-color: #4b7fe8;
+  cursor: pointer;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk:hover .btn-group {
+  display: block;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk .status {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.85em;
+  color: inherit;
+  padding: 2px 6px;
+  background-color: rgba(0, 0, 0, 0.04);
+  display: none;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk.running .btn-group {
+  display: none;
+}
+.markdown-preview-enhanced[for="preview"] .code-chunk.running .status {
+  display: block;
+}
+.markdown-preview-enhanced:not([for="preview"]) .code-chunk .btn-group {
+  display: none;
+}
+.markdown-preview-enhanced:not([for="preview"]) .code-chunk .status {
+  display: none;
+}
+/*
+ * Reveal.js styles
+ */
+[data-presentation-preview-mode] {
+  background-color: #f4f4f4;
+}
+[data-presentation-preview-mode] .preview-slides {
+  width: 100%;
+}
+[data-presentation-preview-mode] .preview-slides .slide {
+  position: relative;
+  background-color: #fff;
+  padding: 2em !important;
+  margin-bottom: 12px;
+  text-align: left !important;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0px 0px 16px 4px #eeeeee;
+  font-size: 24px;
+}
+[data-presentation-preview-mode] .preview-slides .slide h1,
+[data-presentation-preview-mode] .preview-slides .slide h2,
+[data-presentation-preview-mode] .preview-slides .slide h3,
+[data-presentation-preview-mode] .preview-slides .slide h4,
+[data-presentation-preview-mode] .preview-slides .slide h5,
+[data-presentation-preview-mode] .preview-slides .slide h6 {
+  margin-top: 0;
+}
+[data-presentation-preview-mode] .preview-slides .slide .background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+[data-presentation-preview-mode] .preview-slides .slide .background-iframe,
+[data-presentation-preview-mode] .preview-slides .slide .background-iframe-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border: none;
+  z-index: 1;
+}
+[data-presentation-preview-mode] .preview-slides .slide .background-iframe-overlay {
+  z-index: 2;
+}
+[data-presentation-preview-mode] section {
+  display: block;
+  width: 100%;
+  transform-style: preserve-3d;
+  font-size: 100%;
+  font: inherit;
+}
+.markdown-preview-enhanced[data-presentation-mode] {
+  font-size: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.markdown-preview-enhanced[data-presentation-mode] h1,
+.markdown-preview-enhanced[data-presentation-mode] h2,
+.markdown-preview-enhanced[data-presentation-mode] h3,
+.markdown-preview-enhanced[data-presentation-mode] h4,
+.markdown-preview-enhanced[data-presentation-mode] h5,
+.markdown-preview-enhanced[data-presentation-mode] h6 {
+  margin-top: 0;
+}
+.markdown-preview-enhanced[data-presentation-mode] strong {
+  font-weight: bold;
+}
+.markdown-preview-enhanced[data-presentation-mode]::-webkit-scrollbar {
+  display: none;
+}
+.markdown-preview-enhanced .slides {
+  text-align: left !important;
+}
+
+    /*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed.
+ *
+ * If you are unfamiliar with LESS, you can read more about it here:
+ * http://www.lesscss.org
+ */
+
+    </style>
+
+    <link rel="stylesheet" href="file:////Users/gslepak/.atom/packages/markdown-preview-enhanced/node_modules/katex/dist/katex.min.css">
+
+    
+  </head>
+  <body class="markdown-preview-enhanced   "  >
+
+  <h1 id="bylaws-of-the-okturtles-foundation">Bylaws of the okTurtles Foundation</h1>
+<h2 id="article-i-name-purpose">ARTICLE I - NAME, PURPOSE</h2>
+<ol>
+<li>The name of the organization shall be the okTurtles Foundation.</li>
+<li>The okTurtles Foundation is organized for the purpose of conducting any activity permitted under US Internal Revenue Code Section 501(c)(3) and applicable law.</li>
+</ol>
+<h2 id="article-ii-membership">ARTICLE II - MEMBERSHIP</h2>
+<ol>
+<li>The okTurtles Foundation shall have no members.</li>
+</ol>
+<h2 id="article-iii-annual-meeting">ARTICLE III - ANNUAL MEETING</h2>
+<ol>
+<li><strong>Annual Meeting.</strong> The date of the regular annual meeting shall be set by the Board of Directors of the okTurtles Foundation, who shall also set the time and place.</li>
+<li><strong>Special Meetings.</strong> Special meetings may be called by any officer of the okTurtles Foundation, or any member of the board of directors at any time, provided calling of such a meeting complies with notice requirements articulated below.</li>
+<li><strong>Notice.</strong> Notice of each meeting shall be given three days in advance of that meeting.</li>
+</ol>
+<h2 id="article-iv-board-of-directors">ARTICLE IV - BOARD OF DIRECTORS</h2>
+<ol>
+<li><strong>Board Role, Size, Compensation.</strong> The board of directors shall have three members. The size of the board of directors may be amended from time to time as best serves the interests of the okTurtles Foundation, provided such amendments are in compliance with applicable state law.</li>
+<li><strong>Meetings.</strong> The board shall meet annually at an agreed upon time and place.</li>
+<li><strong>Board Elections.</strong> Election of new directors will occur as the first item of business at the annual meeting of the okTurtles Foundation, or at special meetings in order to fill a vacancy. Directors will be elected by a unanimous vote of the current directors whenever there are three acting directors, otherwise, if more than three acting directors are on the board, a majority vote is required.</li>
+<li><strong>Terms.</strong> Unless board members resign, terms of office shall be for life. If there comes a time when there is substantial public interest in serving on the board of the okTurtles Foundation, this section may be amended by two-thirds majority vote to limit terms, or subject board members to annual election, as the then board of directors sees fit.</li>
+<li><strong>Quorum.</strong> A majority of the board members must be in attendance before business can be transacted or motions made or passed. Attendance may be in person, via phone, or by some other electronic method.</li>
+<li><strong>Notice.</strong> An official board meeting requires that each board member have notice of the meeting given at least three days in advance of that meeting. A waiver signed by a person entitled to notice shall be deemed equivalent to the giving of notice, but shall only be valid for items on the proposed agenda. A person's attendance at a meeting shall also constitute a waiver of notice of that meeting, except when the person objects, at the beginning of the meeting, to the transaction of any business because the meeting was not lawfully called or convened.</li>
+<li><strong>Officers and Duties.</strong>
+<ul>
+<li>Officers: There shall be four officers of the board: a president, chairman, vice president and secretary. One board member may serve in one, some, or all of these capacities so long as doing so does not conflict with state law.</li>
+<li>Duties: Officer duties are as follows: The president, chairman, secretary or treasurer may preside or arrange for other directors to preside at each meeting in the following order: president, chairman, secretary, treasurer and other members. The president, chairman, secretary, treasurer or other board members may chair committees on special subjects as designated by the board. The secretary shall be responsible for keeping records of board actions, including overseeing the taking of minutes at all board meetings, sending out meeting announcements, distributing copies of minutes and the agenda to each board member, and assuring that corporate records are maintained. Any officer listed herein may delegate this duty to any other board member who consents to accept it.</li>
+</ul></li>
+<li><strong>Vacancies.</strong> When a vacancy on the board exists, nominations for new members may be received from present board members by the president, chairman, secretary or treasurer within ten working days in advance of a board meeting. Board members shall be given three days advance notice of any nominations to be voted upon at the next board meeting. If events transpire such that there is only one director on the board of directors, that director may unilaterally appoint a second director. If events transpire such that there are no directors in office, the current volunteers and employees as well as the present and past presidents of the okTurtles Foundation may, by majority of those voting, elect one director.</li>
+<li><strong>Resignation, Termination and Absences.</strong> Resignation from the board must be in writing and received by the secretary or tendered at a board meeting. A board member may be removed by a two-thirds vote of the remaining directors where such removal is deemed by the voting directors to be in the best interests of the okTurtles Foundation and where such removal does not conflict with any applicable law.</li>
+<li><strong>Special Meetings.</strong> Special meetings of the Board shall be called upon the request of the president, vice-president, secretary, treasurer or any other board member. Special meetings require three days advance notice. A waiver signed by a person entitled to notice shall be deemed equivalent to the giving of notice, but shall only be valid for items on the proposed agenda. A person's attendance at a meeting shall also constitute a waiver of notice of that meeting, except when the person objects, at the beginning of the meeting, to the transaction of any business because the meeting was not lawfully called or convened.</li>
+</ol>
+<h2 id="article-v-committees">ARTICLE V - COMMITTEES</h2>
+<ol>
+<li>The board may create committees as needed. The board may appoint any individuals it deems appropriate to such committees without regard to age. Appointments shall be by majority vote of the board. Committees may be convened prior to the annual meeting by any officer of the okTurtles Foundation without calling a meeting of the board. Committees created in this fashion are subject to ratification by a majority of the board members present at the next annual meeting. The president, chairman, secretary or treasurer may appoint committee chairs. In the event of disagreement, the choice of officers in the order listed shall take priority.</li>
+<li>The president, chairman, secretary and treasurer of the okTurtles Foundation serve as the members of the executive committee. Except for the power to amend the articles of incorporation and bylaws, the executive committee shall have all of the powers and authority of the board of directors in the intervals between meetings of the board of directors, subject to the direction and control of the board of directors.</li>
+</ol>
+<h2 id="article-vi-indemnification">ARTICLE VI - INDEMNIFICATION</h2>
+<p>The okTurtles Foundation shall, to the extent legally permissible, indemnify each person who may serve or who has served at any time as an officer, director, or employee of the corporation against all expenses and liabilities, including, without limitation, counsel fees, judgments, fines, excise taxes, penalties and settlement payments, reasonably incurred by or imposed upon such person in connection with any threatened, pending, or completed action, suit, or proceeding in which he or she may become involved by reason of his or her service in such capacity; provided that no indemnification shall be provided for any such person with respect to any matter as to which he or she shall have been finally adjudicated in any proceeding not to have acted in good faith in the reasonable belief that such action was in the best interests of the corporation; and further provided that any compromise or settlement payment shall be approved by a majority vote of a quorum of directors who are not at that time parties to the proceeding.</p>
+<p>The indemnification provided hereunder shall inure to the benefit of the heirs, executors and administrators of persons entitled to indemnification hereunder. The right of indemnification under this Article shall be in addition to and not exclusive of all other rights to which any person may be entitled.</p>
+<p>No amendment or repeal of the provisions of this Article which adversely affects the right of an indemnified person under this Article shall apply to such person with respect to those acts or omissions which occurred at any time prior to such amendment or repeal, unless such amendment or repeal was voted by or was made with the written consent of such indemnified person. This Article constitutes a contract between the corporation and the indemnified officers, directors, employees and volunteers. No amendment or repeal of the provisions of this Article which adversely affects the right of an indemnified officer, director, employee or volunteer under this Article shall apply to such officer, director, employee or volunteer with respect to those acts or omissions which occurred at any time prior to such amendment or repeal.</p>
+<h2 id="article-vii-conflict-of-interest-policy">ARTICLE VII – CONFLICT OF INTEREST POLICY</h2>
+<h3 id="section-i-purpose">Section I: Purpose</h3>
+<p>The purpose of the conflict of interest policy is to protect the interest of this tax-exempt organization (the okTurtles Foundation) when it is contemplating entering into a transaction or arrangement that might benefit the private interest of an officer or director of the Organization or might result in a possible excess benefit transaction. This policy is intended to supplement but not replace any applicable state and federal laws governing conflict of interest applicable to nonprofit and charitable organizations.</p>
+<h3 id="section-ii-definitions">Section II: Definitions</h3>
+<ul>
+<li>Interested Person: Any director, principal officer, or member of a committee with governing board delegated powers, who has a direct or indirect financial interest, as defined below, is an interested person.</li>
+<li>Financial Interest: A person has a financial interest if the person has, directly or indirectly, through business, investment, or family:
+<ul>
+<li>An ownership or investment interest in any entity with which the Organization has a transaction or arrangement,</li>
+<li>A compensation arrangement with the Organization or with any entity or individual with which the Organization has a transaction or arrangement, or</li>
+<li>A potential ownership or investment interest in, or compensation arrangement with, any entity or individual with which the Organization is negotiating a transaction or arrangement.</li>
+</ul></li>
+</ul>
+<p>Compensation includes direct and indirect remuneration, as well as gifts or favors that are not insubstantial.</p>
+<p>A financial interest is not necessarily a conflict of interest. Under Section III, Subsection 2, a person who has a financial interest may have a conflict of interest only if the appropriate governing board or committee decides that a conflict of interest exists.</p>
+<h3 id="section-iii-procedures">Section III: Procedures</h3>
+<ol>
+<li>Duty to Disclose.<br>
+In connection with any actual or possible conflict of interest, an interested person must disclose the existence of the financial interest and be given the opportunity to disclose all material facts to the directors and members of committees with governing board delegated powers considering the proposed transaction or arrangement.</li>
+<li>Determining Whether a Conflict of Interest Exists.<br>
+After disclosure of the financial interest and all material facts, and after any discussion with the interested person, he/she shall leave the governing board or committee meeting while the determination of a conflict of interest is discussed and voted upon. The remaining board or committee members shall decide if a conflict of interest exists.</li>
+<li>Procedures for Addressing the Conflict of Interest:
+<ul>
+<li>An interested person may make a presentation at the governing board or committee meeting, but after the presentation, he/she shall leave the meeting during the discussion of, and the vote on, the transaction or arrangement involving the possible conflict of interest.</li>
+<li>The chairperson of the governing board or committee shall, if appropriate, appoint a disinterested person or committee to investigate alternatives to the proposed transaction or arrangement.</li>
+<li>After exercising due diligence, the governing board or committee shall determine whether the Organization can obtain with reasonable efforts a more advantageous transaction or arrangement from a person or entity that would not give rise to a conflict of interest.</li>
+<li>If a more advantageous transaction or arrangement is not reasonably possible under circumstances not producing a conflict of interest, the governing board or committee shall determine by a majority vote of the disinterested directors whether the transaction or arrangement is in the Organization's best interest, for its own benefit, and whether it is fair and reasonable. In conformity with the above determination it shall make its decision as to whether to enter into the transaction or arrangement.</li>
+</ul></li>
+<li>Violations of the Conflicts of Interest Policy:
+<ul>
+<li>If the governing board or committee has reasonable cause to believe a member has failed to disclose actual or possible conflicts of interest, it shall inform the member of the basis for such belief and afford the member an opportunity to explain the alleged failure to disclose.</li>
+<li>If, after hearing the member's response and after making further investigation as warranted by the circumstances, the governing board or committee determines the member has failed to disclose an actual or possible conflict of interest, it shall take appropriate disciplinary and corrective action.</li>
+</ul></li>
+</ol>
+<h3 id="section-iv-records-of-proceedings">Section IV: Records of Proceedings</h3>
+<p>The minutes of the governing board and all committees with board-delegated powers shall contain:</p>
+<ol>
+<li>The names of the persons who disclosed or otherwise were found to have a financial interest in connection with an actual or possible conflict of interest, the nature of the financial interest, any action taken to determine whether a conflict of interest was present, and the governing board's or committee's decision as to whether a conflict of interest in fact existed.</li>
+<li>The names of the persons who were present for discussions and votes relating to the transaction or arrangement, the content of the discussion, including any alternatives to the proposed transaction or arrangement, and a record of any votes taken in connection with the proceedings.</li>
+</ol>
+<h3 id="section-v-compensation">Section V: Compensation</h3>
+<ol>
+<li>A voting member of the governing board who receives compensation, directly or indirectly, from the Organization for services is precluded from voting on matters pertaining to that member's compensation.</li>
+<li>A voting member of any committee whose jurisdiction includes compensation matters and who receives compensation, directly or indirectly, from the Organization for services is precluded from voting on matters pertaining to that member's compensation.</li>
+<li>No voting member of the governing board or any committee whose jurisdiction includes compensation matters and who receives compensation, directly or indirectly, from the Organization, either individually or collectively, is prohibited from providing information to any committee regarding compensation.</li>
+</ol>
+<h3 id="section-vi-annual-statements">Section VI: Annual Statements</h3>
+<p>Each director, principal officer and member of a committee with governing board delegated powers shall annually sign a statement which affirms such person:</p>
+<ol>
+<li>Has received a copy of the conflicts of interest policy;</li>
+<li>Has read and understands the policy;</li>
+<li>Has agreed to comply with the policy; and</li>
+<li>Understands the Organization is charitable and in order to maintain its federal tax exemption it must engage primarily in activities which accomplish one or more of its tax-exempt purposes.</li>
+</ol>
+<h3 id="section-vii-periodic-reviews">Section VII: Periodic Reviews</h3>
+<p>To ensure the Organization operates in a manner consistent with charitable purposes and does not engage in activities that could jeopardize its tax-exempt status, periodic reviews shall be conducted. The periodic reviews shall, at a minimum, include the following subjects:</p>
+<ol>
+<li>Whether compensation arrangements and benefits are reasonable, based on competent survey information, and the result of arm's length bargaining.</li>
+<li>Whether partnerships, joint ventures, and arrangements with management organizations conform to the Organization's written policies, are properly recorded, reflect reasonable investment or payments for goods and services, further charitable purposes and do not result in inurement, impermissible private benefit or in an excess benefit transaction.</li>
+</ol>
+<h3 id="section-viii-use-of-outside-experts">Section VIII: Use of Outside Experts</h3>
+<p>When conducting the periodic reviews as provided for in Section VII, the Organization may, but need not, use outside advisors. If outside experts are used, their use shall not relieve the governing board of its responsibility for ensuring periodic reviews are conducted.</p>
+<h2 id="article-viii-software-licenses">Article VIII - Software Licenses</h2>
+<ol>
+<li>All software belonging to the okTurtles Foundation shall be licensed under the terms of an open source license. Currently, that license must be the Mozilla Public License 2.0 (MPL 2.0), the GNU Public License 3.0 (GPL 3.0), or the GNU Affero General Public License (GNU AGPLv3).</li>
+</ol>
+<h2 id="article-ix-amendments">ARTICLE IX - AMENDMENTS</h2>
+<ol>
+<li>These bylaws may be amended when necessary by a two-thirds majority of the board of directors. Proposed amendments may be submitted to the president, vice-president or secretary and notice of them shall be given with notice of any annual or special meeting.</li>
+</ol>
+<p>These bylaws were approved at a meeting of the board of directors of the okTurtles Foundation on June 6, 2014 and were amended at a meeting of the board of directors of the okTurtles Foundation on March 27, 2016, and on May 9, 2017.</p>
+
+
+  </body>
+  
+</html>
