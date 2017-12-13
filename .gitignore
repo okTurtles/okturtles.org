@@ -4,3 +4,4 @@ index2.html
 node_modules/
 .sass-cache
 reference
+/.well-known
