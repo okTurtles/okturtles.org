@@ -231,3 +231,14 @@ sup a { color: #27AE60; }
 .bottom .tooltip { top: -0.65em; bottom: auto; }
 
 .top .tooltip { bottom: -0.65em; top: auto; }
+
+.activities .header { padding: 60px 0; background-color: #27ae60; }
+.activities .header h1 { font-size: 40px; }
+.activities .header h3 { font-size: 1.1em; }
+.activities .activities-content { padding: 80px 0; background-color: #f5f5f5; }
+.activities .activities-content h2 { font-size: 34px; color: #0C6130; margin-bottom: 10px; }
+.activities .activities-content h3 { font-size: 22px; color: #5a5a5a; margin-bottom: 10px; }
+.activities .activities-content ul { margin-left: 20px; margin-bottom: 10px; padding: 20px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.activities .activities-content ul li { color: #5a5a5a; list-style: disc; position: relative; display: list-item; margin-bottom: 10px; }
+.activities .activities-content ul li a:hover { text-decoration: underline; }
+.activities .activities-content .top-spacer { margin-top: 30px; }
