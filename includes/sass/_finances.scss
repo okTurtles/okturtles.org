@@ -1,0 +1,50 @@
+.activities{
+    .header{
+        padding: 60px 0;
+        background-color: $green;
+        h1{
+            font-size: 40px;
+        }
+        h3{
+            font-size: 1.1em;
+        }
+    }
+
+    .activities-content{
+        padding: 80px 0;
+        background-color: $white;
+        h2{
+            font-size: 34px;
+            color: $dark-green;
+            margin-bottom: 10px;
+        }
+        h3{
+            font-size: 22px;
+            color: $grey;
+            margin-bottom: 10px;
+        }
+        ul{
+            margin-left: 20px;
+            margin-bottom: 10px;
+            padding: 20px;
+            -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            li{
+                color: $grey;
+                list-style: disc;
+                position: relative;
+                display: list-item;
+                margin-bottom: 10px;
+                a:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .top-spacer{
+            margin-top: 30px;
+        }
+
+    }
+}
