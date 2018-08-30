@@ -10,7 +10,7 @@
 	span.tt {
 		font-family: "Courier", monospace;
 	}
-	.donate-content p a, li a {
+	.donate-content p a, .donate-content li a {
 		text-decoration: underline;
 	}
 	</style>
@@ -20,7 +20,7 @@
 	<!--# include file="/includes/header.html" -->
 
 	<!-- donate -->
-	<section class="donate-content">
+	<section class="donate-content" style="padding-bottom: 0">
 		<div class="container">
 			<h2>Donate to the okTurtles Foundation</h2>
 
@@ -36,21 +36,21 @@
 
 			<p class="top-spacer">Direct Cryptocurrency Donation</p>
 			<ul style="padding: 20px 20px 20px 0px !important">
-				<li><span class="tt">BTC.1:</span> <span class="addr">1GFyCuhDdc5AKke6XxrLqigwzGN9Kjtoex</span></li>
-				<li><span class="tt">BTC.2:</span> <span class="addr">bc1qs4l0y8x6z5nqfm240jadxwps5epvsshy6uaw8h</span> (segwit)</li>
-				<li><span class="tt">ETH:</span> <span class="addr">0x71a690ff6b4ff7f57b8bd86cfcfaff18e97935ee</span></li>
-				<li><span class="tt">LTC:</span> <span class="addr">LYmmrvyvLCnT35DsDeWRGV4eBrxKMHHXzX</span></li>
+				<li><span class="tt">BTC:</span> <span class="addr">1GFyCuhDdc5AKke6XxrLqigwzGN9Kjtoex</span></li>
+				<li><span class="tt">BTC (segwit):</span> <span class="addr">bc1qs4l0y8x6z5nqfm240jadxwps5epvsshy6uaw8h</span></li>
+				<li><span class="tt">ETH:</span> <span class="addr">0x7b39b2e9c6ede630a6Dd77AA21703060c55Dfed6</span></li>
+				<li><span class="tt">LTC:</span> <span class="addr">LXE6qeUw6f9eALb31X31S6TheTNZ6XkduT</span></li>
 				<li><span class="tt">XMR:</span>
-					<br/><br/><span class="addr">44gWLkT6buwVQxnimP5Pt2UkjdTmcVvMmTGW56WLKqNqV2dHcEQzdSfYc3CnbypSaJTEtJPnXzLJvSGcx9T1mTshQ2QtZCY</span></li>
+					<br/><br/><span class="addr">4GdoN7NCTi8a5gZug7PrwZNKjvHFmKeV11L6pNJPgj5QNEHsN6eeX3DaAQFwZ1ufD4LYCZKArktt113W7QjWvQ7CWGbFaym1tGiT6dw6WY</span></li>
 			</ul>
-			<p style="margin: -20px 0 10px 0px">
-				<!-- Need a different option? <a href="mailto:hi@okturtles.com">Let us know.</a> -->
-				<i style="color:black">Afterward, please <a href="mailto:hi@okturtles.com">contact us</a> so we can thank you and send you a receipt for your records and tax purposes.</i>
-			</p>
-
+			<center>
+        <p style="margin: -20px 0 10px 0px; color:black">
+  				Afterward, please <b><a href="mailto:hi@okturtles.com">contact us</a></b> so we can thank you and send you a receipt for your records and tax purposes.
+  			</p>
+      </center>
 			<p class="top-spacer">Other cryptocurrency using ShapeShift</p>
 			<p style="margin-top: 10px">
-				<script>function shapeshift_click(a,e){e.preventDefault();var link=a.href;window.open(link,'1418115287605','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0');return false;}</script> <a onclick="shapeshift_click(this, event);" href="https://shapeshift.io/shifty.html?destination=1ADTs29fpMosHgYWqDKSTa5nyLT2mGMLky&amp;output=BTC&amp;amount="><img src="https://shapeshift.io/images/shifty/small_light_altcoins.png" class="ss-button"></a>
+				<script>function shapeshift_click(a,e){e.preventDefault();var link=a.href;window.open(link,'1418115287605','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0');return false;}</script> <a onclick="shapeshift_click(this, event);" href="https://shapeshift.io/shifty.html?destination=1GFyCuhDdc5AKke6XxrLqigwzGN9Kjtoex&amp;output=BTC&amp;amount="><img src="https://shapeshift.io/images/shifty/small_light_altcoins.png" class="ss-button"></a>
 			</p>
 
 			<p class="top-spacer">Need a different option? <a href="mailto:hi@okturtles.com">Let us know.</a></p>
@@ -63,47 +63,19 @@
 				<i>Afterward, <a href="mailto:hi@okturtles.com">contact us</a> so we can thank you.</i>
 			</p> -->
 
-			<p class="spacer top-spacer">
+			<p class="top-spacer">
 		    The okTurtles Foundation is a 501(c)(3) non-profit corporation, and our U.S. federal tax ID number is 47-1188610.
 		  </p>
 		</div>
 	</section>
-
+  <section class="donate-content">
+    <div class="container">
+      <h2>Finances</h2>
+      <p>
+        View <a href="/finances/">our finances by fiscal-year.</a>
+      </p>
+    </div>
+  </section>
 	<!--# include file="/includes/footer.html" -->
-
-  <script type="text/javascript">
-  function checkRequiredFields(form){
-    function isFilled(field){
-      if (field.value.length < 1){
-        return false;
-      }
-      return true;
-    }
-    var elements = form.elements;
-    var invalid = false;
-    for(var i=0; i<elements.length; i++) {
-      elements[i].className = elements[i].className.replace('bitpay-donate-error', '');
-      if(elements[i].className.indexOf("required") != -1) {
-        if(!isFilled(elements[i])){
-          elements[i].className = elements[i].className + ' bitpay-donate-error';
-          invalid = true;
-        };
-      };
-    }
-    if ( invalid ) {
-       return false;
-    }
-    var donationElement = document.getElementById('donation-value');
-    if(donationElement){
-      var enteredDonation = Number(donationElement.value);
-      var maximumDonation = Number(document.getElementById('reference-maximum').value);
-      if(enteredDonation > maximumDonation){
-        alert("Your donation was larger than the allowed maximum of " + Number(maximumDonation).toFixed(2))
-        return false;
-      };
-    };
-    return true;
-  };
-  </script>
 </body>
 </html>
