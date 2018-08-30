@@ -25,42 +25,45 @@
 	<link href="includes/js/video-js.min.css" rel="stylesheet">
 	<script src="includes/js/video.min.js"></script>
 
-	<script type="text/javascript">
-		$(document).ready(function() {
-			var hash = window.location.hash.slice(1);
-			// console.log('hash: ' + hash);
-			var map = {
-				'mitm_proof': '/browser-extension/#mitm_proof',
-				'footer': 'https://github.com/okTurtles/dnschain/blob/master/README.md#community',
-				'memory-of': '/team/#memory-of',
-				'faq': '/browser-extension/#faq',
-				'oktvs': 'https://github.com/okTurtles/dnschain/blob/master/docs/Comparison.md',
-				'DNSChain': 'https://github.com/okTurtles/dnschain'
-			};
-			if (map[hash]) {
-				console.log('redirecting to => ' + map[hash]);
-				window.location.replace(map[hash]); // http://stackoverflow.com/a/506004/1781435
-			}
+  <script type="text/javascript">
+  /* eslint-disable indent, no-trailing-spaces, eol-last, no-multiple-empty-lines */
+  /* global $, videojs, _paq */
+  $(document).ready(function () {
+    var hash = window.location.hash.slice(1)
+    // console.log('hash: ' + hash)
+    var map = {
+      'mitm_proof': '/browser-extension/#mitm_proof',
+      'footer': 'https://github.com/okTurtles/dnschain/blob/master/README.md#community',
+      'memory-of': '/team/#memory-of',
+      'faq': '/browser-extension/#faq',
+      'oktvs': 'https://github.com/okTurtles/dnschain/blob/master/docs/Comparison.md',
+      'DNSChain': 'https://github.com/okTurtles/dnschain'
+    }
+    if (map[hash]) {
+      console.log('redirecting to => ' + map[hash])
+      window.location.replace(map[hash]) // http://stackoverflow.com/a/506004/1781435
+    }
 
-			// $pop = new Popcorn('#demoVideo');
-			// $pop.listen('playing', function () {
-			// 		if (typeof _paq !== 'undefined' && _paq !== null)
-			// 				_paq.push(['trackPageView', '/dnschainVideo']);
-			// });
-			// http://docs.videojs.com/docs/guides/plugins.html
-			videojs.plugin('examplePlugin', function examplePlugin() {
-				var playedOnce = false;
-	      this.on('play', function(e) {
-					if (!playedOnce) {
-						playedOnce = true;
-						if (typeof _paq !== 'undefined' && _paq !== null)
-						_paq.push(['trackPageView', '/dnschainVideo']);
-					}
-	      });
-	    });
-			videojs('demoVideo').examplePlugin();
-		});
-	</script>
+    // $pop = new Popcorn('#demoVideo')
+    // $pop.listen('playing', function () {
+    //    if (typeof _paq !== 'undefined' && _paq !== null)
+    //        _paq.push(['trackPageView', '/dnschainVideo'])
+    // })
+    // http://docs.videojs.com/docs/guides/plugins.html
+    videojs.plugin('examplePlugin', function examplePlugin () {
+      var playedOnce = false
+      this.on('play', function (e) {
+        if (!playedOnce) {
+          playedOnce = true
+          if (typeof _paq !== 'undefined' && _paq !== null) {
+            _paq.push(['trackPageView', '/dnschainVideo'])
+          }
+        }
+      })
+    })
+    videojs('demoVideo').examplePlugin()
+  })
+  </script>
 	<style media="screen">
 		.video-container2 {
 		  position: relative;
@@ -69,6 +72,14 @@
 		  width: 100%;
 		  bottom: 200px;
 		  overflow: hidden;
+		}
+		.what-we-do i.fab, .what-we-do i.fas {
+			color:#27ae60;
+			width: 40px;
+			text-align: center;
+			display:inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
 		}
 	</style>
 </head>
@@ -156,23 +167,23 @@
 				</a>
  -->
 				<a class="blog-post-link" href="https://www.youtube.com/watch?v=7S1IqaSLrq8">
-					<i class="fa fa-youtube-play fa-2x" aria-hidden="true" style="margin-right:9px; margin-left:4px; color:#27ae60; display:inline-block"></i>
+					<i class="fab fa-youtube fa-2x" aria-hidden="true"></i>
 					Deconfusing Decentralization
 				</a>
 				<a class="blog-post-link" href="https://blog.okturtles.org/2017/02/coniks-vs-key-transparency-vs-certificate-transparency-vs-blockchains/">
-					<i class="fa fa-file-text-o fa-2x" aria-hidden="true" style="margin-right:11px; margin-left:5px; color:#27ae60; display:inline-block"></i>
+					<i class="fas fa-file fa-2x" aria-hidden="true"></i>
 					DPKI/DNSChain + related technologies
 				</a>
 				<a class="blog-post-link" href="https://groupincome.org/tag/voting/" target="_blank">
-					<i class="fa fa-file-text-o fa-2x" aria-hidden="true" style="margin-right:11px; margin-left:5px; color:#27ae60; display:inline-block"></i>
+					<i class="fas fa-file fa-2x" aria-hidden="true"></i>
 					Voting Systems + Social Choice Theory
 				</a>
 				<a class="blog-post-link" href="https://groupincome.org/shorts/">
-					<i class="fa fa-youtube-play fa-2x" aria-hidden="true" style="margin-right:9px; margin-left:4px; color:#27ae60; display:inline-block"></i>
+					<i class="fab fa-youtube fa-2x" aria-hidden="true"></i>
 					Group Income: Short Videos
 				</a>
 				<a class="blog-post-link" href="http://groupcurrency.org" target="_blank">
-					<i class="fa fa-users fa-2x" aria-hidden="true" style="margin-right:11px; color:#27ae60; display:inline-block"></i>
+					<i class="fas fa-users fa-2x" aria-hidden="true"></i>
 					Group Currency: Cryptocurrency + Basic Income
 				</a>
 			</div>
@@ -193,7 +204,7 @@
 				</div>
 				<div class="link-container">
 					<a class="link" href="https://blog.okturtles.org/2017/02/coniks-vs-key-transparency-vs-certificate-transparency-vs-blockchains/" target="_blank">
-						<i class="fa fa-cloud fa-2x" style="margin-right:11px; margin-left:4px; color:#27ae60; display:inline-block"></i>
+						<i class="fas fa-cloud fa-2x"></i>
 						DPKI: Decentralized Public Key Infrastructure
 					</a>
 				</div>
@@ -203,15 +214,15 @@
 						DNSChain: Secure Blockchain Access
 					</a>
 				</div>
-<!-- 				<div class="link-container" class="fa fa-users fa-2x">
+<!-- 				<div class="link-container" class="fas fa-users fa-2x">
 					<a class="link" href="http://groupcurrency.org" target="_blank">
-						<i class="fa fa-users fa-2x" style="margin-right:11px; margin-left:5px; color:#27ae60; display:inline-block"></i>
+						<i class="fas fa-users fa-2x" style="margin-right:11px; margin-left:5px; color:#27ae60; display:inline-block"></i>
 						Group Currency: Cryptocurrency + Basic Income
 					</a>
 				</div> -->
 				<div class="link-container">
 					<a class="link" href="https://github.com/okTurtles/blockchainid">
-						<!-- <i class="fa fa-user fa-2x" style="margin-right:16px; margin-left:7px; color:#27ae60; display:inline-block"></i> -->
+						<!-- <i class="fas fa-user fa-2x" style="margin-right:16px; margin-left:7px; color:#27ae60; display:inline-block"></i> -->
 						<img src="/includes/images/cloud.png" style="visibility:hidden">
 						BlockchainID: decentralized web login
 					</a>
