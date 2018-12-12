@@ -56,9 +56,18 @@ p { color: #5a5a5a; line-height: 20px; }
 section { position: relative; display: block; width: 100%; }
 
 .container { position: relative; display: block; margin: 0 auto; max-width: 960px; width: 90%; }
+.container a { color: #1479DE; }
+.container a:hover { text-decoration: underline; }
+.container ul { margin-left: 20px; margin-bottom: 10px; padding: 20px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.container ul li { color: #5a5a5a; list-style: disc; position: relative; display: list-item; margin-bottom: 10px; }
+.container ul li a:hover { text-decoration: underline; }
 
 .green { -webkit-transition: all 0.4s ease; -moz-transition: all 0.4s ease; -ms-transition: all 0.4s ease; transition: all 0.4s ease; color: #27ae60; }
 .green:hover { -webkit-transition: all 0.15s ease; -moz-transition: all 0.15s ease; -ms-transition: all 0.15s ease; transition: all 0.15s ease; }
+
+.addr { background-color: #9a9a9a; color: #f5f5f5; padding: 0.2em 0.3em; border-radius: 0.3em; max-width: 100%; display: inline-block; word-wrap: break-word; }
+
+.tt { font-family: "Courier", monospace; }
 
 .header { background-color: #27ae60; padding-top: 100px; padding-bottom: 300px; }
 .header h1 { color: #f5f5f5; }
@@ -148,9 +157,6 @@ section { position: relative; display: block; width: 100%; }
 .donate .header h3 { font-size: 1.1em; }
 .donate .donate-content { padding: 80px 0; background-color: #f5f5f5; }
 .donate .donate-content h2 { font-size: 34px; color: #0C6130; margin-bottom: 30px; }
-.donate .donate-content ul { margin-left: 20px; margin-bottom: 10px; padding: 20px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-.donate .donate-content ul li { color: #5a5a5a; list-style: disc; position: relative; display: list-item; margin-bottom: 10px; }
-.donate .donate-content ul li a:hover { text-decoration: underline; }
 .donate .donate-content .spacer { margin-bottom: 10px; }
 .donate .donate-content .top-spacer { margin-top: 30px; }
 .donate .donate-content .bitpay-donate { margin-bottom: 30px; }
@@ -185,9 +191,6 @@ section { position: relative; display: block; width: 100%; }
 .browser-extension #faq h3:hover { color: #1479DE; text-decoration: none; -webkit-transition: all 0.15s ease; -moz-transition: all 0.15s ease; -ms-transition: all 0.15s ease; transition: all 0.15s ease; }
 .browser-extension #faq p { margin-bottom: 10px; }
 .browser-extension #faq p a:hover { text-decoration: underline; }
-.browser-extension #faq ul { margin-left: 20px; padding: 20px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-.browser-extension #faq ul li { color: #5a5a5a; list-style: disc; position: relative; display: list-item; margin-bottom: 10px; }
-.browser-extension #faq ul li a:hover { text-decoration: underline; }
 .browser-extension #faq a { color: #1479DE; }
 
 .b-blue { color: #1479DE; }
@@ -238,7 +241,4 @@ sup a { color: #27AE60; }
 .activities .activities-content { padding: 80px 0; background-color: #f5f5f5; }
 .activities .activities-content h2 { font-size: 34px; color: #0C6130; margin-bottom: 10px; }
 .activities .activities-content h3 { font-size: 22px; color: #5a5a5a; margin-bottom: 10px; }
-.activities .activities-content ul { margin-left: 20px; margin-bottom: 10px; padding: 20px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-.activities .activities-content ul li { color: #5a5a5a; list-style: disc; position: relative; display: list-item; margin-bottom: 10px; }
-.activities .activities-content ul li a:hover { text-decoration: underline; }
 .activities .activities-content .top-spacer { margin-top: 30px; }

@@ -165,6 +165,32 @@ section {
   margin: 0 auto;
   max-width: 960px;
   width: 90%;
+
+  a{
+    color: $blue;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+
+  ul{
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    li{
+      color: $grey;
+      list-style: disc;
+      position: relative;
+      display: list-item;
+      margin-bottom: 10px;
+      a:hover{
+        text-decoration: underline;
+      }
+    }
+  }
 }
 .green {
   @include transition(all, .4s, ease);
@@ -172,6 +198,18 @@ section {
   &:hover {
     @include transition(all, .15s, ease);
   }
+}
+.addr {
+  background-color: #9a9a9a;
+  color: #f5f5f5;
+  padding: 0.2em 0.3em;
+  border-radius: 0.3em;
+  max-width: 100%;
+  display: inline-block;
+  word-wrap: break-word;
+}
+.tt {
+  font-family: "Courier", monospace;
 }
 
 

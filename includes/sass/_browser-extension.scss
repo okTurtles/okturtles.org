@@ -74,23 +74,6 @@
 				text-decoration: underline;	
 			}
 		}
-		ul{
-			margin-left: 20px;
-			padding: 20px;
-			-webkit-box-sizing: border-box;
-				-moz-box-sizing: border-box;
-				box-sizing: border-box;
-			li{
-				color: $grey;
-				list-style: disc;
-				position: relative;
-				display: list-item;
-				margin-bottom: 10px;
-				a:hover{
-					text-decoration: underline;
-				}
-			}
-		}
 		a{
 			color: $blue;
 		}
