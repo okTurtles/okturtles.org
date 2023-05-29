@@ -403,10 +403,10 @@ section {
   margin-bottom: 7.5rem;
   text-align: left;
   flex-wrap: wrap;
-  max-width: calc(100% - 2rem);
   margin: 0 auto 7.5rem auto;
 
   h3 {
+    font-family: 'proxima_novabold';
     font-size: 1.5rem;
     font-weight: bold;
     color: #141414;
@@ -415,6 +415,7 @@ section {
   }
 
   @media only screen and (max-width: 800px) {
+    max-width: calc(100% - 2rem);
     img {
       max-width: 100%;
     }

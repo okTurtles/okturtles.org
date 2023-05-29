@@ -103,9 +103,10 @@ section { position: relative; display: block; width: 100%; }
 .what-we-do .button { font-size: .9em; text-align: center; position: relative; display: block; max-width: 80px; padding: 11px; border-radius: 6px; background-color: #f5f5f5; color: #1479DE; margin-top: 30px; border: 1px solid #1479DE; }
 .what-we-do .button:hover { background-color: #1479DE; color: #f5f5f5; }
 
-.other-project-list { display: flex; gap: 1.875rem; justify-content: center; margin-bottom: 7.5rem; text-align: left; flex-wrap: wrap; max-width: calc(100% - 2rem); margin: 0 auto 7.5rem auto; }
-.other-project-list h3 { font-size: 1.5rem; font-weight: bold; color: #141414; margin-top: 0.8rem; margin-bottom: 1rem; }
-@media only screen and (max-width: 800px) { .other-project-list img { max-width: 100%; } }
+.other-project-list { display: flex; gap: 1.875rem; justify-content: center; margin-bottom: 7.5rem; text-align: left; flex-wrap: wrap; margin: 0 auto 7.5rem auto; }
+.other-project-list h3 { font-family: 'proxima_novabold'; font-size: 1.5rem; font-weight: bold; color: #141414; margin-top: 0.8rem; margin-bottom: 1rem; }
+@media only screen and (max-width: 800px) { .other-project-list { max-width: calc(100% - 2rem); }
+  .other-project-list img { max-width: 100%; } }
 
 .project-list { max-width: 370px; }
 @media only screen and (min-width: 800px) { .project-list { width: min-content; } }
