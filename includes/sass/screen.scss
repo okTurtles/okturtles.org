@@ -322,6 +322,7 @@ section {
     margin: 0 auto;
     @media only screen and (max-width: 74rem) {
       max-width: calc(100vw - 2rem);
+      height: auto;
     }
   }
 }
@@ -418,6 +419,7 @@ section {
     max-width: calc(100% - 2rem);
     img {
       max-width: 100%;
+      height: auto;
     }
   }
 }
