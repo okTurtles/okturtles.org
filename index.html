@@ -4,10 +4,9 @@
 	<title>okTurtles Foundation</title>
 
 	<!--# include file="/includes/head.html" -->
+  <meta name="keywords" content="okTurtles, security, dnsnmc, namecoin, bitcoin, ethereum, dnssec, security, surveillance, surviellance, nsa, https, certificate authorities, ssl certificates, certificate transparency, convergence, perspectives, mitm, nsa-proof, mitm-proof" />
 
-    <meta name="keywords" content="okTurtles, security, dnsnmc, namecoin, bitcoin, ethereum, dnssec, security, surveillance, surviellance, nsa, https, certificate authorities, ssl certificates, certificate transparency, convergence, perspectives, mitm, nsa-proof, mitm-proof" />
-
-    <!-- social sharing metadata -->
+  <!-- social sharing metadata -->
 	<meta property="og:title" content="okTurtles: Supporting beneficial decentralization technologies." />
 	<meta property="og:description" content="MITM-proof internet communications." />
 
@@ -30,7 +29,6 @@
   /* global $, videojs, _paq */
   $(document).ready(function () {
     var hash = window.location.hash.slice(1)
-    // console.log('hash: ' + hash)
     var map = {
       'mitm_proof': '/browser-extension/#mitm_proof',
       'footer': 'https://github.com/okTurtles/dnschain/blob/master/README.md#community',
@@ -40,28 +38,8 @@
       'DNSChain': 'https://github.com/okTurtles/dnschain'
     }
     if (map[hash]) {
-      console.log('redirecting to => ' + map[hash])
       window.location.replace(map[hash]) // http://stackoverflow.com/a/506004/1781435
     }
-
-    // $pop = new Popcorn('#demoVideo')
-    // $pop.listen('playing', function () {
-    //    if (typeof _paq !== 'undefined' && _paq !== null)
-    //        _paq.push(['trackPageView', '/dnschainVideo'])
-    // })
-    // http://docs.videojs.com/docs/guides/plugins.html
-    videojs.plugin('examplePlugin', function examplePlugin () {
-      var playedOnce = false
-      this.on('play', function (e) {
-        if (!playedOnce) {
-          playedOnce = true
-          if (typeof _paq !== 'undefined' && _paq !== null) {
-            _paq.push(['trackPageView', '/dnschainVideo'])
-          }
-        }
-      })
-    })
-    videojs('demoVideo').examplePlugin()
   })
   </script>
 	<style media="screen">
@@ -99,26 +77,6 @@
 			<h3>Supporting beneficial decentralization technologies.</h3>
 		</div>
 	</section>
-
-	<!-- video -->
-	<!-- <div class="video-container">
-		<div class="video-wrapper">
-			<video width="704" height="396" id="demoVideo"
-				class="video-js vjs-default-skin vjs-big-play-centered"
-				controls preload="none"
-				poster="other/okTDemoPoster.jpg"
-				data-setup='{}'
-			>
-				<source src="other/okTurtlesDEMO.webm">
-				<source src="other/okTurtlesDEMO.mp4">
-				<source src="other/okTurtlesDEMO.ogv">
-				<source src="other/okTurtlesDEMO.mov">
-				<p class="vjs-no-js">
-			    To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video.
-			  </p>
-			</video>
-		</div>
-	</div> -->
 
 	<!-- https is broken -->
 	<section class="https-is-broken">
@@ -236,8 +194,6 @@
 			</div>
 		</div>
 	</section>
-
 	<!--# include file="/includes/footer.html" -->
-
 </body>
 </html>
