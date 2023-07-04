@@ -20,6 +20,10 @@
 	<meta property="og:image:width" content="601">
 	<meta property="og:image:height" content="316">
 
+	<!-- video utilities -->
+	<!--link href="includes/js/video-js.min.css" rel="stylesheet"-->
+	<!--script src="includes/js/video.min.js"></script-->
+
   <script type="text/javascript">
   /* eslint-disable indent, no-trailing-spaces, eol-last, no-multiple-empty-lines */
   /* global $, videojs, _paq */
@@ -36,9 +40,34 @@
     if (map[hash]) {
       window.location.replace(map[hash]) // http://stackoverflow.com/a/506004/1781435
     }
+
+		// http://docs.videojs.com/docs/guides/plugins.html
+    // videojs.plugin('examplePlugin', function examplePlugin () {
+    //   var playedOnce = false
+    //   this.on('play', function (e) {
+    //     if (!playedOnce) {
+    //       playedOnce = true
+    //       if (typeof _paq !== 'undefined' && _paq !== null) {
+    //         _paq.push(['trackPageView', '/dnschainVideo'])
+    //       }
+    //     }
+    //   })
+    // })
+    // videojs('demoVideo').examplePlugin()
   })
   </script>
 	<style media="screen">
+		/*
+		.video-container2 {
+		  position: relative;
+		  margin: 0 auto;
+		  max-width: 701px;
+		  width: 100%;
+		  bottom: 200px;
+		  overflow: hidden;
+		}
+		*/
+
 		.what-we-do i.fab, .what-we-do i.fas {
 			color:#27ae60;
 			width: 40px;
@@ -65,6 +94,28 @@
 			<h3>Supporting beneficial decentralization technologies.</h3>
 		</div>
 	</section>
+
+	<!-- video -->
+	<!-- <div class="video-container">
+		<div class="video-wrapper">
+			<-- <iframe width="700" height="400" src="//www.youtube.com/embed/7QLaKW8ABy4?&amp;hd=1&amp;rel=0&amp;showinfo=0;theme=light;color=whitee" frameborder="0" allowfullscreen></iframe> ->
+			<-- Original dimensions are 1280x720, so 704x396 is exact same ratio ->
+			<video width="704" height="396" id="demoVideo"
+				class="video-js vjs-default-skin vjs-big-play-centered"
+				controls preload="none"
+				poster="other/okTDemoPoster.jpg"
+				data-setup='{}'
+			>
+				<source src="other/okTurtlesDEMO.webm">
+				<source src="other/okTurtlesDEMO.mp4">
+				<source src="other/okTurtlesDEMO.ogv">
+				<source src="other/okTurtlesDEMO.mov">
+				<p class="vjs-no-js">
+			    To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video.
+			  </p>
+			</video>
+		</div>
+	</div> -->
 
 	<!-- https is broken -->
 	<section class="https-is-broken">
