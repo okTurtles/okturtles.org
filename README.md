@@ -6,17 +6,13 @@ to include header and footer files. For local testing it uses the
 
 To test locally:
 
-1. Make sure CoffeeScript is installed
+1. Install dependencies
 
-        npm install -g coffee-script
+   npm install
 
-2. Install dependencies
+2. Then run the server using:
 
-        npm install
-
-Then run the server using:
-
-    coffee server.coffee
+   npm run dev
 
 And visit: [http://localhost:8080](http://localhost:8080)
 
@@ -26,4 +22,4 @@ To compile scss files `gem install compass` and then `compass compile` or `compa
 
 ## TODO
 
-- Use a Gruntfile instead of this `coffee` and `compass` stuff.
+- Use a Gruntfile instead of `compass` stuff.
