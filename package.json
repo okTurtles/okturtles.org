@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile-sass": "sass includes/sass:includes/stylesheets --no-source-map",
     "compile-sass:dev": "sass includes/sass:includes/stylesheets --no-source-map --watch",
-    "dev": "coffee server.coffee & npm run compile-sass:dev"
+    "dev": "node server.js & npm run compile-sass:dev"
   },
   "repository": {
     "type": "git",
