@@ -222,7 +222,9 @@ section {
   position: relative;
   display: block;
   margin: 0 auto;
-  width: 74rem;
+  width: 100%;
+  max-width: 74rem;
+  box-sizing: border-box;
 }
 @media only screen and (max-width: 74rem) {
   .container {
@@ -1097,5 +1099,3 @@ sup a {
 .activities .activities-content .top-spacer {
   margin-top: 30px;
 }
-
-/*# sourceMappingURL=screen.css.map */

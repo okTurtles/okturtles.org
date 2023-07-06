@@ -161,7 +161,9 @@ section {
   position: relative;
   display: block;
   margin: 0 auto;
-  width: 74rem;
+  width: 100%;
+  max-width: 74rem;
+  box-sizing: border-box;
 
   @media only screen and (max-width: 74rem) {
     width: auto;
