@@ -22,8 +22,10 @@ And visit: [http://localhost:8080](http://localhost:8080)
 
 ## Development
 
-To compile scss files `gem install compass` and then `compass compile` or `compass watch`.
+Run `npm run dev` command.
+
+To compile scss files in `includes/sass` folder, run `npm run compile-sass`
 
 ## TODO
 
-- Use a Gruntfile instead of this `coffee` and `compass` stuff.
+- Use a Gruntfile instead of this `coffee` and `npm run compile-sass` stuff.
