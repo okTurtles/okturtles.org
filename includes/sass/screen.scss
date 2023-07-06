@@ -364,18 +364,12 @@ section {
   .blog-post-link {
     color: $dark-green;
     position: relative;
-    display: block;
+    display: display;
+    align-items: flex-start;
     margin-bottom: 10px;
     font-family: "proxima_novaregular";
     margin-top: 20px;
-  
-    img {
-      position: relative;
-      display: inline-block;
-      max-width: 25px;
-      margin-right: 10px;
-      vertical-align: middle;
-    }
+
     &:hover { color: $blue; }
   }
   .button {
