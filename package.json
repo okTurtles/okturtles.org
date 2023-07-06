@@ -4,7 +4,10 @@
   "description": "okTurtles.org website",
   "main": "server.coffee",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-sass": "sass includes/sass:includes/stylesheets --no-source-map",
+    "compile-sass:dev": "sass includes/sass:includes/stylesheets --no-source-map --watch",
+    "dev": "coffee server.coffee & npm run compile-sass:dev"
   },
   "repository": {
     "type": "git",
@@ -20,6 +23,7 @@
     "connect-static-transform": "^0.7.0",
     "express": "^4.10.7",
     "node-ssi": "^0.3.0",
+    "sass": "^1.63.6",
     "string": "^3.0.0"
   }
 }
