@@ -1,5 +1,4 @@
-@import 'compass/reset';
-
+@import 'reset';
 @import 'variables';
 
 @font-face {
@@ -12,7 +11,6 @@
   url('/includes/fonts/ProximaNova-RegularIt-webfont.svg#proxima_novaitalic') format('svg');
   font-weight: normal;
   font-style: normal;
-
 }
 @font-face {
   font-family: 'proxima_novaregular';
@@ -70,7 +68,6 @@ body, html {
   width: 100%;
   min-height: 100%;
   font-family: 'proxima_novaregular', helvetica, sans-serif;
-  font-size: 100%;
   -webkit-text-size-adjust: 100%;
   text-align: left;
   color: $black;
@@ -78,6 +75,7 @@ body, html {
   font-weight: normal;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-font-smoothing: antialiased;
+  font-size: 16px;
 
   ::selection {
     color: $white;
@@ -163,8 +161,13 @@ section {
   position: relative;
   display: block;
   margin: 0 auto;
-  max-width: 960px;
-  width: 90%;
+  width: 100%;
+  max-width: 74rem;
+  box-sizing: border-box;
+
+  @media only screen and (max-width: 74rem) {
+    width: auto;
+  }
 
   a{
     color: $blue;
@@ -224,11 +227,12 @@ section {
   }
   .home-container {
     max-width: 800px;
+    text-align: center;
   }
 }
 @media only screen and (max-width: 568px) {
   .header {
-    padding-bottom: 250px;
+    padding-bottom: 44vw;
   }
 }
 @media only screen and (max-width: 380px) {
@@ -294,28 +298,31 @@ section {
 
 // https is broken
 .https-is-broken {
-  margin-top: -100px; // to compensate for video
-  text-align: center;
-  padding-bottom: 100px;
+  display: flex;
+  margin: -13rem auto 5rem auto;
+  width: min-content;
+  max-width: calc(100% - 2rem);
+  
+  @media only screen and (max-width: 40rem) {
+    margin-top: -29vw;
+  }
+
   h2 {
-    margin-bottom: 40px;
-    a { color: $blue; }
-    a:hover { text-decoration: underline; }
+    margin-top: 1.4rem;
+    margin-bottom: .5rem;
+    font-weight: bold;
+    font-size: 2rem;
   }
-  p {
-    max-width: 90%;
-    position: relative;
-    display: block;
+
+  .container {
+    width: auto;
+  }
+
+  img {
     margin: 0 auto;
-    a { color: $blue; }
-    a:hover { text-decoration: underline; }
-  }
-  .b {
-    margin-top: 30px;
-  }
-  a:hover {
-    .green {
-      color: $blue;
+    @media only screen and (max-width: 74rem) {
+      max-width: calc(100vw - 2rem);
+      height: auto;
     }
   }
 }
@@ -330,11 +337,18 @@ section {
     margin-bottom: 50px;
   }
   .half {
-    position: relative;
-    display: block;
-    width: 47%;
-    float: left;
     text-align: left;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    gap: 3.5rem;
+    max-width: calc(100% - 2rem);
+    margin: 0 auto;
+
+    @media only screen and (max-width: 800px) {
+      grid-auto-flow: row;
+    }
+
     h3 {
       color: $dark-green;
       font-size: 32px;
@@ -345,58 +359,24 @@ section {
       font-size: 1.1em;
       font-family: "proxima_novabold";
     }
-    .link-container {
-      position: relative;
-      display: block;
-      margin: 20px 0 30px 0;
-      .link {
-        color: $dark-green;
-        font-family: "proxima_novabold";
-        position: relative;
-        display: inline-block;
-        vertical-align: middle;
-        width: 100%;
-        img {
-          position: relative;
-          display: inline-block;
-          max-width: 40px;
-          margin-right: 10px;
-          vertical-align: middle;
-        }
-        &:hover { color: $blue; }
-      }
-    }
   }
-  .education {
-    margin-right: 6%;
-  }
-  @media only screen and (max-width: 668px) {
-    .half {
-      width: 100%;
-      margin-bottom: 50px;
-    }
-    .education {
-      margin-right: 0;
-    }
-    .solutions {
-      margin-bottom: 0;
-    }
-  }
+
   .blog-post-link {
     color: $dark-green;
     position: relative;
-    display: block;
+    display: flex;
+    align-items: flex-start;
     margin-bottom: 10px;
-    font-family: "proxima_novabold";
+    font-family: "proxima_novaregular";
     margin-top: 20px;
-    img {
-      position: relative;
-      display: inline-block;
-      max-width: 25px;
-      margin-right: 10px;
-      vertical-align: middle;
-    }
+
     &:hover { color: $blue; }
+
+    &__text {
+      display: inline-flex;
+      align-self: stretch;
+      align-items: center;
+    }
   }
   .button {
     font-size: .9em;
@@ -417,7 +397,39 @@ section {
   }
 }
 
+.other-project-list {
+  display: flex;
+  gap: 1.875rem;
+  justify-content: center;
+  margin-bottom: 7.5rem;
+  text-align: left;
+  flex-wrap: wrap;
+  margin: 0 auto 7.5rem auto;
 
+  h3 {
+    font-family: 'proxima_novabold';
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #141414;
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  @media only screen and (max-width: 800px) {
+    max-width: calc(100% - 2rem);
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.project-list {
+  max-width: 370px;
+  @media only screen and (min-width: 800px) {
+    width: min-content;
+  }
+}
 
 // footer
 .footer {
