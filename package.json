@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/okTurtles/okturtles.com",
   "dependencies": {
-    "connect-static-transform": "^0.7.0",
+    "connect-static-transform": "^0.9.2",
     "express": "^4.10.7",
     "node-ssi": "^0.3.0",
     "string": "^3.0.0"
