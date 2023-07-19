@@ -65,3 +65,23 @@
     }
   }
 }
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .dpki {
+    .header {
+      h1,
+      h3 {
+        padding: 0 20px;
+      }
+    }
+    .dpki {
+      h2 {
+        padding: 0 5px;
+      }
+    }
+
+    .dpki-embed-container {
+      padding: 0 20px;
+    }
+  }
+}

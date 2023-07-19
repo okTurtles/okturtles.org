@@ -847,7 +847,7 @@ section {
   text-align: center;
   font-size: 44px;
   color: #0C6130;
-  margin-bottom: 30px;
+  margin-bottom: 45px;
 }
 .dpki .dpki h2 span {
   color: #9a9a9a;
@@ -856,7 +856,7 @@ section {
 }
 .dpki .dpki p {
   text-align: center;
-  margin-top: -20px;
+  margin-top: -30px;
   color: #5a5a5a;
 }
 .dpki .dpki .dpki-embed-container {
@@ -870,6 +870,30 @@ section {
   overflow: hidden;
 }
 
+@media (max-width: 767px) {
+  .dpki .header h1,
+  .dpki .header h3 {
+    padding: 0 20px;
+  }
+  .dpki .dpki h2 {
+    padding: 0 5px;
+  }
+  .dpki .dpki-embed-container {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .dpki .header h1,
+  .dpki .header h3 {
+    padding: 0 20px;
+  }
+  .dpki .dpki h2 {
+    padding: 0 5px;
+  }
+  .dpki .dpki-embed-container {
+    padding: 0 20px;
+  }
+}
 .browser-extension .header {
   padding: 60px 0;
   background-color: #27ae60;
