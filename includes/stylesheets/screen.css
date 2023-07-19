@@ -829,6 +829,71 @@ section {
   background-color: #105EAA;
 }
 
+.dpki .header {
+  padding: 60px 0;
+  background-color: #27ae60;
+}
+.dpki .header h1 {
+  font-size: 40px;
+}
+.dpki .header h3 {
+  font-size: 1.1em;
+}
+.dpki .dpki {
+  padding: 80px 0;
+  background-color: #f5f5f5;
+}
+.dpki .dpki h2 {
+  text-align: center;
+  font-size: 44px;
+  color: #0C6130;
+  margin-bottom: 45px;
+}
+.dpki .dpki h2 span {
+  color: #9a9a9a;
+  font-family: "proxima_novaregular";
+  font-size: 20px;
+}
+.dpki .dpki p {
+  text-align: center;
+  margin-top: -30px;
+  color: #5a5a5a;
+}
+.dpki .dpki .dpki-embed-container {
+  max-width: 700px;
+}
+.dpki .dpki .dpki-embed-video {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .dpki .header h1,
+  .dpki .header h3 {
+    padding: 0 20px;
+  }
+  .dpki .dpki h2 {
+    padding: 0 5px;
+  }
+  .dpki .dpki-embed-container {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .dpki .header h1,
+  .dpki .header h3 {
+    padding: 0 20px;
+  }
+  .dpki .dpki h2 {
+    padding: 0 5px;
+  }
+  .dpki .dpki-embed-container {
+    padding: 0 20px;
+  }
+}
 .browser-extension .header {
   padding: 60px 0;
   background-color: #27ae60;
