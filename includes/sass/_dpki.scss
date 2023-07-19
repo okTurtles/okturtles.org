@@ -18,7 +18,7 @@
       text-align: center;
       font-size: 44px;
       color: $dark-green;
-      margin-bottom: 30px;
+      margin-bottom: 45px;
       span {
         color: #9a9a9a;
         font-family: "proxima_novaregular";
@@ -28,7 +28,7 @@
 
     p {
       text-align: center;
-      margin-top: -20px;
+      margin-top: -30px;
       color: $grey;
     }
 
@@ -42,6 +42,26 @@
       padding-top: 30px;
       height: 0;
       overflow: hidden;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .dpki {
+    .header {
+      h1,
+      h3 {
+        padding: 0 20px;
+      }
+    }
+    .dpki {
+      h2 {
+        padding: 0 5px;
+      }
+    }
+
+    .dpki-embed-container {
+      padding: 0 20px;
     }
   }
 }
