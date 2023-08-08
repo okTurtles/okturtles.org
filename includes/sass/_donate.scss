@@ -109,6 +109,11 @@
 				}
 			}
 		}
+		.flex-buttons {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1rem;
+		}
 		.tilt{
 			position: relative;
 			display: block;
@@ -125,6 +130,12 @@
 			cursor: pointer;
 			background-color: #105EAA;
 		}
-
+		.tilt.github {
+			background-color: #343434;
+		}
+		.tilt.github:hover{
+			cursor: pointer;
+			background-color: black;
+		}
 	}
 }
