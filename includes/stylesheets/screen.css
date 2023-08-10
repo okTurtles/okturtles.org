@@ -511,10 +511,13 @@ section {
   height: auto;
   transform: translateY(2px);
 }
-.footer .social-icons .odysee-link img {
+.footer .social-icons .odysee-link svg {
+  display: inline-block;
   width: auto;
   height: 20px;
-  object-fit: contain;
+}
+.footer .social-icons .odysee-link:hover svg, .footer .social-icons .odysee-link:focus svg {
+  fill: #1479DE;
 }
 .footer .form-container {
   position: relative;

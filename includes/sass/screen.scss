@@ -464,10 +464,15 @@ section {
       height: auto;
       transform: translateY(2px);
 
-      img {
+      svg {
+        display: inline-block;
         width: auto;
         height: 20px;
-        object-fit: contain;
+      }
+
+      &:hover svg,
+      &:focus svg {
+        fill: #1479DE;
       }
     }
   }
