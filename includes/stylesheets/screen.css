@@ -505,6 +505,17 @@ section {
 .footer .social-icons li {
   font-size: 18px;
 }
+.footer .social-icons .odysee-link {
+  display: inline-block;
+  width: max-content;
+  height: auto;
+  transform: translateY(2px);
+}
+.footer .social-icons .odysee-link img {
+  width: auto;
+  height: 20px;
+  object-fit: contain;
+}
 .footer .form-container {
   position: relative;
   display: block;
