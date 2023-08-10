@@ -516,7 +516,8 @@ section {
   width: auto;
   height: 20px;
 }
-.footer .social-icons .odysee-link:hover svg, .footer .social-icons .odysee-link:focus svg {
+.footer .social-icons .odysee-link :hover svg,
+.footer .social-icons .odysee-link :focus svg {
   fill: #1479DE;
 }
 .footer .form-container {

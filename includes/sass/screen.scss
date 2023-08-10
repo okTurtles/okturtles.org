@@ -470,8 +470,8 @@ section {
         height: 20px;
       }
 
-      &:hover svg,
-      &:focus svg {
+      :hover svg,
+      :focus svg {
         fill: #1479DE;
       }
     }
