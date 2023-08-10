@@ -440,9 +440,7 @@ section {
       position: relative;
       display: inline-block;
       margin: 0 20px;
-      a {
 
-      }
       a:hover {
         color: $blue;
       }
@@ -455,8 +453,27 @@ section {
   }
   .social-icons {
     margin-top: 35px;
+
     li {
       font-size: 18px;
+    }
+
+    .odysee-link {
+      display: inline-block;
+      width: max-content;
+      height: auto;
+      transform: translateY(2px);
+
+      svg {
+        display: inline-block;
+        width: auto;
+        height: 20px;
+      }
+
+      :hover svg,
+      :focus svg {
+        fill: #1479DE;
+      }
     }
   }
 
