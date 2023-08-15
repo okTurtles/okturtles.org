@@ -65,11 +65,6 @@ a img {
   border: none;
 }
 
-.smooth-scrolling {
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-}
-
 @font-face {
   font-family: "proxima_novaitalic";
   src: url("/includes/fonts/ProximaNova-RegularIt-webfont.eot");
@@ -351,9 +346,11 @@ section {
 }
 .https-is-broken {
   display: flex;
-  margin: -13rem auto 5rem auto;
-  width: min-content;
+  margin-top: -13rem;
+  margin-bottom: 5rem;
   max-width: calc(100% - 2rem);
+  margin-left: auto;
+  margin-right: auto;
 }
 @media only screen and (max-width: 40rem) {
   .https-is-broken {
@@ -367,22 +364,25 @@ section {
   font-size: 2rem;
 }
 .https-is-broken .container {
-  width: auto;
-}
-.https-is-broken img {
+  width: min(705px, 100%);
   margin: 0 auto;
 }
-@media only screen and (max-width: 74rem) {
-  .https-is-broken img {
-    max-width: calc(100vw - 2rem);
-    height: auto;
-  }
+.https-is-broken img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .what-we-do {
   padding: 100px 0;
   background-color: #f5f5f5;
   text-align: center;
+  width: 100%;
+}
+.what-we-do .container {
+  max-width: calc(100% - 2rem);
+  margin-left: auto;
+  margin-right: auto;
 }
 .what-we-do h2 {
   margin-bottom: 50px;
@@ -393,8 +393,6 @@ section {
   grid-auto-flow: column;
   justify-content: space-between;
   gap: 3.5rem;
-  max-width: calc(100% - 2rem);
-  margin: 0 auto;
 }
 @media only screen and (max-width: 800px) {
   .what-we-do .half {
@@ -464,9 +462,6 @@ section {
   margin-bottom: 1rem;
 }
 @media only screen and (max-width: 800px) {
-  .other-project-list {
-    max-width: calc(100% - 2rem);
-  }
   .other-project-list img {
     max-width: 100%;
     height: auto;
@@ -598,9 +593,17 @@ section {
   border-color: #1479DE;
 }
 
+.smooth-scrolling {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
 .team .header {
   padding: 60px 0;
   background-color: #27ae60;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
 }
 .team .header h1 {
   font-size: 40px;
@@ -706,10 +709,19 @@ section {
     margin-right: 0;
   }
 }
+.team .meet-the-team,
+.team #memory-of {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
 
 .donate .header {
   padding: 60px 0;
   background-color: #27ae60;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
 }
 .donate .header h1 {
   font-size: 40px;
@@ -720,6 +732,11 @@ section {
 .donate .donate-content {
   padding: 80px 0;
   background-color: #f5f5f5;
+}
+.donate .donate-content .container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
 }
 .donate .donate-content h2 {
   font-size: 34px;
@@ -858,6 +875,9 @@ section {
 
 .dpki .header {
   padding: 60px 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
   background-color: #27ae60;
 }
 .dpki .header h1 {
@@ -898,10 +918,6 @@ section {
 }
 
 @media (max-width: 767px) {
-  .dpki .header h1,
-  .dpki .header h3 {
-    padding: 0 20px;
-  }
   .dpki .dpki h2 {
     padding: 0 5px;
   }
@@ -1167,6 +1183,9 @@ sup a {
 .activities .header {
   padding: 60px 0;
   background-color: #27ae60;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
 }
 .activities .header h1 {
   font-size: 40px;
@@ -1177,6 +1196,9 @@ sup a {
 .activities .activities-content {
   padding: 80px 0;
   background-color: #f5f5f5;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
 }
 .activities .activities-content h2 {
   font-size: 34px;

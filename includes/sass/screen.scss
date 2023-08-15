@@ -215,8 +215,6 @@ section {
   font-family: "Courier", monospace;
 }
 
-
-
 // header
 .header {
   background-color: $green;
@@ -233,11 +231,6 @@ section {
 @media only screen and (max-width: 568px) {
   .header {
     padding-bottom: 44vw;
-  }
-}
-@media only screen and (max-width: 380px) {
-  .header {
-    // padding-bottom: 230px;
   }
 }
 
@@ -299,9 +292,9 @@ section {
 // https is broken
 .https-is-broken {
   display: flex;
-  margin: -13rem auto 5rem auto;
-  width: min-content;
-  max-width: calc(100% - 2rem);
+  margin-top: -13rem;
+  margin-bottom: 5rem;
+  @include side-margin;
   
   @media only screen and (max-width: 40rem) {
     margin-top: -29vw;
@@ -315,15 +308,14 @@ section {
   }
 
   .container {
-    width: auto;
+    width: min(705px, 100%); // 705px here is the intrinsic width of the image.
+    margin: 0 auto;
   }
 
   img {
-    margin: 0 auto;
-    @media only screen and (max-width: 74rem) {
-      max-width: calc(100vw - 2rem);
-      height: auto;
-    }
+    display: block;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -332,6 +324,11 @@ section {
   padding: 100px 0;
   background-color: $white;
   text-align: center;
+  width: 100%;
+
+  .container {
+    @include side-margin;
+  }
 
   h2 {
     margin-bottom: 50px;
@@ -342,8 +339,6 @@ section {
     grid-auto-flow: column;
     justify-content: space-between;
     gap: 3.5rem;
-    max-width: calc(100% - 2rem);
-    margin: 0 auto;
 
     @media only screen and (max-width: 800px) {
       grid-auto-flow: row;
@@ -416,7 +411,6 @@ section {
   }
 
   @media only screen and (max-width: 800px) {
-    max-width: calc(100% - 2rem);
     img {
       max-width: 100%;
       height: auto;
@@ -550,6 +544,12 @@ section {
       }
     }
   }
+}
+
+// util-classes
+.smooth-scrolling{
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
 }
 
 @import "team";

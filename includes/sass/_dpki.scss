@@ -1,6 +1,9 @@
+@import 'variables';
+
 .dpki {
   .header {
     padding: 60px 0;
+    @include side-padding;
     background-color: $green;
     h1 {
       font-size: 40px;
@@ -48,12 +51,6 @@
 
 @media (max-width: 767px) {
   .dpki {
-    .header {
-      h1,
-      h3 {
-        padding: 0 20px;
-      }
-    }
     .dpki {
       h2 {
         padding: 0 5px;
