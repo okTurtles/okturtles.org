@@ -37,3 +37,15 @@ $blue: #1479DE;
     padding-right: 1rem;
     box-sizing: border-box;
 }
+
+@mixin until ($bp) {
+    @media screen and (max-width: $bp) {
+        @content;
+    }
+}
+
+@mixin from ($bp) {
+    @media screen and (min-width: $bp) {
+        @content;
+    }
+}

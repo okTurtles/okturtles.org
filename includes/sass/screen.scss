@@ -327,7 +327,11 @@ section {
   width: 100%;
 
   .container {
-    @include side-margin;
+    max-width: 74rem;
+
+    @include until (76rem) {
+      @include side-margin;
+    }
   }
 
   h2 {
@@ -339,6 +343,11 @@ section {
     grid-auto-flow: column;
     justify-content: space-between;
     gap: 3.5rem;
+
+    @include from (76rem) {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
 
     @media only screen and (max-width: 800px) {
       grid-auto-flow: row;
