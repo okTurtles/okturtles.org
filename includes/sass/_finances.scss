@@ -1,7 +1,11 @@
+@import 'variables';
+
 .activities{
     .header{
         padding: 60px 0;
         background-color: $green;
+        @include side-padding;
+
         h1{
             font-size: 40px;
         }
@@ -13,6 +17,8 @@
     .activities-content{
         padding: 80px 0;
         background-color: $white;
+        @include side-padding;
+
         h2{
             font-size: 34px;
             color: $dark-green;

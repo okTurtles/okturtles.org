@@ -26,7 +26,26 @@ $blue: #1479DE;
     transition: $transition-property $transition-time $method;
 }
 
-.smooth-scrolling{
-	overflow-y: scroll;
-	-webkit-overflow-scrolling: touch;
+@mixin side-margin {
+    max-width: calc(100% - 2rem);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin side-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+}
+
+@mixin until ($bp) {
+    @media screen and (max-width: $bp) {
+        @content;
+    }
+}
+
+@mixin from ($bp) {
+    @media screen and (min-width: $bp) {
+        @content;
+    }
 }
