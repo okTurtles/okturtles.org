@@ -472,7 +472,14 @@ section {
         width: auto;
         height: 20px;
       }
+    }
 
+    .twitter-link svg {
+      transform: translateY(2px);
+    }
+
+    .odysee-link,
+    .twitter-link {
       :hover svg,
       :focus svg {
         fill: #1479DE;

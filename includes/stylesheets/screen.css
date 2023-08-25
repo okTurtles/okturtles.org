@@ -522,8 +522,13 @@ section {
   width: auto;
   height: 20px;
 }
+.footer .social-icons .twitter-link svg {
+  transform: translateY(2px);
+}
 .footer .social-icons .odysee-link :hover svg,
-.footer .social-icons .odysee-link :focus svg {
+.footer .social-icons .odysee-link :focus svg,
+.footer .social-icons .twitter-link :hover svg,
+.footer .social-icons .twitter-link :focus svg {
   fill: #1479DE;
 }
 .footer .form-container {
