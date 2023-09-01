@@ -4,10 +4,10 @@
   "description": "okTurtles.org website",
   "main": "server.coffee",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "compile-sass": "sass includes/sass:includes/stylesheets --no-source-map",
     "compile-sass:dev": "sass includes/sass:includes/stylesheets --no-source-map --watch",
-    "dev": "node server.js & npm run compile-sass:dev"
+    "dev:legacy": "node server.js & npm run compile-sass:dev",
+    "dev": "astro dev"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "string": "^3.0.0"
   },
   "devDependencies": {
+    "astro": "^3.0.5",
     "sass": "^1.63.6"
   }
 }
