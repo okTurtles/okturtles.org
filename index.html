@@ -25,36 +25,36 @@
 	<!--script src="includes/js/video.min.js"></script-->
 
   <script type="text/javascript">
-  /* eslint-disable indent, no-trailing-spaces, eol-last, no-multiple-empty-lines */
-  /* global $, videojs, _paq */
-  $(document).ready(function () {
-    var hash = window.location.hash.slice(1)
-    var map = {
-      'mitm_proof': '/browser-extension/#mitm_proof',
-      'footer': 'https://github.com/okTurtles/dnschain/blob/master/README.md#community',
-      'memory-of': '/team/#memory-of',
-      'faq': '/browser-extension/#faq',
-      'oktvs': 'https://github.com/okTurtles/dnschain/blob/master/docs/Comparison.md',
-      'DNSChain': 'https://github.com/okTurtles/dnschain'
-    }
-    if (map[hash]) {
-      window.location.replace(map[hash]) // http://stackoverflow.com/a/506004/1781435
-    }
+		/* eslint-disable indent, no-trailing-spaces, eol-last, no-multiple-empty-lines */
+		/* global $, videojs, _paq */
+		$(document).ready(function () {
+			var hash = window.location.hash.slice(1)
+			var map = {
+				'mitm_proof': '/browser-extension/#mitm_proof',
+				'footer': 'https://github.com/okTurtles/dnschain/blob/master/README.md#community',
+				'memory-of': '/team/#memory-of',
+				'faq': '/browser-extension/#faq',
+				'oktvs': 'https://github.com/okTurtles/dnschain/blob/master/docs/Comparison.md',
+				'DNSChain': 'https://github.com/okTurtles/dnschain'
+			}
+			if (map[hash]) {
+				window.location.replace(map[hash]) // http://stackoverflow.com/a/506004/1781435
+			}
 
-		// http://docs.videojs.com/docs/guides/plugins.html
-    // videojs.plugin('examplePlugin', function examplePlugin () {
-    //   var playedOnce = false
-    //   this.on('play', function (e) {
-    //     if (!playedOnce) {
-    //       playedOnce = true
-    //       if (typeof _paq !== 'undefined' && _paq !== null) {
-    //         _paq.push(['trackPageView', '/dnschainVideo'])
-    //       }
-    //     }
-    //   })
-    // })
-    // videojs('demoVideo').examplePlugin()
-  })
+			// http://docs.videojs.com/docs/guides/plugins.html
+			// videojs.plugin('examplePlugin', function examplePlugin () {
+			//   var playedOnce = false
+			//   this.on('play', function (e) {
+			//     if (!playedOnce) {
+			//       playedOnce = true
+			//       if (typeof _paq !== 'undefined' && _paq !== null) {
+			//         _paq.push(['trackPageView', '/dnschainVideo'])
+			//       }
+			//     }
+			//   })
+			// })
+			// videojs('demoVideo').examplePlugin()
+		})
   </script>
 	<style media="screen">
 		/*
@@ -68,7 +68,8 @@
 		}
 		*/
 
-		.what-we-do i.fab, .what-we-do i.fas {
+		.what-we-do i.fab,
+		.what-we-do i.fas {
 			color:#27ae60;
 			width: 40px;
 			text-align: center;
