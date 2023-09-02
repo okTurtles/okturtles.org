@@ -1,0 +1,51 @@
+$white: #f5f5f5;
+$black: #141414;
+$grey: #5a5a5a;
+$light-grey: #eeeeee;
+$green: #27ae60;
+$dark-green: #0C6130;
+$blue: #1479DE;
+
+
+@mixin css3($property, $value) {
+    @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+        #{$prefix}#{$property}: $value;
+    }
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacityIE: $opacity * 100;
+    filter: alpha(opacity=$opacityIE);
+}
+
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
+@mixin side-margin {
+    max-width: calc(100% - 2rem);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin side-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+}
+
+@mixin until ($bp) {
+    @media screen and (max-width: $bp) {
+        @content;
+    }
+}
+
+@mixin from ($bp) {
+    @media screen and (min-width: $bp) {
+        @content;
+    }
+}

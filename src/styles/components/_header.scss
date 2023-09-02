@@ -1,0 +1,15 @@
+.header {
+  background-color: $green;
+  padding-top: 100px;
+  padding-bottom: 300px;
+  h1 {
+    color: $white;
+  }
+  .home-container {
+    max-width: 800px;
+    text-align: center;
+  }
+  @media only screen and (max-width: 568px) {
+    padding-bottom: 44vw;
+  }
+}
