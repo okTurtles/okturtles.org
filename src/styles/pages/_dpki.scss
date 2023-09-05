@@ -1,16 +1,6 @@
-.dpki {
-  .header {
-    padding: 60px 0;
-    @include side-padding;
-    background-color: $green;
-    h1 {
-      font-size: 40px;
-    }
-    h3 {
-      font-size: 1.1em;
-    }
-  }
+@import "../variables";
 
+.dpki-content {
   .dpki {
     padding: 80px 0;
     background-color: $white;
@@ -20,6 +10,7 @@
       font-size: 44px;
       color: $dark-green;
       margin-bottom: 45px;
+
       span {
         color: #9a9a9a;
         font-family: "proxima_novaregular";
@@ -45,10 +36,8 @@
       overflow: hidden;
     }
   }
-}
 
-@media (max-width: 767px) {
-  .dpki {
+  @include until (767px) {
     .dpki {
       h2 {
         padding: 0 5px;
@@ -59,16 +48,15 @@
       padding: 0 20px;
     }
   }
-}
 
-@media (min-width: 768px) and (max-width: 1200px) {
-  .dpki {
-    .header {
+  @media (min-width: 768px) and (max-width: 1200px) {
+    .header--shared {
       h1,
       h3 {
         padding: 0 20px;
       }
     }
+
     .dpki {
       h2 {
         padding: 0 5px;
