@@ -1,18 +1,7 @@
-.donate{
-	.header{
-		padding: 60px 0;
-		background-color: $green;
-		@include side-padding;
+@import "../variables";
 
-		h1{
-			font-size: 40px;
-		}
-		h3{
-			font-size: 1.1em;
-		}
-	}
-
-	.donate-content{
+.donate {
+	.donate-content {
 		padding: 80px 0;
 		background-color: $white;
 
@@ -20,21 +9,25 @@
 			@include side-padding;
 		}
 
-		h2{
+		h2 {
 			font-size: 34px;
 			color: $dark-green;
 			margin-bottom: 30px;
 		}
-		.spacer{
+	
+		.spacer {
 			margin-bottom: 10px;
 		}
-		.top-spacer{
+
+		.top-spacer {
 			margin-top: 30px;
 		}
 
-		.bitpay-donate{
+		.bitpay-donate {
 			margin-bottom: 30px;
-			input, select{
+
+			input,
+			select {
 				vertical-align: bottom;
 				-webkit-appearance: none;
 				-webkit-font-smoothing: antialiased;
@@ -60,35 +53,50 @@
 				-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 				box-sizing: border-box;
 			}
-			.bitpay-donate-field-price{
+	
+			.bitpay-donate-field-price {
 				max-width: 150px;
 			}
-			.bitpay-donate-button{
+
+			.bitpay-donate-button {
 				border: none;
 				width: auto;
 				padding: 0;
 			}
-			select{
+
+			select {
 				max-width: 110px;
 				text-align: center;
-			}
-			option{
-				text-align: center;
-			}
-			input:hover, input:focus{
-				background-color: $white;
-			}
-			input:focus{
-				border-color: $blue;
-			}
-			select:hover, select:focus{
-				background-color: $blue;
-				border-color: $blue;
-				color: $white;
-				cursor: pointer;
+
+				&:hover,
+				&:focus {
+					background-color: $blue;
+					border-color: $blue;
+					color: $white;
+					cursor: pointer;
+				}
 			}
 
-			.submit{
+			option {
+				text-align: center;
+			}
+
+			input {
+				@include until (568px) {
+					max-width: 190px;
+				}
+
+				&:hover,
+				&:focus {
+					background-color: $white;
+				}
+
+				&:focus {
+					border-color: $blue;
+				}
+			}
+
+			.submit {
 				font-family: "proxima_novaregular";
 				color: $blue;
 				position: relative;
@@ -102,26 +110,26 @@
 				text-align: center;
 				-webkit-appearance: none;
 				@include transition(all, .3s, ease);
-			}
-			.submit:hover, .submit:focus, .submit:active{
-				-webkit-font-smoothing: antialiased;
-				cursor: pointer;
-				background-color: $blue;
-				color: $white;
-				@include transition(all, .3s, ease);
-			}
-			@media only screen and (max-width:568px) {
-				input{
-					max-width: 190px;
+
+				&:hover,
+				&:focus,
+				&:active {
+					-webkit-font-smoothing: antialiased;
+					cursor: pointer;
+					background-color: $blue;
+					color: $white;
+					@include transition(all, .3s, ease);
 				}
 			}
 		}
+
 		.flex-buttons {
 			display: flex;
 			flex-wrap: wrap;
 			gap: 1rem;
 		}
-		.tilt{
+
+		.tilt {
 			position: relative;
 			display: block;
 			width: 160px;
@@ -132,17 +140,20 @@
 			color: $white;
 			text-align: center;
 			@include transition(all, .3s, ease);
-		}
-		.tilt:hover{
-			cursor: pointer;
-			background-color: #105EAA;
-		}
-		.tilt.github {
-			background-color: #343434;
-		}
-		.tilt.github:hover{
-			cursor: pointer;
-			background-color: black;
+
+			&:hover {
+				cursor: pointer;
+				background-color: #105EAA;
+			}
+
+			&.github {
+				background-color: #343434;
+			}
+
+			&.github:hover {
+				cursor: pointer;
+				background-color: black;
+			}
 		}
 	}
 }
