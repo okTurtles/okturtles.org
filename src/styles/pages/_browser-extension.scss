@@ -1,31 +1,25 @@
-.browser-extension{
-	.header{
-		padding: 60px 0;
-		background-color: $green;
-		h1{
-			font-size: 40px;
-		}
-		h3{
-			font-size: 1.1em;
-		}
-	}
+@import "../variables";
 
-	.browser-extension{
+.browser-extension {
+	.browser-extension {
 		padding: 80px 0;
+		@include side-padding;
 		background-color: $white;
 
-		h2{
+		h2 {
 			text-align: center;
 			font-size: 44px;
 			color: $dark-green;
 			margin-bottom: 20px;
-			span{
+
+			span {
 				color: #9a9a9a;
 				font-family: 'proxima_novaregular';
 				font-size: 20px;
 			}
 		}
-		.first{
+
+		.first {
 			color: $black;
 			font-size: 1.3em;
 			line-height: 1.4;
@@ -33,84 +27,103 @@
 			display: block;
 			margin: 20px 0;
 		}
-		p{
+
+		p {
 			color: $grey;
 		}
-
 	}
 
-	#unblock{
+	#unblock {
 		padding-top: 80px;
 		text-align: left;
-		h2{
+
+		h2 {
 			text-align: left;
 		}
 	}
 
-	#faq{
+	#faq {
 		padding-top: 80px;
-		sup{
+
+		sup {
 			vertical-align: super;
 			font-size: .8em;
 		}
-		h2{
+
+		h2 {
 			text-align: left;
 		}
-		h3{
+
+		h3 {
 			font-size: 1.5em;	
 			color: $black;	
 			font-family: 'proxima_novaregular';
 			padding: 10px 0;
 			@include transition(all, .4s, ease);
+
+			&:hover {
+				color: $blue;
+				text-decoration: none;
+				@include transition(all, .15s, ease);
+			}
 		}
-		h3:hover{
-			color: $blue;
-			text-decoration: none;
-			@include transition(all, .15s, ease);
-		}
-		p{
-			margin-bottom: 10px;	
-			a:hover{
+
+		p {
+			margin-bottom: 10px;
+
+			a:hover {
 				text-decoration: underline;	
 			}
 		}
-		a{
+
+		a {
 			color: $blue;
 		}
 	}
 }
 
-.b-blue{
+.b-blue {
 	color: #1479DE;
-}
-.b-blue:hover{
-	text-decoration: underline;
-}
 
+	&:hover {
+		text-decoration: underline;
+	}
+}
 
 // big foot
-sup{
+sup {
   line-height: 0em;
+
+	a {
+		color: #27AE60;
+	}
 }
 
-sup a{
-	color: #27AE60;
+.footnote-button {
+	&:hover { opacity: 0.6; }
+	&:active { opacity: 0.6; }
+	&.active {
+		opacity: 0.9;
+		-webkit-transition-delay: 0.05s;
+		-moz-transition-delay: 0.05s;
+		-ms-transition-delay: 0.05s;
+		transition-delay: 0.05s;
+	}
 }
 
-.footnote-button {  }
-.footnote-button:hover { opacity: 0.6; }
-.footnote-button:active { opacity: 0.6; }
-.footnote-button.active { opacity: 0.9; -webkit-transition-delay: 0.05s; -moz-transition-delay: 0.05s; -ms-transition-delay: 0.05s; transition-delay: 0.05s; }
+.footnote-circle:last-child {
+	margin-right: 0;
+}
 
-.footnote-circle {  }
-.footnote-circle:last-child { margin-right: 0; }
+.footnote-content {
+	position: fixed; z-index: 10; bottom: auto; left: auto; box-sizing: border-box; max-width: 90%; margin: 1.21924em auto; display: inline-block; -webkit-transform: scale(0.1) translateZ(0); -moz-transform: scale(0.1) translateZ(0); -ms-transform: scale(0.1) translateZ(0); transform: scale(0.1) translateZ(0); -webkit-transform-origin: 50% 0; -moz-transform-origin: 50% 0; -ms-transform-origin: 50% 0; transform-origin: 50% 0; background: #fafafa; opacity: 0; border-radius: 0.5em; border: 1px solid $blue; -webkit-transition-property: opacity, -webkit-transform; -moz-transition-property: opacity, -moz-transform; -ms-transition-property: opacity, -ms-transform; transition-property: opacity, transform; -webkit-transition-duration: 0.25s; -moz-transition-duration: 0.25s; -ms-transition-duration: 0.25s; transition-duration: 0.25s;
 
-.footnote-content { position: fixed; z-index: 10; bottom: auto; left: auto; box-sizing: border-box; max-width: 90%; margin: 1.21924em auto; display: inline-block; -webkit-transform: scale(0.1) translateZ(0); -moz-transform: scale(0.1) translateZ(0); -ms-transform: scale(0.1) translateZ(0); transform: scale(0.1) translateZ(0); -webkit-transform-origin: 50% 0; -moz-transform-origin: 50% 0; -ms-transform-origin: 50% 0; transform-origin: 50% 0; background: #fafafa; opacity: 0; border-radius: 0.5em; border: 1px solid $blue; -webkit-transition-property: opacity, -webkit-transform; -moz-transition-property: opacity, -moz-transform; -ms-transition-property: opacity, -ms-transform; transition-property: opacity, transform; -webkit-transition-duration: 0.25s; -moz-transition-duration: 0.25s; -ms-transition-duration: 0.25s; transition-duration: 0.25s; }
-.footnote-content.active { -webkit-transform: scale(1) translateZ(0); -moz-transform: scale(1) translateZ(0); -ms-transform: scale(1) translateZ(0); transform: scale(1) translateZ(0); opacity: 0.97; }
-.footnote-content.bottom { -webkit-transform-origin: top; -moz-transform-origin: top; -ms-transform-origin: top; transform-origin: top; }
-.footnote-content.top { -webkit-transform-origin: bottom; -moz-transform-origin: bottom; -ms-transform-origin: bottom; transform-origin: bottom; }
+	&.active { -webkit-transform: scale(1) translateZ(0); -moz-transform: scale(1) translateZ(0); -ms-transform: scale(1) translateZ(0); transform: scale(1) translateZ(0); opacity: 0.97; }
+	&.bottom { -webkit-transform-origin: top; -moz-transform-origin: top; -ms-transform-origin: top; transform-origin: top; }
+	&.top { -webkit-transform-origin: bottom; -moz-transform-origin: bottom; -ms-transform-origin: bottom; transform-origin: bottom; }
 
-.footnote-content ::-webkit-scrollbar { display: none; }
+	::-webkit-scrollbar { display: none; }
+}
 
 .footnote-main-wrapper { position: relative; z-index: 14; box-sizing: border-box; overflow: hidden; margin: 0; max-width: 22em; background-color: #fafafa; border-radius: 0.5em; -webkit-transition-property: max-height; -moz-transition-property: max-height; -ms-transition-property: max-height; transition-property: max-height; -webkit-transition-duration: 0.25s; -moz-transition-duration: 0.25s; -ms-transition-duration: 0.25s; transition-duration: 0.25s; }
 
@@ -124,4 +137,3 @@ sup a{
 .bottom .tooltip { top: -0.65em; bottom: auto; }
 
 .top .tooltip { bottom: -0.65em; top: auto; }
-
