@@ -2,6 +2,7 @@ reference/*
 okturtles.sublime-*
 index2.html
 node_modules/
+dist/
 .sass-cache
 reference
 /.well-known

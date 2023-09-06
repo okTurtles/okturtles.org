@@ -4,10 +4,9 @@
   "description": "okTurtles.org website",
   "main": "server.coffee",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "compile-sass": "sass includes/sass:includes/stylesheets --no-source-map",
-    "compile-sass:dev": "sass includes/sass:includes/stylesheets --no-source-map --watch",
-    "dev": "node server.js & npm run compile-sass:dev"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "repository": {
     "type": "git",
@@ -19,13 +18,8 @@
     "url": "https://github.com/okTurtles/okturtles.com/issues"
   },
   "homepage": "https://github.com/okTurtles/okturtles.com",
-  "dependencies": {
-    "connect-static-transform": "^0.7.0",
-    "express": "^4.10.7",
-    "node-ssi": "^0.3.0",
-    "string": "^3.0.0"
-  },
   "devDependencies": {
+    "astro": "^3.0.5",
     "sass": "^1.63.6"
   }
 }

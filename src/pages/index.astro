@@ -1,0 +1,246 @@
+---
+import Layout from '@/layouts/BaseLayout.astro';
+import Ribbon from '@/components/Ribbon.astro';
+---
+
+<Layout>
+  <Fragment slot="head">
+    <meta name="keywords" content="okTurtles, security, dnsnmc, namecoin, bitcoin, ethereum, dnssec, security, surveillance, surviellance, nsa, https, certificate authorities, ssl certificates, certificate transparency, convergence, perspectives, mitm, nsa-proof, mitm-proof" />
+
+    <!-- social sharing metadata -->
+    <meta property="og:title" content="okTurtles: Supporting beneficial decentralization technologies." />
+    <meta property="og:description" content="Research, development and education about today's decentralization technologies. 501(c)(3)" />
+
+    <meta property="og:image" content="//okturtles.com/images/okturtles-social-share@2x.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1201">
+    <meta property="og:image:height" content="631">
+
+    <meta property="og:image" content="//okturtles.com/images/okturtles-social-share.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="601">
+    <meta property="og:image:height" content="316">
+
+    <!-- video utilities -->
+    <!--link href="/third-party/video-js.min.css" rel="stylesheet"-->
+    <!--script src="/third-party/js/video.min.js"></script-->
+
+    <script is:inline type="text/javascript">
+      /* eslint-disable indent, no-trailing-spaces, eol-last, no-multiple-empty-lines */
+      /* global $, videojs, _paq */
+      $(document).ready(function () {
+        var hash = window.location.hash.slice(1)
+        var map = {
+          'mitm_proof': '/browser-extension/#mitm_proof',
+          'footer': 'https://github.com/okTurtles/dnschain/blob/master/README.md#community',
+          'memory-of': '/team/#memory-of',
+          'faq': '/browser-extension/#faq',
+          'oktvs': 'https://github.com/okTurtles/dnschain/blob/master/docs/Comparison.md',
+          'DNSChain': 'https://github.com/okTurtles/dnschain'
+        }
+        if (map[hash]) {
+          window.location.replace(map[hash]) // http://stackoverflow.com/a/506004/1781435
+        }
+  
+        // http://docs.videojs.com/docs/guides/plugins.html
+        // videojs.plugin('examplePlugin', function examplePlugin () {
+        //   var playedOnce = false
+        //   this.on('play', function (e) {
+        //     if (!playedOnce) {
+        //       playedOnce = true
+        //       if (typeof _paq !== 'undefined' && _paq !== null) {
+        //         _paq.push(['trackPageView', '/dnschainVideo'])
+        //       }
+        //     }
+        //   })
+        // })
+        // videojs('demoVideo').examplePlugin()
+      })
+    </script>
+  </Fragment>
+
+  <Ribbon />
+
+  <section class="header--index">
+		<div class="container home-container">
+			<h1><span>ok</span>Turtles Foundation</h1>
+			<h3>Supporting beneficial decentralization technologies.</h3>
+		</div>
+	</section>
+
+	<!-- video -->
+	<!-- <div class="video-container">
+		<div class="video-wrapper">
+			<-- <iframe width="700" height="400" src="//www.youtube.com/embed/7QLaKW8ABy4?&amp;hd=1&amp;rel=0&amp;showinfo=0;theme=light;color=whitee" frameborder="0" allowfullscreen></iframe> ->
+			<-- Original dimensions are 1280x720, so 704x396 is exact same ratio ->
+			<video width="704" height="396" id="demoVideo"
+				class="video-js vjs-default-skin vjs-big-play-centered"
+				controls preload="none"
+				poster="other/okTDemoPoster.jpg"
+				data-setup='{}'
+			>
+				<source src="other/okTurtlesDEMO.webm">
+				<source src="other/okTurtlesDEMO.mp4">
+				<source src="other/okTurtlesDEMO.ogv">
+				<source src="other/okTurtlesDEMO.mov">
+				<p class="vjs-no-js">
+			    To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video.
+			  </p>
+			</video>
+		</div>
+	</div> -->
+
+	<!-- https is broken -->
+	<section class="https-is-broken">
+		<div class="container">
+			<a class="link" href="https://groupincome.org">
+				<img src="/images/gi-hero.jpg" alt="Group Income" width="705" height="421"/>
+				<h2>
+					Group Income
+				</h2>
+				<p>
+					Group income makes it easy for small communities to provide a financial safety net for their members with end-to-end encryption and self-hosting.
+				</p>
+			</a>
+		</div>
+	</section>
+
+	<!-- Other projects -->
+	<section class="what-we-do">
+		<div class="container">
+			<h2>
+				Other projects
+			</h2>
+
+			<div class="other-project-list">
+				<div class="project-list">
+					<a class="link" href="https://shelterprotocol.net">
+						<img src="/images/banner-shelter.jpg" alt="Shelter Protocol">
+						<h3>Shelter Protocol</h3>
+						<p>
+							A protocol for creating end-to-end encrypted, federated, user-friendly web applications.
+						</p>
+					</a>
+				</div>
+				<div class="project-list">
+					<a class="link" href="/dpki">
+						<img src="/images/banner-dpki.jpg" alt="DPKI">
+						<h3>DPKI</h3>
+						<p>
+							The Web's trust system is broken. Blockchains can fix it. CONIKS vs Key Transparency vs Certificate Transparency vs Blockchains
+						</p>
+					</a>
+				</div>
+				<div class="project-list">
+					<a class="link" href="https://github.com/okTurtles/dnschain">
+						<img src="/images/banner-dns-chain.png" alt="DNSChain">
+						<h3>DNSChain</h3>
+						<p>
+							DNSChain offers a free and secure decentralized alternative while remaining backwards compatible with traditional DNS.
+						</p>
+					</a>
+				</div>
+
+				<!-- <div class="project-list">
+					<a class="link" href="https://okturtles.org/browser-extension/">
+						<img src="/images/banner-ok-turtle.png" alt="DKPI">
+						<h3>okTurtles Browser Extension</h3>
+						<p>
+							Simple, surveillance-free communication, everywhere.
+						</p>
+					</a>
+				</div> -->
+			</div>
+			<div class="half">
+				<!-- education -->
+				<div class="education">
+					<h3>
+						Education + Research
+					</h3>
+					<p>
+						<!-- TODO: these should be links to blog & youtube channe. -->
+						<!--       separaely, we need links to "Other Resources" GH section and comparison. -->
+						<!-- Blog <a href="https://github.com/okTurtles/dnschain/blob/master/README.md#other-resources" target="_blank" style="color:#1479DE">posts, video, and audio</a> content about the dangers of mass surveillance and the technology that can be used to protect against it. -->
+						We produce educational content and solutions on topics ranging from mass surveillance to decentralization. See our <a href="//blog.okturtles.org" style="color:#1479DE">Blog</a>, <a href="https://www.youtube.com/channel/UC0Ft1M3PjlRlpSBcOBWtG3w" style="color:#1479DE">YouTube</a>, <a href="https://twitter.com/okTurtles" style="color:#1479DE">Twitter</a>, and <a href="https://github.com/okturtles" style="color:#1479DE">GitHub</a>.
+					</p>
+
+					<a class="blog-post-link" href="https://www.youtube.com/watch?v=7S1IqaSLrq8">
+						<i class="fab fa-youtube fa-2x" aria-hidden="true"></i>
+						<span class="blog-post-link__text">Deconfusing Decentralization</span>
+					</a>
+					<a class="blog-post-link" href="https://blog.okturtles.org/2017/02/coniks-vs-key-transparency-vs-certificate-transparency-vs-blockchains/">
+						<i class="fas fa-file fa-2x" aria-hidden="true"></i>
+						<span class="blog-post-link__text">DPKI/DNSChain + related technologies</span>
+					</a>
+					<a class="blog-post-link" href="https://groupincome.org/tag/voting/" target="_blank">
+						<i class="fas fa-file fa-2x" aria-hidden="true"></i>
+						<span class="blog-post-link__text">Voting Systems + Social Choice Theory</span>
+					</a>
+					<a class="blog-post-link" href="https://groupincome.org/shorts/">
+						<i class="fab fa-youtube fa-2x" aria-hidden="true"></i>
+						<span class="blog-post-link__text">Group Income: Short Videos</span>
+					</a>
+					<a class="blog-post-link" href="http://groupcurrency.org" target="_blank">
+						<i class="fas fa-users fa-2x" aria-hidden="true"></i>
+						<span class="blog-post-link__text">Group Currency: Cryptocurrency + Basic Income</span>
+					</a>
+				</div>
+
+				<div class="education">
+					<h3>
+						Selected Articles
+					</h3>
+					<p>
+						We occasionally write blog articles on diverse themes around privacy, security, decentralisation, transparency, amongst other topics.
+					</p>
+					<a class="blog-post-link" href="https://blog.okturtles.org/2023/08/turtles-status-letter-5/">
+						Turtles Status Letter #5 — Years In Review
+					</a>				
+					<a class="blog-post-link" href="https://blog.okturtles.org/2019/12/turtles-status-letter-4-year-in-review/">
+						Turtles Status Letter #4 — Year In Review
+					</a>				
+					<a class="blog-post-link" href="https://blog.okturtles.org/2018/08/turtles-status-letter-3-year-in-review/">
+						Turtles Status Letter #3 — Year In Review
+					</a>				
+					<a class="blog-post-link" href="https://blog.okturtles.org/2017/04/turtle-status-letter-2-group-income-dpki-more/">
+						Turtle Status Letter #2 — Group Income + DPKI + More!
+					</a>
+					<a class="blog-post-link" href="https://blog.okturtles.org/2017/02/coniks-vs-key-transparency-vs-certificate-transparency-vs-blockchains/">
+						CONIKS vs Key Transparency vs Certificate Transparency vs Blockchains
+					</a>
+					<a class="blog-post-link" href="https://blog.okturtles.org/2016/03/the-zcash-catch/">
+						The Zcash Catch
+					</a>
+					<a class="button" href="//blog.okturtles.org">
+						View All
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style lang="scss">
+/*
+.video-container2 {
+  position: relative;
+  margin: 0 auto;
+  max-width: 701px;
+  width: 100%;
+  bottom: 200px;
+  overflow: hidden;
+}
+*/
+
+.what-we-do {
+  i.fab,
+  i.fas {
+    color:#27ae60;
+    width: 40px;
+    text-align: center;
+    display:inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+}
+</style>
