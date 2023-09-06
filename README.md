@@ -1,4 +1,4 @@
-# okturtles.com
+# okturtles.org
 
 This project uses [nginx SSI](http://nginx.org/en/docs/http/ngx_http_ssi_module.html)
 to include header and footer files. For local testing it uses the
