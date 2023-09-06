@@ -4,9 +4,6 @@
   "description": "okTurtles.org website",
   "main": "server.coffee",
   "scripts": {
-    "compile-sass": "sass includes/sass:includes/stylesheets --no-source-map",
-    "compile-sass:dev": "sass includes/sass:includes/stylesheets --no-source-map --watch",
-    "dev:legacy": "node server.js & npm run compile-sass:dev",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview"
