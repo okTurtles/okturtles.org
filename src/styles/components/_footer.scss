@@ -37,12 +37,19 @@
       }
     }
 
-    .twitter-link svg {
+    .twitter-link svg,
+    .mastodon-link svg {
       transform: translateY(2px);
     }
 
+    .mastodon-link svg {
+      width: 18px;
+      height: auto;
+    }
+
     .odysee-link,
-    .twitter-link {
+    .twitter-link,
+    .mastodon-link {
       :hover svg,
       :focus svg {
         fill: #1479DE;
