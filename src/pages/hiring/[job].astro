@@ -1,0 +1,32 @@
+---
+import JobPost from '../../layouts/JobPost.astro'
+import { sortedPosts } from '@/utils.js'
+
+export async function getStaticPaths() {
+  const jobs = sortedPosts(await Astro.glob('../../content/jobs/*.{md,mdx}'))
+  return jobs.map(job => {
+    // Use the permalink value defined in the frontmatter as the slug
+    return {
+      params: { job: job.frontmatter.permalink },
+      props: job
+    }
+  })
+}
+
+const { Content } = Astro.props
+---
+<JobPost>
+  <article class="job-content">
+    <Content />
+  </article>
+</JobPost>
+
+<script>
+  // Optionally smooth scroll the job detail into view.
+  document.addEventListener("DOMContentLoaded", function () {
+    window.scrollTo({
+        top: 500,
+        behavior: "smooth"
+    })
+  })
+</script>

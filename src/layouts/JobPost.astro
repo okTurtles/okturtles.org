@@ -1,0 +1,52 @@
+---
+import BaseLayout from './BaseLayout.astro'
+import Header from '../components/base/Header.astro'
+import { sortedPosts } from '@/utils.js'
+
+// Load job posts from the content folder
+const jobs = sortedPosts(await Astro.glob('../content/jobs/*.{md,mdx}')).filter(job => {
+  return !job.file.split('/').pop().startsWith('_')
+})
+
+// Determine the current job slug based on URL.
+// (Assumes that individual job pages are routed as /hiring/[job])
+const pathname = new URL(Astro.request.url).pathname
+const segments = pathname.split('/').filter(Boolean)
+const currentPath = segments[segments.length - 1] || ''
+---
+
+<BaseLayout title="Join Our Team | okTurtles Foundation" bodyClass="hiring-page">
+  <Header />
+
+  <section class="hiring-header">
+    <div class="container">
+      <h1>Join our team.</h1>
+      <p>
+        We're always looking for passionate people who share our vision and excitement for what's possible.
+        If you're genuinely interested in what okTurtles is creating and stands for, you might want to join our team.
+      </p>
+    </div>
+  </section>
+
+  <section class="hiring-content">
+    <div class="container">
+      <h2>Open Positions</h2>
+      <div class="hiring-job-links">
+        {jobs.map((job: any) => {
+          const slug = job.frontmatter.permalink
+          const isActive = slug === currentPath
+          return (
+            <a href={"/hiring/"+slug} class={isActive ? "active-link" : ""}>
+              <span class="hiring-job-title">{job.frontmatter.title}</span>
+              <span class="hiring-job-type">{job.frontmatter.type}</span>
+            </a>
+          )
+        })}
+      </div>
+
+      <article class="hiring-job-content">
+        <slot />
+      </article>
+    </div>
+  </section>
+</BaseLayout>
