@@ -35,6 +35,13 @@
     @include side-margin;
     max-width: 46rem;
     padding: 4rem 0;
+    background-color: $white;
+
+    .container {
+      max-width: 47rem;
+      @include side-padding;
+      margin: 0 auto;
+    }
 
     h2 {
       text-align: center;
