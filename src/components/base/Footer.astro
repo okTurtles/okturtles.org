@@ -108,3 +108,141 @@
 
   <slot />
 </section>
+
+<style lang="scss">
+@use "../../styles/variables" as *;
+
+.footer {
+  text-align: center;
+  padding: 100px 0;
+  ul {
+    li {
+      position: relative;
+      display: inline-block;
+      margin: 0 20px;
+
+      a:hover {
+        color: $blue;
+      }
+    }
+    @media only screen and (max-width: 568px) {
+      li {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .social-icons {
+    margin-top: 35px;
+
+    li {
+      font-size: 18px;
+    }
+
+    .odysee-link {
+      display: inline-block;
+      width: max-content;
+      height: auto;
+      transform: translateY(2px);
+
+      svg {
+        display: inline-block;
+        width: auto;
+        height: 20px;
+      }
+    }
+
+    .twitter-link svg,
+    .mastodon-link svg {
+      transform: translateY(2px);
+    }
+
+    .mastodon-link svg {
+      width: 18px;
+      height: auto;
+    }
+
+    .odysee-link,
+    .twitter-link,
+    .mastodon-link {
+      :hover svg,
+      :focus svg {
+        fill: #1479DE;
+      }
+    }
+  }
+
+  .form-container {
+    position: relative;
+    display: block;
+    margin-top: 60px;
+    p {
+      color: #aeaeae;
+      margin-bottom: 14px;
+      font-size: .9em;
+    }
+    form {
+      input {
+        @include transition(all, .3s, ease);
+        vertical-align: bottom;
+        -webkit-appearance: none;
+        -webkit-font-smoothing: antialiased;
+        font-family: "proxima_novaregular";
+        background-color: $light-grey;
+        max-width: 300px;
+        width: 100%;
+        height: 50px;
+        font-weight: normal;
+        position: relative;
+        border-radius: 0;
+        font-size: 14px;
+        text-align: left;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        padding: 3px 20px;
+        margin: 5px 1px 3px 0px;
+        border: 1px solid $black;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;
+      }
+      input:hover, input:focus {
+        background-color: $white;
+      }
+
+      .submit {
+        font-family: "proxima_novaregular";
+        color: $blue;
+        position: relative;
+        width: 70px;
+        max-height: 50px;
+        height: 50px;
+        padding-left: 5px;
+        right: 7px;
+        padding-right: 5px;
+        margin-bottom: 3px;
+        text-align: center;
+        -webkit-appearance: none;
+        @include transition(all, .3s, ease);
+      }
+      .submit:hover, .submit:focus, .submit:active {
+        -webkit-font-smoothing: antialiased;
+        cursor: pointer;
+        background-color: $blue;
+        color: $white;
+        @include transition(all, .3s, ease);
+      }
+      @media only screen and (max-width: 568px) {
+        input {
+          max-width: 190px;
+        }
+      }
+    }
+    form:hover {
+      input {
+        border-color: $blue;
+      }
+    }
+  }
+}
+</style>

@@ -229,16 +229,26 @@ import Ribbon from '@/components/Ribbon.astro';
 </Layout>
 
 <style lang="scss">
-/*
-.video-container2 {
-  position: relative;
-  margin: 0 auto;
-  max-width: 701px;
-  width: 100%;
-  bottom: 200px;
-  overflow: hidden;
+@use "../styles/variables" as *;
+
+.header--index {
+  background-color: $green;
+  padding-top: 100px;
+  padding-bottom: 300px;
+
+  h1 {
+    color: $white;
+  }
+
+  .home-container {
+    max-width: 800px;
+    text-align: center;
+  }
+
+  @include until (568px) {
+    padding-bottom: 44vw;
+  }
 }
-*/
 
 .what-we-do {
   i.fab,

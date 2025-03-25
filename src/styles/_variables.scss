@@ -38,6 +38,7 @@ $blue: #1479DE;
 }
 
 // media-query related
+
 $tablet: 760px;
 $desktop: 1200px;
 
@@ -49,6 +50,12 @@ $desktop: 1200px;
 
 @mixin from ($bp) {
     @media screen and (min-width: $bp) {
+        @content;
+    }
+}
+
+@mixin from_until($bp_from, $bp_until) {
+    @media screen and (min-width: $bp_from) and (max-width: $bp_until) {
         @content;
     }
 }

@@ -1,8 +1,6 @@
 ---
 import Layout from '@/layouts/BaseLayout.astro'
 import Header from '@/components/base/Header.astro'
-import '@/styles/pages/_browser-extension.scss'
-import '@/styles/components/_slideshow.scss'
 ---
 
 <Layout title='Browser Extension | okTurtles' bodyClass='browser-extension'>
@@ -193,3 +191,528 @@ import '@/styles/components/_slideshow.scss'
     <script is:inline src='/third-party/browser-extension/big-foot.js' type="text/javascript"></script>
   </Fragment>
 </Layout>
+
+<style lang="scss">
+@import "../styles/variables";
+
+.browser-extension {
+  padding: 80px 0;
+  @include side-padding;
+  background-color: $white;
+
+  h2 {
+    text-align: center;
+    font-size: 44px;
+    color: $dark-green;
+    margin-bottom: 20px;
+
+    span {
+      color: #9a9a9a;
+      font-family: 'proxima_novaregular';
+      font-size: 20px;
+    }
+  }
+
+  .first {
+    color: $black;
+    font-size: 1.3em;
+    line-height: 1.4;
+    position: relative;
+    display: block;
+    margin: 20px 0;
+  }
+
+  p {
+    color: $grey;
+  }
+
+	#unblock {
+		padding-top: 80px;
+		text-align: left;
+
+		h2 {
+			text-align: left;
+		}
+	}
+
+	#faq {
+		padding-top: 80px;
+
+		sup {
+			vertical-align: super;
+			font-size: .8em;
+		}
+
+		h2 {
+			text-align: left;
+		}
+
+		h3 {
+			font-size: 1.5em;	
+			color: $black;	
+			font-family: 'proxima_novaregular';
+			padding: 10px 0;
+			@include transition(all, .4s, ease);
+
+			&:hover {
+				color: $blue;
+				text-decoration: none;
+				@include transition(all, .15s, ease);
+			}
+		}
+
+		p {
+			margin-bottom: 10px;
+
+			a:hover {
+				text-decoration: underline;	
+			}
+		}
+
+		a {
+			color: $blue;
+		}
+	}
+}
+
+.b-blue {
+	color: #1479DE;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+// big foot
+sup {
+  line-height: 0em;
+
+	a {
+		color: #27AE60;
+	}
+}
+
+.footnote-button {
+	&:hover { opacity: 0.6; }
+	&:active { opacity: 0.6; }
+	&.active {
+		opacity: 0.9;
+		-webkit-transition-delay: 0.05s;
+		-moz-transition-delay: 0.05s;
+		-ms-transition-delay: 0.05s;
+		transition-delay: 0.05s;
+	}
+}
+
+.footnote-circle:last-child {
+	margin-right: 0;
+}
+
+.footnote-content {
+	position: fixed; z-index: 10; bottom: auto; left: auto; box-sizing: border-box; max-width: 90%; margin: 1.21924em auto; display: inline-block; -webkit-transform: scale(0.1) translateZ(0); -moz-transform: scale(0.1) translateZ(0); -ms-transform: scale(0.1) translateZ(0); transform: scale(0.1) translateZ(0); -webkit-transform-origin: 50% 0; -moz-transform-origin: 50% 0; -ms-transform-origin: 50% 0; transform-origin: 50% 0; background: #fafafa; opacity: 0; border-radius: 0.5em; border: 1px solid $blue; -webkit-transition-property: opacity, -webkit-transform; -moz-transition-property: opacity, -moz-transform; -ms-transition-property: opacity, -ms-transform; transition-property: opacity, transform; -webkit-transition-duration: 0.25s; -moz-transition-duration: 0.25s; -ms-transition-duration: 0.25s; transition-duration: 0.25s;
+
+	&.active { -webkit-transform: scale(1) translateZ(0); -moz-transform: scale(1) translateZ(0); -ms-transform: scale(1) translateZ(0); transform: scale(1) translateZ(0); opacity: 0.97; }
+	&.bottom { -webkit-transform-origin: top; -moz-transform-origin: top; -ms-transform-origin: top; transform-origin: top; }
+	&.top { -webkit-transform-origin: bottom; -moz-transform-origin: bottom; -ms-transform-origin: bottom; transform-origin: bottom; }
+
+	::-webkit-scrollbar { display: none; }
+}
+
+.footnote-main-wrapper { position: relative; z-index: 14; box-sizing: border-box; overflow: hidden; margin: 0; max-width: 22em; background-color: #fafafa; border-radius: 0.5em; -webkit-transition-property: max-height; -moz-transition-property: max-height; -ms-transition-property: max-height; transition-property: max-height; -webkit-transition-duration: 0.25s; -moz-transition-duration: 0.25s; -ms-transition-duration: 0.25s; transition-duration: 0.25s; }
+
+.footnote-content-wrapper { position: relative; z-index: 8; max-height: 15em; padding: 1.1em 1.3em 1.2em; box-sizing: border-box; overflow: auto; -webkit-overflow-scrolling: touch; background: #fafafa; border-radius: 0.5em; }
+.footnote-content-wrapper img { max-width: 100%; }
+.footnote-content-wrapper *:last-child { margin-bottom: 0; }
+.footnote-content-wrapper *:first-child { margin-top: 0; }
+
+.tooltip { position: absolute; z-index: 12; box-sizing: border-box; margin-left: -0.65em; width: 1.3em; height: 1.3em; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); background: #fafafa; border: 1px solid $blue ; border-top-left-radius: 0; }
+
+.bottom .tooltip { top: -0.65em; bottom: auto; }
+
+.top .tooltip { bottom: -0.65em; top: auto; }
+
+// slideshow
+
+#facebook {
+  color: #3b5998;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+#gmail {
+  color: rgb(201, 44, 25);
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.slideshow {
+  position: relative;
+  padding: 20px 0;
+  margin: 0 auto;
+  overflow: visible;
+  max-width: 503px;
+  width: 100%;
+  height: 280px;
+}
+
+.slideshow > div {
+  position: absolute;
+  padding: 0;
+  margin: 0 auto;
+  overflow: visible;
+  max-width: 503px;
+  width: 100%;
+  height: 350px;
+}
+
+.slideshow img {
+  position: absolute;
+  top:10px;
+  /*display: none;*/
+  visibility: hidden;
+  float: left;
+  max-width: 503px !important;
+  width: 100%;
+  display: inline-block;
+}
+
+.slideshow span {
+  position: absolute;
+  visibility: hidden;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: .905em;/*hack - SLIDESHOW TEXT*/
+  width: 100px; /* has to be the same as #service */
+}
+
+#serviceTagline span {
+  position: relative;
+  margin: 0 auto;
+  width: 100px;
+  margin-top: 1.1em;
+}
+
+#service {
+  display: inline-block;
+  width: 100px;
+  height: 20px;
+  margin: 0 5px;
+  top: 0;
+}
+
+#subtitle {
+  margin-top: -20px;
+  line-height: 1.8em;
+}
+
+.green {
+  color: #27ae60;
+}
+
+@media screen and (max-width: 55em) {
+  .container > header h1,
+  .container > header nav {
+    float: none;
+  }
+
+  .container > header > span,
+  .container > header h1 {
+    text-align: center;
+  }
+
+  .container > header nav {
+    margin: 0 auto;
+  }
+
+  .container > header > span {
+    text-indent: 30px;
+  }
+}
+
+.section_color_top {
+  background-color: #ffffff;
+}
+
+.section_color_middle {
+  background-color: #f5f5f5;
+}
+#section_color_last {
+  background-color: #ffffff;
+}
+
+img.features {
+  box-shadow: 2px 2px 4px #888888;
+  padding: 0;
+  margin-bottom: 2.5em;
+}
+
+.cbp-so-scroller {
+  overflow: visible; /* <! GREG CHANGED THIS TO FIX SLIDE SHOW! */
+}
+
+.cbp-so-section {
+  overflow: hidden;
+}
+
+.cbp-so-section:first-child {
+  margin-bottom: 5em;
+  padding-bottom: 1em;
+}
+
+/* Clear floats of children */
+.cbp-so-section:before,
+.cbp-so-section:after {
+  content: " ";
+  display: table;
+}
+
+.cbp-so-section:after {
+  clear: both;
+}
+
+/* Text styling */
+.cbp-so-section h2 {
+  font-size: 4em;
+  font-weight: 300;
+  line-height: 1;
+  margin-top: 0;
+}
+
+.cbp-so-section li {
+  margin-bottom: 10px;
+}
+
+.cbp-so-section li:last-child {
+  margin-bottom: inherit;
+}
+
+.cbp-so-section p, .cbp-so-section li {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+/* Sides */
+.cbp-so-side {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  // padding-right: 15px;
+  // padding-left: 15px;
+  overflow: visible;   /* <! GREG CHANGED THIS TO FIX SLIDE SHOW! */
+  padding-top: 0;
+  padding-bottom: 60px;
+  -webkit-transition: -webkit-transform 1s, opacity 1s;
+  -moz-transition: -moz-transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s;
+}
+
+.cbp-so-side-left {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 40px;
+  overflow: hidden;
+  margin-top: -6em;
+  padding-bottom: 3em;
+  -webkit-transition: -webkit-transform 1s, opacity 1s;
+  -moz-transition: -moz-transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s;
+}
+
+.cbp-so-side-right {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-right: 40px;
+  padding-left: 15px;
+  overflow: hidden;
+  margin-top: -6em;
+  padding-bottom: 3em;
+  -webkit-transition: -webkit-transform 1s, opacity 1s;
+  -moz-transition: -moz-transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s;
+}
+
+.center {
+  margin-bottom: -5em;
+}
+
+.left {
+  width: 50%;
+  float: left;
+  text-align: right;
+  padding-right: 2em;
+}
+
+.right {
+  width: 50%;
+  float: right;
+  text-align: left;
+  padding-left: 2em;
+}
+
+/* Clear floats of children */
+.cbp-so-side:before,
+.cbp-so-side:after {
+  content: " ";
+  display: table;
+}
+
+.cbp-so-side:after {
+  clear: both;
+}
+
+.cbp-so-side-center {
+  text-align: center;
+}
+
+/* Initial state (hidden or anything else) */
+.cbp-so-init .cbp-so-side {
+  opacity: 0;
+}
+
+.cbp-so-init .cbp-so-side-center {
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+.cbp-so-init .cbp-so-side-left {
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+.cbp-so-init .cbp-so-side-right {
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+.sectiongs {
+  clear: both;
+  padding: 0;
+  margin: 0;
+  margin-left: -0.5em;
+}
+
+.colgs {
+  display: block;
+  float:left;
+  width: 100%;
+  box-sizing: border-box; /* Supported by IE 8+. If IE 7 and below support is required see http://html5please.com/#box-sizing */
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background-clip: padding-box; /* This allows column elements to have background colour without it bleeding into the gutter. Supported by IE 9+. If support for IE 8 and below is required, a content div with background colour should be placed inside the column */
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  margin: 0 0 0.25em 0;
+  border-left: 2em solid transparent;
+}
+
+.group:before,
+.group:after {
+  content:"";
+  display:table;
+}
+
+.group:after {
+  clear:both;
+}
+
+@media screen and (max-width: 580px) {
+  .slideshow{
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: 538px) {
+  .slideshow span {
+    padding-left: 52px;
+  }
+}
+
+@media screen and (max-width: 509px) {
+  .slideshow span {
+    padding-left: 2px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .slideshow {
+    height: 220px;
+  }
+
+  .slideshow span {
+    position: absolute;
+    visibility: hidden;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    width: 88px; /* has to be the same as #service */
+      margin-top: .98em;/*iPhone hack - SLIDESHOW TEXT*/
+      padding-left: 10px;
+  }
+
+  #serviceTagline span {
+    position: relative;
+    margin: 0 auto;
+    width: 88px;
+  }
+
+  #service {
+    display: inline-block;
+    width: 88px;
+    height: 20px;
+    margin: 0 5px;
+  }
+
+  #subtitle {
+    margin-top: -20px;
+    line-height: 1.8em;
+  }
+}
+
+@media screen and (max-width: 449px) {
+  .slideshow span {
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .slideshow {
+    height: 150px;
+  }
+
+  .slideshow span {
+    padding-left: 0;
+  }
+}
+
+#serviceTaglineMobile {
+  display: none;
+}
+
+// fix for now
+@media screen and (max-width: 580px) {
+  .slideshow span {
+    display: none;
+  }
+
+  #serviceTagline {
+    display: none;
+  }
+
+  #serviceTagline span {
+    display: none;
+  }
+
+  #serviceTaglineMobile {
+    display: block;
+    position: relative;
+    top: 20px;
+  }
+}
+</style>
