@@ -53,7 +53,7 @@
     justify-content: space-between;
     gap: 3.5rem;
 
-    @include from (76rem) {
+    @include from ($tablet) {
       margin-left: 1rem;
       margin-right: 1rem;
     }
