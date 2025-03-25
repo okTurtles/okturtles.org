@@ -1,7 +1,6 @@
 ---
 import Layout from '@/layouts/BaseLayout.astro'
 import Header from '@/components/base/Header.astro'
-import '@/styles/pages/_donate.scss'
 ---
 
 <Layout title='Donate | okTurtles' bodyClass='donate'>
@@ -64,3 +63,163 @@ import '@/styles/pages/_donate.scss'
     </div>
   </section>
 </Layout>
+
+<style lang="scss">
+@use "../styles/variables" as *;
+
+.donate-content {
+	padding: 80px 0;
+	background-color: $white;
+
+	.container {
+		@include side-padding;
+	}
+
+	h2 {
+		font-size: 34px;
+		color: $dark-green;
+		margin-bottom: 30px;
+	}
+
+	.spacer {
+		margin-bottom: 10px;
+	}
+
+	.top-spacer {
+		margin-top: 30px;
+	}
+
+	.bitpay-donate {
+		margin-bottom: 30px;
+
+		input,
+		select {
+			vertical-align: bottom;
+			-webkit-appearance: none;
+			-webkit-font-smoothing: antialiased;
+			font-family: "proxima_novaregular";
+			background-color: $white;
+			border:none;
+			max-width: 250px;
+			width: 100%;
+			height: 50px;
+			font-weight: normal;
+			position: relative;
+			border-radius: 0;
+			font-size: 14px;
+			text-align: left;
+			position: relative;
+			display: inline-block;
+			outline: none;
+			padding: 3px 20px;
+				margin: 5px 1px 3px 0px;
+				border: 1px solid $black;
+			@include transition(all, .3s, ease);
+			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+			-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+			box-sizing: border-box;
+		}
+
+		.bitpay-donate-field-price {
+			max-width: 150px;
+		}
+
+		.bitpay-donate-button {
+			border: none;
+			width: auto;
+			padding: 0;
+		}
+
+		select {
+			max-width: 110px;
+			text-align: center;
+
+			&:hover,
+			&:focus {
+				background-color: $blue;
+				border-color: $blue;
+				color: $white;
+				cursor: pointer;
+			}
+		}
+
+		option {
+			text-align: center;
+		}
+
+		input {
+			@include until (568px) {
+				max-width: 190px;
+			}
+
+			&:hover,
+			&:focus {
+				background-color: $white;
+			}
+
+			&:focus {
+				border-color: $blue;
+			}
+		}
+
+		.submit {
+			font-family: "proxima_novaregular";
+			color: $blue;
+			position: relative;
+			width: 70px;
+			max-height: 50px;
+			height: 50px;
+			padding-left: 5px;
+			right: 6px;
+			padding-right: 5px;
+			margin-bottom: 3px;
+			text-align: center;
+			-webkit-appearance: none;
+			@include transition(all, .3s, ease);
+
+			&:hover,
+			&:focus,
+			&:active {
+				-webkit-font-smoothing: antialiased;
+				cursor: pointer;
+				background-color: $blue;
+				color: $white;
+				@include transition(all, .3s, ease);
+			}
+		}
+	}
+
+	.flex-buttons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
+	.tilt {
+		position: relative;
+		display: block;
+		width: 160px;
+		padding: 14px 20px;
+		font-size: 16px;
+		border-radius: 5px;
+		background-color: $blue;
+		color: $white;
+		text-align: center;
+		@include transition(all, .3s, ease);
+
+		&:hover {
+			cursor: pointer;
+			background-color: #105EAA;
+		}
+
+		&.github {
+			background-color: #343434;
+		}
+
+		&.github:hover {
+			cursor: pointer;
+			background-color: black;
+		}
+	}
+}
+</style>

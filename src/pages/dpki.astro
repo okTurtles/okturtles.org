@@ -1,7 +1,6 @@
 ---
 import Layout from '@/layouts/BaseLayout.astro'
 import Header from '@/components/base/Header.astro'
-import '@/styles/pages/_dpki.scss'
 
 const pageTitle = 'DPKI | okTurtles'
 ---
@@ -81,3 +80,67 @@ const pageTitle = 'DPKI | okTurtles'
     </div>
   </section>
 </Layout>
+
+<style lang="scss">
+@use "../styles/variables" as *;
+
+.dpki {
+  padding: 80px 0;
+  background-color: $white;
+
+  h2 {
+    text-align: center;
+    font-size: 44px;
+    color: $dark-green;
+    margin-bottom: 45px;
+
+    span {
+      color: #9a9a9a;
+      font-family: "proxima_novaregular";
+      font-size: 20px;
+    }
+  }
+
+  p {
+    text-align: center;
+    margin-top: -30px;
+    color: $grey;
+  }
+
+  .dpki-embed-container {
+    max-width: 700px;
+  }
+
+  .dpki-embed-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+@include until (767px) {
+  .dpki {
+    h2 {
+      padding: 0 5px;
+    }
+  }
+
+  .dpki-embed-container {
+    padding: 0 20px;
+  }
+}
+
+@include from_until(768px, 1200px) {
+  .dpki {
+    h2 {
+      padding: 0 5px;
+    }
+  }
+
+  .dpki-embed-container {
+    padding: 0 20px;
+  }
+}
+</style>

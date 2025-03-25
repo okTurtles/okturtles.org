@@ -1,7 +1,6 @@
 ---
 import Layout from '@/layouts/BaseLayout.astro'
 import Header from '@/components/base/Header.astro'
-import '@/styles/pages/_finances.scss'
 ---
 
 <Layout title='Foundation Activities | okTurtles' bodyClass='activities'>
@@ -101,3 +100,29 @@ import '@/styles/pages/_finances.scss'
     </div>
   </section>
 </Layout>
+
+<style lang="scss">
+@use "../styles/variables" as *;
+
+.activities-content {
+  padding: 80px 0;
+  background-color: $white;
+  @include side-padding;
+
+  h2 {
+    font-size: 34px;
+    color: $dark-green;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 22px;
+    color: $grey;
+    margin-bottom: 10px;
+  }
+
+  .top-spacer {
+    margin-top: 30px;
+  }
+}
+</style>
