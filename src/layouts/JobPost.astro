@@ -1,0 +1,129 @@
+---
+import BaseLayout from './BaseLayout.astro'
+import Header from '../components/base/Header.astro'
+import JobContent from '../components/JobContent.astro'
+import { sortedPosts } from '@/utils.js'
+
+// Load job posts from the content folder
+const jobs = sortedPosts(await Astro.glob('../content/jobs/*.{md,mdx}')).filter(job => {
+  return !job.file.split('/').pop().startsWith('_')
+})
+
+const currentPath = Astro.url.pathname
+const isShowingJobPost = !currentPath.endsWith('hiring')
+---
+
+<BaseLayout title="Join Our Team | okTurtles Foundation" bodyClass="hiring-page">
+  <Header />
+
+  <main class="main-container">
+    <section class="hiring-header">
+      <h2>Open Positions</h2>
+  
+      <div class="hiring-job-links">
+        {
+          jobs.map((job: any) => {
+            const { permalink: slug, title, type } = job.frontmatter
+            const isActive = currentPath.endsWith(slug)
+
+            return (
+              <a href={"/hiring/"+slug} class={isActive ? "is-active" : ""}>
+                <span class="hiring-job-title">{title}</span>
+                <span class="hiring-job-type">{type}</span>
+              </a>
+            )
+          })
+        }
+      </div>
+    </section>
+
+    {
+      isShowingJobPost &&
+      <JobContent>
+        <slot />
+      </JobContent>
+    }
+  </main>
+</BaseLayout>
+
+<style lang="scss">
+@import "../styles/_variables.scss";
+
+.main-container {
+  position: relative;
+  padding: 6.4rem 1rem;
+  background-color: $white;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.hiring-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+
+  h2 {
+    font-size: 32px;
+    font-weight: 500;
+    color: $dark-green;
+    margin-bottom: 4rem;
+
+    @include from ($tablet) {
+      font-size: 40px;
+    }
+  }
+}
+
+.hiring-job-links {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+
+  a {
+    position: relative;
+    display: flex;
+    max-width: 100%;
+    color: $black;
+    padding: 1.5rem;
+    margin-bottom: 1.6rem;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 0.4rem;
+    background: $white;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 150ms ease-out;
+
+    @include from($tablet) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &.is-active,
+    &:hover,
+    &:focus {
+      background: $green;
+      color: $white;
+
+      .hiring-job-type {
+        color: $white;
+      }
+    }
+
+    .hiring-job-title {
+      font-weight: 700;
+    }
+
+    .hiring-job-type {
+      color: $grey;
+    }
+  }
+}
+</style>

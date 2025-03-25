@@ -6,7 +6,6 @@ $green: #27ae60;
 $dark-green: #0C6130;
 $blue: #1479DE;
 
-
 @mixin css3($property, $value) {
     @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
         #{$prefix}#{$property}: $value;
@@ -37,6 +36,10 @@ $blue: #1479DE;
     padding-right: 1rem;
     box-sizing: border-box;
 }
+
+// media-query related
+$tablet: 760px;
+$desktop: 1200px;
 
 @mixin until ($bp) {
     @media screen and (max-width: $bp) {
