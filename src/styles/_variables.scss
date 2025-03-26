@@ -7,6 +7,7 @@ $grey_2: #9a9a9a;
 $green: #27ae60;
 $dark-green: #0C6130;
 $blue: #1479DE;
+$blue_1: #105EAA;
 
 @mixin css3($property, $value) {
     @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
