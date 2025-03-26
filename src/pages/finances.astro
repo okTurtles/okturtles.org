@@ -7,9 +7,9 @@ import Header from '@/components/base/Header.astro'
   <Header />
 
   <!-- activities -->
-  <section class="activities-content">
+  <section class="activities-content page-section-wrapper">
     <div class="container">
-      <h2>okTurtles Foundation Activities</h2>
+      <h2 class="page-content-heading">okTurtles Foundation Activities</h2>
       <h3>by fiscal year (June 1 - May 31)</h3>
 
       <h3 class=top-spacer><b>Foundation Activities</b></h3>
@@ -105,13 +105,7 @@ import Header from '@/components/base/Header.astro'
 @use "../styles/variables" as *;
 
 .activities-content {
-  padding: 80px 0;
-  background-color: $white;
-  @include side-padding;
-
-  h2 {
-    font-size: 34px;
-    color: $dark-green;
+  .page-content-heading {
     margin-bottom: 10px;
   }
 

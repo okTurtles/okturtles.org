@@ -7,9 +7,9 @@ import Header from '@/components/base/Header.astro'
   <Header />
 
   <!-- donate -->
-	<section class="donate-content" style="padding-bottom: 0">
+	<section class="donate-content">
 		<div class="container">
-			<h2>Donate to the okTurtles Foundation</h2>
+			<h2 class="page-content-heading">Donate to the okTurtles Foundation</h2>
 
 			<p><b>Support the okTurtles Foundation's work on:</b></p>
 			<ul>
@@ -68,17 +68,11 @@ import Header from '@/components/base/Header.astro'
 @use "../styles/variables" as *;
 
 .donate-content {
-	padding: 80px 0;
+	padding: 80px 0 0;
 	background-color: $white;
 
 	.container {
 		@include side-padding;
-	}
-
-	h2 {
-		font-size: 34px;
-		color: $dark-green;
-		margin-bottom: 30px;
 	}
 
 	.spacer {
@@ -214,11 +208,11 @@ import Header from '@/components/base/Header.astro'
 
 		&.github {
 			background-color: #343434;
-		}
 
-		&.github:hover {
-			cursor: pointer;
-			background-color: black;
+			&:hover {
+				cursor: pointer;
+				background-color: black;
+			}
 		}
 	}
 }

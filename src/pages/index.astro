@@ -257,7 +257,7 @@ import Ribbon from '@/components/Ribbon.astro';
   margin-bottom: 5rem;
   @include side-margin;
   
-  @media only screen and (max-width: 40rem) {
+  @include until(40rem) {
     margin-top: -29vw;
   }
 
@@ -320,6 +320,7 @@ import Ribbon from '@/components/Ribbon.astro';
       font-size: 32px;
       margin-bottom: 12px;
     }
+  
     h4 {
       margin-top: 40px;
       font-size: 1.1em;
@@ -357,16 +358,16 @@ import Ribbon from '@/components/Ribbon.astro';
     color: $blue;
     margin-top: 30px;
     border: 1px solid $blue;
-  }
 
-  .button:hover {
-    background-color: $blue;
-    color: $white;
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
   }
 
 	i.fab,
   i.fas {
-    color:#27ae60;
+    color: $green;
     width: 40px;
     text-align: center;
     display:inline-block;
@@ -388,13 +389,13 @@ import Ribbon from '@/components/Ribbon.astro';
     font-family: 'proxima_novabold';
     font-size: 1.5rem;
     font-weight: bold;
-    color: #141414;
+    color: $black;
     margin-top: 0.8rem;
     margin-bottom: 1rem;
   }
 
-  @media only screen and (max-width: 800px) {
-    img {
+  img {
+    @include until(800px) {
       max-width: 100%;
       height: auto;
     }
@@ -403,7 +404,8 @@ import Ribbon from '@/components/Ribbon.astro';
 
 .project-list {
   max-width: 370px;
-  @media only screen and (min-width: 800px) {
+
+  @include from (800px) {
     width: min-content;
   }
 }

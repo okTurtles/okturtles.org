@@ -8,7 +8,7 @@ import Header from '@/components/base/Header.astro'
 
   <!-- browser-extension -->
 
-  <section class="browser-extension">
+  <section class="page-section-wrapper">
     <h2>
         okTurtles Browser Extension <br>
         <span>Simple, surveillance-free communication, everywhere.</span>
@@ -195,11 +195,7 @@ import Header from '@/components/base/Header.astro'
 <style lang="scss">
 @import "../styles/variables";
 
-.browser-extension {
-  padding: 80px 0;
-  @include side-padding;
-  background-color: $white;
-
+.page-section-wrapper {
   h2 {
     text-align: center;
     font-size: 44px;
@@ -442,7 +438,7 @@ sup {
 }
 
 img.features {
-  box-shadow: 2px 2px 4px #888888;
+  box-shadow: 2px 2px 4px $light-grey;
   padding: 0;
   margin-bottom: 2.5em;
 }

@@ -7,9 +7,9 @@ import Header from '@/components/base/Header.astro'
   <Header />
 
   <!-- team -->
-	<section class="meet-the-team" style="padding-bottom: 0">
+	<section class="page-section-wrapper pb-0">
 		<div class="container">
-			<h2>Contact Info</h2>
+			<h2 class="page-content-heading">Contact Info</h2>
 			<ul style="margin-bottom: 0">
 				<li><b>Email:</b>&nbsp;<a href="mailto:hi@okturtles.org">hi@okturtles.org</a></li>
 				<li><b>Fediverse:</b>&nbsp;<a href="https://crib.social/okturtles">@okTurtles@crib.social</a></li>
@@ -20,11 +20,12 @@ import Header from '@/components/base/Header.astro'
 	</section>
 
 	<!-- team -->
-	<section class="meet-the-team">
+	<section class="page-section-wrapper pb-0">
 		<div class="container">
-			<h2>
+			<h2 class="page-content-heading">
 				Meet the Team
 			</h2>
+
 			<div class="members">
 				<!-- member -->
 				<div class="member">
@@ -106,16 +107,16 @@ import Header from '@/components/base/Header.astro'
 					</div>
 				</div>
 				<div class="clearfix"></div>
-
 			</div>
 		</div>
 	</section>
 
-	<section id="memory-of">
+	<section id="memory-of" class="page-section-wrapper memory-of">
 		<div class="container">
-			<h2>
+			<h2 class="page-content-heading">
 				In Memory Of
 			</h2>
+
 			<div class="half half-left">
 				<h3>
 					Aaron Swartz
@@ -125,6 +126,7 @@ import Header from '@/components/base/Header.astro'
 					<a href="https://en.wikipedia.org/wiki/Aaron_Swartz" target="_blank">Aaron Swartz</a> was a humanitarian genius who did more for mankind in his brief 26 years on this planet than most accomplish in their entire lifetime. He was the principal <a href="https://web.archive.org/web/20130117033915/http://www.aaronsw.com/weblog/squarezooko" target="_blank">source of inspiration</a> for our work on <a href="https://github.com/okTurtles/dnschain">DNSChain</a> and <a href="https://okturtles.org/dpki">DPKI</a>.
 				</p>
 			</div>
+
 			<div class="half">
 				<h3>
 					Jonathan James
@@ -142,17 +144,7 @@ import Header from '@/components/base/Header.astro'
 <style lang="scss">
 @use "../styles/variables" as *;
 
-.meet-the-team {
-	padding: 80px 0;
-	background-color: $white;
-	@include side-padding;
-
-	h2 {
-		font-size: 34px;
-		color: $dark-green;
-		margin-bottom: 30px;
-	}
-
+.page-section-wrapper {
 	.members {
 		.member {
 			position: relative;
@@ -187,7 +179,7 @@ import Header from '@/components/base/Header.astro'
 
 				span {
 					font-size: .7em;
-					color: #888888;
+					color: $light-grey;
 				}
 
 				p {
@@ -198,7 +190,7 @@ import Header from '@/components/base/Header.astro'
 
 			@include until (668px) {
 				.img,
-				.content{
+				.content {
 					float: left;
 				}
 			}
@@ -206,10 +198,7 @@ import Header from '@/components/base/Header.astro'
 	}
 }
 
-#memory-of {
-	background-color: $white;
-	padding-bottom: 80px;
-	@include side-padding;
+.memory-of {
 	text-align: center;
 
 	a {
@@ -220,9 +209,7 @@ import Header from '@/components/base/Header.astro'
 		}
 	}
 
-	h2 {
-		font-size: 34px;
-		color: $dark-green;
+	.page-content-heading {
 		margin-bottom: 50px;
 		text-align: left;
 	}
@@ -246,7 +233,7 @@ import Header from '@/components/base/Header.astro'
 
 		p {
 			margin-top: 20px;
-			color: #777777;
+			color: $light-grey;
 		}
 
 		@include until (668px) {
@@ -254,6 +241,7 @@ import Header from '@/components/base/Header.astro'
 			margin-bottom: 50px;
 		}
 	}
+
 	.half-left {
 		margin-right: 6%;
 
