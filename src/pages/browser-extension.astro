@@ -1,6 +1,7 @@
 ---
 import Layout from '@/layouts/BaseLayout.astro'
 import Header from '@/components/base/Header.astro'
+import BrowserExtensionCarousel from '@/components/BrowserExtensionCarousel.astro'
 ---
 
 <Layout title='Browser Extension | okTurtles' bodyClass='browser-extension'>
@@ -11,79 +12,31 @@ import Header from '@/components/base/Header.astro'
   <section class="page-section-wrapper">
     <h2>
         okTurtles Browser Extension <br>
-        <span>Simple, surveillance-free communication, everywhere.</span>
+        <span class="sub-heading">Simple, surveillance-free communication, everywhere.</span>
     </h2>
 
-    <!-- carousel -->
-    <section class="cbp-so-section " style="margin-bottom:0px;">
-      <article class="cbp-so-side cbp-so-side-center ">
-        <div id="subtitle">
-          <div class="slideshow clearfix">
-            <div>
-              <img src="/images/slides/facebook.jpg" alt="">
-              <span id="facebook">Facebook</span>
-            </div>
-            <div>
-              <img src="/images/slides/gmail.jpg" alt="">
-              <span id="gmail" >Gmail</span>
-            </div>
-          </div>
-        </div>
-
-        <p id="serviceTagline">
-          <span>Click the turtle in your</span><span id="service">&nbsp;</span><span>to <a class="b-blue" href="#mitm_proof">"MITM-proof"</a> your message.</span>
-        </p>
-
-        <p id="serviceTaglineMobile">
-          Click the turtle to <a class="b-blue" href="#mitm_proof">"MITM-proof"</a> your message.
-        </p>
-      </article>
-    </section>
-    <!-- carousel -->
+    <BrowserExtensionCarousel />
 
     <div class="container">
-      <p class="first">
-        MITM-proof communication through almost any website, with zero intervention needed from the site operators.
-      </p>
-
-      <p>
-        okTurtles is designed with the potential to work over almost any website. All it needs to create an encrypted message for someone is the identity of that person, specifically, their public key. Unlike the system that HTTPS uses today, okTurtles is able to securely obtain this information by using DNSChain.
-      </p>
+      <p class="first">MITM-proof communication through almost any website, with zero intervention needed from the site operators.</p>
+      <p>okTurtles is designed with the potential to work over almost any website. All it needs to create an encrypted message for someone is the identity of that person, specifically, their public key. Unlike the system that HTTPS uses today, okTurtles is able to securely obtain this information by using DNSChain.</p>
     </div>
 
-    <!-- <section id="unblock"> -->
     <div class="container">
-      <p class="first">
-        DNS-based censorship circumvention
-      </p>
-
-      <p>
-        The developers of Unblock.us.org and DNSChain are teaming up to bring the anti-censorship features of Unblock.us into DNSChain. Each project benefits from the other: DNSChain ensures MITM-free communication and Unblock.us ensures that the communication passes through firewalls.
-      </p>
+      <p class="first">DNS-based censorship circumvention</p>
+      <p>The developers of Unblock.us.org and DNSChain are teaming up to bring the anti-censorship features of Unblock.us into DNSChain. Each project benefits from the other: DNSChain ensures MITM-free communication and Unblock.us ensures that the communication passes through firewalls.</p>
     </div>
-
-    <!-- </section> -->
-    <!-- <div class="container">
-        <p class="first">
-            Coming Soon
-        </p>
-        <p>
-            The okTurtles browser extension is currently under development and is not ready for public release. We'll announce it via our newsletter and twitter once it is.
-        </p>
-    </div> -->
 
     <section id="faq">
       <div class="faq container">
         <h2>FAQ</h2>
 
         <h3 class="faq_question">Won't this help the "bad guys"?</h3>
-
         <p class="faq_answer">
           Unfortunately, it's increasingly difficult to tell who the bad guys are. This is a very important question and that's why it's the first one. See <a href="/other/dnschain_okturtles_overview.pdf" target="_blank">our paper's "Motivation" section</a> for the answer.
         </p>
 
         <h3 class="faq_question" id="reviews">Has this proposal been peer-reviewed?</h3>
-        
         <div class="faq_answer">
           <p>Yes!</p>
 
@@ -114,15 +67,13 @@ import Header from '@/components/base/Header.astro'
 
         <h3 class="faq_question">Who's behind these projects?</h3>
         <p class="faq_answer">okTurtles and DNSChain are the brainchildren of <a href="https://twitter.com/taoeffect" target="_blank">Greg Slepak</a>, but he did not invent every aspect of these concepts. He's grateful to Aaron Swartz for <a href="http://www.aaronsw.com/weblog/squarezooko" target="_blank">turning him on to the idea</a>, and for <a href="/images/Aaron_Swartz_Email.jpg" target="_blank">answering</a> some of his questions about it. Of course, none of this would be possible if it wasn't for Satoshi Nakamoto's historic <a href="http://bitcoin.org/bitcoin.pdf" target="_blank">paper</a> on Bitcoin, and the entire Namecoin <a href="http://dot-bit.org/forum/index.php" target="_blank">community</a>.
-        <br/> <br/>
-        <a href="https://twitter.com/willstanley95" target="_blank">Will Stanley</a> is chiefly responsible for this website's design. He has a passion for clean, simple, beautiful design.
-        <br/> <br/>
-        Olga Ivanova is the master illustrator behind the okTurtles logo.
+          <br/> <br/>
+          <a href="https://twitter.com/willstanley95" target="_blank">Will Stanley</a> is chiefly responsible for this website's design. He has a passion for clean, simple, beautiful design.
+          <br/> <br/>
+          Olga Ivanova is the master illustrator behind the okTurtles logo.
         </p>
-        <a name="nsa_proof"></a>
 
         <h3 class="faq_question" id="mitm_proof" name="mitm_proof">Is this project <i>really</i> "MITM/NSA-proof"?</h3>
-
         <div class="faq_answer">
           <p>
             When we state that okTurtles will "MITM-proof" your online communications, we mean that <b>it will stop all of the publicly known methods by which the NSA <a href="https://vimeo.com/100433057" target="_blank">can read</a> your messages on these sites via a <a href="https://vimeo.com/100433057" target="_blank">man-in-the-middle attack</a>.</b>
@@ -165,18 +116,21 @@ import Header from '@/components/base/Header.astro'
         <p class="faq_answer">
             Welcome! <a href="https://github.com/okTurtles/dnschain/blob/master/README.md#community">Join the community</a> and help us fund the Kickstarter once it's ready (<a href="#subscribe">subscribe</a> to know when that'll be).
         </p>
+
         <h3 class="faq_question">Is this "vaporware"?</h3>
         <p class="faq_answer">
-            Maybe! It pains me to write this but implementing this <i>correctly</i> has turned out to be insanely difficult &mdash; it basically requires <a href="https://blog.okturtles.org/2016/02/turtle-status-letter-1-browser-extension-dnschain-dpki-more/#BrowserExtension">rewriting how the Internet's infrastructure works</a>. We've begun this process by pushing <a href="https://blog.okturtles.org/2017/04/turtle-status-letter-2-group-income-dpki-more/#dpki-decentralized-public-key-infrastructure">DPKI &mdash; Decentralized Public Key Infrastructure</a>. This is going to take a long time to do properly. However, there does exist a less secure alternative in the form of <a href="https://flowcrypt.com/">FlowCrypt</a>.<br/><strike>Absolutely not! We have a functioning (though incomplete) version of <a href="https://github.com/okTurtles/dnschain" target="_blank">DNSChain already written</a>. okTurtles is a tad more complicated, and requires a community effort to keep it running smoothly on third-party sites. Most of the design has been explained in <a href="/other/dnschain_okturtles_overview.pdf" target="_blank">our paper</a>, all that remains is to implement it.</strike>
+          Maybe! It pains me to write this but implementing this <i>correctly</i> has turned out to be insanely difficult &mdash; it basically requires <a href="https://blog.okturtles.org/2016/02/turtle-status-letter-1-browser-extension-dnschain-dpki-more/#BrowserExtension">rewriting how the Internet's infrastructure works</a>. We've begun this process by pushing <a href="https://blog.okturtles.org/2017/04/turtle-status-letter-2-group-income-dpki-more/#dpki-decentralized-public-key-infrastructure">DPKI &mdash; Decentralized Public Key Infrastructure</a>. This is going to take a long time to do properly. However, there does exist a less secure alternative in the form of <a href="https://flowcrypt.com/">FlowCrypt</a>.<br/><strike>Absolutely not! We have a functioning (though incomplete) version of <a href="https://github.com/okTurtles/dnschain" target="_blank">DNSChain already written</a>. okTurtles is a tad more complicated, and requires a community effort to keep it running smoothly on third-party sites. Most of the design has been explained in <a href="/other/dnschain_okturtles_overview.pdf" target="_blank">our paper</a>, all that remains is to implement it.</strike>
         </p>
+
         <h3 class="faq_question">Are you going to update this site soon with more info?</h3>
         <p class="faq_answer">Yup.</p>
-        <!-- <h3 class="faq_question">Can I send you a donation via BTC/NMC?</h3>
-        <p class="faq_answer">At this time we'd rather accept financial support through the upcoming <a href="#kickstarter">Kickstarter</a>. This ensures that we are held to a higher standard of accountability. If the kickstarter is successfully funded we have to provide you with regular project updates, etc. This encourages us to deliver. It's a win-win, we think.</p> -->
+
         <h3 class="faq_question">Does this browser make my butt look fat?</h3>
         <p class="faq_answer">Of course not! Unless... are you using IE? I think <a href="http://getfirefox.com" target="_blank">Firefox</a> looks especially good on you.</p>
+
         <h3 class="faq_question">¿Incluyó intencionalmente 42 referencias en su papel?</h3>
         <p class="faq_answer">I'm not sure. It definitely made me less likely to add more once I got to that number. ;-)</p>
+
         <h3 class="faq_question">Did you make up these "frequently asked" questions?</h3>
         <p class="faq_answer">Some of them. Had to anticipate what they might be. ^_^</p>
       </div>
@@ -202,8 +156,8 @@ import Header from '@/components/base/Header.astro'
     color: $dark-green;
     margin-bottom: 20px;
 
-    span {
-      color: #9a9a9a;
+    .sub-heading {
+      color: $grey_2;
       font-family: 'proxima_novaregular';
       font-size: 20px;
     }
@@ -271,20 +225,13 @@ import Header from '@/components/base/Header.astro'
 	}
 }
 
-.b-blue {
-	color: #1479DE;
-
-	&:hover {
-		text-decoration: underline;
-	}
-}
 
 // big foot
 sup {
   line-height: 0em;
 
 	a {
-		color: #27AE60;
+		color: $green;
 	}
 }
 
@@ -326,389 +273,4 @@ sup {
 .bottom .tooltip { top: -0.65em; bottom: auto; }
 
 .top .tooltip { bottom: -0.65em; top: auto; }
-
-// slideshow
-
-#facebook {
-  color: #3b5998;
-  font-size: 1.2em;
-  font-weight: 400;
-}
-
-#gmail {
-  color: rgb(201, 44, 25);
-  font-size: 1.2em;
-  font-weight: 400;
-}
-
-.slideshow {
-  position: relative;
-  padding: 20px 0;
-  margin: 0 auto;
-  overflow: visible;
-  max-width: 503px;
-  width: 100%;
-  height: 280px;
-}
-
-.slideshow > div {
-  position: absolute;
-  padding: 0;
-  margin: 0 auto;
-  overflow: visible;
-  max-width: 503px;
-  width: 100%;
-  height: 350px;
-}
-
-.slideshow img {
-  position: absolute;
-  top:10px;
-  /*display: none;*/
-  visibility: hidden;
-  float: left;
-  max-width: 503px !important;
-  width: 100%;
-  display: inline-block;
-}
-
-.slideshow span {
-  position: absolute;
-  visibility: hidden;
-  display: inline-block;
-  text-align: center;
-  margin: 0 auto;
-  margin-top: .905em;/*hack - SLIDESHOW TEXT*/
-  width: 100px; /* has to be the same as #service */
-}
-
-#serviceTagline span {
-  position: relative;
-  margin: 0 auto;
-  width: 100px;
-  margin-top: 1.1em;
-}
-
-#service {
-  display: inline-block;
-  width: 100px;
-  height: 20px;
-  margin: 0 5px;
-  top: 0;
-}
-
-#subtitle {
-  margin-top: -20px;
-  line-height: 1.8em;
-}
-
-.green {
-  color: #27ae60;
-}
-
-@media screen and (max-width: 55em) {
-  .container > header h1,
-  .container > header nav {
-    float: none;
-  }
-
-  .container > header > span,
-  .container > header h1 {
-    text-align: center;
-  }
-
-  .container > header nav {
-    margin: 0 auto;
-  }
-
-  .container > header > span {
-    text-indent: 30px;
-  }
-}
-
-.section_color_top {
-  background-color: #ffffff;
-}
-
-.section_color_middle {
-  background-color: #f5f5f5;
-}
-#section_color_last {
-  background-color: #ffffff;
-}
-
-img.features {
-  box-shadow: 2px 2px 4px $light-grey;
-  padding: 0;
-  margin-bottom: 2.5em;
-}
-
-.cbp-so-scroller {
-  overflow: visible; /* <! GREG CHANGED THIS TO FIX SLIDE SHOW! */
-}
-
-.cbp-so-section {
-  overflow: hidden;
-}
-
-.cbp-so-section:first-child {
-  margin-bottom: 5em;
-  padding-bottom: 1em;
-}
-
-/* Clear floats of children */
-.cbp-so-section:before,
-.cbp-so-section:after {
-  content: " ";
-  display: table;
-}
-
-.cbp-so-section:after {
-  clear: both;
-}
-
-/* Text styling */
-.cbp-so-section h2 {
-  font-size: 4em;
-  font-weight: 300;
-  line-height: 1;
-  margin-top: 0;
-}
-
-.cbp-so-section li {
-  margin-bottom: 10px;
-}
-
-.cbp-so-section li:last-child {
-  margin-bottom: inherit;
-}
-
-.cbp-so-section p, .cbp-so-section li {
-  font-size: 1.2em;
-  font-weight: 300;
-}
-
-/* Sides */
-.cbp-so-side {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  // padding-right: 15px;
-  // padding-left: 15px;
-  overflow: visible;   /* <! GREG CHANGED THIS TO FIX SLIDE SHOW! */
-  padding-top: 0;
-  padding-bottom: 60px;
-  -webkit-transition: -webkit-transform 1s, opacity 1s;
-  -moz-transition: -moz-transform 1s, opacity 1s;
-  transition: transform 1s, opacity 1s;
-}
-
-.cbp-so-side-left {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding-right: 15px;
-  padding-left: 40px;
-  overflow: hidden;
-  margin-top: -6em;
-  padding-bottom: 3em;
-  -webkit-transition: -webkit-transform 1s, opacity 1s;
-  -moz-transition: -moz-transform 1s, opacity 1s;
-  transition: transform 1s, opacity 1s;
-}
-
-.cbp-so-side-right {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding-right: 40px;
-  padding-left: 15px;
-  overflow: hidden;
-  margin-top: -6em;
-  padding-bottom: 3em;
-  -webkit-transition: -webkit-transform 1s, opacity 1s;
-  -moz-transition: -moz-transform 1s, opacity 1s;
-  transition: transform 1s, opacity 1s;
-}
-
-.center {
-  margin-bottom: -5em;
-}
-
-.left {
-  width: 50%;
-  float: left;
-  text-align: right;
-  padding-right: 2em;
-}
-
-.right {
-  width: 50%;
-  float: right;
-  text-align: left;
-  padding-left: 2em;
-}
-
-/* Clear floats of children */
-.cbp-so-side:before,
-.cbp-so-side:after {
-  content: " ";
-  display: table;
-}
-
-.cbp-so-side:after {
-  clear: both;
-}
-
-.cbp-so-side-center {
-  text-align: center;
-}
-
-/* Initial state (hidden or anything else) */
-.cbp-so-init .cbp-so-side {
-  opacity: 0;
-}
-
-.cbp-so-init .cbp-so-side-center {
-  -webkit-transform: translateX(0px);
-  -moz-transform: translateX(0px);
-  transform: translateX(0px);
-}
-
-.cbp-so-init .cbp-so-side-left {
-  -webkit-transform: translateX(0px);
-  -moz-transform: translateX(0px);
-  transform: translateX(0px);
-}
-
-.cbp-so-init .cbp-so-side-right {
-  -webkit-transform: translateX(0px);
-  -moz-transform: translateX(0px);
-  transform: translateX(0px);
-}
-
-.sectiongs {
-  clear: both;
-  padding: 0;
-  margin: 0;
-  margin-left: -0.5em;
-}
-
-.colgs {
-  display: block;
-  float:left;
-  width: 100%;
-  box-sizing: border-box; /* Supported by IE 8+. If IE 7 and below support is required see http://html5please.com/#box-sizing */
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  background-clip: padding-box; /* This allows column elements to have background colour without it bleeding into the gutter. Supported by IE 9+. If support for IE 8 and below is required, a content div with background colour should be placed inside the column */
-  -moz-background-clip: padding-box;
-  -webkit-background-clip: padding-box;
-  margin: 0 0 0.25em 0;
-  border-left: 2em solid transparent;
-}
-
-.group:before,
-.group:after {
-  content:"";
-  display:table;
-}
-
-.group:after {
-  clear:both;
-}
-
-@media screen and (max-width: 580px) {
-  .slideshow{
-    height: 280px;
-  }
-}
-
-@media screen and (max-width: 538px) {
-  .slideshow span {
-    padding-left: 52px;
-  }
-}
-
-@media screen and (max-width: 509px) {
-  .slideshow span {
-    padding-left: 2px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .slideshow {
-    height: 220px;
-  }
-
-  .slideshow span {
-    position: absolute;
-    visibility: hidden;
-    display: inline-block;
-    text-align: center;
-    margin: 0 auto;
-    width: 88px; /* has to be the same as #service */
-      margin-top: .98em;/*iPhone hack - SLIDESHOW TEXT*/
-      padding-left: 10px;
-  }
-
-  #serviceTagline span {
-    position: relative;
-    margin: 0 auto;
-    width: 88px;
-  }
-
-  #service {
-    display: inline-block;
-    width: 88px;
-    height: 20px;
-    margin: 0 5px;
-  }
-
-  #subtitle {
-    margin-top: -20px;
-    line-height: 1.8em;
-  }
-}
-
-@media screen and (max-width: 449px) {
-  .slideshow span {
-    padding-left: 30px;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .slideshow {
-    height: 150px;
-  }
-
-  .slideshow span {
-    padding-left: 0;
-  }
-}
-
-#serviceTaglineMobile {
-  display: none;
-}
-
-// fix for now
-@media screen and (max-width: 580px) {
-  .slideshow span {
-    display: none;
-  }
-
-  #serviceTagline {
-    display: none;
-  }
-
-  #serviceTagline span {
-    display: none;
-  }
-
-  #serviceTaglineMobile {
-    display: block;
-    position: relative;
-    top: 20px;
-  }
-}
 </style>

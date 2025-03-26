@@ -1,0 +1,250 @@
+---
+interface Slide { id: string, name: string, img: string }
+
+const slides: Slide[] = [
+  { id: 'facebook', name: 'Facebook', img: '/images/slides/facebook.jpg' },
+  { id: 'gmail', name: 'Gmail', img: '/images/slides/gmail.jpg' }
+]
+---
+
+<section class="cbp-so-section">
+  <article class="cbp-so-side cbp-so-side-center">
+    <div id="subtitle">
+      <div class="slideshow clearfix">
+        {
+          slides.map(entry => {
+            return <div>
+              <img src={entry.img} alt={entry.name} />
+              <span id={entry.id}>{entry.name}</span>
+            </div>
+          })
+        }
+      </div>
+    </div>
+
+    <p id="serviceTagline">
+      <span>Click the turtle in your</span><span id="service">&nbsp;</span><span>to <a class="b-blue" href="#mitm_proof">"MITM-proof"</a> your message.</span>
+    </p>
+
+    <p id="serviceTaglineMobile">
+      Click the turtle to <a class="b-blue" href="#mitm_proof">"MITM-proof"</a> your message.
+    </p>
+  </article>
+</section>
+
+<style lang="scss">
+@use "../styles/variables" as *;
+
+.cbp-so-section {
+  margin-bottom: 0;
+  overflow: hidden;
+
+  h2 {
+    font-size: 4em;
+    font-weight: 300;
+    line-height: 1;
+    margin-top: 0;
+  }
+
+  p {
+    font-size: 1.2em;
+    font-weight: 300;
+  }
+}
+
+/* Sides */
+.cbp-so-side {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  // padding-right: 15px;
+  // padding-left: 15px;
+  overflow: visible;   /* <! GREG CHANGED THIS TO FIX SLIDE SHOW! */
+  padding-top: 0;
+  padding-bottom: 60px;
+  -webkit-transition: -webkit-transform 1s, opacity 1s;
+  -moz-transition: -moz-transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s;
+
+  &-center {
+    text-align: center;
+  }
+}
+
+.b-blue {
+	color: #1479DE;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+// slideshow
+
+#facebook {
+  color: #3b5998;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+#gmail {
+  color: rgb(201, 44, 25);
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.slideshow {
+  position: relative;
+  padding: 20px 0;
+  margin: 0 auto;
+  overflow: visible;
+  max-width: 503px;
+  width: 100%;
+  height: 280px;
+}
+
+.slideshow > div {
+  position: absolute;
+  padding: 0;
+  margin: 0 auto;
+  overflow: visible;
+  max-width: 503px;
+  width: 100%;
+  height: 350px;
+}
+
+.slideshow img {
+  position: absolute;
+  top:10px;
+  /*display: none;*/
+  visibility: hidden;
+  float: left;
+  max-width: 503px !important;
+  width: 100%;
+  display: inline-block;
+}
+
+.slideshow span {
+  position: absolute;
+  visibility: hidden;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: .905em;/*hack - SLIDESHOW TEXT*/
+  width: 100px; /* has to be the same as #service */
+}
+
+#serviceTagline span {
+  position: relative;
+  margin: 0 auto;
+  width: 100px;
+  margin-top: 1.1em;
+}
+
+#service {
+  display: inline-block;
+  width: 100px;
+  height: 20px;
+  margin: 0 5px;
+  top: 0;
+}
+
+#subtitle {
+  margin-top: -20px;
+  line-height: 1.8em;
+}
+
+@media screen and (max-width: 580px) {
+  .slideshow {
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: 538px) {
+  .slideshow span {
+    padding-left: 52px;
+  }
+}
+
+@media screen and (max-width: 509px) {
+  .slideshow span {
+    padding-left: 2px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .slideshow {
+    height: 220px;
+  }
+
+  .slideshow span {
+    position: absolute;
+    visibility: hidden;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    width: 88px; /* has to be the same as #service */
+      margin-top: .98em;/*iPhone hack - SLIDESHOW TEXT*/
+      padding-left: 10px;
+  }
+
+  #serviceTagline span {
+    position: relative;
+    margin: 0 auto;
+    width: 88px;
+  }
+
+  #service {
+    display: inline-block;
+    width: 88px;
+    height: 20px;
+    margin: 0 5px;
+  }
+
+  #subtitle {
+    margin-top: -20px;
+    line-height: 1.8em;
+  }
+}
+
+@media screen and (max-width: 449px) {
+  .slideshow span {
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .slideshow {
+    height: 150px;
+  }
+
+  .slideshow span {
+    padding-left: 0;
+  }
+}
+
+#serviceTaglineMobile {
+  display: none;
+}
+
+// fix for now
+@media screen and (max-width: 580px) {
+  .slideshow span {
+    display: none;
+  }
+
+  #serviceTagline {
+    display: none;
+  }
+
+  #serviceTagline span {
+    display: none;
+  }
+
+  #serviceTaglineMobile {
+    display: block;
+    position: relative;
+    top: 20px;
+  }
+}
+</style>
