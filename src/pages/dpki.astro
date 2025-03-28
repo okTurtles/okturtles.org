@@ -1,7 +1,6 @@
 ---
 import Layout from '@/layouts/BaseLayout.astro'
 import Header from '@/components/base/Header.astro'
-import '@/styles/pages/_dpki.scss'
 
 const pageTitle = 'DPKI | okTurtles'
 ---
@@ -9,7 +8,7 @@ const pageTitle = 'DPKI | okTurtles'
 <Layout title={pageTitle} bodyClass='dpki-content'>
   <Header />
 
-  <section class="dpki">
+  <section class="dpki page-section-wrapper">
     <div class="container">
       <h2>DPKI: Decentralized Public Key Infrastructure</h2>
     </div>
@@ -81,3 +80,60 @@ const pageTitle = 'DPKI | okTurtles'
     </div>
   </section>
 </Layout>
+
+<style lang="scss">
+@use "../styles/variables" as *;
+
+.dpki {
+  h2 {
+    text-align: center;
+    font-size: 44px;
+    color: $dark-green;
+    margin-bottom: 45px;
+
+    span {
+      color: $grey_2;
+      font-family: "proxima_novaregular";
+      font-size: 20px;
+    }
+  }
+
+  p {
+    text-align: center;
+    margin-top: -30px;
+    color: $grey;
+  }
+
+  .dpki-embed-container {
+    max-width: 700px;
+  }
+
+  .dpki-embed-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+@include until (767px) {
+  .dpki {
+    h2 {
+      padding: 0 5px;
+    }
+  }
+}
+
+@include from_until(768px, 1200px) {
+  .dpki {
+    h2 {
+      padding: 0 5px;
+    }
+  }
+
+  .dpki-embed-container {
+    padding: 0 20px;
+  }
+}
+</style>

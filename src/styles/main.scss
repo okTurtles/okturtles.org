@@ -1,15 +1,5 @@
-@import "reset";
-@import "variables";
-@import "typography";
-@import "base";
-@import "utils";
-
-@import "./components/header";
-@import "./components/footer";
-@import "./components/ribbon";
-@import "./pages/index";
-@import "./pages/team";
-@import "./pages/donate";
-@import "./pages/dpki";
-@import "./pages/browser-extension";
-@import "./pages/finances";
+@use "reset";
+@use "typography";
+@use "base";
+@use "utils";
+@use "page_common";

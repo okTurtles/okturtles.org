@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 @font-face {
   font-family: 'proxima_novaitalic';
   src: url('/fonts/ProximaNova-RegularIt-webfont.eot');
@@ -92,4 +94,8 @@ h3 {
   font-weight: lighter;
   line-height: 1.25;
   color: $white;
+}
+
+.has-proxima-novabold {
+  font-family: "proxima_novabold";
 }

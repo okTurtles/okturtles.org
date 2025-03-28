@@ -1,16 +1,15 @@
 ---
 import Layout from '@/layouts/BaseLayout.astro'
 import Header from '@/components/base/Header.astro'
-import '@/styles/pages/_team.scss'
 ---
 
 <Layout title='Team | okTurtles' bodyClass='team'>
   <Header />
 
   <!-- team -->
-	<section class="meet-the-team" style="padding-bottom: 0">
+	<section class="page-section-wrapper pb-0">
 		<div class="container">
-			<h2>Contact Info</h2>
+			<h2 class="page-content-heading">Contact Info</h2>
 			<ul style="margin-bottom: 0">
 				<li><b>Email:</b>&nbsp;<a href="mailto:hi@okturtles.org">hi@okturtles.org</a></li>
 				<li><b>Fediverse:</b>&nbsp;<a href="https://crib.social/okturtles">@okTurtles@crib.social</a></li>
@@ -21,11 +20,12 @@ import '@/styles/pages/_team.scss'
 	</section>
 
 	<!-- team -->
-	<section class="meet-the-team">
+	<section class="page-section-wrapper pb-0">
 		<div class="container">
-			<h2>
+			<h2 class="page-content-heading">
 				Meet the Team
 			</h2>
+
 			<div class="members">
 				<!-- member -->
 				<div class="member">
@@ -107,16 +107,16 @@ import '@/styles/pages/_team.scss'
 					</div>
 				</div>
 				<div class="clearfix"></div>
-
 			</div>
 		</div>
 	</section>
 
-	<section id="memory-of">
+	<section id="memory-of" class="page-section-wrapper memory-of">
 		<div class="container">
-			<h2>
+			<h2 class="page-content-heading">
 				In Memory Of
 			</h2>
+
 			<div class="half half-left">
 				<h3>
 					Aaron Swartz
@@ -126,6 +126,7 @@ import '@/styles/pages/_team.scss'
 					<a href="https://en.wikipedia.org/wiki/Aaron_Swartz" target="_blank">Aaron Swartz</a> was a humanitarian genius who did more for mankind in his brief 26 years on this planet than most accomplish in their entire lifetime. He was the principal <a href="https://web.archive.org/web/20130117033915/http://www.aaronsw.com/weblog/squarezooko" target="_blank">source of inspiration</a> for our work on <a href="https://github.com/okTurtles/dnschain">DNSChain</a> and <a href="https://okturtles.org/dpki">DPKI</a>.
 				</p>
 			</div>
+
 			<div class="half">
 				<h3>
 					Jonathan James
@@ -139,3 +140,114 @@ import '@/styles/pages/_team.scss'
 		<div class="clearfix"></div>
 	</section>
 </Layout>
+
+<style lang="scss">
+@use "../styles/variables" as *;
+
+.page-section-wrapper {
+	.members {
+		.member {
+			position: relative;
+			display: block;
+			width: 100%;
+			padding: 50px 0;
+
+			.img {
+				width: 19%;
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 5%;
+
+				img {
+					position: relative;
+					max-width: 150px;
+					width: 100%;
+					height: auto;
+					border-radius: 50%;
+				}
+			}
+
+			.content {
+				width: 74%;
+				display: inline-block;
+				vertical-align: middle;
+
+				h4 {
+					color: $black;
+					font-size: 1.2em;
+				}
+
+				span {
+					font-size: .7em;
+					color: $grey_1;
+				}
+
+				p {
+					margin-top: 20px;
+					color: $grey;
+				}
+			}
+
+			@include until (668px) {
+				.img,
+				.content {
+					float: left;
+				}
+			}
+		}
+	}
+}
+
+.memory-of {
+	text-align: center;
+
+	a {
+		color: $blue;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.page-content-heading {
+		margin-bottom: 50px;
+		text-align: left;
+	}
+
+	.half {
+		position: relative;
+		display: block;
+		width: 47%;
+		float: left;
+
+		h3 {
+			color: $black;
+			font-size: 1.6em;
+			font-family: 'proxima_novaregular';
+			margin-bottom: 20px;
+		}
+
+		img {
+			max-height: 200px;
+		}
+
+		p {
+			margin-top: 20px;
+			color: $grey_1;
+		}
+
+		@include until (668px) {
+			width: 100%;
+			margin-bottom: 50px;
+		}
+	}
+
+	.half-left {
+		margin-right: 6%;
+
+		@include until (668px) {
+			margin-right: 0;
+		}
+	}
+}
+</style>

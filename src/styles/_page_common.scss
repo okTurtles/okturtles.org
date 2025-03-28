@@ -1,0 +1,13 @@
+@use "variables" as *;
+
+.page-content-heading {
+  font-size: 34px;
+  color: $dark-green;
+  margin-bottom: 30px;
+}
+
+.page-section-wrapper {
+  padding: 80px 0;
+	background-color: $white;
+	@include side-padding;
+}

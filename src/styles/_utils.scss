@@ -1,16 +1,17 @@
+@use "variables" as *;
 
-.clearfix { display: inline-block; }
-/* start commented backslash hack \*/
-* html .clearfix { height: 1%; }
-.clearfix { display: block; }
-/* close commented backslash hack */
-.clearfix::after {
-  visibility: hidden;
+.clearfix {
   display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
+  height: 1%;
+
+  &::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
 }
 
 .container {
@@ -21,31 +22,34 @@
   max-width: 74rem;
   box-sizing: border-box;
 
-  @media only screen and (max-width: 74rem) {
+  @include until(74rem) {
     width: auto;
   }
 
-  a{
+  a {
     color: $blue;
-  }
-  a:hover{
-    text-decoration: underline;
+
+    &:hover{
+      text-decoration: underline;
+    }
   }
 
-  ul{
+  ul {
     margin-left: 20px;
     margin-bottom: 10px;
     padding: 20px;
     -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-    li{
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    li {
       color: $grey;
       list-style: disc;
       position: relative;
       display: list-item;
       margin-bottom: 10px;
-      a:hover{
+
+      a:hover {
         text-decoration: underline;
       }
     }
@@ -62,8 +66,8 @@
 }
 
 .addr {
-  background-color: #9a9a9a;
-  color: #f5f5f5;
+  background-color: $grey_2;
+  color: $white;
   padding: 0.2em 0.3em;
   border-radius: 0.3em;
   max-width: 100%;
@@ -131,7 +135,6 @@
   }
 }
 
-.smooth-scrolling {
-	overflow-y: scroll;
-	-webkit-overflow-scrolling: touch;
+.pb-0 {
+  padding-bottom: 0 !important;
 }

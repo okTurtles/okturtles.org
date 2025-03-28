@@ -15,3 +15,32 @@ import Ribbon from '@/components/Ribbon.astro';
     <h3>Supporting beneficial decentralization technologies.</h3>
   </div>
 </section>
+
+<style lang="scss">
+@use "../../styles/variables" as *;
+
+.header--shared {
+  padding: 60px 0;
+  background-color: $green;
+  @include side-padding;
+
+  h1 {
+    font-size: 40px;
+    color: $white;
+  }
+
+  h3 {
+    font-size: 1.1em;
+  }
+
+  // style variation per pages
+  .dpki-content & {
+    @include from_until(768px, 1200px) {
+      h1,
+      h3 {
+        padding: 0 20px;
+      }
+    }
+  }
+}
+</style>

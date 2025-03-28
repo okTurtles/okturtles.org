@@ -1,16 +1,15 @@
 ---
 import Layout from '@/layouts/BaseLayout.astro'
 import Header from '@/components/base/Header.astro'
-import '@/styles/pages/_donate.scss'
 ---
 
 <Layout title='Donate | okTurtles' bodyClass='donate'>
   <Header />
 
   <!-- donate -->
-	<section class="donate-content" style="padding-bottom: 0">
+	<section class="page-section-wrapper pb-0">
 		<div class="container">
-			<h2>Donate to the okTurtles Foundation</h2>
+			<h2 class="page-content-heading">Donate to the okTurtles Foundation</h2>
 
 			<p><b>Support the okTurtles Foundation's work on:</b></p>
 			<ul>
@@ -55,12 +54,59 @@ import '@/styles/pages/_donate.scss'
 		</div>
 	</section>
 
-  <section class="donate-content">
+  <section class="page-section-wrapper">
     <div class="container">
-      <h2>Finances</h2>
+      <h2 class="page-content-heading">Finances</h2>
       <p>
         View <a href="/finances/">our finances by fiscal-year.</a>
       </p>
     </div>
   </section>
 </Layout>
+
+<style lang="scss">
+@use "../styles/variables" as *;
+
+.page-section-wrapper {
+	.spacer {
+		margin-bottom: 10px;
+	}
+
+	.top-spacer {
+		margin-top: 30px;
+	}
+
+	.flex-buttons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
+	.tilt {
+		position: relative;
+		display: block;
+		width: 160px;
+		padding: 14px 20px;
+		font-size: 16px;
+		border-radius: 5px;
+		background-color: $blue;
+		color: $white;
+		text-align: center;
+		@include transition(all, .3s, ease);
+
+		&:hover {
+			cursor: pointer;
+			background-color: $blue_1;
+		}
+
+		&.github {
+			background-color: #343434;
+
+			&:hover {
+				cursor: pointer;
+				background-color: $black;
+			}
+		}
+	}
+}
+</style>

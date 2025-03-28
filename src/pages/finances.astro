@@ -1,16 +1,15 @@
 ---
 import Layout from '@/layouts/BaseLayout.astro'
 import Header from '@/components/base/Header.astro'
-import '@/styles/pages/_finances.scss'
 ---
 
 <Layout title='Foundation Activities | okTurtles' bodyClass='activities'>
   <Header />
 
   <!-- activities -->
-  <section class="activities-content">
+  <section class="activities-content page-section-wrapper">
     <div class="container">
-      <h2>okTurtles Foundation Activities</h2>
+      <h2 class="page-content-heading">okTurtles Foundation Activities</h2>
       <h3>by fiscal year (June 1 - May 31)</h3>
 
       <h3 class=top-spacer><b>Foundation Activities</b></h3>
@@ -101,3 +100,23 @@ import '@/styles/pages/_finances.scss'
     </div>
   </section>
 </Layout>
+
+<style lang="scss">
+@use "../styles/variables" as *;
+
+.activities-content {
+  .page-content-heading {
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 22px;
+    color: $grey;
+    margin-bottom: 10px;
+  }
+
+  .top-spacer {
+    margin-top: 30px;
+  }
+}
+</style>
