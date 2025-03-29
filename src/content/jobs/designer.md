@@ -8,25 +8,26 @@ permalink: designer
 
 ### UI/UX Designer
 
-We're seeking a creative and experienced UI/UX Designer to help shape the user experience of our decentralized applications. You'll work closely with our development team to create intuitive, accessible, and visually appealing interfaces.
+okTurtles is looking for a highly-skilled professional designer to work with us on a new project to free information online.
 
-#### Responsibilities
-
-- Create user-centered designs by understanding business requirements, user feedback, and user journeys
-- Design flows, prototypes, and high-fidelity mockups
-- Collaborate with developers to implement your designs
-- Conduct user research and usability testing
-- Stay updated on design trends and accessibility best practices
+If you're tired of information gatekeepers attempting to mind-control humanity, and have the design chops we're looking for, please follow the instructions below to apply.
 
 #### Requirements
 
 - 2+ years of experience in UI/UX design for web applications
-- Proficiency with design tools (Figma, Sketch, Adobe XD)
-- Knowledge of HTML, CSS, and responsive design principles
-- Portfolio demonstrating your design process and solutions
+- Proficiency with design tools like Figma
 - Understanding of accessibility standards
+- Able to share with us a portfolio of your best work
 - Strong communication and collaboration skills
 
 If you're passionate about creating beautiful, functional designs that empower users and make complex technologies accessible, we want to talk to you!
 
-Please apply by sending your portfolio, resume, and a brief introduction to [jobs@okturtles.org](mailto:jobs@okturtles.org).
+#### Instructions
+
+To apply:
+
+1. Create a message with your portfolio, resume, and why you're interested in working with us.
+2. Email this message to [hi@okturtles.org](mailto:hi@okturtles.org)
+3. Install [Keybase](https://keybase.io/) and send a copy of that message to [https://keybase.io/greg](https://keybase.io/greg)
+
+Make sure to do all 3 steps if you'd like to hear back from us.

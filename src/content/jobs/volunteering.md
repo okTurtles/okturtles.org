@@ -8,10 +8,18 @@ permalink: "volunteering"
 
 ### Volunteering
 
-Most of the people who work on Group Income do so as volunteers. We’re looking for designers, developers, and writers. Feel free to hop right in and join our [Slack](https://join.slack.com/t/okturtles/shared_invite/zt-10jmpfgxj-tXQ1MKW7t8qqdyY6fB7uyQ) and [Github](https://github.com/okTurtles/group-income)!
+okTurtles Foundation is promoting decentralization on the web through education, research, and development.
 
-#### Bounties
+Which of our projects are you interested in helping us with?
 
-You can also get paid to work on Group Income without applying for a specific position by working on issues that [have bounties posted to them](https://github.com/okTurtles/group-income/issues?q=is%3Aissue+is%3Aopen+label%3ANote%3ABounty) or ask us [on Slack](https://join.slack.com/t/okturtles/shared_invite/zt-10jmpfgxj-tXQ1MKW7t8qqdyY6fB7uyQ) if we can add a bounty to an issue you're interested in.
+- [Group Income](https://groupincome.org) — DIY resource sharing for your community in a safe, end-to-end encrypted environment.
+- Chelonia — A next-generation framework for creating end-to-end encrypted web apps. The first implementation of [Shelter Protocol](https://shelterprotocol.net).
+- [DPKI](https://okturtles.org/dpki/) — Using blockchains to fix the security of [HTTPS](https://en.wikipedia.org/wiki/HTTPS).
 
-Every regular contributor to the development of Group Income will be added to the Group Income Contributors Group, a special group for Group Income contributors that’s sustained by voluntary contributions from the larger network of groups.
+We’re looking for designers, developers, and writers. Feel free to hop right in and join our [Slack](https://join.slack.com/t/okturtles/shared_invite/zt-10jmpfgxj-tXQ1MKW7t8qqdyY6fB7uyQ) and [Github](https://github.com/okTurtles/group-income)!
+
+### Bounties
+
+You can also get paid to work on Group Income / Chelonia without applying for a specific position by working on issues that [have bounties posted to them](https://github.com/okTurtles/group-income/issues?q=is%3Aissue+is%3Aopen+label%3ANote%3ABounty) or ask us [on Slack](https://join.slack.com/t/okturtles/shared_invite/zt-10jmpfgxj-tXQ1MKW7t8qqdyY6fB7uyQ) if we can add a bounty to an issue you're interested in.
+
+Regular contributors to Group Income can join the Group Income Contributors Group.
