@@ -1,13 +1,5 @@
-$white: #f5f5f5;
-$background-grey: #eeeeee;
-$black: #141414;
-$grey: #5a5a5a;
-$grey_1: #888888;
-$grey_2: #9a9a9a;
-$green: #27ae60;
-$dark-green: #0C6130;
-$blue: #1479DE;
-$blue_1: #105EAA;
+@forward "colors";
+@forward "markdown_style";
 
 @mixin css3($property, $value) {
     @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
