@@ -8,9 +8,9 @@ permalink: designer
 
 ### UI/UX Designer
 
-okTurtles is looking for a highly-skilled professional designer to work with us on a new project to free information online.
+okTurtles is looking for a highly-skilled professional designer to work with us on a new project to decentralize control of information online.
 
-If you're tired of information gatekeepers attempting to mind-control humanity, and have the design chops we're looking for, please follow the instructions below to apply.
+If that sounds interesting and you have the design chops we're looking for, please follow the instructions below to apply:
 
 #### Requirements
 
@@ -20,14 +20,14 @@ If you're tired of information gatekeepers attempting to mind-control humanity, 
 - Able to share with us a portfolio of your best work
 - Strong communication and collaboration skills
 
-If you're passionate about creating beautiful, functional designs that empower users and make complex technologies accessible, we want to talk to you!
+If you're passionate about creating beautiful, functional designs that empower users and make complex technologies accessible, we want to talk with you!
 
 #### Instructions
 
 To apply:
 
-1. Create a message with your portfolio, resume, and why you're interested in working with us.
-2. Email this message to [hi@okturtles.org](mailto:hi@okturtles.org)
-3. Install [Keybase](https://keybase.io/) and send a copy of that message to [https://keybase.io/greg](https://keybase.io/greg)
+1. Create a message with a link to your online portfolio, resume, and why we should hire you.
+2. Email this message to [hi@okturtles.org](mailto:hi@okturtles.org).
+3. Install [Keybase](https://keybase.io/) and send a complete copy of that message to [https://keybase.io/greg](https://keybase.io/greg). This ensures we hear from you in case there's an email delivery problem.
 
-Make sure to do all 3 steps if you'd like to hear back from us.
+Please make sure to do all 3 steps if you'd like to hear back from us.
