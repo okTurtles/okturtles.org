@@ -31,3 +31,18 @@ To apply:
 3. Install [Keybase](https://keybase.io/) and send a copy of that message to [https://keybase.io/greg](https://keybase.io/greg)
 
 Make sure to do all 3 steps if you'd like to hear back from us.
+
+### Code fences
+
+```js
+export async function getStaticPaths() {
+  const jobs = sortedPosts(await Astro.glob('../../content/jobs/*.{md,mdx}'))
+  return jobs.map(job => {
+    // Use the permalink value defined in the frontmatter as the slug
+    return {
+      params: { job: job.frontmatter.permalink },
+      props: job
+    }
+  })
+}
+```
