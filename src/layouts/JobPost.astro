@@ -9,7 +9,8 @@ const jobs = sortedPosts(await Astro.glob('../content/jobs/*.{md,mdx}')).filter(
   return !job.file.split('/').pop().startsWith('_')
 })
 
-const currentPath = Astro.url.pathname
+const pathname = Astro.url.pathname
+const currentPath = pathname.endsWith('/') ? pathname.slice(0, -1) : pathname
 const isShowingJobPost = !currentPath.endsWith('hiring')
 ---
 
