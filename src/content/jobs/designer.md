@@ -8,6 +8,8 @@ permalink: designer
 
 ### UI/UX Designer
 
+The world is complicated, and Wikipedia is not up to the task of handling that complexity.
+
 okTurtles is looking for a highly-skilled professional designer to work with us on a new project to decentralize control of information online.
 
 If that sounds interesting and you have the design chops we're looking for, please follow the instructions below to apply:
