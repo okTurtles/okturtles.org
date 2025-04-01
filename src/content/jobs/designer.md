@@ -28,7 +28,7 @@ If you're passionate about creating beautiful, functional designs that empower u
 
 To apply:
 
-1. Create a message with a link to your online portfolio, resume, and why we should hire you.
+1. Create a message with a link to your online portfolio, resumé, and why we should hire you.
 2. Email this message to [hi@okturtles.org](mailto:hi@okturtles.org).
 3. Install [Keybase](https://keybase.io/) and send a complete copy of that message to [https://keybase.io/greg](https://keybase.io/greg). This ensures we hear from you in case there's an email delivery problem.
 
