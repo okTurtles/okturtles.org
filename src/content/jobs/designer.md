@@ -18,6 +18,7 @@ If that sounds interesting and you have the design chops we're looking for, plea
 
 - 2+ years of experience in UI/UX design for web applications
 - Proficiency with design tools like Figma
+- Able to join the team on video calls to discuss work once per week (if needed)
 - Understanding of accessibility standards
 - Able to share with us a portfolio of your best work
 - Strong communication and collaboration skills
