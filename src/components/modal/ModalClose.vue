@@ -1,7 +1,8 @@
 <template>
 <button class="c-modal-close"
   type="button"
-  @click.stop="onClick">
+  @click.stop="onClick"
+  aria-label="Close modal">
   <span class="c-close-bar"></span>
   <span class="c-close-bar"></span>
 </button>
@@ -41,7 +42,7 @@ const onClick = () => {
   }
 
   &:hover,
-  &focus {
+  &:focus {
     background-color: $grey_3;
 
     .c-close-bar:first-child,

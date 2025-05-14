@@ -10,7 +10,7 @@
     <div class="cta-container">
       <input type="email" name="email" id="bd-email" class="email"
       placeholder="Enter email for updates" required
-      v-model="email"
+      v-model.trim="email"
       ref="emailInputEl" />
       <input type="submit" value="Send" class="submit" />
     </div>
@@ -40,17 +40,18 @@ const validateEmail = (email: string) => {
 }
 
 const validateEmailField = () => {
-  const getAddressSegment = (str: string) => str.split('@')[1]
+  const getDomain = (str: string) => (str.split('@')[1] || '').toLowerCase()
   let passed = true
 
   if (!validateEmail(email.value)) {
     emailErr.value = 'Please enter correct email format.'
     passed = false
     emailInputEl.value?.focus()
-  } else if (EMAIL_BLACKLIST.includes(getAddressSegment(email.value))) {
+  } else if (EMAIL_BLACKLIST.includes(getDomain(email.value))) {
     openModal('NewsLetterWarningModal')
     passed = false 
   }
+
   return passed
 }
 

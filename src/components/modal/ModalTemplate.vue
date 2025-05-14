@@ -1,6 +1,9 @@
 <template>
 <div v-if="isActive"
-  class='c-modal-container'>
+  class='c-modal-container'
+  role="dialog"
+  :aria-modal="true"
+  :aria-label='title'>
   <div class='c-modal-background'
     @click.stop="closeModal"></div>
 
@@ -8,7 +11,9 @@
     <header class='c-modal-header'>
       <h1 v-if="title">{{ title }}</h1>
 
-      <modal-close class="c-close-btn" @close="closeModal" />
+      <modal-close v-if="hideClose"
+        class="c-close-btn"
+        @close="closeModal" />
     </header>
 
     <section class="c-modal-body">
