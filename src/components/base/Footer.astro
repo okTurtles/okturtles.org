@@ -1,3 +1,7 @@
+---
+import NewsLetterWarningModal from '@/components/modal/NewsLetterWarningModal.vue'
+---
+
 <section class="footer">
   <ul>
     <li>
@@ -107,6 +111,8 @@
   </div>
 
   <slot />
+
+  <NewsLetterWarningModal client:only="vue" />
 </section>
 
 <style lang="scss">

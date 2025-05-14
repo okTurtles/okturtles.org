@@ -3,7 +3,7 @@
   type="button"
   @click.stop="onClick">
   <span class="c-close-bar"></span>
-  <span class="close-bar"></span>
+  <span class="c-close-bar"></span>
 </button>
 </template>
 
@@ -21,36 +21,48 @@ const onClick = () => {
 @import "../../styles/variables.scss";
 
 .c-modal-close {
+  --c-btn-side: 26px;
+  --c-bar-side: 12px;
+
   position: relative;
   display: inline-block;
   background-color: $white;
-  color: $black;
-  width: 32px;
-  height: 32px;
+  color: $grey;
+  width: var(--c-btn-side);
+  height: var(--c-btn-side);
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0);
   cursor: pointer;
-  transition:
-    background-color 0.3s ease-out,
-    border-color 0.3s ease-out;
+  transition: background-color 150ms linear;
+
+  @include from($tablet) {
+    --c-btn-side: 32px;
+    --c-bar-side: 16px;
+  }
 
   &:hover,
   &focus {
-    background-color: $background-grey;
+    background-color: $grey_3;
+
+    .c-close-bar:first-child,
+    .c-close-bar:last-child {
+      transform: translateX(-50%) rotate(0deg);
+    }
   }
 
   &:focus {
-    border-color: $grey_3;
+    border-color: $grey_2;
   }
 
   .c-close-bar {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 24px;
+    width: var(--c-bar-side);
     height: 2px;
     border-radius: 2px;
     background-color: currentColor;
+    transition: transform 150ms linear;
 
     &:first-child {
       transform: translateX(-50%) rotate(45deg);
