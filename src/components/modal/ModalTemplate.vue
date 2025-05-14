@@ -1,6 +1,8 @@
 <template>
-<div id='c-modal-container' class='c-modal-container'>
-  <div class='c-modal-background'></div>
+<div v-if="isActive"
+  class='c-modal-container'>
+  <div class='c-modal-background'
+    @click.stop="closeModal"></div>
 
   <div class='c-modal-content'>
     <header class='c-modal-header'>
@@ -21,6 +23,9 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
+import { useStore } from '@nanostores/vue'
+import { $activeModal, unloadModal } from '@/store/modal'
 import ModalClose from './ModalClose.vue'
 
 interface ComponentProps {
@@ -31,7 +36,14 @@ interface ComponentProps {
 
 const props = defineProps<ComponentProps>()
 
-const closeModal = () => {}
+// state
+const activeModal = useStore($activeModal)
+
+// computed
+const isActive = computed(() => activeModal.value === props.modalName)
+
+// methods
+const closeModal = () => { unloadModal(props.modalName) }
 
 // define expose
 defineExpose({
@@ -76,7 +88,7 @@ defineExpose({
   position: relative;
   border-radius: $radius-big;
   width: calc(100vw - 30px);
-  max-width: 580px;
+  max-width: 620px;
   height: auto;
   max-height: calc(100% - 50px);
   overflow: hidden;

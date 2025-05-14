@@ -6,7 +6,7 @@ export const openModal = (modalName: string): void => {
   modalName && $activeModal.set(modalName)
 }
 
-export const closeModal = (modalName?: string): void => {
+export const unloadModal = (modalName?: string): void => {
   if (modalName) {
     if ($activeModal.get() === modalName) {
       $activeModal.set('')

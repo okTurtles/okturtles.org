@@ -1,5 +1,6 @@
 ---
 import NewsLetterWarningModal from '@/components/modal/NewsLetterWarningModal.vue'
+import NewsLetterForm from '@/components/NewsLetterForm.vue'
 ---
 
 <section class="footer">
@@ -83,17 +84,7 @@ import NewsLetterWarningModal from '@/components/modal/NewsLetterWarningModal.vu
       Low-volume project newsletter. No Spam.
     </p>
 
-    <form
-      action="https://buttondown.email/api/emails/embed-subscribe/okturtles"
-      method="post"
-      target="popupwindow"
-      onsubmit="window.open('https://buttondown.email/okturtles', 'popupwindow')"
-      class="embeddable-buttondown-form validate"
-      novalidate
-    >
-      <input type="email" name="email" id="bd-email" class="email" placeholder="Enter email for updates" required />
-      <input type="submit" value="Send" class="submit" />
-    </form>
+    <NewsLetterForm client:only="vue" />
 
     <!-- Begin Mailchimp Signup Form -->
     <!-- <form action="https://okturtles.us4.list-manage.com/subscribe/post?u=bacb6eb127dd649ee5a8ff399&amp;id=707996fda6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -181,73 +172,11 @@ import NewsLetterWarningModal from '@/components/modal/NewsLetterWarningModal.vu
     position: relative;
     display: block;
     margin-top: 60px;
+
     p {
       color: #aeaeae;
       margin-bottom: 14px;
       font-size: .9em;
-    }
-    form {
-      input {
-        @include transition(all, .3s, ease);
-        vertical-align: bottom;
-        -webkit-appearance: none;
-        -webkit-font-smoothing: antialiased;
-        font-family: "proxima_novaregular";
-        background-color: $background-grey;
-        max-width: 300px;
-        width: 100%;
-        height: 50px;
-        font-weight: normal;
-        position: relative;
-        border-radius: 0;
-        font-size: 14px;
-        text-align: left;
-        position: relative;
-        display: inline-block;
-        outline: none;
-        padding: 3px 20px;
-        margin: 5px 1px 3px 0px;
-        border: 1px solid $black;
-        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-        box-sizing: border-box;
-      }
-      input:hover, input:focus {
-        background-color: $white;
-      }
-
-      .submit {
-        font-family: "proxima_novaregular";
-        color: $blue;
-        position: relative;
-        width: 70px;
-        max-height: 50px;
-        height: 50px;
-        padding-left: 5px;
-        right: 7px;
-        padding-right: 5px;
-        margin-bottom: 3px;
-        text-align: center;
-        -webkit-appearance: none;
-        @include transition(all, .3s, ease);
-      }
-      .submit:hover, .submit:focus, .submit:active {
-        -webkit-font-smoothing: antialiased;
-        cursor: pointer;
-        background-color: $blue;
-        color: $white;
-        @include transition(all, .3s, ease);
-      }
-      @media only screen and (max-width: 568px) {
-        input {
-          max-width: 190px;
-        }
-      }
-    }
-    form:hover {
-      input {
-        border-color: $blue;
-      }
     }
   }
 }
