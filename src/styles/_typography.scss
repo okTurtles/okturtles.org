@@ -99,3 +99,13 @@ h3 {
 .has-proxima-novabold {
   font-family: "proxima_novabold";
 }
+
+.link {
+  color: $blue;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: $blue_1;
+  }
+}
