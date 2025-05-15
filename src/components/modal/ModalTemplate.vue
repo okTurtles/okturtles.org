@@ -11,7 +11,7 @@
     <header class='c-modal-header'>
       <h1 v-if="title">{{ title }}</h1>
 
-      <modal-close v-if="hideClose"
+      <modal-close v-if="!hideClose"
         class="c-close-btn"
         @close="closeModal" />
     </header>
