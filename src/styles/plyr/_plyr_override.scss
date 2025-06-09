@@ -1,0 +1,6 @@
+@use "../variables" as *;
+@use "./plyr_default";
+
+.plyr_override {
+  --plyr-color-main: #{$green};
+}

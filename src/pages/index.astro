@@ -1,6 +1,7 @@
 ---
 import Layout from '@/layouts/BaseLayout.astro';
 import Ribbon from '@/components/Ribbon.astro';
+import VideoPlayer from '@/components/VideoPlayer.vue'
 ---
 
 <Layout>
@@ -93,22 +94,22 @@ import Ribbon from '@/components/Ribbon.astro';
 	<!-- https is broken -->
 	<section class="https-is-broken">
 		<div class="container">
-			<a class="link" href="https://groupincome.org">
 				<!--img src="/images/gi-hero.jpg" alt="Group Income" width="705" height="421"/-->
-				<div class="youtube-container">
-					<iframe width="100%" src="https://www.youtube-nocookie.com/embed/FoJ5WE2E5ac?si=K-eZsILRxKXL96Ck"
-						title="Shelter protocol youtube video"
-						frame-border="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						referrerpolicy="strict-origin-when-cross-origin"
-						allowfullscreen></iframe>
-				</div>
-				<h2>
-					Group Income
-				</h2>
-				<p>
-					Group income makes it easy for small communities to provide a financial safety net for their members with end-to-end encryption and self-hosting.
-				</p>
+      <div class="vidplayer-container">
+        <iframe width="100%" src="https://www.youtube-nocookie.com/embed/FoJ5WE2E5ac?si=K-eZsILRxKXL96Ck"
+          title="Shelter protocol youtube video"
+          frame-border="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+        <!-- <VideoPlayer client:only="vue"
+          src='/videos/groupncome_1.0_launch.webm'
+          mimeType='video/webm' /> -->
+      </div>
+
+      <a class="link" href="https://groupincome.org">
+				<h2>Group Income</h2>
+				<p>Group income makes it easy for small communities to provide a financial safety net for their members with end-to-end encryption and self-hosting.</p>
 			</a>
 		</div>
 	</section>
@@ -410,7 +411,7 @@ import Ribbon from '@/components/Ribbon.astro';
   }
 }
 
-.youtube-container {
+.vidplayer-container {
 	position: relative;
 	display: block;
 	width: 100%;
