@@ -22,7 +22,10 @@ const player = ref<any>(null)
 
 // methods
 const initPlayer = () => {
-  const opts: PlyrOptions = { debug: false }
+  const opts: PlyrOptions = {
+    // Documentation for plyr options: https://www.npmjs.com/package/plyr#options
+    debug: false
+  }
 
   player.value = new Plyr(videoEl.value as HTMLElement, opts)
 }
