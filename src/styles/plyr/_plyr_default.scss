@@ -998,7 +998,7 @@ a.plyr__control:before {
 
 .plyr__video-embed,
 .plyr__video-wrapper--fixed-ratio {
-  aspect-ratio: 16/9
+  aspect-ratio: 16/9;
 }
 
 @supports not (aspect-ratio:16/9) {

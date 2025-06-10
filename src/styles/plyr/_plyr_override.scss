@@ -5,4 +5,11 @@
   // To override default colors of the player, refer to this css color variable table:
   // https://www.npmjs.com/package/plyr#customizing-the-css
   --plyr-color-main: #{$green};
+  --custom-aspect-ratio: 16/9;
+
+  aspect-ratio: var(--custom-aspect-ratio);
+
+  .plyr {
+    aspect-ratio: inherit;
+  }
 }
