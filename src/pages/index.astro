@@ -94,14 +94,19 @@ import VideoPlayer from '@/components/VideoPlayer.vue'
 	<!-- https is broken -->
 	<section class="https-is-broken">
 		<div class="container">
-				<!--img src="/images/gi-hero.jpg" alt="Group Income" width="705" height="421"/-->
-      <div class="vidplayer-container">
+      <!-- <div class="vidplayer-container">
         <VideoPlayer client:only="vue"
           src='https://okturtles.org/videos/Group_Income_1.0_Launch_Special_Announcement.mp4'
           mimeType='video/mp4' />
-      </div>
+      </div> -->
 
       <a class="link" href="https://groupincome.org">
+        <div class="vidplayer-container">
+          <iframe width="100%" src="https://www.youtube-nocookie.com/embed/md54gZAtWA8?si=QH8HqnBwWWHVeKOf"
+				    title="A Group Income Future" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
 				<h2>Group Income</h2>
 				<p>Group income makes it easy for small communities to provide a financial safety net for their members with end-to-end encryption and self-hosting.</p>
 			</a>
