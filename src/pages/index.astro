@@ -1,6 +1,7 @@
 ---
 import Layout from '@/layouts/BaseLayout.astro';
 import Ribbon from '@/components/Ribbon.astro';
+import VideoPlayer from '@/components/VideoPlayer.vue'
 ---
 
 <Layout>
@@ -93,20 +94,21 @@ import Ribbon from '@/components/Ribbon.astro';
 	<!-- https is broken -->
 	<section class="https-is-broken">
 		<div class="container">
-			<a class="link" href="https://groupincome.org">
-				<!--img src="/images/gi-hero.jpg" alt="Group Income" width="705" height="421"/-->
-				<div class="youtube-container">
-					<iframe width="100%" src="https://www.youtube-nocookie.com/embed/md54gZAtWA8?si=QH8HqnBwWWHVeKOf"
-					  title="A Group Income Future" frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-							referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-				</div>
-				<h2>
-					Group Income
-				</h2>
-				<p>
-				  Private community software with a financial safety net. Decentralized. End-to-end encrypted.
-				</p>
+      <!-- <div class="vidplayer-container">
+        <VideoPlayer client:only="vue"
+          src='https://okturtles.org/videos/Group_Income_1.0_Launch_Special_Announcement.mp4'
+          mimeType='video/mp4' />
+      </div> -->
+      <div class="vidplayer-container">
+        <iframe width="100%" src="https://www.youtube-nocookie.com/embed/md54gZAtWA8?si=QH8HqnBwWWHVeKOf"
+          title="A Group Income Future" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <a class="link" href="https://groupincome.org">
+				<h2>Group Income</h2>
+				<p>Private community software with a financial safety net. Decentralized. End-to-end encrypted.</p>
 			</a>
 		</div>
 	</section>
@@ -408,7 +410,7 @@ import Ribbon from '@/components/Ribbon.astro';
   }
 }
 
-.youtube-container {
+.vidplayer-container {
 	position: relative;
 	display: block;
 	width: 100%;
