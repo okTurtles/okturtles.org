@@ -1,6 +1,6 @@
 <template>
 <div class="video-player-container plyr_override">
-  <video ref="video-el" playsinline controls>
+  <video ref="video-el" playsinline controls :poster="poster">
     <source :src="src" :type="mimeType" />
   </video>
 </div>
@@ -12,7 +12,8 @@ import Plyr, { type Options as PlyrOptions } from 'plyr'
 
 interface ComponentProps {
   src: string,
-  mimeType: string
+  mimeType: string,
+  poster?: string
 }
 
 const props = defineProps<ComponentProps>()

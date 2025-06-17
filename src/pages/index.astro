@@ -94,22 +94,27 @@ import VideoPlayer from '@/components/VideoPlayer.vue'
 	<!-- https is broken -->
 	<section class="https-is-broken">
 		<div class="container">
-      <!-- <div class="vidplayer-container">
-        <VideoPlayer client:only="vue"
-          src='https://okturtles.org/videos/Group_Income_1.0_Launch_Special_Announcement.mp4'
-          mimeType='video/mp4' />
-      </div> -->
       <div class="vidplayer-container">
+        <VideoPlayer client:only="vue"
+          src='/videos/group_income_ending_big_tech_control.mp4'
+          mimeType='video/mp4'
+          poster='/videos/ending_big_tech.jpg' />
+      </div>
+      <!-- <div class="vidplayer-container">
         <iframe width="100%" src="https://www.youtube-nocookie.com/embed/md54gZAtWA8?si=QH8HqnBwWWHVeKOf"
           title="A Group Income Future" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
-
       <a class="link" href="https://groupincome.org">
 				<h2>Group Income</h2>
 				<p>Private community software with a financial safety net. Decentralized. End-to-end encrypted.</p>
 			</a>
+      -->
+
+			<h2>The History of <a href="https://groupincome.org">Group Income</a> and Chelonia</h2>
+			<p>Subscribe to <a href="#newsletter">our newsletter</a> to learn about Chelonia and <b><a href="https://groupincome.org">Group Income</a></b>.</p>
+
 		</div>
 	</section>
 
@@ -201,6 +206,9 @@ import VideoPlayer from '@/components/VideoPlayer.vue'
 					<p>
 						We occasionally write blog articles on diverse themes around privacy, security, decentralisation, transparency, amongst other topics.
 					</p>
+					<a class="blog-post-link" href="https://blog.okturtles.org/2024/10/convert-wordpress-to-static-site/">
+  					How to Convert a Wordpress blog to an Astro Static Site
+					</a>
 					<a class="blog-post-link" href="https://blog.okturtles.org/2024/06/the-ultimate-ios-to-grapheneos-migration-guide-and-review/">
 						The Ultimate iOS to GrapheneOS Migration Guide and Review
 					</a>
@@ -215,9 +223,6 @@ import VideoPlayer from '@/components/VideoPlayer.vue'
 					</a>
 					<a class="blog-post-link" href="https://blog.okturtles.org/2017/04/turtle-status-letter-2-group-income-dpki-more/">
 						Turtle Status Letter #2 — Group Income + DPKI + More!
-					</a>
-					<a class="blog-post-link" href="https://blog.okturtles.org/2017/02/coniks-vs-key-transparency-vs-certificate-transparency-vs-blockchains/">
-						CONIKS vs Key Transparency vs Certificate Transparency vs Blockchains
 					</a>
 					<a class="button" href="//blog.okturtles.org">
 						View All
