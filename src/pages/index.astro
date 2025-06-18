@@ -94,7 +94,7 @@ import VideoPlayer from '@/components/VideoPlayer.vue'
 	<!-- https is broken -->
 	<section class="https-is-broken">
 		<div class="container">
-      <div class="vidplayer-container">
+      <div class="vidplayer-container has-medium-box-shadow">
         <VideoPlayer client:only="vue"
           src='/videos/group_income_ending_big_tech_control.mp4'
           mimeType='video/mp4'
@@ -419,6 +419,11 @@ import VideoPlayer from '@/components/VideoPlayer.vue'
 	position: relative;
 	display: block;
 	width: 100%;
+
+  @include until ($tablet) {
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
+  }
 
 	iframe {
 		display: block;

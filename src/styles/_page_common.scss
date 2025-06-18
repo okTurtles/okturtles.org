@@ -11,3 +11,15 @@
 	background-color: $white;
 	@include side-padding;
 }
+
+.has-deep-box-shadow {
+  box-shadow: $drop-shadow_deep;
+}
+
+.has-medium-box-shadow {
+  box-shadow: $drop-shadow_medium;
+}
+
+.has-shallow-box-shadow {
+  box-shadow: $drop-shadow_shallow;
+}
