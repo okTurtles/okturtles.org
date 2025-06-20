@@ -25,7 +25,12 @@ const player = ref<any>(null)
 const initPlayer = () => {
   const opts: PlyrOptions = {
     // Documentation for plyr options: https://www.npmjs.com/package/plyr#options
-    debug: false
+    debug: false,
+    keyboard: {
+      // For more details about the keyboard shortcuts: https://www.npmjs.com/package/plyr#shortcuts
+      focused: true,
+      global: true
+    }
   }
 
   player.value = new Plyr(videoEl.value as HTMLElement, opts)
