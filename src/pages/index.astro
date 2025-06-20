@@ -4,7 +4,7 @@ import Ribbon from '@/components/Ribbon.astro';
 import VideoPlayer from '@/components/VideoPlayer.vue'
 ---
 
-<Layout>
+<Layout loadPlyr={true}>
   <Fragment slot="head">
     <meta name="keywords" content="okTurtles, security, dnsnmc, namecoin, bitcoin, ethereum, dnssec, security, surveillance, surviellance, nsa, https, certificate authorities, ssl certificates, certificate transparency, convergence, perspectives, mitm, nsa-proof, mitm-proof" />
 
@@ -95,7 +95,7 @@ import VideoPlayer from '@/components/VideoPlayer.vue'
 	<section class="https-is-broken">
 		<div class="container">
       <div class="vidplayer-container has-medium-box-shadow">
-        <VideoPlayer client:only="vue"
+        <VideoPlayer client:load
           src='/videos/group_income_ending_big_tech_control.mp4'
           mimeType='video/mp4'
           poster='/videos/ending_big_tech_control.png' />

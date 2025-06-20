@@ -5,7 +5,8 @@ import BodyScripts from '../components/base/BodyScripts.astro';
 
 const {
   title = 'okTurtles Foundation',
-  bodyClass = ''
+  bodyClass = '',
+  loadPlyr = false
 } = Astro.props;
 ---
 
@@ -14,6 +15,7 @@ const {
   <head>
     <BaseHead title={title} />
     <slot name="head" />
+    { loadPlyr && <script src="/third-party/plyr.3.7.8.min.js" is:inline></script> }
   </head>
 
   <body class={bodyClass}>
