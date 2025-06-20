@@ -20,7 +20,7 @@
   "homepage": "https://github.com/okTurtles/okturtles.com",
   "devDependencies": {
     "@astrojs/vue": "^3.0.4",
-    "astro": "^3.0.5",
+    "astro": "^5.10.0",
     "sass": "^1.63.6"
   },
   "dependencies": {
