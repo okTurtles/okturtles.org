@@ -4,6 +4,7 @@
 $phone_narrow: 430px;
 
 .plyr_override {
+  position: relative;
   // To override default colors of the player, refer to this css color variable table:
   // https://www.npmjs.com/package/plyr#customizing-the-css
   --plyr-color-main: #{$green};
@@ -11,7 +12,20 @@ $phone_narrow: 430px;
 
   aspect-ratio: var(--custom-aspect-ratio);
 
+  // background placeholder
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(12, 97, 48, 0.25);
+    z-index: 0;
+  }
+
   .plyr {
+    z-index: 1;
     aspect-ratio: inherit;
   }
 
