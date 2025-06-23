@@ -8,8 +8,6 @@
 
 <script setup lang="ts">
 import { useTemplateRef, ref, onMounted } from 'vue'
-import Plyr, { type Options as PlyrOptions } from 'plyr'
-
 interface ComponentProps {
   src: string,
   mimeType: string,
@@ -23,9 +21,10 @@ const player = ref<any>(null)
 
 // methods
 const initPlayer = () => {
-  const opts: PlyrOptions = {
+  const opts = {
     // Documentation for plyr options: https://www.npmjs.com/package/plyr#options
     debug: false,
+    ratio: '16:9',
     keyboard: {
       // For more details about the keyboard shortcuts: https://www.npmjs.com/package/plyr#shortcuts
       focused: true,
