@@ -33,7 +33,7 @@ If the AI can write better code than you can without AI assistance, this job isn
 
 We want someone who can write better frontend code than the best AIs out there. Someone who knows how to use AI to their advantage, but not someone who uses it as a crutch to compensate for their own shortcomings.
 
-We are not hiring an AI. We are hiring a human: someone who already possesses the necessary skills to get the job done without AI.
+We are not hiring an AI. We are hiring a human professional: someone who already possesses the necessary skills to get the job done without AI.
 
 #### Instructions
 
