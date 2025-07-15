@@ -10,7 +10,7 @@ permalink: vue-go-dev
 
 Think about all the problems there are today when researching any subject. If you're a fearless lover of Truth, you will love this project.
 
-We're looking for an extremely strong Vue.js developer. Someone capable of taking existing designs and creating functioning **pixel-perfect** frontend UIs out of them.
+We're looking for an extremely strong Vue.js developer. Someone capable of taking existing designs and creating functioning pixel-perfect frontend UIs out of them.
 
 #### Requirements
 
