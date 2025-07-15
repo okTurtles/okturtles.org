@@ -12,18 +12,6 @@ Think about all the problems there are today when researching any subject. If yo
 
 We're looking for an extremely strong Vue.js developer. Someone capable of taking existing designs and creating functioning **pixel-perfect** frontend UIs out of them.
 
-#### Note on AI
-
-Do you think you're strong *because you know how to use Claude Opus?* If so, please do not apply.
-
-While we encourage our developers to use AI to improve their efficiency, we **never** blindly accept the output of AI code at okTurtles. It must **always** be thoroughly reviewed by a professional.
-
-If the AI can write better code than you can without AI assistance, this job isn't for you, please do not waste our time.
-
-We want someone who can write better frontend code than the best AIs out there. Someone who knows how to use AI to their advantage, but not someone who uses it as a crutch to compensate for their own shortcomings.
-
-We are not hiring an AI. We are hiring a human: someone who already possesses the necessary skills to get the job done without AI.
-
 #### Requirements
 
 - 3+ years of experience creating websites
@@ -36,6 +24,16 @@ We are not hiring an AI. We are hiring a human: someone who already possesses th
 #### Nice-to-haves
 
 - If you are familiar with [Go](https://go.dev), it's a significant plus. If not, a willingness to learn it is also appreciated.
+
+#### Note on AI
+
+While we encourage our developers to use AI to improve their efficiency, we **never** blindly accept the output of AI code at okTurtles. It must **always** be thoroughly reviewed by a professional.
+
+If the AI can write better code than you can without AI assistance, this job isn't for you, please do not waste our time.
+
+We want someone who can write better frontend code than the best AIs out there. Someone who knows how to use AI to their advantage, but not someone who uses it as a crutch to compensate for their own shortcomings.
+
+We are not hiring an AI. We are hiring a human: someone who already possesses the necessary skills to get the job done without AI.
 
 #### Instructions
 
