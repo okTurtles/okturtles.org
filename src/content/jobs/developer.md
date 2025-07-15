@@ -3,7 +3,7 @@ id: 3
 title: Vue.js Developer (with optional Go-lang experience)
 pubDate: '2025-02-20T00:00:00+00:00'
 type: "remote"
-permalink: designer
+permalink: vue-go-dev
 ---
 
 ### Vue.js Developer (with optional Go-lang experience)
