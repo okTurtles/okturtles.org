@@ -4,8 +4,8 @@ import NewsLetterForm from '@/components/NewsLetterForm.vue'
 ---
 
 <section class="footer">
-  <ul>
-    <li>
+  <ul class="text-links">
+    <li class="text-link-item">
       <a href="/">
         Home
       </a>
@@ -22,24 +22,30 @@ import NewsLetterForm from '@/components/NewsLetterForm.vue'
         Shelter protocol
       </a>
     </li> -->
-    <li>
+    <li class="text-link-item">
       <a href="//blog.okturtles.org">
         Blog
       </a>
     </li>
-    <li>
+
+    <li class="text-link-item">
+      <a href="https://podcast.okturtles.org" target="_blank">
+        Podcast
+      </a>
+    </li>
+
+    <li class="text-link-item">
       <a href="/donate">
         <i class="fas fa-heart" style="color:darkred"></i> Donate
       </a>
     </li>
-    <li>
+
+    <li class="text-link-item">
       <a href="/team">
         Team
       </a>
     </li>
   </ul>
-
-  <div class="clearfix"></div>
 
   <ul class="social-icons">
     <li class="mastodon-link">
@@ -114,24 +120,42 @@ import NewsLetterForm from '@/components/NewsLetterForm.vue'
 .footer {
   text-align: center;
   padding: 100px 0;
+
   ul {
+    &.text-links {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      font-size: 15px;
+      padding: 0 1rem;
+
+      @include from(568px) {
+        gap: 32px;
+        font-size: 16px;
+      }
+    }
+
     li {
       position: relative;
       display: inline-block;
-      margin: 0 20px;
 
       a:hover {
         color: $blue;
       }
     }
-    @media only screen and (max-width: 568px) {
-      li {
-        margin-bottom: 20px;
-      }
-    }
   }
+
   .social-icons {
     margin-top: 35px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
 
     li {
       font-size: 18px;

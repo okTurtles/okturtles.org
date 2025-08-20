@@ -7,4 +7,4 @@ dist/
 reference
 /.well-known
 .DS_Store
-/.astro
+.astro/

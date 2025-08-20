@@ -193,9 +193,9 @@ import VideoPlayer from '@/components/VideoPlayer.vue'
 						<i class="fab fa-youtube fa-2x" aria-hidden="true"></i>
 						<span class="blog-post-link__text">Group Income Videos</span>
 					</a>
-					<a class="blog-post-link" href="http://groupcurrency.org" target="_blank">
-						<i class="fas fa-users fa-2x" aria-hidden="true"></i>
-						<span class="blog-post-link__text">Group Currency: Cryptocurrency + Basic Income</span>
+					<a class="blog-post-link" href="https://podcast.okturtles.org" target="_blank">
+						<i class="fas fa-microphone fa-2x" aria-hidden="true"></i>
+						<span class="blog-post-link__text">okTurtles Podcast</span>
 					</a>
 				</div>
 
@@ -341,8 +341,15 @@ import VideoPlayer from '@/components/VideoPlayer.vue'
     margin-bottom: 10px;
     font-family: "proxima_novaregular";
     margin-top: 20px;
+    text-decoration: none;
 
-    &:hover { color: $blue; }
+    &:hover {
+      color: $blue;
+
+      .blog-post-link__text {
+        text-decoration: underline;
+      }
+    }
 
     &__text {
       display: inline-flex;
