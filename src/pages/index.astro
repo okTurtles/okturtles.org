@@ -144,6 +144,7 @@ import VideoPlayer from '@/components/VideoPlayer.vue'
 						</p>
 					</a>
 				</div>
+				<!-- TODO: Replace this with a link to Group Income and make sure DNSChain is featured somewhere on DPKI page -->
 				<div class="project-list">
 					<a class="link" href="https://github.com/okTurtles/dnschain">
 						<img src="/images/banner-dns-chain.png" alt="DNSChain">
@@ -174,9 +175,16 @@ import VideoPlayer from '@/components/VideoPlayer.vue'
 						<!-- TODO: these should be links to blog & youtube channe. -->
 						<!--       separaely, we need links to "Other Resources" GH section and comparison. -->
 						<!-- Blog <a href="https://github.com/okTurtles/dnschain/blob/master/README.md#other-resources" target="_blank" style="color:#1479DE">posts, video, and audio</a> content about the dangers of mass surveillance and the technology that can be used to protect against it. -->
-						We produce educational content and solutions on topics ranging from mass surveillance to decentralization. See our <a href="//blog.okturtles.org" style="color:#1479DE">Blog</a>, <a href="https://www.youtube.com/channel/UC0Ft1M3PjlRlpSBcOBWtG3w" style="color:#1479DE">YouTube</a>, <a href="https://twitter.com/okTurtles" style="color:#1479DE">Twitter</a>, and <a href="https://github.com/okturtles" style="color:#1479DE">GitHub</a>.
+						We produce educational content and solutions on topics ranging from mass surveillance to decentralization. See our
+						  <a href="//blog.okturtles.org" style="color:#1479DE">Blog</a>,
+							<a href="https://podcast.okturtles.org" style="color:#1479DE">Podcast</a>,
+							<a href="https://odysee.com/@okTurtles" style="color:#1479DE">Odysee</a> / <a href="https://www.youtube.com/@okTurtles" style="color:#1479DE">YT</a>, and
+							<a href="https://crib.social/okTurtles" style="color:#1479DE">Fedi</a> / <a href="https://x.com/okTurtles" style="color:#1479DE">X</a>.
 					</p>
-
+					<a class="blog-post-link" href="https://podcast.okturtles.org" target="_blank">
+						<i class="fas fa-microphone fa-2x" aria-hidden="true"></i>
+						<span class="blog-post-link__text">okTurtles Podcast</span>
+					</a>
 					<a class="blog-post-link" href="https://www.youtube.com/watch?v=7S1IqaSLrq8">
 						<i class="fab fa-youtube fa-2x" aria-hidden="true"></i>
 						<span class="blog-post-link__text">Deconfusing Decentralization</span>
@@ -189,13 +197,10 @@ import VideoPlayer from '@/components/VideoPlayer.vue'
 						<i class="fas fa-file fa-2x" aria-hidden="true"></i>
 						<span class="blog-post-link__text">Voting Systems + Social Choice Theory</span>
 					</a>
-					<a class="blog-post-link" href="https://groupincome.org/shorts/">
+					<!-- TODO: Link to okTurtles odysee + YT here -->
+					<a class="blog-post-link" href="https://www.youtube.com/@GroupIncome/videos">
 						<i class="fab fa-youtube fa-2x" aria-hidden="true"></i>
-						<span class="blog-post-link__text">Group Income: Short Videos</span>
-					</a>
-					<a class="blog-post-link" href="http://groupcurrency.org" target="_blank">
-						<i class="fas fa-users fa-2x" aria-hidden="true"></i>
-						<span class="blog-post-link__text">Group Currency: Cryptocurrency + Basic Income</span>
+						<span class="blog-post-link__text">Group Income Videos</span>
 					</a>
 				</div>
 
@@ -206,6 +211,9 @@ import VideoPlayer from '@/components/VideoPlayer.vue'
 					<p>
 						We occasionally write blog articles on diverse themes around privacy, security, decentralisation, transparency, amongst other topics.
 					</p>
+					<a class="blog-post-link" href="https://blog.okturtles.org/2025/07/okturtles-podcast/">
+					  The New okTurtles Podcast
+					</a>
 					<a class="blog-post-link" href="https://blog.okturtles.org/2024/10/convert-wordpress-to-static-site/">
   					How to Convert a Wordpress blog to an Astro Static Site
 					</a>
@@ -220,9 +228,6 @@ import VideoPlayer from '@/components/VideoPlayer.vue'
 					</a>
 					<a class="blog-post-link" href="https://blog.okturtles.org/2018/08/turtles-status-letter-3-year-in-review/">
 						Turtles Status Letter #3 — Year In Review
-					</a>
-					<a class="blog-post-link" href="https://blog.okturtles.org/2017/04/turtle-status-letter-2-group-income-dpki-more/">
-						Turtle Status Letter #2 — Group Income + DPKI + More!
 					</a>
 					<a class="button" href="//blog.okturtles.org">
 						View All
@@ -341,8 +346,15 @@ import VideoPlayer from '@/components/VideoPlayer.vue'
     margin-bottom: 10px;
     font-family: "proxima_novaregular";
     margin-top: 20px;
+    text-decoration: none;
 
-    &:hover { color: $blue; }
+    &:hover {
+      color: $blue;
+
+      .blog-post-link__text {
+        text-decoration: underline;
+      }
+    }
 
     &__text {
       display: inline-flex;
