@@ -1,10 +1,10 @@
 ---
 import JobPost from '../../layouts/JobPost.astro'
-import { sortedPosts } from '@/utils.js'
+import { getAllJobs } from '@/utils.js'
 
 export async function getStaticPaths() {
-  const jobs = sortedPosts(await Astro.glob('../../content/jobs/*.{md,mdx}'))
-  return jobs.map(job => {
+  const jobs = getAllJobs()
+  return jobs.map((job: any) => {
     // Use the permalink value defined in the frontmatter as the slug
     return {
       params: { job: job.frontmatter.permalink },
