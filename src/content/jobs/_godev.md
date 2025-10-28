@@ -1,7 +1,7 @@
 ---
 id: 4
 title: Golang Backend Developer
-pubDate: '2025-09-29T00:00:01+00:00'
+pubDate: '2025-09-29T00:00:01Z'
 type: "remote"
 permalink: go-dev
 ---

@@ -1,7 +1,7 @@
 ---
 id: 2
 title: UI/UX Designer
-pubDate: '2025-02-20T00:00:01+00:00'
+pubDate: '2025-02-20T00:00:01Z'
 type: "remote"
 permalink: designer
 ---
