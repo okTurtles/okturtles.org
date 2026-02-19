@@ -1,4 +1,4 @@
-name: AI PR Review
+name: AI PR Review (Crush)
 
 on:
   issue_comment:
@@ -9,7 +9,7 @@ jobs:
     name: Automated PR Review
     if: >-
       github.event.issue.pull_request &&
-      startsWith(github.event.comment.body, '/review') &&
+      startsWith(github.event.comment.body, '/crush') &&
       (github.event.comment.author_association == 'MEMBER' ||
       github.event.comment.author_association == 'OWNER' ||
       github.event.comment.author_association == 'COLLABORATOR')
@@ -48,6 +48,10 @@ jobs:
             -X PATCH \
             -f body="${ORIGINAL_BODY}
 
+          ---
+
+          _AI review [started](${RUN_URL})._"
+
       - name: Resolve provider settings
         run: |
           case "$REVIEW_PROVIDER" in
@@ -55,7 +59,7 @@ jobs:
               {
                 echo "PROVIDER_API_URL=https://openrouter.ai/api/v1/chat/completions"
                 echo "PROVIDER_API_KEY=$OPENROUTER_API_KEY"
-                echo "OPENCODE_MODEL=openrouter/$REVIEW_MODEL"
+                echo "CRUSH_MODEL=openrouter/$REVIEW_MODEL"
                 echo "PROVIDER_DISPLAY=OpenRouter"
                 echo "PROVIDER_API_KEY_REF={env:OPENROUTER_API_KEY}"
               } >> "$GITHUB_ENV"
@@ -64,7 +68,7 @@ jobs:
               {
                 echo "PROVIDER_API_URL=https://api.z.ai/api/coding/paas/v4/chat/completions"
                 echo "PROVIDER_API_KEY=$ZAI_API_KEY"
-                echo "OPENCODE_MODEL=zai-coding-plan/$REVIEW_MODEL"
+                echo "CRUSH_MODEL=zai/$REVIEW_MODEL"
                 echo "PROVIDER_DISPLAY=Z.AI"
                 echo "PROVIDER_API_KEY_REF={env:ZAI_API_KEY}"
               } >> "$GITHUB_ENV"
@@ -390,40 +394,22 @@ jobs:
           cat /tmp/raw_review.txt
           echo "::endgroup::"
 
-      - name: Install opencode
+      - name: Install crush
         if: steps.size-check.outputs.too_large == 'false'
-        run: curl -fsSL https://opencode.ai/install | bash
-
-      - name: Configure opencode
-        if: steps.size-check.outputs.too_large == 'false'
-        run: |
-          mkdir -p ~/.config/opencode
-          jq -n \
-            --arg provider "$REVIEW_PROVIDER" \
-            --arg api_key_ref "$PROVIDER_API_KEY_REF" \
-            '{
-              "$schema": "https://opencode.ai/config.json",
-              "provider": {
-                ($provider): {
-                  "options": { "apiKey": $api_key_ref }
-                }
-              }
-            }' > ~/.config/opencode/opencode.json
+        run: npm install -g @charmland/crush
 
       - name: Run agentic review
         if: steps.size-check.outputs.too_large == 'false'
-        env:
-          OPENCODE_PERMISSION: '{ "edit": "deny", "write": "deny", "patch": "deny", "multiedit": "deny", "bash": "deny", "read": "allow", "grep": "allow", "glob": "allow", "list": "allow" }'
         run: |
-          opencode run -m "$OPENCODE_MODEL" < /tmp/agentic_prompt.txt > /tmp/agentic_review.txt 2>/tmp/opencode_stderr.txt || {
-            echo "::warning::Agentic review via opencode failed"
-            cat /tmp/opencode_stderr.txt >&2
-            echo "Agentic review unavailable (opencode encountered an error)." > /tmp/agentic_review.txt
+          crush run -m "$CRUSH_MODEL" --small-model "$CRUSH_MODEL" < /tmp/agentic_prompt.txt > /tmp/agentic_review.txt 2>/tmp/crush_stderr.txt || {
+            echo "::warning::Agentic review via crush failed"
+            cat /tmp/crush_stderr.txt >&2
+            echo "Agentic review unavailable (crush encountered an error)." > /tmp/agentic_review.txt
           }
 
           echo "Agentic review complete ($(wc -c < /tmp/agentic_review.txt) bytes)"
 
-          echo "::group::Agentic (opencode) review"
+          echo "::group::Agentic (crush) review"
           cat /tmp/agentic_review.txt
           echo "::endgroup::"
 
@@ -503,7 +489,7 @@ jobs:
           {
             echo "## Advanced AI Review"
             echo ""
-            echo "- Type: ${REVIEW_TYPE}"
+            echo "- Type: ${REVIEW_TYPE} (crush)"
             echo "- Model: ${REVIEW_MODEL}"
             echo ""
             echo "<details>"
