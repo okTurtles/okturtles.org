@@ -443,7 +443,10 @@ jobs:
                 "ls",
                 "glob",
                 "grep",
-                "fetch"
+                "fetch",
+                "agentic_fetch",
+                "agent",
+                "todos"
               ]
             }
           }
