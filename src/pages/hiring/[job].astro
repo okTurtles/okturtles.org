@@ -17,28 +17,32 @@ export async function getStaticPaths() {
 
 const { Content, isDisabled } = Astro.props
 ---
-{isDisabled ? (
-  <html>
+{isDisabled && (
+  <html lang="en">
     <head>
+      <meta charset="utf-8" />
       <meta http-equiv="refresh" content="0;url=/hiring" />
+      <title>Redirecting…</title>
     </head>
-    <body></body>
+    <body>
+      <p>This position is no longer available. Redirecting to <a href="/hiring">our hiring page</a>…</p>
+    </body>
   </html>
-) : (
-  <>
-    <JobPost>
-      <article class="job-content">
-        <Content />
-      </article>
-    </JobPost>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        window.scrollTo({
-            top: 500,
-            behavior: "smooth"
-        })
+)}
+{!isDisabled && (
+  <JobPost>
+    <article class="job-content">
+      <Content />
+    </article>
+  </JobPost>
+)}
+{!isDisabled && (
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      window.scrollTo({
+          top: 500,
+          behavior: "smooth"
       })
-    </script>
-  </>
+    })
+  </script>
 )}
