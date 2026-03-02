@@ -121,7 +121,7 @@ import { openModal } from '@/store/modal'
 
 - Job posts are Markdown files in `src/content/jobs/`.
 - Frontmatter fields: `id`, `title`, `pubDate`, `type`, `permalink`.
-- Files prefixed with `_` (e.g., `_designer.md`) are filtered out from the live listing in `JobPost.astro` but still generate routes.
+- Files prefixed with `_` (e.g., `_designer.md`) are filtered out from the live listing in `JobPost.astro`. They still generate routes, but those routes immediately redirect to `/hiring` instead of rendering the job content.
 - Jobs are loaded via `getAllJobs()` in `src/utils.js` using `import.meta.glob`.
 - Dynamic routing at `/hiring/[job]` uses `getStaticPaths()` with the `permalink` frontmatter field as the slug.
 
