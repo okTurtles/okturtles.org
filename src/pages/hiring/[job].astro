@@ -5,28 +5,40 @@ import { getAllJobs } from '@/utils.js'
 export async function getStaticPaths() {
   const jobs = getAllJobs()
   return jobs.map((job: any) => {
-    // Use the permalink value defined in the frontmatter as the slug
+    const filePath = job.file || ''
+    const fileName = filePath.split('/').pop() || ''
+    const isDisabled = fileName.startsWith('_')
     return {
       params: { job: job.frontmatter.permalink },
-      props: job
+      props: { ...job, isDisabled }
     }
   })
 }
 
-const { Content } = Astro.props
+const { Content, isDisabled } = Astro.props
 ---
-<JobPost>
-  <article class="job-content">
-    <Content />
-  </article>
-</JobPost>
+{isDisabled ? (
+  <html>
+    <head>
+      <meta http-equiv="refresh" content="0;url=/hiring" />
+    </head>
+    <body></body>
+  </html>
+) : (
+  <>
+    <JobPost>
+      <article class="job-content">
+        <Content />
+      </article>
+    </JobPost>
 
-<script>
-  // Optionally smooth scroll the job detail into view.
-  document.addEventListener("DOMContentLoaded", function () {
-    window.scrollTo({
-        top: 500,
-        behavior: "smooth"
-    })
-  })
-</script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        window.scrollTo({
+            top: 500,
+            behavior: "smooth"
+        })
+      })
+    </script>
+  </>
+)}
