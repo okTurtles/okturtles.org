@@ -3,21 +3,22 @@
 <script is:inline type="text/javascript" src="/third-party/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 <!-- Matomo -->
-<script is:inline type="text/javascript">
-  var _paq = _paq || [];
+<script is:inline>
+  var _paq = window._paq = window._paq || [];
   /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
   _paq.push(["setCookieDomain", "*.okturtles.com"]);
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
-    var u="https://piwik.okturtles.org/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    var u="https://m.okturtles.org/";
+    _paq.push(['setTrackerUrl', u+'m.php']);
     _paq.push(['setSiteId', '1']);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    g.async=true; g.src=u+'m.js'; s.parentNode.insertBefore(g,s);
   })();
 </script>
-<noscript><p><img src="https://piwik.okturtles.org/piwik.php?idsite=1&rec=1" style="border:0;" alt="" /></p></noscript>
+<noscript><p><img referrerpolicy="no-referrer-when-downgrade" src="https://m.okturtles.org/m.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
 <!-- End Matomo Code -->
 
 <slot />
