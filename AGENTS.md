@@ -61,11 +61,6 @@ src/
 │   └── modal.ts            # Nanostores atom for modal state
 ├── content/
 │   └── jobs/               # Markdown job postings
-│       ├── grant-writer.md
-│       ├── volunteering.md
-│       ├── _designer.md    # Prefixed with _ = hidden/draft
-│       ├── _developer.md
-│       └── _godev.md
 ├── styles/
 │   ├── main.scss           # Entry point — imports all partials
 │   ├── _variables.scss     # Mixins, breakpoints, forwards _colors
